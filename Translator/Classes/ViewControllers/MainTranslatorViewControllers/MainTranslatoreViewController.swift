@@ -40,7 +40,7 @@ extension MainTranslatoreViewController: UICollectionViewDelegateFlowLayout, UIC
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 19, left: 55, bottom: 19, right: 55)
+        return UIEdgeInsets(top: 19, left: 50, bottom: 19, right: 50)
     }
     
 //    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
