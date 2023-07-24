@@ -7,15 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F6B170472A6E93B2002A7BD2 /* MainTranslatorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B170462A6E93B2002A7BD2 /* MainTranslatorCell.swift */; };
+		F6B1704B2A6E93EC002A7BD2 /* MainTranslatorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6B1704A2A6E93EC002A7BD2 /* MainTranslatorCell.xib */; };
+		F6C0D30D2A6E92CC00418837 /* MainTranslatoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C0D30C2A6E92CC00418837 /* MainTranslatoreViewController.swift */; };
 		F6DE20B62A6E6A7F003F49F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DE20B52A6E6A7F003F49F4 /* AppDelegate.swift */; };
 		F6DE20B82A6E6A7F003F49F4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DE20B72A6E6A7F003F49F4 /* SceneDelegate.swift */; };
-		F6DE20BA2A6E6A7F003F49F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DE20B92A6E6A7F003F49F4 /* ViewController.swift */; };
-		F6DE20BD2A6E6A7F003F49F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6DE20BB2A6E6A7F003F49F4 /* Main.storyboard */; };
+		F6DE20BD2A6E6A7F003F49F4 /* MainTranslator.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6DE20BB2A6E6A7F003F49F4 /* MainTranslator.storyboard */; };
 		F6DE20BF2A6E6A80003F49F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6DE20BE2A6E6A80003F49F4 /* Assets.xcassets */; };
 		F6DE20C22A6E6A80003F49F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6DE20C02A6E6A80003F49F4 /* LaunchScreen.storyboard */; };
 		F6DE20CD2A6E6A80003F49F4 /* TranslatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DE20CC2A6E6A80003F49F4 /* TranslatorTests.swift */; };
 		F6DE20D72A6E6A80003F49F4 /* TranslatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DE20D62A6E6A80003F49F4 /* TranslatorUITests.swift */; };
 		F6DE20D92A6E6A80003F49F4 /* TranslatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DE20D82A6E6A80003F49F4 /* TranslatorUITestsLaunchTests.swift */; };
+		F6DE20EB2A6E6CFE003F49F4 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6DE20EA2A6E6CFE003F49F4 /* SplashScreen.storyboard */; };
+		F6DE20ED2A6E6DD2003F49F4 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DE20EC2A6E6DD2003F49F4 /* SplashScreenViewController.swift */; };
+		F6DE20F02A6E7273003F49F4 /* Sriracha-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6DE20EF2A6E7273003F49F4 /* Sriracha-Regular.ttf */; };
+		F6DE21222A6E72DF003F49F4 /* FixelText-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6DE20F12A6E72DE003F49F4 /* FixelText-Light.ttf */; };
+		F6DE21232A6E72DF003F49F4 /* FixelText-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6DE20F22A6E72DE003F49F4 /* FixelText-ExtraLight.ttf */; };
+		F6DE21242A6E72DF003F49F4 /* FixelText-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6DE20F32A6E72DE003F49F4 /* FixelText-SemiBold.ttf */; };
+		F6DE21252A6E72DF003F49F4 /* FixelText-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6DE20F42A6E72DE003F49F4 /* FixelText-Black.ttf */; };
+		F6DE21262A6E72DF003F49F4 /* FixelText-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6DE20F52A6E72DF003F49F4 /* FixelText-Regular.ttf */; };
+		F6DE21272A6E72DF003F49F4 /* FixelText-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6DE20F62A6E72DF003F49F4 /* FixelText-Bold.ttf */; };
+		F6DE21282A6E72DF003F49F4 /* FixelText-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6DE20F72A6E72DF003F49F4 /* FixelText-Thin.ttf */; };
+		F6DE21292A6E72DF003F49F4 /* FixelText-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6DE20F82A6E72DF003F49F4 /* FixelText-Medium.ttf */; };
+		F6DE21542A6E7B43003F49F4 /* UIView+rotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DE21532A6E7B43003F49F4 /* UIView+rotation.swift */; };
+		F6DE21562A6E7C49003F49F4 /* Premium.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6DE21552A6E7C49003F49F4 /* Premium.storyboard */; };
+		F6DE21592A6E7CBD003F49F4 /* PremiumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DE21582A6E7CBD003F49F4 /* PremiumViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,11 +52,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F6B170462A6E93B2002A7BD2 /* MainTranslatorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTranslatorCell.swift; sourceTree = "<group>"; };
+		F6B1704A2A6E93EC002A7BD2 /* MainTranslatorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTranslatorCell.xib; sourceTree = "<group>"; };
+		F6C0D30C2A6E92CC00418837 /* MainTranslatoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTranslatoreViewController.swift; sourceTree = "<group>"; };
 		F6DE20B22A6E6A7F003F49F4 /* Translator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Translator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6DE20B52A6E6A7F003F49F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6DE20B72A6E6A7F003F49F4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F6DE20B92A6E6A7F003F49F4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F6DE20BC2A6E6A7F003F49F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F6DE20BC2A6E6A7F003F49F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainTranslator.storyboard; sourceTree = "<group>"; };
 		F6DE20BE2A6E6A80003F49F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F6DE20C12A6E6A80003F49F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F6DE20C32A6E6A80003F49F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +67,20 @@
 		F6DE20D22A6E6A80003F49F4 /* TranslatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TranslatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6DE20D62A6E6A80003F49F4 /* TranslatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslatorUITests.swift; sourceTree = "<group>"; };
 		F6DE20D82A6E6A80003F49F4 /* TranslatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F6DE20EA2A6E6CFE003F49F4 /* SplashScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SplashScreen.storyboard; sourceTree = "<group>"; };
+		F6DE20EC2A6E6DD2003F49F4 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
+		F6DE20EF2A6E7273003F49F4 /* Sriracha-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sriracha-Regular.ttf"; sourceTree = "<group>"; };
+		F6DE20F12A6E72DE003F49F4 /* FixelText-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FixelText-Light.ttf"; sourceTree = "<group>"; };
+		F6DE20F22A6E72DE003F49F4 /* FixelText-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FixelText-ExtraLight.ttf"; sourceTree = "<group>"; };
+		F6DE20F32A6E72DE003F49F4 /* FixelText-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FixelText-SemiBold.ttf"; sourceTree = "<group>"; };
+		F6DE20F42A6E72DE003F49F4 /* FixelText-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FixelText-Black.ttf"; sourceTree = "<group>"; };
+		F6DE20F52A6E72DF003F49F4 /* FixelText-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FixelText-Regular.ttf"; sourceTree = "<group>"; };
+		F6DE20F62A6E72DF003F49F4 /* FixelText-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FixelText-Bold.ttf"; sourceTree = "<group>"; };
+		F6DE20F72A6E72DF003F49F4 /* FixelText-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FixelText-Thin.ttf"; sourceTree = "<group>"; };
+		F6DE20F82A6E72DF003F49F4 /* FixelText-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FixelText-Medium.ttf"; sourceTree = "<group>"; };
+		F6DE21532A6E7B43003F49F4 /* UIView+rotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+rotation.swift"; sourceTree = "<group>"; };
+		F6DE21552A6E7C49003F49F4 /* Premium.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Premium.storyboard; sourceTree = "<group>"; };
+		F6DE21582A6E7CBD003F49F4 /* PremiumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +108,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F6B170452A6E9376002A7BD2 /* ViewContollerCells */ = {
+			isa = PBXGroup;
+			children = (
+				F6B170482A6E93B5002A7BD2 /* MainTranslator */,
+			);
+			path = ViewContollerCells;
+			sourceTree = "<group>";
+		};
+		F6B170482A6E93B5002A7BD2 /* MainTranslator */ = {
+			isa = PBXGroup;
+			children = (
+				F6B170462A6E93B2002A7BD2 /* MainTranslatorCell.swift */,
+			);
+			path = MainTranslator;
+			sourceTree = "<group>";
+		};
+		F6B170492A6E93DD002A7BD2 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F6B1704A2A6E93EC002A7BD2 /* MainTranslatorCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		F6C0D30B2A6E928500418837 /* MainTranslatorViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F6C0D30C2A6E92CC00418837 /* MainTranslatoreViewController.swift */,
+			);
+			path = MainTranslatorViewControllers;
+			sourceTree = "<group>";
+		};
 		F6DE20A92A6E6A7F003F49F4 = {
 			isa = PBXGroup;
 			children = (
@@ -99,13 +163,10 @@
 		F6DE20B42A6E6A7F003F49F4 /* Translator */ = {
 			isa = PBXGroup;
 			children = (
-				F6DE20B52A6E6A7F003F49F4 /* AppDelegate.swift */,
-				F6DE20B72A6E6A7F003F49F4 /* SceneDelegate.swift */,
-				F6DE20B92A6E6A7F003F49F4 /* ViewController.swift */,
-				F6DE20BB2A6E6A7F003F49F4 /* Main.storyboard */,
-				F6DE20BE2A6E6A80003F49F4 /* Assets.xcassets */,
-				F6DE20C02A6E6A80003F49F4 /* LaunchScreen.storyboard */,
 				F6DE20C32A6E6A80003F49F4 /* Info.plist */,
+				F6DE20E72A6E6B14003F49F4 /* Classes */,
+				F6DE20E52A6E6AFB003F49F4 /* Resources */,
+				F6DE20BE2A6E6A80003F49F4 /* Assets.xcassets */,
 			);
 			path = Translator;
 			sourceTree = "<group>";
@@ -125,6 +186,81 @@
 				F6DE20D82A6E6A80003F49F4 /* TranslatorUITestsLaunchTests.swift */,
 			);
 			path = TranslatorUITests;
+			sourceTree = "<group>";
+		};
+		F6DE20E52A6E6AFB003F49F4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F6B170492A6E93DD002A7BD2 /* Cells */,
+				F6DE20E62A6E6B06003F49F4 /* Storyboards */,
+				F6DE20B52A6E6A7F003F49F4 /* AppDelegate.swift */,
+				F6DE20B72A6E6A7F003F49F4 /* SceneDelegate.swift */,
+				F6DE20C02A6E6A80003F49F4 /* LaunchScreen.storyboard */,
+				F6DE20EE2A6E7259003F49F4 /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F6DE20E62A6E6B06003F49F4 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				F6DE20BB2A6E6A7F003F49F4 /* MainTranslator.storyboard */,
+				F6DE20EA2A6E6CFE003F49F4 /* SplashScreen.storyboard */,
+				F6DE21552A6E7C49003F49F4 /* Premium.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		F6DE20E72A6E6B14003F49F4 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F6DE21522A6E7B3F003F49F4 /* Helpers */,
+				F6B170452A6E9376002A7BD2 /* ViewContollerCells */,
+				F6DE20E82A6E6B1B003F49F4 /* ViewControllers */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		F6DE20E82A6E6B1B003F49F4 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F6C0D30B2A6E928500418837 /* MainTranslatorViewControllers */,
+				F6DE21572A6E7CA7003F49F4 /* PremiumViewControllers */,
+				F6DE20EC2A6E6DD2003F49F4 /* SplashScreenViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F6DE20EE2A6E7259003F49F4 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F6DE20F42A6E72DE003F49F4 /* FixelText-Black.ttf */,
+				F6DE20F62A6E72DF003F49F4 /* FixelText-Bold.ttf */,
+				F6DE20F22A6E72DE003F49F4 /* FixelText-ExtraLight.ttf */,
+				F6DE20F12A6E72DE003F49F4 /* FixelText-Light.ttf */,
+				F6DE20F82A6E72DF003F49F4 /* FixelText-Medium.ttf */,
+				F6DE20F52A6E72DF003F49F4 /* FixelText-Regular.ttf */,
+				F6DE20F32A6E72DE003F49F4 /* FixelText-SemiBold.ttf */,
+				F6DE20F72A6E72DF003F49F4 /* FixelText-Thin.ttf */,
+				F6DE20EF2A6E7273003F49F4 /* Sriracha-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		F6DE21522A6E7B3F003F49F4 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				F6DE21532A6E7B43003F49F4 /* UIView+rotation.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		F6DE21572A6E7CA7003F49F4 /* PremiumViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F6DE21582A6E7CBD003F49F4 /* PremiumViewController.swift */,
+			);
+			path = PremiumViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,9 +367,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6DE20EB2A6E6CFE003F49F4 /* SplashScreen.storyboard in Resources */,
+				F6DE21272A6E72DF003F49F4 /* FixelText-Bold.ttf in Resources */,
 				F6DE20C22A6E6A80003F49F4 /* LaunchScreen.storyboard in Resources */,
 				F6DE20BF2A6E6A80003F49F4 /* Assets.xcassets in Resources */,
-				F6DE20BD2A6E6A7F003F49F4 /* Main.storyboard in Resources */,
+				F6B1704B2A6E93EC002A7BD2 /* MainTranslatorCell.xib in Resources */,
+				F6DE21242A6E72DF003F49F4 /* FixelText-SemiBold.ttf in Resources */,
+				F6DE20BD2A6E6A7F003F49F4 /* MainTranslator.storyboard in Resources */,
+				F6DE21562A6E7C49003F49F4 /* Premium.storyboard in Resources */,
+				F6DE21252A6E72DF003F49F4 /* FixelText-Black.ttf in Resources */,
+				F6DE21282A6E72DF003F49F4 /* FixelText-Thin.ttf in Resources */,
+				F6DE21232A6E72DF003F49F4 /* FixelText-ExtraLight.ttf in Resources */,
+				F6DE20F02A6E7273003F49F4 /* Sriracha-Regular.ttf in Resources */,
+				F6DE21222A6E72DF003F49F4 /* FixelText-Light.ttf in Resources */,
+				F6DE21262A6E72DF003F49F4 /* FixelText-Regular.ttf in Resources */,
+				F6DE21292A6E72DF003F49F4 /* FixelText-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +406,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6DE20BA2A6E6A7F003F49F4 /* ViewController.swift in Sources */,
+				F6DE21542A6E7B43003F49F4 /* UIView+rotation.swift in Sources */,
+				F6B170472A6E93B2002A7BD2 /* MainTranslatorCell.swift in Sources */,
+				F6DE21592A6E7CBD003F49F4 /* PremiumViewController.swift in Sources */,
+				F6DE20ED2A6E6DD2003F49F4 /* SplashScreenViewController.swift in Sources */,
 				F6DE20B62A6E6A7F003F49F4 /* AppDelegate.swift in Sources */,
 				F6DE20B82A6E6A7F003F49F4 /* SceneDelegate.swift in Sources */,
+				F6C0D30D2A6E92CC00418837 /* MainTranslatoreViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,12 +449,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F6DE20BB2A6E6A7F003F49F4 /* Main.storyboard */ = {
+		F6DE20BB2A6E6A7F003F49F4 /* MainTranslator.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				F6DE20BC2A6E6A7F003F49F4 /* Base */,
 			);
-			name = Main.storyboard;
+			name = MainTranslator.storyboard;
 			sourceTree = "<group>";
 		};
 		F6DE20C02A6E6A80003F49F4 /* LaunchScreen.storyboard */ = {

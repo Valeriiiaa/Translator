@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Sriracha-Regular.ttf">
+            <string>Sriracha-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Splash Screen View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="SplashScreenViewController" id="Y6W-OH-hqX" customClass="SplashScreenViewController" customModule="Translator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradientBackgroundSplash" translatesAutoresizingMaskIntoConstraints="NO" id="0J4-hk-jm9">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splashScreenMainPicture" translatesAutoresizingMaskIntoConstraints="NO" id="VAV-Cv-AUr">
+                                <rect key="frame" x="53" y="228" width="266" height="168.66666666666663"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gain new experience using our Voice Translator" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pBs-HN-gZ0">
+                                <rect key="frame" x="30" y="425.66666666666669" width="330" height="71"/>
+                                <fontDescription key="fontDescription" name="Sriracha-Regular" family="Sriracha" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g3Y-1l-fZM">
+                                <rect key="frame" x="125" y="501.66666666666674" width="140" height="152"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Iup-JZ-G1i">
+                                        <rect key="frame" x="0.0" y="0.0" width="140" height="152"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loader" translatesAutoresizingMaskIntoConstraints="NO" id="AS4-Ci-Oaf">
+                                        <rect key="frame" x="42.666666666666657" y="48.666666666666686" width="55" height="55"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="55" id="BCN-IF-m2f"/>
+                                            <constraint firstAttribute="height" constant="55" id="LN7-Tz-5QK"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Iup-JZ-G1i" secondAttribute="bottom" id="6zK-ta-Mtc"/>
+                                    <constraint firstItem="Iup-JZ-G1i" firstAttribute="leading" secondItem="g3Y-1l-fZM" secondAttribute="leading" id="9o8-qm-858"/>
+                                    <constraint firstAttribute="trailing" secondItem="Iup-JZ-G1i" secondAttribute="trailing" id="Dcg-y1-cF9"/>
+                                    <constraint firstItem="AS4-Ci-Oaf" firstAttribute="centerY" secondItem="g3Y-1l-fZM" secondAttribute="centerY" id="kRr-ro-hf0"/>
+                                    <constraint firstItem="AS4-Ci-Oaf" firstAttribute="centerX" secondItem="g3Y-1l-fZM" secondAttribute="centerX" id="o8b-Ag-8Vv"/>
+                                    <constraint firstAttribute="width" constant="140" id="rNR-IY-cri"/>
+                                    <constraint firstItem="Iup-JZ-G1i" firstAttribute="top" secondItem="g3Y-1l-fZM" secondAttribute="top" id="sO2-ZW-bsy"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="VAV-Cv-AUr" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="181" id="68y-dQ-ONl"/>
+                            <constraint firstItem="pBs-HN-gZ0" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="BaA-cZ-ln6"/>
+                            <constraint firstAttribute="trailing" secondItem="pBs-HN-gZ0" secondAttribute="trailing" constant="30" id="Igj-0P-oCn"/>
+                            <constraint firstItem="pBs-HN-gZ0" firstAttribute="top" secondItem="VAV-Cv-AUr" secondAttribute="bottom" constant="29" id="OkM-4c-4Tu"/>
+                            <constraint firstItem="0J4-hk-jm9" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="SGG-X8-BdO"/>
+                            <constraint firstItem="g3Y-1l-fZM" firstAttribute="height" secondItem="0J4-hk-jm9" secondAttribute="height" multiplier="0.18" id="WxE-Yf-fdi"/>
+                            <constraint firstAttribute="bottom" secondItem="0J4-hk-jm9" secondAttribute="bottom" id="Y3v-Av-ugv"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="0J4-hk-jm9" secondAttribute="trailing" id="fko-qr-hld"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="VAV-Cv-AUr" secondAttribute="trailing" constant="71" id="hoE-Ao-oMw"/>
+                            <constraint firstItem="VAV-Cv-AUr" firstAttribute="height" secondItem="0J4-hk-jm9" secondAttribute="height" multiplier="0.2" id="j2D-Ct-8gS"/>
+                            <constraint firstItem="g3Y-1l-fZM" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="jK4-bw-fLi"/>
+                            <constraint firstItem="g3Y-1l-fZM" firstAttribute="top" secondItem="pBs-HN-gZ0" secondAttribute="bottom" constant="5" id="ky4-6O-b07"/>
+                            <constraint firstItem="0J4-hk-jm9" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="ldQ-wz-bnS"/>
+                            <constraint firstItem="VAV-Cv-AUr" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="53" id="r8Z-ff-Cbu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundImage" destination="Iup-JZ-G1i" id="rb8-GM-56A"/>
+                        <outlet property="loaderImage" destination="AS4-Ci-Oaf" id="xXc-kA-Tpb"/>
+                        <outlet property="textLabel" destination="pBs-HN-gZ0" id="Lel-0x-Api"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="48" y="-2"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="gradientBackgroundSplash" width="360" height="800"/>
+        <image name="loader" width="55" height="55"/>
+        <image name="splashScreenMainPicture" width="236" height="160"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

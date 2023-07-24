@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="FixelText-Bold.ttf">
+            <string>FixelText-Bold</string>
+        </array>
+        <array key="FixelText-Medium.ttf">
+            <string>FixelText-Medium</string>
+        </array>
+        <array key="FixelText-Regular.ttf">
+            <string>FixelText-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Premium View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="PremiumViewController" id="Y6W-OH-hqX" customClass="PremiumViewController" customModule="Translator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="premiumBackground" translatesAutoresizingMaskIntoConstraints="NO" id="pp3-nK-eBv">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fgt-OR-LYd">
+                                <rect key="frame" x="24" y="55" width="24" height="24"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="close"/>
+                                <connections>
+                                    <action selector="closeButtonDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="mRg-X1-hGr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PoQ-0N-Hd0">
+                                <rect key="frame" x="294" y="52" width="57" height="30"/>
+                                <fontDescription key="fontDescription" name="FixelText-Medium" family="Fixel Text" pointSize="16"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Restore">
+                                    <color key="titleColor" name="LabelDarkBlue"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gain new experience just for $3,99 using our Voice Translator" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c3N-9M-coc">
+                                <rect key="frame" x="42" y="718" width="291" height="35"/>
+                                <fontDescription key="fontDescription" name="FixelText-Regular" family="Fixel Text" pointSize="16"/>
+                                <color key="textColor" name="LabelColorLight"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oWo-Mp-APu">
+                                <rect key="frame" x="12.666666666666657" y="638" width="350" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="OHe-0O-uWl"/>
+                                    <constraint firstAttribute="width" constant="350" id="hfF-Xc-lqe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="FixelText-Bold" family="Fixel Text" pointSize="16"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="BUY NOW">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="buyNowButtonDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="iLQ-YK-cjA"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dya-fl-D2f">
+                                <rect key="frame" x="29" y="466" width="316" height="150"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="38" translatesAutoresizingMaskIntoConstraints="NO" id="uJe-dp-i5P">
+                                        <rect key="frame" x="25" y="34" width="8" height="82"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stick" translatesAutoresizingMaskIntoConstraints="NO" id="D45-4c-EmX">
+                                                <rect key="frame" x="0.0" y="0.0" width="8" height="2"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stick" translatesAutoresizingMaskIntoConstraints="NO" id="AGk-gw-zJG">
+                                                <rect key="frame" x="0.0" y="40" width="8" height="2"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stick" translatesAutoresizingMaskIntoConstraints="NO" id="eYy-wm-Dfa">
+                                                <rect key="frame" x="0.0" y="80" width="8" height="2"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="uvx-KN-y9P">
+                                        <rect key="frame" x="48" y="25" width="238" height="98"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unlimited Voice Translator" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cki-NZ-13A">
+                                                <rect key="frame" x="0.0" y="0.0" width="238" height="18.666666666666668"/>
+                                                <fontDescription key="fontDescription" name="FixelText-Medium" family="Fixel Text" pointSize="17"/>
+                                                <color key="textColor" name="BlueButton"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unlimited Camera Translator" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G3x-pA-tsc">
+                                                <rect key="frame" x="0.0" y="38.666666666666629" width="238" height="19.666666666666671"/>
+                                                <fontDescription key="fontDescription" name="FixelText-Medium" family="Fixel Text" pointSize="18"/>
+                                                <color key="textColor" name="BlueButton"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100% No Annoying ADS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqB-D4-qpj">
+                                                <rect key="frame" x="0.0" y="78.333333333333371" width="238" height="19.666666666666671"/>
+                                                <fontDescription key="fontDescription" name="FixelText-Medium" family="Fixel Text" pointSize="18"/>
+                                                <color key="textColor" name="BlueButton"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="uJe-dp-i5P" firstAttribute="top" secondItem="dya-fl-D2f" secondAttribute="top" constant="34" id="4Od-6H-1U3"/>
+                                    <constraint firstItem="uvx-KN-y9P" firstAttribute="leading" secondItem="uJe-dp-i5P" secondAttribute="trailing" constant="15" id="CQH-o9-Bpz"/>
+                                    <constraint firstItem="uJe-dp-i5P" firstAttribute="leading" secondItem="dya-fl-D2f" secondAttribute="leading" constant="25" id="GYw-0F-F1I"/>
+                                    <constraint firstItem="uvx-KN-y9P" firstAttribute="top" secondItem="dya-fl-D2f" secondAttribute="top" constant="25" id="VQj-g8-aKK"/>
+                                    <constraint firstAttribute="height" constant="150" id="lZ4-PC-N7I"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lifeTimeLabel" translatesAutoresizingMaskIntoConstraints="NO" id="ljI-dv-HIa">
+                                <rect key="frame" x="28" y="397" width="320" height="49"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="pp3-nK-eBv" secondAttribute="bottom" id="35D-jL-6SL"/>
+                            <constraint firstAttribute="trailing" secondItem="c3N-9M-coc" secondAttribute="trailing" constant="42" id="3R9-ft-r0g"/>
+                            <constraint firstItem="oWo-Mp-APu" firstAttribute="top" secondItem="dya-fl-D2f" secondAttribute="bottom" constant="22" id="4lq-vF-Mvf"/>
+                            <constraint firstItem="Fgt-OR-LYd" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="5" id="4uY-1h-jCc"/>
+                            <constraint firstItem="pp3-nK-eBv" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="5EB-pn-drl"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="dya-fl-D2f" secondAttribute="trailing" constant="30" id="5WI-9U-amd"/>
+                            <constraint firstItem="dya-fl-D2f" firstAttribute="top" secondItem="ljI-dv-HIa" secondAttribute="bottom" constant="20" id="8kz-57-mjA"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ljI-dv-HIa" secondAttribute="trailing" constant="27" id="Ivx-ka-E9h"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="c3N-9M-coc" secondAttribute="bottom" constant="25" id="JvD-Lw-LT9"/>
+                            <constraint firstItem="oWo-Mp-APu" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="KKH-42-YKI"/>
+                            <constraint firstItem="ljI-dv-HIa" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="28" id="SCk-Jr-alh"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="pp3-nK-eBv" secondAttribute="trailing" id="VYR-DN-2q8"/>
+                            <constraint firstItem="PoQ-0N-Hd0" firstAttribute="centerY" secondItem="Fgt-OR-LYd" secondAttribute="centerY" id="YM4-U0-MeR"/>
+                            <constraint firstItem="Fgt-OR-LYd" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="aHr-UB-A3Z"/>
+                            <constraint firstItem="dya-fl-D2f" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="29" id="fYd-Ej-88z"/>
+                            <constraint firstItem="pp3-nK-eBv" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="kFb-7j-MdA"/>
+                            <constraint firstItem="c3N-9M-coc" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="42" id="rRa-b8-ije"/>
+                            <constraint firstItem="c3N-9M-coc" firstAttribute="top" secondItem="oWo-Mp-APu" secondAttribute="bottom" constant="28" id="uxS-tn-ptc"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="PoQ-0N-Hd0" secondAttribute="trailing" constant="24" id="z8R-ph-EXs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundTextView" destination="dya-fl-D2f" id="m3d-xD-Ugh"/>
+                        <outlet property="buyNowButton" destination="oWo-Mp-APu" id="f9m-dW-ec9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="29.600000000000001" y="3.6945812807881775"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="close" width="24" height="24"/>
+        <image name="lifeTimeLabel" width="322" height="49"/>
+        <image name="premiumBackground" width="360" height="800"/>
+        <image name="stick" width="8" height="2"/>
+        <namedColor name="BlueButton">
+            <color red="0.31400001049041748" green="0.55699998140335083" blue="0.96100002527236938" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LabelColorLight">
+            <color red="0.62699997425079346" green="0.6589999794960022" blue="0.76899999380111694" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LabelDarkBlue">
+            <color red="0.23499999940395355" green="0.28200000524520874" blue="0.3529999852180481" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
