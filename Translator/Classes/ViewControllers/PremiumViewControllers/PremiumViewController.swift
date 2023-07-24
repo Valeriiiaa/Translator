@@ -38,6 +38,8 @@ class PremiumViewController: UIViewController {
     }
     
     @IBAction func closeButtonDidTap(_ sender: Any) {
+        let entarcen = UIStoryboard(name: "MainTranslator", bundle: nil).instantiateViewController(identifier: "MainTranslatoreViewController")
+        self.navigationController?.pushViewController(entarcen, animated: true)
     }
     
     @IBAction func buyNowButtonDidTap(_ sender: Any) {

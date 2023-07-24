@@ -9,14 +9,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="FixelText-Bold.ttf">
-            <string>FixelText-Bold</string>
-        </array>
         <array key="FixelText-Medium.ttf">
             <string>FixelText-Medium</string>
         </array>
         <array key="FixelText-Regular.ttf">
             <string>FixelText-Regular</string>
+        </array>
+        <array key="FixelText-SemiBold.ttf">
+            <string>FixelText-SemiBold</string>
         </array>
     </customFonts>
     <scenes>
@@ -59,7 +59,7 @@
                                     <constraint firstAttribute="height" constant="52" id="OHe-0O-uWl"/>
                                     <constraint firstAttribute="width" constant="350" id="hfF-Xc-lqe"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="FixelText-Bold" family="Fixel Text" pointSize="16"/>
+                                <fontDescription key="fontDescription" name="FixelText-SemiBold" family="Fixel Text" pointSize="16"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="BUY NOW">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

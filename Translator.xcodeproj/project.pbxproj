@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F62893592A6E999C00B7A36C /* MainTranslatorModelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62893582A6E999C00B7A36C /* MainTranslatorModelCell.swift */; };
+		F628935D2A6EBB9100B7A36C /* DrawerPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F628935C2A6EBB9100B7A36C /* DrawerPresentationController.swift */; };
+		F62893602A6EBBD900B7A36C /* DrawerSlideAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F628935F2A6EBBD900B7A36C /* DrawerSlideAnimation.swift */; };
+		F62893622A6EBC2700B7A36C /* DrawerTransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62893612A6EBC2700B7A36C /* DrawerTransitionManager.swift */; };
+		F62893652A6EBCAD00B7A36C /* DrawerMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62893642A6EBCAD00B7A36C /* DrawerMenuViewController.swift */; };
+		F62893692A6EBE1000B7A36C /* PremiumImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F62893682A6EBE1000B7A36C /* PremiumImageCell.xib */; };
+		F628936B2A6EBE2100B7A36C /* MenuItemsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F628936A2A6EBE2100B7A36C /* MenuItemsCell.xib */; };
+		F628936E2A6EC02000B7A36C /* PremiumImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F628936D2A6EC02000B7A36C /* PremiumImageCell.swift */; };
+		F62893702A6EC12800B7A36C /* MenuItemsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F628936F2A6EC12800B7A36C /* MenuItemsCell.swift */; };
+		F62893752A6EC29D00B7A36C /* MenuItemsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62893742A6EC29D00B7A36C /* MenuItemsModel.swift */; };
+		F62893782A6EC38E00B7A36C /* DrawerMenuCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62893772A6EC38E00B7A36C /* DrawerMenuCellType.swift */; };
 		F6B170472A6E93B2002A7BD2 /* MainTranslatorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B170462A6E93B2002A7BD2 /* MainTranslatorCell.swift */; };
 		F6B1704B2A6E93EC002A7BD2 /* MainTranslatorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6B1704A2A6E93EC002A7BD2 /* MainTranslatorCell.xib */; };
 		F6C0D30D2A6E92CC00418837 /* MainTranslatoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C0D30C2A6E92CC00418837 /* MainTranslatoreViewController.swift */; };
@@ -52,6 +63,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F62893582A6E999C00B7A36C /* MainTranslatorModelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTranslatorModelCell.swift; sourceTree = "<group>"; };
+		F628935C2A6EBB9100B7A36C /* DrawerPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerPresentationController.swift; sourceTree = "<group>"; };
+		F628935F2A6EBBD900B7A36C /* DrawerSlideAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerSlideAnimation.swift; sourceTree = "<group>"; };
+		F62893612A6EBC2700B7A36C /* DrawerTransitionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerTransitionManager.swift; sourceTree = "<group>"; };
+		F62893642A6EBCAD00B7A36C /* DrawerMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerMenuViewController.swift; sourceTree = "<group>"; };
+		F62893682A6EBE1000B7A36C /* PremiumImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PremiumImageCell.xib; sourceTree = "<group>"; };
+		F628936A2A6EBE2100B7A36C /* MenuItemsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuItemsCell.xib; sourceTree = "<group>"; };
+		F628936D2A6EC02000B7A36C /* PremiumImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremiumImageCell.swift; sourceTree = "<group>"; };
+		F628936F2A6EC12800B7A36C /* MenuItemsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemsCell.swift; sourceTree = "<group>"; };
+		F62893742A6EC29D00B7A36C /* MenuItemsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemsModel.swift; sourceTree = "<group>"; };
+		F62893772A6EC38E00B7A36C /* DrawerMenuCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerMenuCellType.swift; sourceTree = "<group>"; };
 		F6B170462A6E93B2002A7BD2 /* MainTranslatorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTranslatorCell.swift; sourceTree = "<group>"; };
 		F6B1704A2A6E93EC002A7BD2 /* MainTranslatorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTranslatorCell.xib; sourceTree = "<group>"; };
 		F6C0D30C2A6E92CC00418837 /* MainTranslatoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTranslatoreViewController.swift; sourceTree = "<group>"; };
@@ -108,9 +130,97 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F62893572A6E998700B7A36C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F62893762A6EC38300B7A36C /* Enums */,
+				F62893712A6EC28100B7A36C /* DrawerMenuOptions */,
+				F62893582A6E999C00B7A36C /* MainTranslatorModelCell.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F628935A2A6EBA1600B7A36C /* DrawerMenu */ = {
+			isa = PBXGroup;
+			children = (
+				F62893632A6EBC4F00B7A36C /* DrawerMenuController */,
+				F628935B2A6EBB5F00B7A36C /* DrawerPresentationController */,
+				F628935E2A6EBBBA00B7A36C /* SlideAnimation */,
+				F62893612A6EBC2700B7A36C /* DrawerTransitionManager.swift */,
+			);
+			path = DrawerMenu;
+			sourceTree = "<group>";
+		};
+		F628935B2A6EBB5F00B7A36C /* DrawerPresentationController */ = {
+			isa = PBXGroup;
+			children = (
+				F628935C2A6EBB9100B7A36C /* DrawerPresentationController.swift */,
+			);
+			path = DrawerPresentationController;
+			sourceTree = "<group>";
+		};
+		F628935E2A6EBBBA00B7A36C /* SlideAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				F628935F2A6EBBD900B7A36C /* DrawerSlideAnimation.swift */,
+			);
+			path = SlideAnimation;
+			sourceTree = "<group>";
+		};
+		F62893632A6EBC4F00B7A36C /* DrawerMenuController */ = {
+			isa = PBXGroup;
+			children = (
+				F62893642A6EBCAD00B7A36C /* DrawerMenuViewController.swift */,
+			);
+			path = DrawerMenuController;
+			sourceTree = "<group>";
+		};
+		F62893662A6EBDEF00B7A36C /* MainTranslator */ = {
+			isa = PBXGroup;
+			children = (
+				F6B1704A2A6E93EC002A7BD2 /* MainTranslatorCell.xib */,
+			);
+			path = MainTranslator;
+			sourceTree = "<group>";
+		};
+		F62893672A6EBDF900B7A36C /* DrawerMenuCells */ = {
+			isa = PBXGroup;
+			children = (
+				F62893682A6EBE1000B7A36C /* PremiumImageCell.xib */,
+				F628936A2A6EBE2100B7A36C /* MenuItemsCell.xib */,
+			);
+			path = DrawerMenuCells;
+			sourceTree = "<group>";
+		};
+		F628936C2A6EBFF100B7A36C /* DrawerMenuCells */ = {
+			isa = PBXGroup;
+			children = (
+				F628936D2A6EC02000B7A36C /* PremiumImageCell.swift */,
+				F628936F2A6EC12800B7A36C /* MenuItemsCell.swift */,
+			);
+			path = DrawerMenuCells;
+			sourceTree = "<group>";
+		};
+		F62893712A6EC28100B7A36C /* DrawerMenuOptions */ = {
+			isa = PBXGroup;
+			children = (
+				F62893742A6EC29D00B7A36C /* MenuItemsModel.swift */,
+			);
+			path = DrawerMenuOptions;
+			sourceTree = "<group>";
+		};
+		F62893762A6EC38300B7A36C /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				F62893772A6EC38E00B7A36C /* DrawerMenuCellType.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
 		F6B170452A6E9376002A7BD2 /* ViewContollerCells */ = {
 			isa = PBXGroup;
 			children = (
+				F628936C2A6EBFF100B7A36C /* DrawerMenuCells */,
 				F6B170482A6E93B5002A7BD2 /* MainTranslator */,
 			);
 			path = ViewContollerCells;
@@ -127,7 +237,8 @@
 		F6B170492A6E93DD002A7BD2 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				F6B1704A2A6E93EC002A7BD2 /* MainTranslatorCell.xib */,
+				F62893672A6EBDF900B7A36C /* DrawerMenuCells */,
+				F62893662A6EBDEF00B7A36C /* MainTranslator */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -215,6 +326,8 @@
 			isa = PBXGroup;
 			children = (
 				F6DE21522A6E7B3F003F49F4 /* Helpers */,
+				F628935A2A6EBA1600B7A36C /* DrawerMenu */,
+				F62893572A6E998700B7A36C /* Models */,
 				F6B170452A6E9376002A7BD2 /* ViewContollerCells */,
 				F6DE20E82A6E6B1B003F49F4 /* ViewControllers */,
 			);
@@ -367,6 +480,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F628936B2A6EBE2100B7A36C /* MenuItemsCell.xib in Resources */,
 				F6DE20EB2A6E6CFE003F49F4 /* SplashScreen.storyboard in Resources */,
 				F6DE21272A6E72DF003F49F4 /* FixelText-Bold.ttf in Resources */,
 				F6DE20C22A6E6A80003F49F4 /* LaunchScreen.storyboard in Resources */,
@@ -374,6 +488,7 @@
 				F6B1704B2A6E93EC002A7BD2 /* MainTranslatorCell.xib in Resources */,
 				F6DE21242A6E72DF003F49F4 /* FixelText-SemiBold.ttf in Resources */,
 				F6DE20BD2A6E6A7F003F49F4 /* MainTranslator.storyboard in Resources */,
+				F62893692A6EBE1000B7A36C /* PremiumImageCell.xib in Resources */,
 				F6DE21562A6E7C49003F49F4 /* Premium.storyboard in Resources */,
 				F6DE21252A6E72DF003F49F4 /* FixelText-Black.ttf in Resources */,
 				F6DE21282A6E72DF003F49F4 /* FixelText-Thin.ttf in Resources */,
@@ -406,13 +521,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F62893592A6E999C00B7A36C /* MainTranslatorModelCell.swift in Sources */,
+				F62893702A6EC12800B7A36C /* MenuItemsCell.swift in Sources */,
+				F62893782A6EC38E00B7A36C /* DrawerMenuCellType.swift in Sources */,
 				F6DE21542A6E7B43003F49F4 /* UIView+rotation.swift in Sources */,
+				F62893652A6EBCAD00B7A36C /* DrawerMenuViewController.swift in Sources */,
 				F6B170472A6E93B2002A7BD2 /* MainTranslatorCell.swift in Sources */,
 				F6DE21592A6E7CBD003F49F4 /* PremiumViewController.swift in Sources */,
+				F62893752A6EC29D00B7A36C /* MenuItemsModel.swift in Sources */,
+				F628935D2A6EBB9100B7A36C /* DrawerPresentationController.swift in Sources */,
 				F6DE20ED2A6E6DD2003F49F4 /* SplashScreenViewController.swift in Sources */,
 				F6DE20B62A6E6A7F003F49F4 /* AppDelegate.swift in Sources */,
+				F628936E2A6EC02000B7A36C /* PremiumImageCell.swift in Sources */,
 				F6DE20B82A6E6A7F003F49F4 /* SceneDelegate.swift in Sources */,
+				F62893622A6EBC2700B7A36C /* DrawerTransitionManager.swift in Sources */,
 				F6C0D30D2A6E92CC00418837 /* MainTranslatoreViewController.swift in Sources */,
+				F62893602A6EBBD900B7A36C /* DrawerSlideAnimation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -594,7 +718,7 @@
 				INFOPLIST_FILE = Translator/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = MainTranslator;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -622,7 +746,7 @@
 				INFOPLIST_FILE = Translator/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = MainTranslator;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
