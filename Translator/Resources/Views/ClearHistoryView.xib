@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="FixelText-Bold.ttf">
+            <string>FixelText-Bold</string>
+        </array>
+        <array key="FixelText-Regular.ttf">
+            <string>FixelText-Regular</string>
+        </array>
+        <array key="FixelText-SemiBold.ttf">
+            <string>FixelText-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="ClearHistoryView" id="pPd-tE-NNI" customClass="ClearHistoryView" customModule="Translator" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Clear history?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C1b-3U-gIP">
+                    <rect key="frame" x="20" y="25" width="353" height="26.333333333333329"/>
+                    <fontDescription key="fontDescription" name="FixelText-Bold" family="Fixel Text" pointSize="24"/>
+                    <color key="textColor" red="0.31372549020000001" green="0.35294117650000001" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="stickClearHistory" translatesAutoresizingMaskIntoConstraints="NO" id="FG4-0c-smP">
+                    <rect key="frame" x="105" y="646" width="183" height="2"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vU2-0d-i03">
+                    <rect key="frame" x="10" y="673" width="373" height="35"/>
+                    <string key="text">Your chat will be permanently deleted. 
+Are you sure you want to proceed?</string>
+                    <fontDescription key="fontDescription" name="FixelText-Regular" family="Fixel Text" pointSize="16"/>
+                    <color key="textColor" red="0.62745098040000002" green="0.6588235294" blue="0.76862745099999996" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="wEY-Kj-Hlo">
+                    <rect key="frame" x="76.666666666666686" y="733" width="240" height="45"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Yz-Bc-5Xd">
+                            <rect key="frame" x="0.0" y="0.0" width="107" height="45"/>
+                            <color key="backgroundColor" name="BlueButton"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="107" id="1PW-RJ-8A5"/>
+                                <constraint firstAttribute="height" constant="45" id="igC-wh-nVJ"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="FixelText-SemiBold" family="Fixel Text" pointSize="18"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="YES">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="yesButtonDidTap:" destination="pPd-tE-NNI" eventType="touchUpInside" id="wOD-bF-kZu"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xgk-WT-Q25">
+                            <rect key="frame" x="133" y="0.0" width="107" height="45"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="107" id="1Tl-1k-d7o"/>
+                                <constraint firstAttribute="height" constant="45" id="vjI-FG-2zz"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="FixelText-SemiBold" family="Fixel Text" pointSize="18"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="NO">
+                                <color key="titleColor" name="BlueButton"/>
+                            </state>
+                            <connections>
+                                <action selector="noButtonDidTap:" destination="pPd-tE-NNI" eventType="touchUpInside" id="ub0-XQ-jZn"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="EIe-35-xhJ"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="vU2-0d-i03" secondAttribute="trailing" constant="10" id="Dmn-72-EFk"/>
+                <constraint firstItem="vU2-0d-i03" firstAttribute="leading" secondItem="EIe-35-xhJ" secondAttribute="leading" constant="10" id="Ggd-EU-skz"/>
+                <constraint firstItem="EIe-35-xhJ" firstAttribute="trailing" secondItem="C1b-3U-gIP" secondAttribute="trailing" constant="20" id="I3Z-v2-EII"/>
+                <constraint firstItem="vU2-0d-i03" firstAttribute="top" secondItem="FG4-0c-smP" secondAttribute="bottom" constant="25" id="Jig-Q0-b3c"/>
+                <constraint firstItem="C1b-3U-gIP" firstAttribute="leading" secondItem="EIe-35-xhJ" secondAttribute="leading" constant="20" id="LoE-97-Zu0"/>
+                <constraint firstItem="FG4-0c-smP" firstAttribute="top" secondItem="C1b-3U-gIP" secondAttribute="bottom" constant="25" id="Nfp-Vb-LZi"/>
+                <constraint firstItem="FG4-0c-smP" firstAttribute="centerX" secondItem="pPd-tE-NNI" secondAttribute="centerX" id="e8X-Sx-6LU"/>
+                <constraint firstItem="C1b-3U-gIP" firstAttribute="top" secondItem="pPd-tE-NNI" secondAttribute="top" constant="25" id="mWR-UO-ANZ"/>
+                <constraint firstItem="EIe-35-xhJ" firstAttribute="bottom" secondItem="wEY-Kj-Hlo" secondAttribute="bottom" constant="40" id="tF4-0n-RID"/>
+                <constraint firstItem="wEY-Kj-Hlo" firstAttribute="top" secondItem="vU2-0d-i03" secondAttribute="bottom" constant="25" id="uDa-z6-itU"/>
+                <constraint firstItem="wEY-Kj-Hlo" firstAttribute="centerX" secondItem="pPd-tE-NNI" secondAttribute="centerX" id="vdw-Gy-GAA"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="noButton" destination="Xgk-WT-Q25" id="Gwf-Z9-jYw"/>
+                <outlet property="yesButton" destination="1Yz-Bc-5Xd" id="oLB-Mx-lUR"/>
+            </connections>
+            <point key="canvasLocation" x="46.564885496183201" y="20.422535211267608"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="stickClearHistory" width="183" height="2"/>
+        <namedColor name="BlueButton">
+            <color red="0.31400001049041748" green="0.55699998140335083" blue="0.96100002527236938" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

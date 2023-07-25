@@ -10,7 +10,7 @@ import UIKit
 class DrawerMenuViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
-
+    
     static let shared = DrawerMenuViewController()
     
     public weak var drawerNavigationController: UINavigationController?
@@ -25,7 +25,7 @@ class DrawerMenuViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-}
+    }
     
     private let tableView: UITableView = {
         let table = UITableView()
@@ -63,7 +63,7 @@ class DrawerMenuViewController: UIViewController, UITableViewDelegate, UITableVi
     
     
     @objc func closeButtonDidTap(_ sender: UIButton) {
-       dismiss(animated: true)
+        dismiss(animated: true)
     }
     
     var models = [DrawerMenuCellType.premiumPicture, .itemsMenu(MenuItemsModel(label: "History", image: "history")), .itemsMenu(MenuItemsModel(label: "Share it", image: "shareIt")), .itemsMenu(MenuItemsModel(label: "Rate us", image: "rateUs")), .itemsMenu(MenuItemsModel(label: "Contact us", image: "contactUs")), .itemsMenu(MenuItemsModel(label: "Privacy Policy", image: "privacyPolicy"))]
@@ -88,12 +88,12 @@ class DrawerMenuViewController: UIViewController, UITableViewDelegate, UITableVi
         menuBottomLabel.translatesAutoresizingMaskIntoConstraints = false
         menuBottomLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         menuBottomLabel.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -50).isActive = true
-
-}
+        
+    }
     public func back() {
         drawerNavigationController?.setViewControllers([previousVC].compactMap({ $0 }), animated: true)
     }
-   
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         tableView.frame = CGRect(x: 0, y: view.safeAreaInsets.top + 60, width: view.bounds.size.width - 0, height: view.bounds.size.height)
@@ -110,12 +110,29 @@ class DrawerMenuViewController: UIViewController, UITableViewDelegate, UITableVi
         case .premiumPicture: break
         case .itemsMenu(let itemsMenuModel):
             (cell as? MenuItemsCell)?.configure(image: itemsMenuModel.image , label: itemsMenuModel.label)
-    }
+        }
         return cell
     }
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        <#code#>
-//    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        previousVC = drawerNavigationController?.viewControllers.last
+        switch indexPath.row {
+    case 0: openHistoryVC()
+    case 1: openHistoryVC()
+    case 2: openHistoryVC()
+    case 3: openHistoryVC()
+    case 4: openHistoryVC()
+    default: print ("ppp")
+    }
+}
 
+    private func openHistoryVC() {
+        let entrance = UIStoryboard(name: "History", bundle: nil).instantiateViewController(identifier: "HistoryViewController")
+        guard !(drawerNavigationController?.viewControllers.last is HistoryViewController) else {
+            dismiss(animated: true)
+            return
+        }
+        drawerNavigationController?.viewControllers = [entrance]
+        dismiss(animated: true)
+    }
 }

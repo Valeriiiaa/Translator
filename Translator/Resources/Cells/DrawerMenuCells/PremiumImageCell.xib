@@ -22,7 +22,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pemiumBackground" translatesAutoresizingMaskIntoConstraints="NO" id="bvj-DX-LR4">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="184"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393.66666666666669" height="184"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="bvj-DX-LR4" secondAttribute="height" multiplier="1.07:0.5" id="ULL-1F-YgR"/>
+                        </constraints>
                     </imageView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yi2-C0-Wv9">
                         <rect key="frame" x="31.666666666666657" y="181" width="330" height="42"/>
@@ -38,7 +41,7 @@
                         </state>
                     </button>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="62i-Ky-95T">
-                        <rect key="frame" x="0.0" y="305.66666666666669" width="393" height="1"/>
+                        <rect key="frame" x="0.0" y="252" width="393" height="1"/>
                         <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="Amm-hI-eXX"/>
@@ -55,7 +58,6 @@
                     <constraint firstItem="62i-Ky-95T" firstAttribute="leading" secondItem="9pX-xG-dq3" secondAttribute="leading" id="hTj-gl-VLM"/>
                     <constraint firstAttribute="bottom" secondItem="62i-Ky-95T" secondAttribute="bottom" id="jbm-Ak-qi4"/>
                     <constraint firstAttribute="trailing" secondItem="bvj-DX-LR4" secondAttribute="trailing" id="uJy-im-geV"/>
-                    <constraint firstItem="bvj-DX-LR4" firstAttribute="height" secondItem="9pX-xG-dq3" secondAttribute="height" multiplier="0.6" id="xtO-q3-bb6"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

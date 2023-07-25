@@ -22,6 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         navigationController.isNavigationBarHidden = true
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
+        DrawerMenuViewController.shared.drawerNavigationController = navigationController
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

@@ -43,9 +43,14 @@ extension MainTranslatoreViewController: UICollectionViewDelegateFlowLayout, UIC
         return UIEdgeInsets(top: 19, left: 50, bottom: 19, right: 50)
     }
     
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        <#code#>
-//    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if indexPath.row == 0 {
+            let entrance = UIStoryboard(name: "TranslatorText", bundle: nil).instantiateViewController(identifier: "TranslatorTextViewController")
+            navigationController?.pushViewController(entrance, animated: true)
+        } else {
+            return
+        }
+    }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let item = models[indexPath.row]
