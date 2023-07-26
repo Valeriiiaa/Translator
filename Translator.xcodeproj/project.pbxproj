@@ -20,11 +20,20 @@
 		F62893752A6EC29D00B7A36C /* MenuItemsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62893742A6EC29D00B7A36C /* MenuItemsModel.swift */; };
 		F62893782A6EC38E00B7A36C /* DrawerMenuCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62893772A6EC38E00B7A36C /* DrawerMenuCellType.swift */; };
 		F62893872A6FC53D00B7A36C /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F62893862A6FC53D00B7A36C /* History.storyboard */; };
+		F68C37002A71328500AD0A1F /* EmptyChatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F68C36FF2A71328500AD0A1F /* EmptyChatCell.xib */; };
+		F68C37022A71329300AD0A1F /* EmptyChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68C37012A71329300AD0A1F /* EmptyChatCell.swift */; };
 		F6B170472A6E93B2002A7BD2 /* MainTranslatorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B170462A6E93B2002A7BD2 /* MainTranslatorCell.swift */; };
 		F6B1704B2A6E93EC002A7BD2 /* MainTranslatorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6B1704A2A6E93EC002A7BD2 /* MainTranslatorCell.xib */; };
 		F6C0D30D2A6E92CC00418837 /* MainTranslatoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C0D30C2A6E92CC00418837 /* MainTranslatoreViewController.swift */; };
 		F6D2C8B22A7004A200F7D7EF /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D2C8B12A7004A200F7D7EF /* TextField.swift */; };
 		F6D2C8B62A70074A00F7D7EF /* TextMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D2C8B52A70074A00F7D7EF /* TextMessageView.swift */; };
+		F6D2C8CB2A711AA200F7D7EF /* VoiceChat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6D2C8CA2A711AA200F7D7EF /* VoiceChat.storyboard */; };
+		F6D2C8CD2A711AB400F7D7EF /* VoiceChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D2C8CC2A711AB400F7D7EF /* VoiceChatViewController.swift */; };
+		F6D2C8D02A71203400F7D7EF /* LeftMessagesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6D2C8CF2A71203400F7D7EF /* LeftMessagesCell.xib */; };
+		F6D2C8D22A71203C00F7D7EF /* RightMessagesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6D2C8D12A71203C00F7D7EF /* RightMessagesCell.xib */; };
+		F6D2C8D52A71206D00F7D7EF /* LeftMessagesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D2C8D42A71206D00F7D7EF /* LeftMessagesCell.swift */; };
+		F6D2C8D72A71207C00F7D7EF /* RightMessegesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D2C8D62A71207C00F7D7EF /* RightMessegesCell.swift */; };
+		F6D2C8DB2A71268500F7D7EF /* MessagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D2C8DA2A71268500F7D7EF /* MessagesModel.swift */; };
 		F6D622FA2A6FC9D800D24F16 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D622F92A6FC9D800D24F16 /* HistoryViewController.swift */; };
 		F6D622FC2A6FCC7000D24F16 /* HistoryEmptyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D622FB2A6FCC7000D24F16 /* HistoryEmptyTableViewCell.swift */; };
 		F6D622FF2A6FCC8600D24F16 /* HistoryFullTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D622FE2A6FCC8600D24F16 /* HistoryFullTableViewCell.swift */; };
@@ -83,6 +92,19 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		F6D2C8C92A7023C900F7D7EF /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		F62893582A6E999C00B7A36C /* MainTranslatorModelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTranslatorModelCell.swift; sourceTree = "<group>"; };
 		F628935C2A6EBB9100B7A36C /* DrawerPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerPresentationController.swift; sourceTree = "<group>"; };
@@ -96,11 +118,23 @@
 		F62893742A6EC29D00B7A36C /* MenuItemsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemsModel.swift; sourceTree = "<group>"; };
 		F62893772A6EC38E00B7A36C /* DrawerMenuCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerMenuCellType.swift; sourceTree = "<group>"; };
 		F62893862A6FC53D00B7A36C /* History.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
+		F68C36FF2A71328500AD0A1F /* EmptyChatCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyChatCell.xib; sourceTree = "<group>"; };
+		F68C37012A71329300AD0A1F /* EmptyChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyChatCell.swift; sourceTree = "<group>"; };
 		F6B170462A6E93B2002A7BD2 /* MainTranslatorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTranslatorCell.swift; sourceTree = "<group>"; };
 		F6B1704A2A6E93EC002A7BD2 /* MainTranslatorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTranslatorCell.xib; sourceTree = "<group>"; };
 		F6C0D30C2A6E92CC00418837 /* MainTranslatoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTranslatoreViewController.swift; sourceTree = "<group>"; };
 		F6D2C8B12A7004A200F7D7EF /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		F6D2C8B52A70074A00F7D7EF /* TextMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextMessageView.swift; sourceTree = "<group>"; };
+		F6D2C8BD2A7023C900F7D7EF /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		F6D2C8C02A7023C900F7D7EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		F6D2C8C22A7023C900F7D7EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6D2C8CA2A711AA200F7D7EF /* VoiceChat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VoiceChat.storyboard; sourceTree = "<group>"; };
+		F6D2C8CC2A711AB400F7D7EF /* VoiceChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceChatViewController.swift; sourceTree = "<group>"; };
+		F6D2C8CF2A71203400F7D7EF /* LeftMessagesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeftMessagesCell.xib; sourceTree = "<group>"; };
+		F6D2C8D12A71203C00F7D7EF /* RightMessagesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RightMessagesCell.xib; sourceTree = "<group>"; };
+		F6D2C8D42A71206D00F7D7EF /* LeftMessagesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMessagesCell.swift; sourceTree = "<group>"; };
+		F6D2C8D62A71207C00F7D7EF /* RightMessegesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightMessegesCell.swift; sourceTree = "<group>"; };
+		F6D2C8DA2A71268500F7D7EF /* MessagesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesModel.swift; sourceTree = "<group>"; };
 		F6D622F92A6FC9D800D24F16 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		F6D622FB2A6FCC7000D24F16 /* HistoryEmptyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryEmptyTableViewCell.swift; sourceTree = "<group>"; };
 		F6D622FE2A6FCC8600D24F16 /* HistoryFullTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryFullTableViewCell.swift; sourceTree = "<group>"; };
@@ -179,6 +213,7 @@
 				F62893762A6EC38300B7A36C /* Enums */,
 				F62893712A6EC28100B7A36C /* DrawerMenuOptions */,
 				F62893582A6E999C00B7A36C /* MainTranslatorModelCell.swift */,
+				F6D2C8DA2A71268500F7D7EF /* MessagesModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -255,6 +290,7 @@
 		F6B170452A6E9376002A7BD2 /* ViewContollerCells */ = {
 			isa = PBXGroup;
 			children = (
+				F6D2C8D32A71204B00F7D7EF /* MessagesChat */,
 				F6D622FD2A6FCC7500D24F16 /* HistoryCells */,
 				F628936C2A6EBFF100B7A36C /* DrawerMenuCells */,
 			);
@@ -264,6 +300,7 @@
 		F6B170492A6E93DD002A7BD2 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				F6D2C8CE2A71202600F7D7EF /* MessagesChat */,
 				F6D623002A6FCC8C00D24F16 /* HistoryCells */,
 				F62893672A6EBDF900B7A36C /* DrawerMenuCells */,
 				F6B1704A2A6E93EC002A7BD2 /* MainTranslatorCell.xib */,
@@ -278,6 +315,36 @@
 				F6D2C8B52A70074A00F7D7EF /* TextMessageView.swift */,
 			);
 			path = ViewTextField;
+			sourceTree = "<group>";
+		};
+		F6D2C8BC2A7023C900F7D7EF /* ShareExtention */ = {
+			isa = PBXGroup;
+			children = (
+				F6D2C8BD2A7023C900F7D7EF /* ShareViewController.swift */,
+				F6D2C8BF2A7023C900F7D7EF /* MainInterface.storyboard */,
+				F6D2C8C22A7023C900F7D7EF /* Info.plist */,
+			);
+			path = ShareExtention;
+			sourceTree = "<group>";
+		};
+		F6D2C8CE2A71202600F7D7EF /* MessagesChat */ = {
+			isa = PBXGroup;
+			children = (
+				F6D2C8CF2A71203400F7D7EF /* LeftMessagesCell.xib */,
+				F6D2C8D12A71203C00F7D7EF /* RightMessagesCell.xib */,
+				F68C36FF2A71328500AD0A1F /* EmptyChatCell.xib */,
+			);
+			path = MessagesChat;
+			sourceTree = "<group>";
+		};
+		F6D2C8D32A71204B00F7D7EF /* MessagesChat */ = {
+			isa = PBXGroup;
+			children = (
+				F6D2C8D42A71206D00F7D7EF /* LeftMessagesCell.swift */,
+				F6D2C8D62A71207C00F7D7EF /* RightMessegesCell.swift */,
+				F68C37012A71329300AD0A1F /* EmptyChatCell.swift */,
+			);
+			path = MessagesChat;
 			sourceTree = "<group>";
 		};
 		F6D622FD2A6FCC7500D24F16 /* HistoryCells */ = {
@@ -335,6 +402,7 @@
 				F6DE20B42A6E6A7F003F49F4 /* Translator */,
 				F6DE20CB2A6E6A80003F49F4 /* TranslatorTests */,
 				F6DE20D52A6E6A80003F49F4 /* TranslatorUITests */,
+				F6D2C8BC2A7023C900F7D7EF /* ShareExtention */,
 				F6DE20B32A6E6A7F003F49F4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -400,6 +468,7 @@
 				F6DE21552A6E7C49003F49F4 /* Premium.storyboard */,
 				F62893862A6FC53D00B7A36C /* History.storyboard */,
 				F6DDCBD02A6FFBFF007B51EE /* TranslatorText.storyboard */,
+				F6D2C8CA2A711AA200F7D7EF /* VoiceChat.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -426,6 +495,7 @@
 				F6DE20EC2A6E6DD2003F49F4 /* SplashScreenViewController.swift */,
 				F6D622F92A6FC9D800D24F16 /* HistoryViewController.swift */,
 				F6DDCBD22A6FFC18007B51EE /* TranslatorTextViewController.swift */,
+				F6D2C8CC2A711AB400F7D7EF /* VoiceChatViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -464,6 +534,7 @@
 				F6DE20AE2A6E6A7F003F49F4 /* Sources */,
 				F6DE20AF2A6E6A7F003F49F4 /* Frameworks */,
 				F6DE20B02A6E6A7F003F49F4 /* Resources */,
+				F6D2C8C92A7023C900F7D7EF /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
@@ -566,6 +637,7 @@
 			files = (
 				F628936B2A6EBE2100B7A36C /* MenuItemsCell.xib in Resources */,
 				F6DDCBCD2A6FFB76007B51EE /* ClearHistoryView.xib in Resources */,
+				F6D2C8D02A71203400F7D7EF /* LeftMessagesCell.xib in Resources */,
 				F6DE20EB2A6E6CFE003F49F4 /* SplashScreen.storyboard in Resources */,
 				F6D6230D2A6FD4FE00D24F16 /* Offer30View.xib in Resources */,
 				F6DDCBD12A6FFBFF007B51EE /* TranslatorText.storyboard in Resources */,
@@ -579,8 +651,11 @@
 				F6DE21242A6E72DF003F49F4 /* FixelText-SemiBold.ttf in Resources */,
 				F6DE20BD2A6E6A7F003F49F4 /* MainTranslator.storyboard in Resources */,
 				F62893692A6EBE1000B7A36C /* PremiumImageCell.xib in Resources */,
+				F6D2C8D22A71203C00F7D7EF /* RightMessagesCell.xib in Resources */,
 				F6DE21562A6E7C49003F49F4 /* Premium.storyboard in Resources */,
+				F68C37002A71328500AD0A1F /* EmptyChatCell.xib in Resources */,
 				F6DE21252A6E72DF003F49F4 /* FixelText-Black.ttf in Resources */,
+				F6D2C8CB2A711AA200F7D7EF /* VoiceChat.storyboard in Resources */,
 				F6DDCBC92A6FF0B6007B51EE /* ClearChatView.xib in Resources */,
 				F6DE21282A6E72DF003F49F4 /* FixelText-Thin.ttf in Resources */,
 				F6DE21232A6E72DF003F49F4 /* FixelText-ExtraLight.ttf in Resources */,
@@ -615,24 +690,29 @@
 			files = (
 				F62893592A6E999C00B7A36C /* MainTranslatorModelCell.swift in Sources */,
 				F62893702A6EC12800B7A36C /* MenuItemsCell.swift in Sources */,
+				F6D2C8D72A71207C00F7D7EF /* RightMessegesCell.swift in Sources */,
 				F62893782A6EC38E00B7A36C /* DrawerMenuCellType.swift in Sources */,
 				F6DE21542A6E7B43003F49F4 /* UIView+rotation.swift in Sources */,
 				F62893652A6EBCAD00B7A36C /* DrawerMenuViewController.swift in Sources */,
 				F6B170472A6E93B2002A7BD2 /* MainTranslatorCell.swift in Sources */,
 				F6D623092A6FCF3600D24F16 /* BaseHistoryModel.swift in Sources */,
 				F6D623072A6FCEF500D24F16 /* HistoryEmptyModel.swift in Sources */,
+				F6D2C8CD2A711AB400F7D7EF /* VoiceChatViewController.swift in Sources */,
 				F6DDCBCB2A6FF911007B51EE /* ClearChatView.swift in Sources */,
 				F6DE21592A6E7CBD003F49F4 /* PremiumViewController.swift in Sources */,
 				F62893752A6EC29D00B7A36C /* MenuItemsModel.swift in Sources */,
 				F628935D2A6EBB9100B7A36C /* DrawerPresentationController.swift in Sources */,
 				F6DE20ED2A6E6DD2003F49F4 /* SplashScreenViewController.swift in Sources */,
 				F6D623132A6FD52300D24F16 /* Offer50View.swift in Sources */,
+				F68C37022A71329300AD0A1F /* EmptyChatCell.swift in Sources */,
 				F6DE20B62A6E6A7F003F49F4 /* AppDelegate.swift in Sources */,
 				F6D2C8B22A7004A200F7D7EF /* TextField.swift in Sources */,
 				F6D623112A6FD51900D24F16 /* Offer30View.swift in Sources */,
+				F6D2C8D52A71206D00F7D7EF /* LeftMessagesCell.swift in Sources */,
 				F6DDCBCF2A6FFB81007B51EE /* ClearHistoryView.swift in Sources */,
 				F6D622FF2A6FCC8600D24F16 /* HistoryFullTableViewCell.swift in Sources */,
 				F628936E2A6EC02000B7A36C /* PremiumImageCell.swift in Sources */,
+				F6D2C8DB2A71268500F7D7EF /* MessagesModel.swift in Sources */,
 				F6DE20B82A6E6A7F003F49F4 /* SceneDelegate.swift in Sources */,
 				F6D2C8B62A70074A00F7D7EF /* TextMessageView.swift in Sources */,
 				F62893622A6EBC2700B7A36C /* DrawerTransitionManager.swift in Sources */,
@@ -677,6 +757,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		F6D2C8BF2A7023C900F7D7EF /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F6D2C8C02A7023C900F7D7EF /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		F6DE20BB2A6E6A7F003F49F4 /* MainTranslator.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -813,6 +901,7 @@
 		F6DE20DD2A6E6A80003F49F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -841,6 +930,7 @@
 		F6DE20DE2A6E6A80003F49F4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;

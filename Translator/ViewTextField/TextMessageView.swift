@@ -30,8 +30,8 @@ class OverlayView: UIView {
     private func setupViews() {
             addSubview(messageLabel)
             NSLayoutConstraint.activate([
-                messageLabel.topAnchor.constraint(equalTo: topAnchor, constant: 20),
-                messageLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 20)
+                messageLabel.topAnchor.constraint(equalTo: topAnchor, constant: 0),
+                messageLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 5)
             ])
         }
     }

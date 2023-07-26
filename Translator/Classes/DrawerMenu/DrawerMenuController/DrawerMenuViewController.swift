@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import StoreKit
 
 class DrawerMenuViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -119,7 +120,7 @@ class DrawerMenuViewController: UIViewController, UITableViewDelegate, UITableVi
         switch indexPath.row {
     case 0: openHistoryVC()
     case 1: openHistoryVC()
-    case 2: openHistoryVC()
+    case 2: rateUs()
     case 3: openHistoryVC()
     case 4: openHistoryVC()
     default: print ("ppp")
@@ -134,5 +135,18 @@ class DrawerMenuViewController: UIViewController, UITableViewDelegate, UITableVi
         }
         drawerNavigationController?.viewControllers = [entrance]
         dismiss(animated: true)
+    }
+  
+    private func shareIt() {
+        let entrance = UIStoryboard(name: "History", bundle: nil).instantiateViewController(identifier: "HistoryViewController")
+        guard !(drawerNavigationController?.viewControllers.last is HistoryViewController) else {
+            dismiss(animated: true)
+            return
+        }
+        drawerNavigationController?.viewControllers = [entrance]
+        dismiss(animated: true)
+    }
+    
+    private func rateUs() {
     }
 }

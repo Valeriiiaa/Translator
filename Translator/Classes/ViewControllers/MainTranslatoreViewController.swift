@@ -47,8 +47,9 @@ extension MainTranslatoreViewController: UICollectionViewDelegateFlowLayout, UIC
         if indexPath.row == 0 {
             let entrance = UIStoryboard(name: "TranslatorText", bundle: nil).instantiateViewController(identifier: "TranslatorTextViewController")
             navigationController?.pushViewController(entrance, animated: true)
-        } else {
-            return
+        } else if indexPath.row == 1 {
+            let entrance = UIStoryboard(name: "VoiceChat", bundle: nil).instantiateViewController(identifier: "VoiceChatViewController")
+            navigationController?.pushViewController(entrance, animated: true)
         }
     }
     

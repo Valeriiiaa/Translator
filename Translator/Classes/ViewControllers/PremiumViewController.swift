@@ -35,6 +35,9 @@ class PremiumViewController: UIViewController {
        
         gradient.frame = buyNowButton.bounds
         buyNowButton.layer.insertSublayer(gradient, at: 0)
+//        buyNowButton.layer.borderWidth = 4
+      
+        
     }
     
     @IBAction func closeButtonDidTap(_ sender: Any) {
