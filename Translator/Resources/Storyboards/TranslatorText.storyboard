@@ -81,6 +81,9 @@
                                                         <rect key="frame" x="87.666666666666686" y="6" width="16" height="22"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                         <state key="normal" image="arrowDown "/>
+                                                        <connections>
+                                                            <action selector="selectCountryDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="brE-nP-8VP"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="English" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VOO-gS-Wuf">
                                                         <rect key="frame" x="30.000000000000011" y="10.333333333333343" width="39.666666666666657" height="13.333333333333336"/>
@@ -90,6 +93,7 @@
                                                     </label>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="34" id="9EV-nq-AYK"/>
                                                     <constraint firstItem="5fP-kC-JIv" firstAttribute="top" secondItem="n5Y-ww-VLF" secondAttribute="top" constant="12" id="EAz-8E-umb"/>
@@ -101,6 +105,9 @@
                                                     <constraint firstItem="VOO-gS-Wuf" firstAttribute="leading" secondItem="5fP-kC-JIv" secondAttribute="trailing" constant="8" id="ka6-ph-rQk"/>
                                                     <constraint firstItem="Wde-1X-ZZ6" firstAttribute="leading" secondItem="VOO-gS-Wuf" secondAttribute="trailing" constant="18" id="pNW-GF-Cfv"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="s4m-RY-t4D" appends="YES" id="nMb-tT-6Ve"/>
+                                                </connections>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2qT-Dn-WXq">
                                                 <rect key="frame" x="135" y="0.0" width="22" height="34"/>
@@ -133,6 +140,7 @@
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="34" id="1On-4K-xwC"/>
                                                     <constraint firstItem="dym-Km-h7I" firstAttribute="leading" secondItem="Y66-FH-Rmv" secondAttribute="trailing" constant="4" id="4de-vz-SO8"/>
@@ -144,6 +152,9 @@
                                                     <constraint firstItem="Y66-FH-Rmv" firstAttribute="leading" secondItem="Kx1-Ju-W5Z" secondAttribute="trailing" constant="8" id="im9-Ia-8Gq"/>
                                                     <constraint firstAttribute="width" constant="113" id="pcE-bc-CzU"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="HKH-2d-3wT" appends="YES" id="fre-Ip-zAt"/>
+                                                </connections>
                                             </view>
                                         </subviews>
                                     </stackView>
@@ -358,6 +369,12 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="s4m-RY-t4D">
+                    <connections>
+                        <action selector="selectCountryDidTap:" destination="Y6W-OH-hqX" id="hEo-fC-g1O"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="HKH-2d-3wT"/>
             </objects>
             <point key="canvasLocation" x="46.564885496183201" y="-2.1126760563380285"/>
         </scene>

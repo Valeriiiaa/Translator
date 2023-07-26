@@ -22,6 +22,14 @@
 		F62893872A6FC53D00B7A36C /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F62893862A6FC53D00B7A36C /* History.storyboard */; };
 		F68C37002A71328500AD0A1F /* EmptyChatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F68C36FF2A71328500AD0A1F /* EmptyChatCell.xib */; };
 		F68C37022A71329300AD0A1F /* EmptyChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68C37012A71329300AD0A1F /* EmptyChatCell.swift */; };
+		F68C37042A71393C00AD0A1F /* SelectionCountry.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F68C37032A71393C00AD0A1F /* SelectionCountry.storyboard */; };
+		F68C37062A713A3100AD0A1F /* SelectionCountryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68C37052A713A3100AD0A1F /* SelectionCountryViewController.swift */; };
+		F68C37082A71438100AD0A1F /* SectionCountryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F68C37072A71438100AD0A1F /* SectionCountryCell.xib */; };
+		F68C370A2A7148A100AD0A1F /* SectionCountryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68C37092A7148A100AD0A1F /* SectionCountryCell.swift */; };
+		F68C370C2A714F5500AD0A1F /* SelectionCountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68C370B2A714F5500AD0A1F /* SelectionCountryModel.swift */; };
+		F68C37102A71509800AD0A1F /* SectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68C370F2A71509800AD0A1F /* SectionModel.swift */; };
+		F68C37132A71517A00AD0A1F /* SelectionCountryHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F68C37122A71517A00AD0A1F /* SelectionCountryHeaderView.xib */; };
+		F68C37162A71522F00AD0A1F /* SelectionCountryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68C37152A71522F00AD0A1F /* SelectionCountryHeaderView.swift */; };
 		F6B170472A6E93B2002A7BD2 /* MainTranslatorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B170462A6E93B2002A7BD2 /* MainTranslatorCell.swift */; };
 		F6B1704B2A6E93EC002A7BD2 /* MainTranslatorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6B1704A2A6E93EC002A7BD2 /* MainTranslatorCell.xib */; };
 		F6C0D30D2A6E92CC00418837 /* MainTranslatoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C0D30C2A6E92CC00418837 /* MainTranslatoreViewController.swift */; };
@@ -120,6 +128,14 @@
 		F62893862A6FC53D00B7A36C /* History.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
 		F68C36FF2A71328500AD0A1F /* EmptyChatCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyChatCell.xib; sourceTree = "<group>"; };
 		F68C37012A71329300AD0A1F /* EmptyChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyChatCell.swift; sourceTree = "<group>"; };
+		F68C37032A71393C00AD0A1F /* SelectionCountry.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectionCountry.storyboard; sourceTree = "<group>"; };
+		F68C37052A713A3100AD0A1F /* SelectionCountryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionCountryViewController.swift; sourceTree = "<group>"; };
+		F68C37072A71438100AD0A1F /* SectionCountryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionCountryCell.xib; sourceTree = "<group>"; };
+		F68C37092A7148A100AD0A1F /* SectionCountryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionCountryCell.swift; sourceTree = "<group>"; };
+		F68C370B2A714F5500AD0A1F /* SelectionCountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionCountryModel.swift; sourceTree = "<group>"; };
+		F68C370F2A71509800AD0A1F /* SectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionModel.swift; sourceTree = "<group>"; };
+		F68C37122A71517A00AD0A1F /* SelectionCountryHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectionCountryHeaderView.xib; sourceTree = "<group>"; };
+		F68C37152A71522F00AD0A1F /* SelectionCountryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionCountryHeaderView.swift; sourceTree = "<group>"; };
 		F6B170462A6E93B2002A7BD2 /* MainTranslatorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTranslatorCell.swift; sourceTree = "<group>"; };
 		F6B1704A2A6E93EC002A7BD2 /* MainTranslatorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTranslatorCell.xib; sourceTree = "<group>"; };
 		F6C0D30C2A6E92CC00418837 /* MainTranslatoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTranslatoreViewController.swift; sourceTree = "<group>"; };
@@ -209,6 +225,7 @@
 		F62893572A6E998700B7A36C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F68C370E2A71507D00AD0A1F /* CountrySelection */,
 				F6D623052A6FCEE200D24F16 /* HistoryClasses */,
 				F62893762A6EC38300B7A36C /* Enums */,
 				F62893712A6EC28100B7A36C /* DrawerMenuOptions */,
@@ -287,12 +304,38 @@
 			path = Enums;
 			sourceTree = "<group>";
 		};
+		F68C370E2A71507D00AD0A1F /* CountrySelection */ = {
+			isa = PBXGroup;
+			children = (
+				F68C370B2A714F5500AD0A1F /* SelectionCountryModel.swift */,
+				F68C370F2A71509800AD0A1F /* SectionModel.swift */,
+			);
+			path = CountrySelection;
+			sourceTree = "<group>";
+		};
+		F68C37112A71515000AD0A1F /* HeaderFooters */ = {
+			isa = PBXGroup;
+			children = (
+				F68C37122A71517A00AD0A1F /* SelectionCountryHeaderView.xib */,
+			);
+			path = HeaderFooters;
+			sourceTree = "<group>";
+		};
+		F68C37142A71520B00AD0A1F /* HeaderFooters */ = {
+			isa = PBXGroup;
+			children = (
+				F68C37152A71522F00AD0A1F /* SelectionCountryHeaderView.swift */,
+			);
+			path = HeaderFooters;
+			sourceTree = "<group>";
+		};
 		F6B170452A6E9376002A7BD2 /* ViewContollerCells */ = {
 			isa = PBXGroup;
 			children = (
 				F6D2C8D32A71204B00F7D7EF /* MessagesChat */,
 				F6D622FD2A6FCC7500D24F16 /* HistoryCells */,
 				F628936C2A6EBFF100B7A36C /* DrawerMenuCells */,
+				F68C37092A7148A100AD0A1F /* SectionCountryCell.swift */,
 			);
 			path = ViewContollerCells;
 			sourceTree = "<group>";
@@ -304,6 +347,7 @@
 				F6D623002A6FCC8C00D24F16 /* HistoryCells */,
 				F62893672A6EBDF900B7A36C /* DrawerMenuCells */,
 				F6B1704A2A6E93EC002A7BD2 /* MainTranslatorCell.xib */,
+				F68C37072A71438100AD0A1F /* SectionCountryCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -451,6 +495,7 @@
 			children = (
 				F6D6230A2A6FD4A100D24F16 /* Views */,
 				F6B170492A6E93DD002A7BD2 /* Cells */,
+				F68C37112A71515000AD0A1F /* HeaderFooters */,
 				F6DE20E62A6E6B06003F49F4 /* Storyboards */,
 				F6DE20B52A6E6A7F003F49F4 /* AppDelegate.swift */,
 				F6DE20B72A6E6A7F003F49F4 /* SceneDelegate.swift */,
@@ -469,6 +514,7 @@
 				F62893862A6FC53D00B7A36C /* History.storyboard */,
 				F6DDCBD02A6FFBFF007B51EE /* TranslatorText.storyboard */,
 				F6D2C8CA2A711AA200F7D7EF /* VoiceChat.storyboard */,
+				F68C37032A71393C00AD0A1F /* SelectionCountry.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -476,6 +522,7 @@
 		F6DE20E72A6E6B14003F49F4 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				F68C37142A71520B00AD0A1F /* HeaderFooters */,
 				F6D6230B2A6FD4D200D24F16 /* CustomViewAlerts */,
 				F6DE21522A6E7B3F003F49F4 /* Helpers */,
 				F628935A2A6EBA1600B7A36C /* DrawerMenu */,
@@ -496,6 +543,7 @@
 				F6D622F92A6FC9D800D24F16 /* HistoryViewController.swift */,
 				F6DDCBD22A6FFC18007B51EE /* TranslatorTextViewController.swift */,
 				F6D2C8CC2A711AB400F7D7EF /* VoiceChatViewController.swift */,
+				F68C37052A713A3100AD0A1F /* SelectionCountryViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -636,6 +684,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F628936B2A6EBE2100B7A36C /* MenuItemsCell.xib in Resources */,
+				F68C37082A71438100AD0A1F /* SectionCountryCell.xib in Resources */,
 				F6DDCBCD2A6FFB76007B51EE /* ClearHistoryView.xib in Resources */,
 				F6D2C8D02A71203400F7D7EF /* LeftMessagesCell.xib in Resources */,
 				F6DE20EB2A6E6CFE003F49F4 /* SplashScreen.storyboard in Resources */,
@@ -657,12 +706,14 @@
 				F6DE21252A6E72DF003F49F4 /* FixelText-Black.ttf in Resources */,
 				F6D2C8CB2A711AA200F7D7EF /* VoiceChat.storyboard in Resources */,
 				F6DDCBC92A6FF0B6007B51EE /* ClearChatView.xib in Resources */,
+				F68C37042A71393C00AD0A1F /* SelectionCountry.storyboard in Resources */,
 				F6DE21282A6E72DF003F49F4 /* FixelText-Thin.ttf in Resources */,
 				F6DE21232A6E72DF003F49F4 /* FixelText-ExtraLight.ttf in Resources */,
 				F6DE20F02A6E7273003F49F4 /* Sriracha-Regular.ttf in Resources */,
 				F6DE21222A6E72DF003F49F4 /* FixelText-Light.ttf in Resources */,
 				F6DE21262A6E72DF003F49F4 /* FixelText-Regular.ttf in Resources */,
 				F6DE21292A6E72DF003F49F4 /* FixelText-Medium.ttf in Resources */,
+				F68C37132A71517A00AD0A1F /* SelectionCountryHeaderView.xib in Resources */,
 				F62893872A6FC53D00B7A36C /* History.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -696,6 +747,7 @@
 				F62893652A6EBCAD00B7A36C /* DrawerMenuViewController.swift in Sources */,
 				F6B170472A6E93B2002A7BD2 /* MainTranslatorCell.swift in Sources */,
 				F6D623092A6FCF3600D24F16 /* BaseHistoryModel.swift in Sources */,
+				F68C37102A71509800AD0A1F /* SectionModel.swift in Sources */,
 				F6D623072A6FCEF500D24F16 /* HistoryEmptyModel.swift in Sources */,
 				F6D2C8CD2A711AB400F7D7EF /* VoiceChatViewController.swift in Sources */,
 				F6DDCBCB2A6FF911007B51EE /* ClearChatView.swift in Sources */,
@@ -703,9 +755,13 @@
 				F62893752A6EC29D00B7A36C /* MenuItemsModel.swift in Sources */,
 				F628935D2A6EBB9100B7A36C /* DrawerPresentationController.swift in Sources */,
 				F6DE20ED2A6E6DD2003F49F4 /* SplashScreenViewController.swift in Sources */,
+				F68C37162A71522F00AD0A1F /* SelectionCountryHeaderView.swift in Sources */,
 				F6D623132A6FD52300D24F16 /* Offer50View.swift in Sources */,
+				F68C37062A713A3100AD0A1F /* SelectionCountryViewController.swift in Sources */,
+				F68C370C2A714F5500AD0A1F /* SelectionCountryModel.swift in Sources */,
 				F68C37022A71329300AD0A1F /* EmptyChatCell.swift in Sources */,
 				F6DE20B62A6E6A7F003F49F4 /* AppDelegate.swift in Sources */,
+				F68C370A2A7148A100AD0A1F /* SectionCountryCell.swift in Sources */,
 				F6D2C8B22A7004A200F7D7EF /* TextField.swift in Sources */,
 				F6D623112A6FD51900D24F16 /* Offer30View.swift in Sources */,
 				F6D2C8D52A71206D00F7D7EF /* LeftMessagesCell.swift in Sources */,

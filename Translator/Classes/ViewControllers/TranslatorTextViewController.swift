@@ -118,6 +118,10 @@ class TranslatorTextViewController: UIViewController, UITextViewDelegate {
         isSwapped.toggle()
     }
     
+    @IBAction func selectCountryDidTap(_ sender: Any) {
+        let entrance = UIStoryboard(name: "SelectionCountry", bundle: nil).instantiateViewController(identifier: "SelectionCountryViewController")
+        navigationController?.pushViewController(entrance, animated: true)
+    }
     
     @IBAction func backbuttonDidTap(_ sender: Any) {
         navigationController?.popViewController(animated: true)
