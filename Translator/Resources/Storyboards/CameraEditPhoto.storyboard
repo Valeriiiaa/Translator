@@ -21,6 +21,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ka8-G1-HpR">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pf0-Ed-PBw">
                                 <rect key="frame" x="307" y="0.0" width="86" height="80"/>
                                 <subviews>
@@ -162,15 +165,20 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Ka8-G1-HpR" secondAttribute="bottom" id="0dc-1L-dko"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Pf0-Ed-PBw" secondAttribute="trailing" id="GIM-ml-JdV"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Ka8-G1-HpR" secondAttribute="trailing" id="I4h-bI-DMr"/>
                             <constraint firstAttribute="bottom" secondItem="dhP-Es-bhj" secondAttribute="bottom" id="Izv-CE-XsA"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="dhP-Es-bhj" secondAttribute="trailing" id="NWV-cT-tFk"/>
+                            <constraint firstItem="Ka8-G1-HpR" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Ozf-Wr-l6Z"/>
                             <constraint firstItem="dhP-Es-bhj" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="n6o-d9-DU3"/>
                             <constraint firstItem="Pf0-Ed-PBw" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="teM-5i-A84"/>
+                            <constraint firstItem="Ka8-G1-HpR" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="uC6-ge-TrH"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="backgrounMainView" destination="Sct-tH-RNZ" id="M4E-PN-wrX"/>
+                        <outlet property="backgroundImageView" destination="Ka8-G1-HpR" id="ugo-w6-03U"/>
                         <outlet property="backgroundRotateView" destination="Pf0-Ed-PBw" id="x7O-wV-sSU"/>
                         <outlet property="backgroundStuckView" destination="N3B-xb-3F9" id="nA2-Ml-wQu"/>
                     </connections>

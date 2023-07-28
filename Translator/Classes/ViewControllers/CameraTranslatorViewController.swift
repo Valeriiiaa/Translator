@@ -100,20 +100,25 @@ class CameraTranslatorViewController: UIViewController {
     }
     @IBAction func galleryButtonDidTap(_ sender: Any) {
     }
+    
+    func pushAnotherScreen(image: UIImage) {
+        let entrance = UIStoryboard(name: "CameraEditPhoto", bundle: nil).instantiateViewController(identifier: "CameraEditPhotoViewController")
+        (entrance as? CameraEditPhotoViewController)?.image = image
+        navigationController?.pushViewController(entrance, animated: true)
+    }
 }
 
 extension CameraTranslatorViewController: AVCapturePhotoCaptureDelegate {
+   
     func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
         guard let data = photo.fileDataRepresentation() else {
             return
         }
-        let image  = UIImage(data: data)
-        
+       
+        guard let image  = UIImage(data: data) else { return }
+    
         session?.stopRunning()
-        
-        let imageView = UIImageView(image: image)
-        imageView.contentMode = .scaleAspectFill
-        imageView.frame = view.bounds
-        view.addSubview(imageView)
+       
+        pushAnotherScreen(image: image)
     }
 }
