@@ -50,6 +50,9 @@ extension MainTranslatoreViewController: UICollectionViewDelegateFlowLayout, UIC
         } else if indexPath.row == 1 {
             let entrance = UIStoryboard(name: "VoiceChat", bundle: nil).instantiateViewController(identifier: "VoiceChatViewController")
             navigationController?.pushViewController(entrance, animated: true)
+        } else if indexPath.row == 2 {
+            let entrance = UIStoryboard(name: "CameraTranslator", bundle: nil).instantiateViewController(identifier: "CameraTranslatorViewController")
+            navigationController?.pushViewController(entrance, animated: true)
         }
     }
     

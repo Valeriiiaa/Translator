@@ -32,7 +32,10 @@
 		F68C37162A71522F00AD0A1F /* SelectionCountryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68C37152A71522F00AD0A1F /* SelectionCountryHeaderView.swift */; };
 		F6B170472A6E93B2002A7BD2 /* MainTranslatorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B170462A6E93B2002A7BD2 /* MainTranslatorCell.swift */; };
 		F6B1704B2A6E93EC002A7BD2 /* MainTranslatorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6B1704A2A6E93EC002A7BD2 /* MainTranslatorCell.xib */; };
+		F6BE51642A725EC900625E62 /* CameraTranslator.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6BE51632A725EC900625E62 /* CameraTranslator.storyboard */; };
+		F6BE51662A72625B00625E62 /* CameraTranslatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BE51652A72625B00625E62 /* CameraTranslatorViewController.swift */; };
 		F6C0D30D2A6E92CC00418837 /* MainTranslatoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C0D30C2A6E92CC00418837 /* MainTranslatoreViewController.swift */; };
+		F6CFB9772A7279A10058246B /* CameraEditPhoto.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6CFB9762A7279A10058246B /* CameraEditPhoto.storyboard */; };
 		F6D2C8B22A7004A200F7D7EF /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D2C8B12A7004A200F7D7EF /* TextField.swift */; };
 		F6D2C8B62A70074A00F7D7EF /* TextMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D2C8B52A70074A00F7D7EF /* TextMessageView.swift */; };
 		F6D2C8CB2A711AA200F7D7EF /* VoiceChat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6D2C8CA2A711AA200F7D7EF /* VoiceChat.storyboard */; };
@@ -42,6 +45,7 @@
 		F6D2C8D52A71206D00F7D7EF /* LeftMessagesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D2C8D42A71206D00F7D7EF /* LeftMessagesCell.swift */; };
 		F6D2C8D72A71207C00F7D7EF /* RightMessegesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D2C8D62A71207C00F7D7EF /* RightMessegesCell.swift */; };
 		F6D2C8DB2A71268500F7D7EF /* MessagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D2C8DA2A71268500F7D7EF /* MessagesModel.swift */; };
+		F6D5D9642A727BAF00A8053B /* CameraEditPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D5D9632A727BAF00A8053B /* CameraEditPhotoViewController.swift */; };
 		F6D622FA2A6FC9D800D24F16 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D622F92A6FC9D800D24F16 /* HistoryViewController.swift */; };
 		F6D622FC2A6FCC7000D24F16 /* HistoryEmptyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D622FB2A6FCC7000D24F16 /* HistoryEmptyTableViewCell.swift */; };
 		F6D622FF2A6FCC8600D24F16 /* HistoryFullTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D622FE2A6FCC8600D24F16 /* HistoryFullTableViewCell.swift */; };
@@ -138,7 +142,10 @@
 		F68C37152A71522F00AD0A1F /* SelectionCountryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionCountryHeaderView.swift; sourceTree = "<group>"; };
 		F6B170462A6E93B2002A7BD2 /* MainTranslatorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTranslatorCell.swift; sourceTree = "<group>"; };
 		F6B1704A2A6E93EC002A7BD2 /* MainTranslatorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTranslatorCell.xib; sourceTree = "<group>"; };
+		F6BE51632A725EC900625E62 /* CameraTranslator.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CameraTranslator.storyboard; sourceTree = "<group>"; };
+		F6BE51652A72625B00625E62 /* CameraTranslatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraTranslatorViewController.swift; sourceTree = "<group>"; };
 		F6C0D30C2A6E92CC00418837 /* MainTranslatoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTranslatoreViewController.swift; sourceTree = "<group>"; };
+		F6CFB9762A7279A10058246B /* CameraEditPhoto.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CameraEditPhoto.storyboard; sourceTree = "<group>"; };
 		F6D2C8B12A7004A200F7D7EF /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		F6D2C8B52A70074A00F7D7EF /* TextMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextMessageView.swift; sourceTree = "<group>"; };
 		F6D2C8BD2A7023C900F7D7EF /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
@@ -151,6 +158,7 @@
 		F6D2C8D42A71206D00F7D7EF /* LeftMessagesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMessagesCell.swift; sourceTree = "<group>"; };
 		F6D2C8D62A71207C00F7D7EF /* RightMessegesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightMessegesCell.swift; sourceTree = "<group>"; };
 		F6D2C8DA2A71268500F7D7EF /* MessagesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesModel.swift; sourceTree = "<group>"; };
+		F6D5D9632A727BAF00A8053B /* CameraEditPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraEditPhotoViewController.swift; sourceTree = "<group>"; };
 		F6D622F92A6FC9D800D24F16 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		F6D622FB2A6FCC7000D24F16 /* HistoryEmptyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryEmptyTableViewCell.swift; sourceTree = "<group>"; };
 		F6D622FE2A6FCC8600D24F16 /* HistoryFullTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryFullTableViewCell.swift; sourceTree = "<group>"; };
@@ -515,6 +523,8 @@
 				F6DDCBD02A6FFBFF007B51EE /* TranslatorText.storyboard */,
 				F6D2C8CA2A711AA200F7D7EF /* VoiceChat.storyboard */,
 				F68C37032A71393C00AD0A1F /* SelectionCountry.storyboard */,
+				F6BE51632A725EC900625E62 /* CameraTranslator.storyboard */,
+				F6CFB9762A7279A10058246B /* CameraEditPhoto.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -544,6 +554,8 @@
 				F6DDCBD22A6FFC18007B51EE /* TranslatorTextViewController.swift */,
 				F6D2C8CC2A711AB400F7D7EF /* VoiceChatViewController.swift */,
 				F68C37052A713A3100AD0A1F /* SelectionCountryViewController.swift */,
+				F6BE51652A72625B00625E62 /* CameraTranslatorViewController.swift */,
+				F6D5D9632A727BAF00A8053B /* CameraEditPhotoViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -685,6 +697,7 @@
 			files = (
 				F628936B2A6EBE2100B7A36C /* MenuItemsCell.xib in Resources */,
 				F68C37082A71438100AD0A1F /* SectionCountryCell.xib in Resources */,
+				F6BE51642A725EC900625E62 /* CameraTranslator.storyboard in Resources */,
 				F6DDCBCD2A6FFB76007B51EE /* ClearHistoryView.xib in Resources */,
 				F6D2C8D02A71203400F7D7EF /* LeftMessagesCell.xib in Resources */,
 				F6DE20EB2A6E6CFE003F49F4 /* SplashScreen.storyboard in Resources */,
@@ -708,6 +721,7 @@
 				F6DDCBC92A6FF0B6007B51EE /* ClearChatView.xib in Resources */,
 				F68C37042A71393C00AD0A1F /* SelectionCountry.storyboard in Resources */,
 				F6DE21282A6E72DF003F49F4 /* FixelText-Thin.ttf in Resources */,
+				F6CFB9772A7279A10058246B /* CameraEditPhoto.storyboard in Resources */,
 				F6DE21232A6E72DF003F49F4 /* FixelText-ExtraLight.ttf in Resources */,
 				F6DE20F02A6E7273003F49F4 /* Sriracha-Regular.ttf in Resources */,
 				F6DE21222A6E72DF003F49F4 /* FixelText-Light.ttf in Resources */,
@@ -748,10 +762,12 @@
 				F6B170472A6E93B2002A7BD2 /* MainTranslatorCell.swift in Sources */,
 				F6D623092A6FCF3600D24F16 /* BaseHistoryModel.swift in Sources */,
 				F68C37102A71509800AD0A1F /* SectionModel.swift in Sources */,
+				F6BE51662A72625B00625E62 /* CameraTranslatorViewController.swift in Sources */,
 				F6D623072A6FCEF500D24F16 /* HistoryEmptyModel.swift in Sources */,
 				F6D2C8CD2A711AB400F7D7EF /* VoiceChatViewController.swift in Sources */,
 				F6DDCBCB2A6FF911007B51EE /* ClearChatView.swift in Sources */,
 				F6DE21592A6E7CBD003F49F4 /* PremiumViewController.swift in Sources */,
+				F6D5D9642A727BAF00A8053B /* CameraEditPhotoViewController.swift in Sources */,
 				F62893752A6EC29D00B7A36C /* MenuItemsModel.swift in Sources */,
 				F628935D2A6EBB9100B7A36C /* DrawerPresentationController.swift in Sources */,
 				F6DE20ED2A6E6DD2003F49F4 /* SplashScreenViewController.swift in Sources */,
@@ -965,6 +981,8 @@
 				DEVELOPMENT_TEAM = 6NNWR2JHQ8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Translator/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow to take a photo.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Please allow to record audio.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = MainTranslator;
@@ -994,6 +1012,8 @@
 				DEVELOPMENT_TEAM = 6NNWR2JHQ8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Translator/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow to take a photo.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Please allow to record audio.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = MainTranslator;
