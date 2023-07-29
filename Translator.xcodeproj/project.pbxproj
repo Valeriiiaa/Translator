@@ -46,6 +46,8 @@
 		F6D2C8D72A71207C00F7D7EF /* RightMessegesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D2C8D62A71207C00F7D7EF /* RightMessegesCell.swift */; };
 		F6D2C8DB2A71268500F7D7EF /* MessagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D2C8DA2A71268500F7D7EF /* MessagesModel.swift */; };
 		F6D5D9642A727BAF00A8053B /* CameraEditPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D5D9632A727BAF00A8053B /* CameraEditPhotoViewController.swift */; };
+		F6D5D9792A7534D100A8053B /* SectionMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6D5D9782A7534D100A8053B /* SectionMenuCell.xib */; };
+		F6D5D97B2A75352E00A8053B /* SectionMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D5D97A2A75352E00A8053B /* SectionMenuCell.swift */; };
 		F6D622FA2A6FC9D800D24F16 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D622F92A6FC9D800D24F16 /* HistoryViewController.swift */; };
 		F6D622FC2A6FCC7000D24F16 /* HistoryEmptyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D622FB2A6FCC7000D24F16 /* HistoryEmptyTableViewCell.swift */; };
 		F6D622FF2A6FCC8600D24F16 /* HistoryFullTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D622FE2A6FCC8600D24F16 /* HistoryFullTableViewCell.swift */; };
@@ -159,6 +161,8 @@
 		F6D2C8D62A71207C00F7D7EF /* RightMessegesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightMessegesCell.swift; sourceTree = "<group>"; };
 		F6D2C8DA2A71268500F7D7EF /* MessagesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesModel.swift; sourceTree = "<group>"; };
 		F6D5D9632A727BAF00A8053B /* CameraEditPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraEditPhotoViewController.swift; sourceTree = "<group>"; };
+		F6D5D9782A7534D100A8053B /* SectionMenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionMenuCell.xib; sourceTree = "<group>"; };
+		F6D5D97A2A75352E00A8053B /* SectionMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionMenuCell.swift; sourceTree = "<group>"; };
 		F6D622F92A6FC9D800D24F16 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		F6D622FB2A6FCC7000D24F16 /* HistoryEmptyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryEmptyTableViewCell.swift; sourceTree = "<group>"; };
 		F6D622FE2A6FCC8600D24F16 /* HistoryFullTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryFullTableViewCell.swift; sourceTree = "<group>"; };
@@ -340,10 +344,12 @@
 		F6B170452A6E9376002A7BD2 /* ViewContollerCells */ = {
 			isa = PBXGroup;
 			children = (
+				F6B170462A6E93B2002A7BD2 /* MainTranslatorCell.swift */,
 				F6D2C8D32A71204B00F7D7EF /* MessagesChat */,
 				F6D622FD2A6FCC7500D24F16 /* HistoryCells */,
 				F628936C2A6EBFF100B7A36C /* DrawerMenuCells */,
 				F68C37092A7148A100AD0A1F /* SectionCountryCell.swift */,
+				F6D5D97A2A75352E00A8053B /* SectionMenuCell.swift */,
 			);
 			path = ViewContollerCells;
 			sourceTree = "<group>";
@@ -356,6 +362,7 @@
 				F62893672A6EBDF900B7A36C /* DrawerMenuCells */,
 				F6B1704A2A6E93EC002A7BD2 /* MainTranslatorCell.xib */,
 				F68C37072A71438100AD0A1F /* SectionCountryCell.xib */,
+				F6D5D9782A7534D100A8053B /* SectionMenuCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -538,7 +545,6 @@
 				F628935A2A6EBA1600B7A36C /* DrawerMenu */,
 				F62893572A6E998700B7A36C /* Models */,
 				F6B170452A6E9376002A7BD2 /* ViewContollerCells */,
-				F6B170462A6E93B2002A7BD2 /* MainTranslatorCell.swift */,
 				F6DE20E82A6E6B1B003F49F4 /* ViewControllers */,
 			);
 			path = Classes;
@@ -727,6 +733,7 @@
 				F6DE21222A6E72DF003F49F4 /* FixelText-Light.ttf in Resources */,
 				F6DE21262A6E72DF003F49F4 /* FixelText-Regular.ttf in Resources */,
 				F6DE21292A6E72DF003F49F4 /* FixelText-Medium.ttf in Resources */,
+				F6D5D9792A7534D100A8053B /* SectionMenuCell.xib in Resources */,
 				F68C37132A71517A00AD0A1F /* SelectionCountryHeaderView.xib in Resources */,
 				F62893872A6FC53D00B7A36C /* History.storyboard in Resources */,
 			);
@@ -761,6 +768,7 @@
 				F62893652A6EBCAD00B7A36C /* DrawerMenuViewController.swift in Sources */,
 				F6B170472A6E93B2002A7BD2 /* MainTranslatorCell.swift in Sources */,
 				F6D623092A6FCF3600D24F16 /* BaseHistoryModel.swift in Sources */,
+				F6D5D97B2A75352E00A8053B /* SectionMenuCell.swift in Sources */,
 				F68C37102A71509800AD0A1F /* SectionModel.swift in Sources */,
 				F6BE51662A72625B00625E62 /* CameraTranslatorViewController.swift in Sources */,
 				F6D623072A6FCEF500D24F16 /* HistoryEmptyModel.swift in Sources */,
