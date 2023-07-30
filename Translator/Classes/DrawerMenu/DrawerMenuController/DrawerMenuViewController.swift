@@ -30,8 +30,8 @@ class DrawerMenuViewController: UIViewController, UITableViewDelegate, UITableVi
     
     private let tableView: UITableView = {
         let table = UITableView()
-        table.register(UINib(nibName: "PremiumImageCell" , bundle: nil), forCellReuseIdentifier: "PremiumImageCell")
-        table.register(UINib(nibName: "MenuItemsCell" , bundle: nil), forCellReuseIdentifier: "MenuItemsCell")
+        table.register(UINib(nibName: CellManager.getCell(by: "PremiumImageCell") , bundle: nil), forCellReuseIdentifier: CellManager.getCell(by: "PremiumImageCell"))
+        table.register(UINib(nibName: CellManager.getCell(by: "MenuItemsCell") , bundle: nil), forCellReuseIdentifier: CellManager.getCell(by: "MenuItemsCell"))
         table.backgroundColor = nil
         table.separatorColor = .clear
         return table
@@ -39,26 +39,40 @@ class DrawerMenuViewController: UIViewController, UITableViewDelegate, UITableVi
     
     private var  closeButton: UIButton = {
         let button = UIButton()
-        button.setImage(UIImage(named: "close"), for: .normal)
         button.addTarget(self, action: #selector(closeButtonDidTap), for: .touchUpInside)
+        switch UIDevice.current.userInterfaceIdiom {
+        case .phone: button.setImage(UIImage(named: "close"), for: .normal)
+            
+        default: button.setImage(UIImage(named: "close-ipad"), for: .normal)
+        }
         return button
     }()
     
     private var menuLabel: UILabel = {
         let label = UILabel()
         label.text = "Menu"
-        label.font = UIFont(name: "Sriracha", size: 20)
         label.textColor = UIColor(red: 93/255, green: 104/255, blue: 131/255, alpha: 1)
+        
+        switch UIDevice.current.userInterfaceIdiom {
+        case .phone:  label.font = UIFont(name: "Sriracha", size: 20)
+            
+        default:  label.font = UIFont(name: "Sriracha", size: 35)
+        }
         return label
     }()
     
     private var menuBottomLabel: UILabel = {
         let label = UILabel()
         label.text = "Gain new experience using\nour Voice Translator"
-        label.font = UIFont(name: "Fixel", size: 16)
         label.numberOfLines = 0
         label.textAlignment = .center
         label.textColor = UIColor(red: 160/255, green: 168/255, blue: 196/255, alpha: 1)
+       
+        switch UIDevice.current.userInterfaceIdiom {
+        case .phone: label.font = UIFont(name: "Fixel", size: 16)
+            
+        default: label.font = UIFont(name: "Fixel", size: 35)
+        }
         return label
     }()
     
@@ -106,7 +120,7 @@ class DrawerMenuViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let model = models[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: model.reusedId, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: CellManager.getCell(by: model.reusedId) , for: indexPath)
         switch model {
         case .premiumPicture: break
         case .itemsMenu(let itemsMenuModel):
@@ -118,15 +132,15 @@ class DrawerMenuViewController: UIViewController, UITableViewDelegate, UITableVi
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         previousVC = drawerNavigationController?.viewControllers.last
         switch indexPath.row {
-    case 0: openHistoryVC()
-    case 1: openHistoryVC()
-    case 2: rateUs()
-    case 3: openHistoryVC()
-    case 4: openHistoryVC()
-    default: print ("ppp")
+        case 0: openHistoryVC()
+        case 1: openHistoryVC()
+        case 2: rateUs()
+        case 3: openHistoryVC()
+        case 4: openHistoryVC()
+        default: print ("ppp")
+        }
     }
-}
-
+    
     private func openHistoryVC() {
         let entrance = UIStoryboard(name: "History", bundle: nil).instantiateViewController(identifier: "HistoryViewController")
         guard !(drawerNavigationController?.viewControllers.last is HistoryViewController) else {
@@ -136,7 +150,7 @@ class DrawerMenuViewController: UIViewController, UITableViewDelegate, UITableVi
         drawerNavigationController?.viewControllers = [entrance]
         dismiss(animated: true)
     }
-  
+    
     private func shareIt() {
         let entrance = UIStoryboard(name: "History", bundle: nil).instantiateViewController(identifier: "HistoryViewController")
         guard !(drawerNavigationController?.viewControllers.last is HistoryViewController) else {

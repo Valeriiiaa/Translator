@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad11_0rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="FixelText-Medium.ttf">
+            <string>FixelText-Medium</string>
+        </array>
+        <array key="FixelText-Regular.ttf">
+            <string>FixelText-Regular</string>
+        </array>
+        <array key="FixelText-SemiBold.ttf">
+            <string>FixelText-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Premium View Controller-->
+        <scene sceneID="G44-Vp-4fj">
+            <objects>
+                <viewController storyboardIdentifier="PremiumViewController" id="FbI-tc-il8" customClass="PremiumViewController" customModule="Translator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PTF-sG-tTV">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="premiumBackground-ipad" translatesAutoresizingMaskIntoConstraints="NO" id="314-jA-q3q">
+                                <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ztu-a1-zV4">
+                                <rect key="frame" x="34" y="34" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="2np-5A-TPg"/>
+                                    <constraint firstAttribute="height" constant="44" id="X9v-vC-NpF"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="close-ipad"/>
+                                <connections>
+                                    <action selector="closeButtonDidTap:" destination="FbI-tc-il8" eventType="touchUpInside" id="OH9-e2-il9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UfU-ay-bl0">
+                                <rect key="frame" x="708" y="35.5" width="92" height="41"/>
+                                <fontDescription key="fontDescription" name="FixelText-Medium" family="Fixel Text" pointSize="26"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Restore">
+                                    <color key="titleColor" name="#3C485A"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gain new experience just for $3,99 using our Voice Translator" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eyr-ba-ARB">
+                                <rect key="frame" x="42" y="1120.5" width="750" height="28.5"/>
+                                <fontDescription key="fontDescription" name="FixelText-Regular" family="Fixel Text" pointSize="26"/>
+                                <color key="textColor" name="#A0A8C4"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OOR-4y-EFY">
+                                <rect key="frame" x="167" y="1012.5" width="500" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="7Ky-Er-Jth"/>
+                                    <constraint firstAttribute="width" constant="500" id="wHK-ad-dWG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="FixelText-SemiBold" family="Fixel Text" pointSize="26"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="BUY NOW">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="buyNowButtonDidTap:" destination="FbI-tc-il8" eventType="touchUpInside" id="FbC-l6-91g"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DPd-oB-6Ex">
+                                <rect key="frame" x="50" y="790.5" width="734" height="190"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="Gcd-va-cSf">
+                                        <rect key="frame" x="60" y="34" width="25" height="115"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stick-ipad" translatesAutoresizingMaskIntoConstraints="NO" id="EEb-LY-3yc">
+                                                <rect key="frame" x="0.0" y="0.0" width="25" height="5"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stick-ipad" translatesAutoresizingMaskIntoConstraints="NO" id="Tqi-8f-3jW">
+                                                <rect key="frame" x="0.0" y="55" width="25" height="5"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stick-ipad" translatesAutoresizingMaskIntoConstraints="NO" id="nEW-Bm-EPC">
+                                                <rect key="frame" x="0.0" y="110" width="25" height="5"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="yCI-E1-Doo">
+                                        <rect key="frame" x="150" y="25" width="383" height="136"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unlimited Voice Translator" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TGc-no-p3c">
+                                                <rect key="frame" x="0.0" y="0.0" width="383" height="32"/>
+                                                <fontDescription key="fontDescription" name="FixelText-Medium" family="Fixel Text" pointSize="29"/>
+                                                <color key="textColor" name="BlueButton"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unlimited Camera Translator" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nMD-BG-674">
+                                                <rect key="frame" x="0.0" y="52" width="383" height="32"/>
+                                                <fontDescription key="fontDescription" name="FixelText-Medium" family="Fixel Text" pointSize="29"/>
+                                                <color key="textColor" name="BlueButton"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100% No Annoying ADS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bGv-vV-iCo">
+                                                <rect key="frame" x="0.0" y="104" width="383" height="32"/>
+                                                <fontDescription key="fontDescription" name="FixelText-Medium" family="Fixel Text" pointSize="29"/>
+                                                <color key="textColor" name="BlueButton"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="Gcd-va-cSf" firstAttribute="top" secondItem="DPd-oB-6Ex" secondAttribute="top" constant="34" id="BhE-wW-FBq"/>
+                                    <constraint firstItem="yCI-E1-Doo" firstAttribute="leading" secondItem="Gcd-va-cSf" secondAttribute="trailing" constant="65" id="Kj2-ja-5cA"/>
+                                    <constraint firstItem="Gcd-va-cSf" firstAttribute="leading" secondItem="DPd-oB-6Ex" secondAttribute="leading" constant="60" id="rGU-g6-P1k"/>
+                                    <constraint firstAttribute="height" constant="190" id="sRQ-2s-d0K"/>
+                                    <constraint firstItem="yCI-E1-Doo" firstAttribute="top" secondItem="DPd-oB-6Ex" secondAttribute="top" constant="25" id="uKn-KX-gVm"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lifeTimeLabel-ipad" translatesAutoresizingMaskIntoConstraints="NO" id="0G9-uq-PV0">
+                                <rect key="frame" x="28" y="671.5" width="779" height="79"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ipo-eO-jmp"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="314-jA-q3q" firstAttribute="top" secondItem="PTF-sG-tTV" secondAttribute="top" id="0Dc-g2-WEN"/>
+                            <constraint firstItem="eyr-ba-ARB" firstAttribute="leading" secondItem="ipo-eO-jmp" secondAttribute="leading" constant="42" id="4X7-NO-hDH"/>
+                            <constraint firstItem="0G9-uq-PV0" firstAttribute="leading" secondItem="ipo-eO-jmp" secondAttribute="leading" constant="28" id="5hx-IN-PX0"/>
+                            <constraint firstItem="314-jA-q3q" firstAttribute="leading" secondItem="ipo-eO-jmp" secondAttribute="leading" id="9wv-JN-Djt"/>
+                            <constraint firstItem="ipo-eO-jmp" firstAttribute="trailing" secondItem="UfU-ay-bl0" secondAttribute="trailing" constant="34" id="FWK-z9-dQG"/>
+                            <constraint firstItem="ztu-a1-zV4" firstAttribute="leading" secondItem="ipo-eO-jmp" secondAttribute="leading" constant="34" id="HsZ-wJ-je4"/>
+                            <constraint firstItem="OOR-4y-EFY" firstAttribute="top" secondItem="DPd-oB-6Ex" secondAttribute="bottom" constant="32" id="P20-fg-kGn"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="eyr-ba-ARB" secondAttribute="bottom" constant="25" id="Qyj-XJ-Ji1"/>
+                            <constraint firstItem="ztu-a1-zV4" firstAttribute="top" secondItem="ipo-eO-jmp" secondAttribute="top" constant="10" id="Uym-Hr-Vfo"/>
+                            <constraint firstItem="DPd-oB-6Ex" firstAttribute="top" secondItem="0G9-uq-PV0" secondAttribute="bottom" constant="40" id="ZZ6-IQ-YBY"/>
+                            <constraint firstItem="ipo-eO-jmp" firstAttribute="trailing" secondItem="DPd-oB-6Ex" secondAttribute="trailing" constant="50" id="aRV-oD-Yt7"/>
+                            <constraint firstItem="OOR-4y-EFY" firstAttribute="centerX" secondItem="PTF-sG-tTV" secondAttribute="centerX" id="eog-Yr-wUG"/>
+                            <constraint firstAttribute="trailing" secondItem="eyr-ba-ARB" secondAttribute="trailing" constant="42" id="hy6-m2-AP5"/>
+                            <constraint firstItem="eyr-ba-ARB" firstAttribute="top" secondItem="OOR-4y-EFY" secondAttribute="bottom" constant="38" id="mCa-Cc-Lwr"/>
+                            <constraint firstItem="DPd-oB-6Ex" firstAttribute="leading" secondItem="ipo-eO-jmp" secondAttribute="leading" constant="50" id="ogt-8Y-26b"/>
+                            <constraint firstAttribute="bottom" secondItem="314-jA-q3q" secondAttribute="bottom" id="tMO-b8-Xvc"/>
+                            <constraint firstItem="ipo-eO-jmp" firstAttribute="trailing" secondItem="0G9-uq-PV0" secondAttribute="trailing" constant="27" id="uFu-Wk-OZg"/>
+                            <constraint firstItem="UfU-ay-bl0" firstAttribute="centerY" secondItem="ztu-a1-zV4" secondAttribute="centerY" id="z2j-xJ-mqq"/>
+                            <constraint firstItem="ipo-eO-jmp" firstAttribute="trailing" secondItem="314-jA-q3q" secondAttribute="trailing" id="zux-3H-HQ2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundTextView" destination="DPd-oB-6Ex" id="bQ6-lq-cTo"/>
+                        <outlet property="buyNowButton" destination="OOR-4y-EFY" id="wov-OH-cqQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jVw-iA-JVf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="29.496402877697843" y="3.5175879396984926"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="close-ipad" width="30" height="30"/>
+        <image name="lifeTimeLabel-ipad" width="661" height="79"/>
+        <image name="premiumBackground-ipad" width="850" height="1365"/>
+        <image name="stick-ipad" width="25" height="5"/>
+        <namedColor name="#3C485A">
+            <color red="0.23499999940395355" green="0.28200000524520874" blue="0.3529999852180481" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="#A0A8C4">
+            <color red="0.62699997425079346" green="0.6589999794960022" blue="0.76899999380111694" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BlueButton">
+            <color red="0.31400001049041748" green="0.55699998140335083" blue="0.96100002527236938" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

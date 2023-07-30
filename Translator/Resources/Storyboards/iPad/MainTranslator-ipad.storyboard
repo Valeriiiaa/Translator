@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad11_0rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Sriracha-Regular.ttf">
+            <string>Sriracha-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Main Translatore View Controller-->
+        <scene sceneID="Qi0-QU-e7V">
+            <objects>
+                <viewController storyboardIdentifier="MainTranslatoreViewController" id="RD3-uo-OQv" customClass="MainTranslatoreViewController" customModule="Translator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9Fz-F9-AZN">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mFr-0Q-4u0">
+                                <rect key="frame" x="34" y="58" width="46" height="46"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="menu-ipad"/>
+                                <connections>
+                                    <action selector="menuButtonDidTap:" destination="RD3-uo-OQv" eventType="touchUpInside" id="IjX-4e-Icl"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uJg-uh-icb">
+                                <rect key="frame" x="673.5" y="65.5" width="135.5" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No ADS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZXd-1H-mVg">
+                                        <rect key="frame" x="0.0" y="0.0" width="76.5" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
+                                        <color key="textColor" name="#3B4669"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Be2-Y4-5rr">
+                                        <rect key="frame" x="86.5" y="0.0" width="51" height="31"/>
+                                    </switch>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Voice Translator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DHu-hB-WMt">
+                                <rect key="frame" x="30" y="116.5" width="774" height="71"/>
+                                <fontDescription key="fontDescription" name="Sriracha-Regular" family="Sriracha" pointSize="40"/>
+                                <color key="textColor" name="#5D6883"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Z0J-iA-Usn">
+                                <rect key="frame" x="0.0" y="206.5" width="834" height="716.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gGG-Le-7ML">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="oU2-Zd-dCM">
+                                        <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="obR-h0-KvR">
+                                            <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kwb-iA-jZ8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="DHu-hB-WMt" firstAttribute="top" secondItem="ZXd-1H-mVg" secondAttribute="bottom" constant="20" id="1fC-gs-lCN"/>
+                            <constraint firstItem="mFr-0Q-4u0" firstAttribute="top" secondItem="kwb-iA-jZ8" secondAttribute="top" constant="34" id="7iA-A0-v46"/>
+                            <constraint firstItem="Z0J-iA-Usn" firstAttribute="centerX" secondItem="9Fz-F9-AZN" secondAttribute="centerX" id="CSv-3d-qdG"/>
+                            <constraint firstItem="mFr-0Q-4u0" firstAttribute="leading" secondItem="kwb-iA-jZ8" secondAttribute="leading" constant="34" id="Jz5-Tg-SIH"/>
+                            <constraint firstItem="Z0J-iA-Usn" firstAttribute="top" secondItem="DHu-hB-WMt" secondAttribute="bottom" constant="19" id="SMx-65-aAa"/>
+                            <constraint firstItem="Z0J-iA-Usn" firstAttribute="leading" secondItem="kwb-iA-jZ8" secondAttribute="leading" id="VsF-x1-6qJ"/>
+                            <constraint firstItem="uJg-uh-icb" firstAttribute="centerY" secondItem="mFr-0Q-4u0" secondAttribute="centerY" id="g3w-Nb-APL"/>
+                            <constraint firstItem="kwb-iA-jZ8" firstAttribute="trailing" secondItem="DHu-hB-WMt" secondAttribute="trailing" constant="30" id="gce-0b-KzJ"/>
+                            <constraint firstItem="kwb-iA-jZ8" firstAttribute="trailing" secondItem="Z0J-iA-Usn" secondAttribute="trailing" id="jq7-rW-69s"/>
+                            <constraint firstItem="DHu-hB-WMt" firstAttribute="leading" secondItem="kwb-iA-jZ8" secondAttribute="leading" constant="30" id="rIP-fF-ihr"/>
+                            <constraint firstItem="kwb-iA-jZ8" firstAttribute="trailing" secondItem="uJg-uh-icb" secondAttribute="trailing" constant="25" id="yq8-Jy-PFE"/>
+                            <constraint firstItem="Z0J-iA-Usn" firstAttribute="height" secondItem="9Fz-F9-AZN" secondAttribute="height" multiplier="0.6" id="zoK-aC-aBX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionCell" destination="Z0J-iA-Usn" id="w3Q-Qr-vmT"/>
+                        <outlet property="menuButton" destination="mFr-0Q-4u0" id="53X-G3-cgh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MNZ-ro-06M" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="30" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="menu-ipad" width="46" height="46"/>
+        <namedColor name="#3B4669">
+            <color red="0.23100000619888306" green="0.27500000596046448" blue="0.41200000047683716" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="#5D6883">
+            <color red="0.36500000953674316" green="0.40799999237060547" blue="0.51399999856948853" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

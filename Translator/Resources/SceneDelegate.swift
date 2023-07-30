@@ -17,7 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
         
-        let splashStoryboard =  UIStoryboard(name: "SplashScreen", bundle: nil).instantiateViewController(withIdentifier: "SplashScreenViewController")
+        let splashStoryboard = StoryboardFabric.getStoryboard(by: "SplashScreen").instantiateViewController(withIdentifier: "SplashScreenViewController")
         let navigationController = UINavigationController(rootViewController: splashStoryboard)
         navigationController.isNavigationBarHidden = true
         window?.rootViewController = navigationController

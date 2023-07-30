@@ -28,20 +28,28 @@ class PremiumViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        backgroundTextView.layer.cornerRadius = 20
+        
+        switch UIDevice.current.userInterfaceIdiom {
+        case .phone:
+                  backgroundTextView.layer.cornerRadius = 20
+                  buyNowButton.layer.cornerRadius = 15
+            
+        default:  backgroundTextView.layer.cornerRadius = 30
+                  buyNowButton.layer.cornerRadius = 25
+        }
+      
         backgroundTextView.layer.masksToBounds = true
-        buyNowButton.layer.cornerRadius = 15
         buyNowButton.layer.masksToBounds = true
-       
+        
         gradient.frame = buyNowButton.bounds
         buyNowButton.layer.insertSublayer(gradient, at: 0)
-//        buyNowButton.layer.borderWidth = 4
+
       
         
     }
     
     @IBAction func closeButtonDidTap(_ sender: Any) {
-        let entarcen = UIStoryboard(name: "MainTranslator", bundle: nil).instantiateViewController(identifier: "MainTranslatoreViewController")
+        let entarcen = StoryboardFabric.getStoryboard(by: "MainTranslator").instantiateViewController(identifier: "MainTranslatoreViewController")
         self.navigationController?.pushViewController(entarcen, animated: true)
     }
     

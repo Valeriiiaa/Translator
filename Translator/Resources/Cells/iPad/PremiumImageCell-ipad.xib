@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="FixelText-SemiBold.ttf">
+            <string>FixelText-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="PremiumImageCell" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="250" id="MNd-mD-BbG" customClass="PremiumImageCell" customModule="Translator" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="250"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MNd-mD-BbG" id="cIi-LU-maq">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="250"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pemiumBackground" translatesAutoresizingMaskIntoConstraints="NO" id="PLD-0w-VdU">
+                        <rect key="frame" x="0.0" y="0.0" width="393.66666666666669" height="184"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="PLD-0w-VdU" secondAttribute="height" multiplier="1.07:0.5" id="Yl2-zr-Fqu"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lf9-cW-QrO">
+                        <rect key="frame" x="-53.666666666666657" y="181" width="500.33333333333326" height="70"/>
+                        <color key="backgroundColor" name="BlueButton"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="70" id="D4V-aa-d0y"/>
+                            <constraint firstAttribute="width" constant="500" id="b5T-Ze-kGa"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="FixelText-SemiBold" family="Fixel Text" pointSize="26"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title="BUY NOW">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ijl-jE-IKq">
+                        <rect key="frame" x="0.0" y="280" width="393" height="1"/>
+                        <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="fef-qY-mg0"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="lf9-cW-QrO" firstAttribute="top" secondItem="PLD-0w-VdU" secondAttribute="bottom" constant="-3" id="4vH-l5-e2E"/>
+                    <constraint firstItem="PLD-0w-VdU" firstAttribute="leading" secondItem="cIi-LU-maq" secondAttribute="leading" id="Bu9-Pq-mPF"/>
+                    <constraint firstAttribute="bottom" secondItem="ijl-jE-IKq" secondAttribute="bottom" id="OJn-Vd-PFK"/>
+                    <constraint firstItem="lf9-cW-QrO" firstAttribute="centerX" secondItem="cIi-LU-maq" secondAttribute="centerX" id="SsM-L4-PCp"/>
+                    <constraint firstItem="ijl-jE-IKq" firstAttribute="leading" secondItem="cIi-LU-maq" secondAttribute="leading" id="VZ7-Ul-lHc"/>
+                    <constraint firstAttribute="trailing" secondItem="ijl-jE-IKq" secondAttribute="trailing" id="eHN-Ub-Tt2"/>
+                    <constraint firstAttribute="trailing" secondItem="PLD-0w-VdU" secondAttribute="trailing" id="k8h-VZ-h5U"/>
+                    <constraint firstItem="PLD-0w-VdU" firstAttribute="top" secondItem="cIi-LU-maq" secondAttribute="top" id="sBa-7u-HfZ"/>
+                    <constraint firstAttribute="bottom" secondItem="lf9-cW-QrO" secondAttribute="bottom" constant="30" id="tBe-me-An8"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="buyNowButton" destination="lf9-cW-QrO" id="6Wq-8b-YYy"/>
+            </connections>
+            <point key="canvasLocation" x="188.54961832061068" y="96.478873239436624"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="pemiumBackground" width="360" height="184"/>
+        <namedColor name="BlueButton">
+            <color red="0.31400001049041748" green="0.55699998140335083" blue="0.96100002527236938" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
