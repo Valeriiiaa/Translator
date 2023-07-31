@@ -10,6 +10,7 @@ import UIKit
 class CameraEditPhotoViewController: UIViewController {
     
     
+    @IBOutlet weak var arrowDownWhiteButton: UIButton!
     @IBOutlet weak var bottomStuckConstraint: NSLayoutConstraint!
     @IBOutlet weak var textFieldMenu: TextField!
     @IBOutlet weak var backgroundTableView: UIView!
@@ -21,17 +22,19 @@ class CameraEditPhotoViewController: UIViewController {
     
     public var image: UIImage?
     
+    var backDidTap: (() -> Void)?
+    
     var allItems = [SelectionCountryModel(nameCountry: "Hindi", flagPicture: "hindi", isSelected: false), SelectionCountryModel(nameCountry: "Hindi", flagPicture: "hindi", isSelected: false) ,SelectionCountryModel(nameCountry: "Hindi", flagPicture: "hindi", isSelected: false), SelectionCountryModel(nameCountry: "Hindi", flagPicture: "hindi", isSelected: false)] {
         didSet {
             countriesModels = allItems
+        }
     }
-}
     
     private var countriesModels = [SelectionCountryModel]()
-   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
         switch UIDevice.current.userInterfaceIdiom {
         case .phone:
             backgroundStuckView.layer.cornerRadius = 10
@@ -52,8 +55,7 @@ class CameraEditPhotoViewController: UIViewController {
         
         switch UIDevice.current.userInterfaceIdiom {
         case .phone: textFieldMenu.attributedPlaceholder = NSAttributedString(string: "Search your language...", attributes: [NSAttributedString.Key.foregroundColor: UIColor(red: 160/255, green: 168/255, blue: 196/255, alpha: 1), .font: UIFont.systemFont(ofSize: 15)])
-
-
+            
         default: textFieldMenu.attributedPlaceholder = NSAttributedString(string: "Search your language...", attributes: [NSAttributedString.Key.foregroundColor: UIColor(red: 160/255, green: 168/255, blue: 196/255, alpha: 1), .font: UIFont.systemFont(ofSize: 25)])
         }
         
@@ -110,12 +112,15 @@ class CameraEditPhotoViewController: UIViewController {
     }
     
     @IBAction func rotateButtonDidTap(_ sender: Any) {
+        
     }
     
     @IBAction func checkmarkDidTap(_ sender: Any) {
     }
     
     @IBAction func backButtonDidTap(_ sender: Any) {
+        backDidTap?()
+        navigationController?.popViewController(animated: true)
     }
 }
 
@@ -130,7 +135,7 @@ extension CameraEditPhotoViewController: UITextFieldDelegate {
         countriesModels = allItems.filter({ $0.nameCountry.localizedCaseInsensitiveContains(searchText) })
         
     }
-}
+} 
 
 
 extension CameraEditPhotoViewController: UITableViewDelegate, UITableViewDataSource {

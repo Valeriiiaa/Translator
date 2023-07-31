@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="FixelText-Regular.ttf">
+            <string>FixelText-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="SelectionCountryHeaderView" id="mCZ-jI-Xhe" customClass="SelectionCountryHeaderView" customModule="Translator" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="58"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DCy-Cn-YNk">
+                    <rect key="frame" x="24" y="31.666666666666671" width="345" height="26.333333333333329"/>
+                    <fontDescription key="fontDescription" name="FixelText-Regular" family="Fixel Text" pointSize="24"/>
+                    <color key="textColor" red="0.62745098040000002" green="0.6588235294" blue="0.76862745099999996" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="6yn-jD-2hf"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="6yn-jD-2hf" firstAttribute="trailing" secondItem="DCy-Cn-YNk" secondAttribute="trailing" constant="24" id="DDZ-jH-BmT"/>
+                <constraint firstItem="DCy-Cn-YNk" firstAttribute="leading" secondItem="6yn-jD-2hf" secondAttribute="leading" constant="24" id="kbo-5n-SWD"/>
+                <constraint firstAttribute="bottom" secondItem="DCy-Cn-YNk" secondAttribute="bottom" id="m3x-XY-9c3"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="headerName" destination="DCy-Cn-YNk" id="th1-uX-2Ji"/>
+            </connections>
+            <point key="canvasLocation" x="55.725190839694655" y="299.29577464788736"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

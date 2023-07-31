@@ -8,11 +8,14 @@
 import UIKit
 import AVFoundation
 
-class CameraTranslatorViewController: UIViewController {
+class CameraTranslatorViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var takePhotoButton: UIButton!
     @IBOutlet weak var backgroundstackView: UIView!
     @IBOutlet weak var backgroundMainView: UIView!
+    
+    
+    var imagePicker = UIImagePickerController()
     
     var session: AVCaptureSession?
     
@@ -29,6 +32,8 @@ class CameraTranslatorViewController: UIViewController {
       
         checkCameraPermissions()
     }
+    
+    
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -83,6 +88,29 @@ class CameraTranslatorViewController: UIViewController {
             }
         }
     }
+    
+    func withDeviceLock(on device: AVCaptureDevice, block: (AVCaptureDevice) -> Void) {
+            do {
+                try device.lockForConfiguration()
+                block(device)
+                device.unlockForConfiguration()
+            } catch {
+            }
+        }
+    
+    func turnOnTorch(device: AVCaptureDevice) {
+            guard device.hasTorch else { return }
+            withDeviceLock(on: device) {
+                try? $0.setTorchModeOn(level: AVCaptureDevice.maxAvailableTorchLevel)
+            }
+        }
+    
+    func turnOffTorch(device: AVCaptureDevice) {
+            guard device.hasTorch else { return }
+            withDeviceLock(on: device) {
+                $0.torchMode = .off
+            }
+        }
    
     @IBAction func cancelButtonDidTap(_ sender: Any) {
         navigationController?.popViewController(animated: true)
@@ -90,7 +118,9 @@ class CameraTranslatorViewController: UIViewController {
     
     @IBAction func selectCountryButtonDidTap(_ sender: Any) {
     }
+   
     @IBAction func splashButtonDidTap(_ sender: Any) {
+        
     }
     
     @IBAction func takePhotoButtonDidTap(_ sender: Any) {
@@ -98,12 +128,34 @@ class CameraTranslatorViewController: UIViewController {
                             delegate: self)
         
     }
+   
     @IBAction func galleryButtonDidTap(_ sender: Any) {
+        
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary){
+                    imagePicker.delegate = self
+                    imagePicker.sourceType = .photoLibrary
+                    imagePicker.allowsEditing = false
+
+                    present(imagePicker, animated: true, completion: nil)
+                }
     }
-    
+   
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+            picker.dismiss(animated: true, completion: nil)
+            if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+                pushAnotherScreen(image: image)
+            }
+
+        }
+  
     func pushAnotherScreen(image: UIImage) {
         let entrance = StoryboardFabric.getStoryboard(by: "CameraEditPhoto").instantiateViewController(identifier: "CameraEditPhotoViewController")
         (entrance as? CameraEditPhotoViewController)?.image = image
+        (entrance as? CameraEditPhotoViewController)?.backDidTap = { [weak self] in
+            DispatchQueue.global().async {
+                self?.session?.startRunning()
+            }
+        }
         navigationController?.pushViewController(entrance, animated: true)
     }
 }

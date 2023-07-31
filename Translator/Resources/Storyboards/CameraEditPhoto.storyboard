@@ -210,6 +210,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="arrowDownWhiteButton" destination="Bmq-pq-gtP" id="ndY-zj-fed"/>
                         <outlet property="backgroundImageView" destination="Ka8-G1-HpR" id="ugo-w6-03U"/>
                         <outlet property="backgroundRotateView" destination="Pf0-Ed-PBw" id="x7O-wV-sSU"/>
                         <outlet property="backgroundStuckView" destination="Rlf-n9-u9e" id="Q8a-lV-Ft5"/>

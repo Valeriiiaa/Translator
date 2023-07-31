@@ -56,6 +56,7 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="backgroundSelectionView" destination="21m-HE-Vf8" id="eFz-Ec-Bqm"/>
+                <outlet property="flagImage" destination="3E3-Y2-lGz" id="9rN-ZR-BmH"/>
                 <outlet property="nameCountry" destination="4cK-3p-EkP" id="wFE-ZS-Gbv"/>
             </connections>
             <point key="canvasLocation" x="191.6030534351145" y="55.633802816901408"/>

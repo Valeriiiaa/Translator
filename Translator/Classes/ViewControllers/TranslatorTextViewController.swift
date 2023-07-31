@@ -132,7 +132,7 @@ class TranslatorTextViewController: UIViewController, UITextViewDelegate {
     }
     
     @IBAction func selectCountryDidTap(_ sender: Any) {
-        let entrance = UIStoryboard(name: "SelectionCountry", bundle: nil).instantiateViewController(identifier: "SelectionCountryViewController")
+        let entrance = StoryboardFabric.getStoryboard(by: "SelectionCountry").instantiateViewController(identifier: "SelectionCountryViewController")
         navigationController?.pushViewController(entrance, animated: true)
     }
     

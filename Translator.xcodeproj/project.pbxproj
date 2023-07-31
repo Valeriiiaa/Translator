@@ -28,6 +28,8 @@
 		F625F6DB2A77B9270040F1A3 /* CameraTranslator-ipad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F625F6DA2A77B9270040F1A3 /* CameraTranslator-ipad.storyboard */; };
 		F625F6DD2A77B9330040F1A3 /* CameraEditPhoto-ipad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F625F6DC2A77B9330040F1A3 /* CameraEditPhoto-ipad.storyboard */; };
 		F625F6DF2A77C4F00040F1A3 /* SectionMenuCell-ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F625F6DE2A77C4F00040F1A3 /* SectionMenuCell-ipad.xib */; };
+		F625F6E22A77D9830040F1A3 /* SelectionCountryHeaderView-ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F625F6E12A77D9830040F1A3 /* SelectionCountryHeaderView-ipad.xib */; };
+		F625F6E52A77DBE00040F1A3 /* ClearChatView-ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F625F6E42A77DBE00040F1A3 /* ClearChatView-ipad.xib */; };
 		F62893592A6E999C00B7A36C /* MainTranslatorModelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62893582A6E999C00B7A36C /* MainTranslatorModelCell.swift */; };
 		F628935D2A6EBB9100B7A36C /* DrawerPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F628935C2A6EBB9100B7A36C /* DrawerPresentationController.swift */; };
 		F62893602A6EBBD900B7A36C /* DrawerSlideAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F628935F2A6EBBD900B7A36C /* DrawerSlideAnimation.swift */; };
@@ -160,6 +162,8 @@
 		F625F6DA2A77B9270040F1A3 /* CameraTranslator-ipad.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "CameraTranslator-ipad.storyboard"; sourceTree = "<group>"; };
 		F625F6DC2A77B9330040F1A3 /* CameraEditPhoto-ipad.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "CameraEditPhoto-ipad.storyboard"; sourceTree = "<group>"; };
 		F625F6DE2A77C4F00040F1A3 /* SectionMenuCell-ipad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "SectionMenuCell-ipad.xib"; sourceTree = "<group>"; };
+		F625F6E12A77D9830040F1A3 /* SelectionCountryHeaderView-ipad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "SelectionCountryHeaderView-ipad.xib"; sourceTree = "<group>"; };
+		F625F6E42A77DBE00040F1A3 /* ClearChatView-ipad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "ClearChatView-ipad.xib"; sourceTree = "<group>"; };
 		F62893582A6E999C00B7A36C /* MainTranslatorModelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTranslatorModelCell.swift; sourceTree = "<group>"; };
 		F628935C2A6EBB9100B7A36C /* DrawerPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerPresentationController.swift; sourceTree = "<group>"; };
 		F628935F2A6EBBD900B7A36C /* DrawerSlideAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerSlideAnimation.swift; sourceTree = "<group>"; };
@@ -315,6 +319,22 @@
 			path = iPad;
 			sourceTree = "<group>";
 		};
+		F625F6E02A77D9590040F1A3 /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				F625F6E12A77D9830040F1A3 /* SelectionCountryHeaderView-ipad.xib */,
+			);
+			path = iPad;
+			sourceTree = "<group>";
+		};
+		F625F6E32A77DBD60040F1A3 /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				F625F6E42A77DBE00040F1A3 /* ClearChatView-ipad.xib */,
+			);
+			path = iPad;
+			sourceTree = "<group>";
+		};
 		F62893572A6E998700B7A36C /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -409,6 +429,7 @@
 		F68C37112A71515000AD0A1F /* HeaderFooters */ = {
 			isa = PBXGroup;
 			children = (
+				F625F6E02A77D9590040F1A3 /* iPad */,
 				F68C37122A71517A00AD0A1F /* SelectionCountryHeaderView.xib */,
 			);
 			path = HeaderFooters;
@@ -518,6 +539,7 @@
 		F6D6230A2A6FD4A100D24F16 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F625F6E32A77DBD60040F1A3 /* iPad */,
 				F6D6230C2A6FD4FE00D24F16 /* Offer30View.xib */,
 				F6D6230E2A6FD50600D24F16 /* Offer50View.xib */,
 				F6DDCBC82A6FF0B6007B51EE /* ClearChatView.xib */,
@@ -815,6 +837,7 @@
 				F6D2C8D22A71203C00F7D7EF /* RightMessagesCell.xib in Resources */,
 				F625F6C22A779E240040F1A3 /* History-ipad.storyboard in Resources */,
 				F625F6D42A77B7DB0040F1A3 /* SelectionCountry-ipad.storyboard in Resources */,
+				F625F6E22A77D9830040F1A3 /* SelectionCountryHeaderView-ipad.xib in Resources */,
 				F6DE21562A6E7C49003F49F4 /* Premium.storyboard in Resources */,
 				F625F6D02A77B4B30040F1A3 /* RightMessagesCell-ipad.xib in Resources */,
 				F625F6DF2A77C4F00040F1A3 /* SectionMenuCell-ipad.xib in Resources */,
@@ -836,6 +859,7 @@
 				F6DE21292A6E72DF003F49F4 /* FixelText-Medium.ttf in Resources */,
 				F6D5D9792A7534D100A8053B /* SectionMenuCell.xib in Resources */,
 				F68C37132A71517A00AD0A1F /* SelectionCountryHeaderView.xib in Resources */,
+				F625F6E52A77DBE00040F1A3 /* ClearChatView-ipad.xib in Resources */,
 				F625F6CC2A77B46C0040F1A3 /* EmptyChatCell-ipad.xib in Resources */,
 				F62893872A6FC53D00B7A36C /* History.storyboard in Resources */,
 				F625F6B52A76B3440040F1A3 /* MainTranslator-ipad.storyboard in Resources */,
@@ -1093,7 +1117,7 @@
 				DEVELOPMENT_TEAM = 6NNWR2JHQ8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Translator/Info.plist;
-				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow to take a photo.";
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Please allow to record audio.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -1124,7 +1148,7 @@
 				DEVELOPMENT_TEAM = 6NNWR2JHQ8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Translator/Info.plist;
-				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow to take a photo.";
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Please allow to record audio.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;

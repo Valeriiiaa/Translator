@@ -22,21 +22,31 @@ class SelectionCountryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        searchBar.layer.cornerRadius = 15
+        switch UIDevice.current.userInterfaceIdiom {
+        case .phone:
+            searchBar.layer.cornerRadius = 15
+            
+        default:
+            searchBar.layer.cornerRadius = 25
+        }
+        
         searchBar.layer.masksToBounds = true
         searchBar.searchTextField.font = UIFont(name: "Fixel-Medium", size: 14)
         selectionModels = allItems
         tableViewSection.dataSource = self
         tableViewSection.delegate = self
-        tableViewSection.register(UINib(nibName: "SectionCountryCell" , bundle: nil), forCellReuseIdentifier: "SectionCountryCell")
-        tableViewSection.register(UINib(nibName: "SelectionCountryHeaderView", bundle: nil), forHeaderFooterViewReuseIdentifier: "SelectionCountryHeaderView")
+        tableViewSection.register(UINib(nibName: CellManager.getCell(by: "SectionCountryCell") , bundle: nil), forCellReuseIdentifier: CellManager.getCell(by: "SectionCountryCell"))
+        tableViewSection.register(UINib(nibName: HeaderManager.getHeader(by: "SelectionCountryHeaderView"), bundle: nil), forHeaderFooterViewReuseIdentifier: HeaderManager.getHeader(by: "SelectionCountryHeaderView"))
         searchBar.delegate = self
         searchBar.placeholder = "Search your language..."
-        searchBar.searchTextField.attributedPlaceholder = NSAttributedString(string: "Search your language...", attributes: [NSAttributedString.Key.foregroundColor: UIColor(red: 160/255, green: 168/255, blue: 196/255, alpha: 1)])
-
-
         
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
+        switch UIDevice.current.userInterfaceIdiom {
+        case .phone: searchBar.searchTextField.attributedPlaceholder = NSAttributedString(string: "Search your language...", attributes: [NSAttributedString.Key.foregroundColor: UIColor(red: 160/255, green: 168/255, blue: 196/255, alpha: 1), .font: UIFont.systemFont(ofSize: 15)])
+
+        default:  searchBar.searchTextField.attributedPlaceholder = NSAttributedString(string: "Search your language...", attributes: [NSAttributedString.Key.foregroundColor: UIColor(red: 160/255, green: 168/255, blue: 196/255, alpha: 1), .font: UIFont.systemFont(ofSize: 25)])
+        }
+    
+       let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
                 view.addGestureRecognizer(tapGesture)
         
         view.isUserInteractionEnabled = true
@@ -69,7 +79,7 @@ extension SelectionCountryViewController: UITableViewDelegate, UITableViewDataSo
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let itemSection = selectionModels[section]
-        let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: "SelectionCountryHeaderView")
+        let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: HeaderManager.getHeader(by: "SelectionCountryHeaderView"))
         (header as? SelectionCountryHeaderView)?.configure(name: itemSection.title)
         return header
     }
@@ -81,7 +91,7 @@ extension SelectionCountryViewController: UITableViewDelegate, UITableViewDataSo
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let model = selectionModels[indexPath.section].countryModels[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SectionCountryCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: CellManager.getCell(by: "SectionCountryCell"), for: indexPath)
         (cell as? SectionCountryCell)?.configure(flagPicture: model.flagPicture, labelCountry: model.nameCountry)
         return cell
     }
