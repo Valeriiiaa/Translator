@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad11_0rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="FixelText-Medium.ttf">
+            <string>FixelText-Medium</string>
+        </array>
+        <array key="Sriracha-Regular.ttf">
+            <string>Sriracha-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--History View Controller-->
+        <scene sceneID="rUn-7b-7Ls">
+            <objects>
+                <viewController storyboardIdentifier="HistoryViewController" id="IIh-Je-Djc" customClass="HistoryViewController" customModule="Translator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Z7P-Nv-L5q">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="i0Y-oO-NCr">
+                                <rect key="frame" x="34" y="58" width="190.5" height="62"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N2o-nj-9Cu">
+                                        <rect key="frame" x="0.0" y="0.0" width="44" height="62"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="back-ipad"/>
+                                        <connections>
+                                            <action selector="backButtonDidTap:" destination="IIh-Je-Djc" eventType="touchUpInside" id="6r0-4U-D5V"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="History" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4r-pS-EJw">
+                                        <rect key="frame" x="74" y="0.0" width="116.5" height="62"/>
+                                        <fontDescription key="fontDescription" name="Sriracha-Regular" family="Sriracha" pointSize="35"/>
+                                        <color key="textColor" name="#5D6883"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="J5W-P1-MdK">
+                                <rect key="frame" x="664.5" y="73.5" width="135.5" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No ADS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ymL-3j-dXv">
+                                        <rect key="frame" x="0.0" y="0.0" width="76.5" height="31"/>
+                                        <fontDescription key="fontDescription" name="FixelText-Medium" family="Fixel Text" pointSize="22"/>
+                                        <color key="textColor" red="0.23137254900000001" green="0.27450980390000002" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WgD-5l-4is">
+                                        <rect key="frame" x="86.5" y="0.0" width="51" height="31"/>
+                                    </switch>
+                                </subviews>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="uid-7C-3r4">
+                                <rect key="frame" x="0.0" y="170" width="834" height="1024"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5jO-cD-O0X">
+                                <rect key="frame" x="239.5" y="69" width="40" height="40"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="eraser-ipad"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NFx-Lm-0xW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="5jO-cD-O0X" firstAttribute="leading" secondItem="i0Y-oO-NCr" secondAttribute="trailing" constant="15" id="31h-jl-wa8"/>
+                            <constraint firstItem="uid-7C-3r4" firstAttribute="top" secondItem="i0Y-oO-NCr" secondAttribute="bottom" constant="50" id="FR3-r1-Ox2"/>
+                            <constraint firstItem="NFx-Lm-0xW" firstAttribute="trailing" secondItem="J5W-P1-MdK" secondAttribute="trailing" constant="34" id="H3U-aV-6e3"/>
+                            <constraint firstItem="i0Y-oO-NCr" firstAttribute="top" secondItem="NFx-Lm-0xW" secondAttribute="top" constant="34" id="KEJ-ke-d0T"/>
+                            <constraint firstAttribute="bottom" secondItem="uid-7C-3r4" secondAttribute="bottom" id="M2C-30-wr1"/>
+                            <constraint firstItem="NFx-Lm-0xW" firstAttribute="trailing" secondItem="uid-7C-3r4" secondAttribute="trailing" id="PHz-kD-jZC"/>
+                            <constraint firstItem="uid-7C-3r4" firstAttribute="leading" secondItem="NFx-Lm-0xW" secondAttribute="leading" id="S6d-IF-IVn"/>
+                            <constraint firstItem="i0Y-oO-NCr" firstAttribute="leading" secondItem="NFx-Lm-0xW" secondAttribute="leading" constant="34" id="d2i-Oz-DXI"/>
+                            <constraint firstItem="5jO-cD-O0X" firstAttribute="centerY" secondItem="g4r-pS-EJw" secondAttribute="centerY" id="oJf-OJ-KNQ"/>
+                            <constraint firstItem="J5W-P1-MdK" firstAttribute="centerY" secondItem="i0Y-oO-NCr" secondAttribute="centerY" id="t6l-sX-Hfn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="eraserButton" destination="5jO-cD-O0X" id="lOf-SE-isz"/>
+                        <outlet property="historyLabel" destination="g4r-pS-EJw" id="CTh-Up-gQi"/>
+                        <outlet property="tableView" destination="uid-7C-3r4" id="kzi-Kb-dYI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1EP-wO-epu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="48" y="-2"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="back-ipad" width="44" height="44"/>
+        <image name="eraser-ipad" width="40" height="40"/>
+        <namedColor name="#5D6883">
+            <color red="0.36500000953674316" green="0.40799999237060547" blue="0.51399999856948853" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

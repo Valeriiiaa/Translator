@@ -20,12 +20,13 @@ class HistoryViewController: UIViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UINib(nibName: "HistoryEmptyCell" , bundle: nil), forCellReuseIdentifier: "HistoryEmptyCell")
-       
+        tableView.register(UINib(nibName: CellManager.getCell(by: "HistoryEmptyCell") , bundle: nil), forCellReuseIdentifier: CellManager.getCell(by: "HistoryEmptyCell"))
+        tableView.register(UINib(nibName: CellManager.getCell(by: "HistoryFullCell") , bundle: nil), forCellReuseIdentifier: CellManager.getCell(by: "HistoryFullCell"))
     }
     
 
     @IBAction func backButtonDidTap(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
 //        showPopup()
     }
    
@@ -53,7 +54,7 @@ extension HistoryViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let model = historyModels[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: model is HistoryEmptyModel ? "HistoryEmptyCell" : "HistoryFullCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: model is HistoryEmptyModel ? CellManager.getCell(by: "HistoryEmptyCell") : CellManager.getCell(by: "HistoryFullCell"), for: indexPath)
         return cell
     }
    

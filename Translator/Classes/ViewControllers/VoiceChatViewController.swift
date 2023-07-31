@@ -22,9 +22,9 @@ class VoiceChatViewController: UIViewController {
         
         tableViewChat.dataSource = self
         tableViewChat.delegate = self
-        tableViewChat.register(UINib(nibName: "LeftMessagesCell" , bundle: nil), forCellReuseIdentifier: "LeftMessagesCell")
-        tableViewChat.register(UINib(nibName: "RightMessagesCell" , bundle: nil), forCellReuseIdentifier: "RightMessagesCell")
-        tableViewChat.register(UINib(nibName: "EmptyChatCell" , bundle: nil), forCellReuseIdentifier: "EmptyChatCell")
+        tableViewChat.register(UINib(nibName: CellManager.getCell(by: "LeftMessagesCell") , bundle: nil), forCellReuseIdentifier: CellManager.getCell(by: "LeftMessagesCell"))
+        tableViewChat.register(UINib(nibName: CellManager.getCell(by: "RightMessagesCell") , bundle: nil), forCellReuseIdentifier: CellManager.getCell(by: "RightMessagesCell"))
+        tableViewChat.register(UINib(nibName: CellManager.getCell(by: "EmptyChatCell") , bundle: nil), forCellReuseIdentifier: CellManager.getCell(by: "EmptyChatCell"))
 }
     
     @IBAction func backButtonDidTap(_ sender: Any) {
@@ -47,11 +47,11 @@ extension VoiceChatViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let model = messagesModel[indexPath.row]
         if model.isMe {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "LeftMessagesCell", for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: CellManager.getCell(by: "LeftMessagesCell"), for: indexPath)
             (cell as? LeftMessagesCell)?.configure(labelFirst: model.textFirst, labelSecond: model.textSecond)
             return cell
         } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "RightMessagesCell", for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: CellManager.getCell(by: "RightMessagesCell"), for: indexPath)
             (cell as? LeftMessagesCell)?.configure(labelFirst: model.textFirst, labelSecond: model.textSecond)
             return cell
         }

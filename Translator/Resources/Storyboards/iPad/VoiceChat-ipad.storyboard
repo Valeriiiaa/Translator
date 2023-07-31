@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad11_0rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="FixelText-Medium.ttf">
+            <string>FixelText-Medium</string>
+        </array>
+        <array key="Sriracha-Regular.ttf">
+            <string>Sriracha-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Voice Chat View Controller-->
+        <scene sceneID="PT8-U1-lSu">
+            <objects>
+                <viewController storyboardIdentifier="VoiceChatViewController" id="plQ-E4-7sE" customClass="VoiceChatViewController" customModule="Translator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OMQ-BJ-D3R">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="170" translatesAutoresizingMaskIntoConstraints="NO" id="Nxu-9X-hKl">
+                                <rect key="frame" x="212" y="899" width="410" height="120"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cML-sS-NXQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="blueMic-ipad"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5QM-Fz-xfb">
+                                        <rect key="frame" x="290" y="0.0" width="120" height="120"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="orangeMic-ipad"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9bg-yS-ptJ">
+                                <rect key="frame" x="20" y="44" width="55" height="34"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9gu-fS-bWu">
+                                        <rect key="frame" x="5.5" y="-5" width="44" height="44"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="back-ipad"/>
+                                        <connections>
+                                            <action selector="backButtonDidTap:" destination="plQ-E4-7sE" eventType="touchUpInside" id="zcv-Jf-Voe"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="55" id="1xV-v3-bdx"/>
+                                    <constraint firstItem="9gu-fS-bWu" firstAttribute="centerY" secondItem="9bg-yS-ptJ" secondAttribute="centerY" id="Nx9-gY-BqA"/>
+                                    <constraint firstAttribute="height" constant="34" id="Q5c-Nl-Xpd"/>
+                                    <constraint firstItem="9gu-fS-bWu" firstAttribute="centerX" secondItem="9bg-yS-ptJ" secondAttribute="centerX" id="ytl-Kn-pce"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Voice Chat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="biq-Re-bNe">
+                                <rect key="frame" x="96" y="30" width="161" height="62"/>
+                                <fontDescription key="fontDescription" name="Sriracha-Regular" family="Sriracha" pointSize="35"/>
+                                <color key="textColor" name="#5D6883"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x6V-zg-jyM">
+                                <rect key="frame" x="272" y="41" width="40" height="40"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="eraser-ipad"/>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="INp-vO-FHx">
+                                <rect key="frame" x="0.0" y="97" width="834" height="782"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="t8H-oh-b8Z">
+                                <rect key="frame" x="664.5" y="45.5" width="135.5" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No ADS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QVu-XZ-aCt">
+                                        <rect key="frame" x="0.0" y="0.0" width="76.5" height="31"/>
+                                        <fontDescription key="fontDescription" name="FixelText-Medium" family="Fixel Text" pointSize="22"/>
+                                        <color key="textColor" red="0.23137254900000001" green="0.27450980390000002" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z3D-rN-51v">
+                                        <rect key="frame" x="86.5" y="0.0" width="51" height="31"/>
+                                    </switch>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o9h-AT-ffK">
+                                <rect key="frame" x="34" y="1049" width="766" height="100"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="v0s-vH-HMH">
+                                        <rect key="frame" x="66" y="15.5" width="634.5" height="69"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mhN-r8-jlF">
+                                                <rect key="frame" x="0.0" y="0.0" width="250" height="69"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flagUA-ipad" translatesAutoresizingMaskIntoConstraints="NO" id="90g-qA-HhZ">
+                                                        <rect key="frame" x="20" y="24" width="31" height="21"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="31" id="U84-We-0ut"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ukrainian" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ri-cP-CAD">
+                                                        <rect key="frame" x="66" y="24.5" width="71.5" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" name="#3B4669"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fbP-G8-iUt">
+                                                        <rect key="frame" x="189" y="18" width="36" height="33"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" image="arrowDown-ipad"/>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="fbP-G8-iUt" secondAttribute="trailing" constant="25" id="LOu-Qb-kuZ"/>
+                                                    <constraint firstAttribute="height" constant="69" id="LXi-Kx-ev9"/>
+                                                    <constraint firstAttribute="width" constant="250" id="Wjv-Jd-lbd"/>
+                                                    <constraint firstAttribute="bottom" secondItem="90g-qA-HhZ" secondAttribute="bottom" constant="24" id="czv-TB-9js"/>
+                                                    <constraint firstItem="90g-qA-HhZ" firstAttribute="top" secondItem="mhN-r8-jlF" secondAttribute="top" constant="24" id="gGi-7T-sin"/>
+                                                    <constraint firstItem="90g-qA-HhZ" firstAttribute="leading" secondItem="mhN-r8-jlF" secondAttribute="leading" constant="20" id="hTK-Cv-KK1"/>
+                                                    <constraint firstItem="4Ri-cP-CAD" firstAttribute="leading" secondItem="90g-qA-HhZ" secondAttribute="trailing" constant="15" id="xCm-2F-lYe"/>
+                                                    <constraint firstItem="4Ri-cP-CAD" firstAttribute="centerY" secondItem="90g-qA-HhZ" secondAttribute="centerY" id="xnl-Ua-Mrj"/>
+                                                    <constraint firstItem="fbP-G8-iUt" firstAttribute="centerY" secondItem="4Ri-cP-CAD" secondAttribute="centerY" id="yla-RG-MJa"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XIQ-fm-sfS">
+                                                <rect key="frame" x="298" y="0.0" width="48.5" height="69"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="riverso-ipad"/>
+                                                <connections>
+                                                    <action selector="riversoButtonDidTap:" destination="plQ-E4-7sE" eventType="touchUpInside" id="vGm-1b-gnq"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RxU-bk-FS5">
+                                                <rect key="frame" x="394.5" y="0.0" width="240" height="69"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flagUK-ipad" translatesAutoresizingMaskIntoConstraints="NO" id="nus-EN-WJ1">
+                                                        <rect key="frame" x="20" y="24" width="31" height="21"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="31" id="T5C-Vd-YMP"/>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="31" id="VW5-C0-3fe"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="English" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uvy-FN-w1w">
+                                                        <rect key="frame" x="66" y="24.5" width="55" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" name="#3B4669"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AdV-ce-K9U">
+                                                        <rect key="frame" x="179" y="18" width="36" height="33"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" image="arrowDown-ipad"/>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="69" id="ATM-NN-mfg"/>
+                                                    <constraint firstItem="uvy-FN-w1w" firstAttribute="leading" secondItem="nus-EN-WJ1" secondAttribute="trailing" constant="15" id="BxS-LA-2iQ"/>
+                                                    <constraint firstItem="nus-EN-WJ1" firstAttribute="top" secondItem="RxU-bk-FS5" secondAttribute="top" constant="24" id="IXT-qx-wdT"/>
+                                                    <constraint firstItem="nus-EN-WJ1" firstAttribute="leading" secondItem="RxU-bk-FS5" secondAttribute="leading" constant="20" id="TEf-d7-ne7"/>
+                                                    <constraint firstItem="AdV-ce-K9U" firstAttribute="centerY" secondItem="uvy-FN-w1w" secondAttribute="centerY" id="asy-L3-1Xq"/>
+                                                    <constraint firstAttribute="trailing" secondItem="AdV-ce-K9U" secondAttribute="trailing" constant="25" id="giT-Fx-hW3"/>
+                                                    <constraint firstAttribute="width" constant="240" id="khE-22-rLK"/>
+                                                    <constraint firstItem="uvy-FN-w1w" firstAttribute="centerY" secondItem="nus-EN-WJ1" secondAttribute="centerY" id="p3K-4v-qCa"/>
+                                                    <constraint firstAttribute="bottom" secondItem="nus-EN-WJ1" secondAttribute="bottom" constant="24" id="puP-eB-3Qm"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.96470588239999999" green="0.98039215690000003" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="v0s-vH-HMH" firstAttribute="centerX" secondItem="o9h-AT-ffK" secondAttribute="centerX" id="FmR-f2-LsO"/>
+                                    <constraint firstItem="v0s-vH-HMH" firstAttribute="centerY" secondItem="o9h-AT-ffK" secondAttribute="centerY" id="hpH-PM-3cd"/>
+                                    <constraint firstAttribute="height" constant="100" id="i5P-hY-tQB"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4cb-KV-dSO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="biq-Re-bNe" firstAttribute="centerY" secondItem="9gu-fS-bWu" secondAttribute="centerY" id="6mv-uO-Kxy"/>
+                            <constraint firstItem="t8H-oh-b8Z" firstAttribute="centerY" secondItem="biq-Re-bNe" secondAttribute="centerY" id="8Xk-iv-ueN"/>
+                            <constraint firstItem="INp-vO-FHx" firstAttribute="top" secondItem="biq-Re-bNe" secondAttribute="bottom" constant="5" id="JWU-EP-vSI"/>
+                            <constraint firstItem="o9h-AT-ffK" firstAttribute="leading" secondItem="4cb-KV-dSO" secondAttribute="leading" constant="34" id="Nk5-hs-gYa"/>
+                            <constraint firstItem="9bg-yS-ptJ" firstAttribute="top" secondItem="4cb-KV-dSO" secondAttribute="top" constant="20" id="R3T-U8-yG3"/>
+                            <constraint firstItem="4cb-KV-dSO" firstAttribute="trailing" secondItem="t8H-oh-b8Z" secondAttribute="trailing" constant="34" id="R7h-9U-rTe"/>
+                            <constraint firstItem="4cb-KV-dSO" firstAttribute="bottom" secondItem="o9h-AT-ffK" secondAttribute="bottom" constant="25" id="RVB-mL-Ok6"/>
+                            <constraint firstItem="o9h-AT-ffK" firstAttribute="top" secondItem="Nxu-9X-hKl" secondAttribute="bottom" constant="30" id="RoX-We-kWb"/>
+                            <constraint firstItem="4cb-KV-dSO" firstAttribute="trailing" secondItem="INp-vO-FHx" secondAttribute="trailing" id="ZoO-Eh-tCM"/>
+                            <constraint firstItem="INp-vO-FHx" firstAttribute="leading" secondItem="4cb-KV-dSO" secondAttribute="leading" id="bVE-cE-s7h"/>
+                            <constraint firstItem="x6V-zg-jyM" firstAttribute="leading" secondItem="biq-Re-bNe" secondAttribute="trailing" constant="15" id="jhR-ET-QC2"/>
+                            <constraint firstItem="x6V-zg-jyM" firstAttribute="centerY" secondItem="biq-Re-bNe" secondAttribute="centerY" id="lmS-uI-9xZ"/>
+                            <constraint firstItem="biq-Re-bNe" firstAttribute="leading" secondItem="9bg-yS-ptJ" secondAttribute="trailing" constant="21" id="mBu-0u-Jig"/>
+                            <constraint firstItem="Nxu-9X-hKl" firstAttribute="top" secondItem="INp-vO-FHx" secondAttribute="bottom" constant="20" id="nXT-CM-dXw"/>
+                            <constraint firstItem="9bg-yS-ptJ" firstAttribute="leading" secondItem="4cb-KV-dSO" secondAttribute="leading" constant="20" id="pKs-W0-DBC"/>
+                            <constraint firstItem="Nxu-9X-hKl" firstAttribute="centerX" secondItem="OMQ-BJ-D3R" secondAttribute="centerX" id="twM-il-ATR"/>
+                            <constraint firstItem="4cb-KV-dSO" firstAttribute="trailing" secondItem="o9h-AT-ffK" secondAttribute="trailing" constant="34" id="w4b-ns-01Z"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="firstFlag" destination="90g-qA-HhZ" id="7p1-da-d12"/>
+                        <outlet property="firstLabel" destination="4Ri-cP-CAD" id="M6y-Lw-k8a"/>
+                        <outlet property="secondFlag" destination="nus-EN-WJ1" id="Yrr-V1-EK6"/>
+                        <outlet property="secondLabel" destination="uvy-FN-w1w" id="I4g-pQ-Tfs"/>
+                        <outlet property="tableViewChat" destination="INp-vO-FHx" id="gdB-fY-RhH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ti1-dO-DMU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="46.043165467625904" y="-2.512562814070352"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrowDown-ipad" width="36" height="33"/>
+        <image name="back-ipad" width="44" height="44"/>
+        <image name="blueMic-ipad" width="120" height="120"/>
+        <image name="eraser-ipad" width="40" height="40"/>
+        <image name="flagUA-ipad" width="29.5" height="21"/>
+        <image name="flagUK-ipad" width="25" height="21"/>
+        <image name="orangeMic-ipad" width="120" height="120"/>
+        <image name="riverso-ipad" width="48.5" height="48.5"/>
+        <namedColor name="#3B4669">
+            <color red="0.23100000619888306" green="0.27500000596046448" blue="0.41200000047683716" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="#5D6883">
+            <color red="0.36500000953674316" green="0.40799999237060547" blue="0.51399999856948853" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

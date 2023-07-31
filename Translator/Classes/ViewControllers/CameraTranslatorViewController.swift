@@ -102,7 +102,7 @@ class CameraTranslatorViewController: UIViewController {
     }
     
     func pushAnotherScreen(image: UIImage) {
-        let entrance = UIStoryboard(name: "CameraEditPhoto", bundle: nil).instantiateViewController(identifier: "CameraEditPhotoViewController")
+        let entrance = StoryboardFabric.getStoryboard(by: "CameraEditPhoto").instantiateViewController(identifier: "CameraEditPhotoViewController")
         (entrance as? CameraEditPhotoViewController)?.image = image
         navigationController?.pushViewController(entrance, animated: true)
     }

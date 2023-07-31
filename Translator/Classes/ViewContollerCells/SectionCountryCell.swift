@@ -15,7 +15,14 @@ class SectionCountryCell: UITableViewCell {
    
     override func awakeFromNib() {
         super.awakeFromNib()
-        backgroundSelectionView.layer.cornerRadius = 15
+        
+        switch UIDevice.current.userInterfaceIdiom {
+        case .phone:
+            backgroundSelectionView.layer.cornerRadius = 15
+            
+            
+        default:  backgroundSelectionView.layer.cornerRadius = 25
+        }
         backgroundSelectionView.layer.masksToBounds = true
         backgroundSelectionView.layer.borderWidth = 2
         backgroundSelectionView.layer.borderColor = UIColor(red: 235/255, green: 239/255, blue: 248/255, alpha: 1).cgColor

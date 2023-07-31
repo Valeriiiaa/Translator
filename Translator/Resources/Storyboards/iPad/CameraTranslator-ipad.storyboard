@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad11_0rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="FixelText-Medium.ttf">
+            <string>FixelText-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Camera Translator View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="CameraTranslatorViewController" id="Y6W-OH-hqX" customClass="CameraTranslatorViewController" customModule="Translator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IOO-Sp-Iqh">
+                                <rect key="frame" x="0.0" y="894" width="834" height="300"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YYP-vh-8Qg">
+                                        <rect key="frame" x="167" y="180" width="500" height="100"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Translate into" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gri-7b-PaA">
+                                                <rect key="frame" x="55" y="35" width="151" height="30"/>
+                                                <fontDescription key="fontDescription" name="FixelText-Medium" family="Fixel Text" pointSize="24"/>
+                                                <color key="textColor" red="0.96470588239999999" green="0.98039215690000003" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rqd-T8-GEG">
+                                                <rect key="frame" x="256" y="15" width="210" height="70"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flagUK-ipad" translatesAutoresizingMaskIntoConstraints="NO" id="Zpq-83-7YA">
+                                                        <rect key="frame" x="24" y="12" width="25" height="46"/>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="English" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3kz-Qt-dui">
+                                                        <rect key="frame" x="73" y="20.5" width="75.5" height="29"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g8C-4L-dVz">
+                                                        <rect key="frame" x="164" y="18.5" width="36" height="33"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" image="arrowDown-ipad"/>
+                                                        <connections>
+                                                            <action selector="selectCountryButtonDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="bIX-eS-nc7"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.34999999999999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="Zpq-83-7YA" secondAttribute="bottom" constant="12" id="2C8-wx-zJi"/>
+                                                    <constraint firstItem="Zpq-83-7YA" firstAttribute="leading" secondItem="rqd-T8-GEG" secondAttribute="leading" constant="24" id="2c5-iv-sAZ"/>
+                                                    <constraint firstItem="3kz-Qt-dui" firstAttribute="leading" secondItem="Zpq-83-7YA" secondAttribute="trailing" constant="24" id="H3c-45-XPd"/>
+                                                    <constraint firstItem="Zpq-83-7YA" firstAttribute="top" secondItem="rqd-T8-GEG" secondAttribute="top" constant="12" id="bfX-ri-Cba"/>
+                                                    <constraint firstAttribute="height" constant="70" id="hVO-Ha-PBb"/>
+                                                    <constraint firstItem="3kz-Qt-dui" firstAttribute="centerY" secondItem="Zpq-83-7YA" secondAttribute="centerY" id="iMK-ES-jj8"/>
+                                                    <constraint firstAttribute="trailing" secondItem="g8C-4L-dVz" secondAttribute="trailing" constant="10" id="rdD-6p-7bh"/>
+                                                    <constraint firstItem="g8C-4L-dVz" firstAttribute="centerY" secondItem="3kz-Qt-dui" secondAttribute="centerY" id="vgp-e0-Ihf"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.96470588235294119" green="0.98039215686274506" blue="0.99215686274509807" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="Gri-7b-PaA" firstAttribute="top" secondItem="YYP-vh-8Qg" secondAttribute="top" constant="35" id="9OW-1B-YKb"/>
+                                            <constraint firstAttribute="bottom" secondItem="Gri-7b-PaA" secondAttribute="bottom" constant="35" id="Eov-7K-c77"/>
+                                            <constraint firstAttribute="bottom" secondItem="rqd-T8-GEG" secondAttribute="bottom" constant="15" id="Han-1p-5hN"/>
+                                            <constraint firstItem="rqd-T8-GEG" firstAttribute="top" secondItem="YYP-vh-8Qg" secondAttribute="top" constant="15" id="LUc-jh-75r"/>
+                                            <constraint firstAttribute="width" constant="500" id="N4h-46-cgt"/>
+                                            <constraint firstAttribute="trailing" secondItem="rqd-T8-GEG" secondAttribute="trailing" constant="34" id="aCg-Ax-qPL"/>
+                                            <constraint firstItem="Gri-7b-PaA" firstAttribute="leading" secondItem="YYP-vh-8Qg" secondAttribute="leading" constant="55" id="blV-yu-z9u"/>
+                                            <constraint firstItem="rqd-T8-GEG" firstAttribute="leading" secondItem="Gri-7b-PaA" secondAttribute="trailing" constant="50" id="bn9-EX-Bq2"/>
+                                            <constraint firstAttribute="height" constant="100" id="eQb-8W-idg"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="150" translatesAutoresizingMaskIntoConstraints="NO" id="Qgh-pG-epa">
+                                        <rect key="frame" x="132" y="24" width="570" height="120"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xll-ap-aUh">
+                                                <rect key="frame" x="0.0" y="0.0" width="75" height="120"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="gallery-ipad"/>
+                                                <connections>
+                                                    <action selector="galleryButtonDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="6qc-OS-ZCG"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qVF-QI-cMF">
+                                                <rect key="frame" x="225" y="0.0" width="120" height="120"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="cameraTakePhoto-ipad"/>
+                                                <connections>
+                                                    <action selector="takePhotoButtonDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="akU-DJ-hcs"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sn0-Ml-g2e">
+                                                <rect key="frame" x="495" y="0.0" width="75" height="120"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="splash-ipad"/>
+                                                <connections>
+                                                    <action selector="splashButtonDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ZVl-Op-amp"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.2627450980392157" green="0.23921568627450979" blue="0.26666666666666666" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Qgh-pG-epa" firstAttribute="centerX" secondItem="IOO-Sp-Iqh" secondAttribute="centerX" id="Ceh-LF-Pgd"/>
+                                    <constraint firstAttribute="bottom" secondItem="YYP-vh-8Qg" secondAttribute="bottom" constant="20" id="E45-jC-Mkl"/>
+                                    <constraint firstItem="Qgh-pG-epa" firstAttribute="top" secondItem="IOO-Sp-Iqh" secondAttribute="top" constant="24" id="J1x-xs-bHh"/>
+                                    <constraint firstAttribute="height" constant="300" id="TyO-0M-Lnv"/>
+                                    <constraint firstItem="YYP-vh-8Qg" firstAttribute="centerX" secondItem="IOO-Sp-Iqh" secondAttribute="centerX" id="qd3-Jd-bp3"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iQh-yI-qlO">
+                                <rect key="frame" x="0.0" y="0.0" width="834" height="128"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Hv-z5-SfS">
+                                        <rect key="frame" x="740" y="45.5" width="44" height="44"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="cancelWhite-ipad"/>
+                                        <connections>
+                                            <action selector="cancelButtonDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="7N8-0I-YGL"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Take a photo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gD4-mJ-wKv">
+                                        <rect key="frame" x="313" y="48" width="208.5" height="38.5"/>
+                                        <fontDescription key="fontDescription" name="FixelText-Medium" family="Fixel Text" pointSize="35"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.2627450980392157" green="0.23921568627450979" blue="0.26666666666666666" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="7I3-oc-nxm"/>
+                                    <constraint firstAttribute="trailing" secondItem="4Hv-z5-SfS" secondAttribute="trailing" constant="50" id="8iF-Ph-IsL"/>
+                                    <constraint firstItem="4Hv-z5-SfS" firstAttribute="centerY" secondItem="gD4-mJ-wKv" secondAttribute="centerY" id="AKH-Vp-U4o"/>
+                                    <constraint firstItem="gD4-mJ-wKv" firstAttribute="top" secondItem="iQh-yI-qlO" secondAttribute="top" constant="48" id="fnD-FM-TOv"/>
+                                    <constraint firstItem="gD4-mJ-wKv" firstAttribute="centerX" secondItem="iQh-yI-qlO" secondAttribute="centerX" id="oBY-gq-brT"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="IOO-Sp-Iqh" secondAttribute="trailing" id="N6a-q8-I5b"/>
+                            <constraint firstItem="IOO-Sp-Iqh" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="TpE-gr-rL6"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="iQh-yI-qlO" secondAttribute="trailing" id="cI7-nI-sxG"/>
+                            <constraint firstItem="iQh-yI-qlO" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="fKX-nW-Phh"/>
+                            <constraint firstAttribute="bottom" secondItem="IOO-Sp-Iqh" secondAttribute="bottom" id="tYI-jH-1Gc"/>
+                            <constraint firstItem="iQh-yI-qlO" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="zA7-bW-xvz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundMainView" destination="IOO-Sp-Iqh" id="B0C-QH-7wK"/>
+                        <outlet property="backgroundstackView" destination="YYP-vh-8Qg" id="2oU-TT-cWg"/>
+                        <outlet property="takePhotoButton" destination="qVF-QI-cMF" id="HOq-oD-kMK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="45.323741007194251" y="-2.0100502512562812"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrowDown-ipad" width="36" height="33"/>
+        <image name="cameraTakePhoto-ipad" width="120" height="120"/>
+        <image name="cancelWhite-ipad" width="44" height="44"/>
+        <image name="flagUK-ipad" width="25" height="21"/>
+        <image name="gallery-ipad" width="75" height="75"/>
+        <image name="splash-ipad" width="75" height="75"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

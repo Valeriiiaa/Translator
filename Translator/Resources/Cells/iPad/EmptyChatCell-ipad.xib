@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="EmptyChatCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="216" id="XJW-sK-Xyb" customClass="EmptyChatCell" customModule="Translator" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="216"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XJW-sK-Xyb" id="Qv0-PD-9PF">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="216"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" image="noConversation" translatesAutoresizingMaskIntoConstraints="NO" id="Mjn-lI-jqW">
+                        <rect key="frame" x="47" y="0.0" width="299" height="165"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No conversations to show" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fHC-8g-czV">
+                        <rect key="frame" x="20" y="175" width="353" height="28"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                        <color key="textColor" red="0.62745098040000002" green="0.6588235294" blue="0.76862745099999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="fHC-8g-czV" secondAttribute="bottom" constant="13" id="6kt-Oi-7tt"/>
+                    <constraint firstAttribute="trailing" secondItem="fHC-8g-czV" secondAttribute="trailing" constant="20" id="Fwn-xW-Y0g"/>
+                    <constraint firstAttribute="trailing" secondItem="Mjn-lI-jqW" secondAttribute="trailing" constant="47" id="PFq-dB-lou"/>
+                    <constraint firstItem="fHC-8g-czV" firstAttribute="leading" secondItem="Qv0-PD-9PF" secondAttribute="leading" constant="20" id="TfZ-x7-7c8"/>
+                    <constraint firstItem="Mjn-lI-jqW" firstAttribute="top" secondItem="Qv0-PD-9PF" secondAttribute="top" id="YOe-TV-hKc"/>
+                    <constraint firstItem="Mjn-lI-jqW" firstAttribute="leading" secondItem="Qv0-PD-9PF" secondAttribute="leading" constant="47" id="ecg-u8-UWH"/>
+                    <constraint firstItem="fHC-8g-czV" firstAttribute="top" secondItem="Mjn-lI-jqW" secondAttribute="bottom" constant="10" id="yBS-FN-L3M"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="191.6030534351145" y="77.464788732394368"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="noConversation" width="266" height="165"/>
+    </resources>
+</document>

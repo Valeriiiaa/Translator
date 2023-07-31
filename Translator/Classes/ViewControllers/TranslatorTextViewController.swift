@@ -30,26 +30,39 @@ class TranslatorTextViewController: UIViewController, UITextViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        switch UIDevice.current.userInterfaceIdiom {
+        case .phone:
+            backgroundMainView.layer.cornerRadius = 15
+            backgroundFlagSecondView.layer.cornerRadius = 10
+            backgroundFlagFirstView.layer.cornerRadius = 10
+            textViewTypeText.layer.cornerRadius = 20
+            textViewGetText.layer.cornerRadius = 20
+            putTextView.layer.cornerRadius = 20
+            getTextView.layer.cornerRadius = 20
+            
+        default: backgroundMainView.layer.cornerRadius = 25
+                 backgroundFlagSecondView.layer.cornerRadius = 20
+                 backgroundFlagFirstView.layer.cornerRadius = 20
+                 textViewTypeText.layer.cornerRadius = 40
+                 textViewGetText.layer.cornerRadius = 40
+                 putTextView.layer.cornerRadius = 40
+                 getTextView.layer.cornerRadius = 40
+        }
+        
         textViewTypeText.delegate = self
-        backgroundMainView.layer.cornerRadius = 15
         backgroundMainView.layer.masksToBounds = true
-        backgroundFlagSecondView.layer.cornerRadius = 10
         backgroundFlagSecondView.layer.masksToBounds = true
-        backgroundFlagFirstView.layer.cornerRadius = 10
         backgroundFlagFirstView.layer.masksToBounds = true
-        textViewTypeText.layer.cornerRadius = 20
         textViewTypeText.layer.masksToBounds = true
-        textViewGetText.layer.cornerRadius = 20
         textViewGetText.layer.masksToBounds = true
         setupOverlayView()
         putTextView.layer.borderWidth = 2
         putTextView.layer.borderColor = UIColor(red: 112/255, green: 139/255, blue: 194/255, alpha: 1).cgColor
-        putTextView.layer.cornerRadius = 20
         putTextView.layer.masksToBounds = true
         
         getTextView.layer.borderWidth = 2
         getTextView.layer.borderColor = UIColor(red: 112/255, green: 139/255, blue: 194/255, alpha: 1).cgColor
-        getTextView.layer.cornerRadius = 20
         getTextView.layer.masksToBounds = true
         
         

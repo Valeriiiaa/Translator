@@ -11,7 +11,7 @@ class CameraEditPhotoViewController: UIViewController {
     
     
     @IBOutlet weak var bottomStuckConstraint: NSLayoutConstraint!
-    @IBOutlet weak var textFieldMenu: UITextField!
+    @IBOutlet weak var textFieldMenu: TextField!
     @IBOutlet weak var backgroundTableView: UIView!
     @IBOutlet weak var menuTableView: UITableView!
     @IBOutlet weak var backgroundImageView: UIImageView!
@@ -31,27 +31,41 @@ class CameraEditPhotoViewController: UIViewController {
    
     override func viewDidLoad() {
         super.viewDidLoad()
+       
+        switch UIDevice.current.userInterfaceIdiom {
+        case .phone:
+            backgroundStuckView.layer.cornerRadius = 10
+            backgroundRotateView.layer.cornerRadius = 15
+            backgroundTableView.layer.cornerRadius = 15
+            textFieldMenu.layer.cornerRadius = 15
+            
+        default:  backgroundStuckView.layer.cornerRadius = 20
+            backgroundRotateView.layer.cornerRadius = 25
+            backgroundTableView.layer.cornerRadius = 25
+            textFieldMenu.layer.cornerRadius = 25
+        }
         
-        backgroundStuckView.layer.cornerRadius = 10
         backgroundStuckView.layer.masksToBounds = true
-        backgroundRotateView.layer.cornerRadius = 15
         backgroundRotateView.layer.maskedCorners = [.layerMinXMaxYCorner]
-        backgroundTableView.layer.cornerRadius = 15
-        
         backgroundTableView.layer.masksToBounds = true
         countriesModels = allItems
         
+        switch UIDevice.current.userInterfaceIdiom {
+        case .phone: textFieldMenu.attributedPlaceholder = NSAttributedString(string: "Search your language...", attributes: [NSAttributedString.Key.foregroundColor: UIColor(red: 160/255, green: 168/255, blue: 196/255, alpha: 1), .font: UIFont.systemFont(ofSize: 15)])
+
+
+        default: textFieldMenu.attributedPlaceholder = NSAttributedString(string: "Search your language...", attributes: [NSAttributedString.Key.foregroundColor: UIColor(red: 160/255, green: 168/255, blue: 196/255, alpha: 1), .font: UIFont.systemFont(ofSize: 25)])
+        }
+        
         textFieldMenu.delegate = self
         textFieldMenu.placeholder = "Search your language..."
-        textFieldMenu.attributedPlaceholder = NSAttributedString(string: "Search your language...", attributes: [NSAttributedString.Key.foregroundColor: UIColor(red: 160/255, green: 168/255, blue: 196/255, alpha: 1)])
-        textFieldMenu.leftView = UIImageView(image: UIImage(named: "loope"))
+        textFieldMenu.leftView = UIImageView(image: UIImage(named: ImageManager.getImage(by: "loope")))
         textFieldMenu.leftViewMode = .always
-        textFieldMenu.layer.cornerRadius = 15
         textFieldMenu.layer.masksToBounds = true
         
         menuTableView.dataSource = self
         menuTableView.delegate = self
-        menuTableView.register(UINib(nibName: "SectionMenuCell", bundle: nil), forCellReuseIdentifier: "SectionMenuCell")
+        menuTableView.register(UINib(nibName: CellManager.getCell(by: "SectionMenuCell"), bundle: nil), forCellReuseIdentifier: CellManager.getCell(by: "SectionMenuCell"))
         
         guard let image else { return }
         backgroundImageView.image = image
@@ -131,7 +145,7 @@ extension CameraEditPhotoViewController: UITableViewDelegate, UITableViewDataSou
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let model = countriesModels[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SectionMenuCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: CellManager.getCell(by: "SectionMenuCell"), for: indexPath)
         (cell as? SectionMenuCell)?.configure(flagPicture: model.flagPicture, labelCountry: model.nameCountry)
         return cell
     }

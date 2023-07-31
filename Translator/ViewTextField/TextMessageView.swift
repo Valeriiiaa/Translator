@@ -12,8 +12,14 @@ class OverlayView: UIView {
         let label = UILabel()
         label.textColor = UIColor(red: 160/255, green: 168/255, blue: 196/255, alpha: 1)
         label.text = "Type something here..."
-        label.font = UIFont(name: "Fixel-Regular", size: 12)
         label.translatesAutoresizingMaskIntoConstraints = false
+        
+        switch UIDevice.current.userInterfaceIdiom {
+        case .phone: label.font = UIFont(name: "Fixel-Regular", size: 12)
+           
+            
+        default: label.font = UIFont(name: "Fixel-Regular", size: 24)
+        }
         return label
     }()
     
@@ -30,6 +36,7 @@ class OverlayView: UIView {
     private func setupViews() {
             addSubview(messageLabel)
             NSLayoutConstraint.activate([
+                
                 messageLabel.topAnchor.constraint(equalTo: topAnchor, constant: 0),
                 messageLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 5)
             ])

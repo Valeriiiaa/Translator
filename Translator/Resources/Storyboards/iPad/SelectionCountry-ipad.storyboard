@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad11_0rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Selection Country View Controller-->
+        <scene sceneID="oCr-bj-lc0">
+            <objects>
+                <viewController storyboardIdentifier="SelectionCountryViewController" id="1VA-be-7VQ" customClass="SelectionCountryViewController" customModule="Translator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ccK-vI-EId">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JrW-cc-Mui">
+                                <rect key="frame" x="20" y="48" width="84" height="39"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SoU-dp-OdK">
+                                        <rect key="frame" x="20" y="-2.5" width="44" height="44"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="back-ipad"/>
+                                        <connections>
+                                            <action selector="backbuttonDidTap:" destination="1VA-be-7VQ" eventType="touchUpInside" id="s93-Ye-bIm"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="SoU-dp-OdK" firstAttribute="centerY" secondItem="JrW-cc-Mui" secondAttribute="centerY" id="8vR-bk-FSo"/>
+                                    <constraint firstAttribute="height" constant="39" id="N7s-mj-3Aj"/>
+                                    <constraint firstItem="SoU-dp-OdK" firstAttribute="centerX" secondItem="JrW-cc-Mui" secondAttribute="centerX" id="Udc-IL-JUE"/>
+                                    <constraint firstAttribute="width" constant="84" id="uF3-Is-R0Q"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="7hz-Vk-ouK" appends="YES" id="Oqw-8X-2MM"/>
+                                </connections>
+                            </view>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="UX2-Y6-nl4">
+                                <rect key="frame" x="99" y="27.5" width="720" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="TNK-Ed-zsG"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="1VA-be-7VQ" id="o9K-R8-Jsb"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="owi-9l-lU1">
+                                <rect key="frame" x="0.0" y="107.5" width="834" height="1086.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hdW-6Q-xYR"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="UX2-Y6-nl4" secondAttribute="trailing" constant="15" id="3MR-jG-3ym"/>
+                            <constraint firstItem="JrW-cc-Mui" firstAttribute="leading" secondItem="hdW-6Q-xYR" secondAttribute="leading" constant="20" id="6DT-xm-MEc"/>
+                            <constraint firstItem="hdW-6Q-xYR" firstAttribute="trailing" secondItem="owi-9l-lU1" secondAttribute="trailing" id="Jeh-At-pLl"/>
+                            <constraint firstItem="JrW-cc-Mui" firstAttribute="top" secondItem="hdW-6Q-xYR" secondAttribute="top" constant="24" id="KYM-AB-klT"/>
+                            <constraint firstItem="UX2-Y6-nl4" firstAttribute="centerY" secondItem="SoU-dp-OdK" secondAttribute="centerY" id="WW3-Ag-HmQ"/>
+                            <constraint firstItem="owi-9l-lU1" firstAttribute="top" secondItem="UX2-Y6-nl4" secondAttribute="bottom" id="e29-z1-MAb"/>
+                            <constraint firstItem="owi-9l-lU1" firstAttribute="leading" secondItem="hdW-6Q-xYR" secondAttribute="leading" id="jKy-5i-ci1"/>
+                            <constraint firstItem="UX2-Y6-nl4" firstAttribute="leading" secondItem="JrW-cc-Mui" secondAttribute="trailing" constant="-5" id="njV-5x-sTe"/>
+                            <constraint firstAttribute="bottom" secondItem="owi-9l-lU1" secondAttribute="bottom" id="yAT-su-0Yb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="searchBar" destination="UX2-Y6-nl4" id="xIZ-cn-TeN"/>
+                        <outlet property="tableViewSection" destination="owi-9l-lU1" id="2MD-YB-Wl2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jJj-eZ-Q9R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="7hz-Vk-ouK">
+                    <connections>
+                        <action selector="backbuttonDidTap:" destination="1VA-be-7VQ" id="ers-Aq-YZ2"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="55.725190839694655" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="back-ipad" width="44" height="44"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

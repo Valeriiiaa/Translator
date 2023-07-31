@@ -142,7 +142,7 @@ class DrawerMenuViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     private func openHistoryVC() {
-        let entrance = UIStoryboard(name: "History", bundle: nil).instantiateViewController(identifier: "HistoryViewController")
+        let entrance = StoryboardFabric.getStoryboard(by: "History").instantiateViewController(identifier: "HistoryViewController")
         guard !(drawerNavigationController?.viewControllers.last is HistoryViewController) else {
             dismiss(animated: true)
             return
@@ -152,7 +152,7 @@ class DrawerMenuViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     private func shareIt() {
-        let entrance = UIStoryboard(name: "History", bundle: nil).instantiateViewController(identifier: "HistoryViewController")
+        let entrance = StoryboardFabric.getStoryboard(by: "History").instantiateViewController(identifier: "HistoryViewController")
         guard !(drawerNavigationController?.viewControllers.last is HistoryViewController) else {
             dismiss(animated: true)
             return

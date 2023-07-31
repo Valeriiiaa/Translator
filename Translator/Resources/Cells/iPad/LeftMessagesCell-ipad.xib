@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="FixelText-Medium.ttf">
+            <string>FixelText-Medium</string>
+        </array>
+        <array key="FixelText-Regular.ttf">
+            <string>FixelText-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="LeftMessagesCell" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="208" id="eAz-5U-1hI" customClass="LeftMessagesCell" customModule="Translator" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="473" height="208"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eAz-5U-1hI" id="hnd-1w-As7">
+                <rect key="frame" x="0.0" y="0.0" width="473" height="208"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nUs-bj-FCz">
+                        <rect key="frame" x="15" y="0.0" width="308" height="180"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Sbf-DV-pNH">
+                                <rect key="frame" x="15" y="15" width="87" height="22"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flagUK" translatesAutoresizingMaskIntoConstraints="NO" id="V5x-Yh-jLv">
+                                        <rect key="frame" x="0.0" y="0.0" width="14" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="14" id="rSC-kK-6AX"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="English" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GQh-0o-ZIh">
+                                        <rect key="frame" x="22" y="0.0" width="65" height="22"/>
+                                        <fontDescription key="fontDescription" name="FixelText-Regular" family="Fixel Text" pointSize="20"/>
+                                        <color key="textColor" red="0.62745098040000002" green="0.6588235294" blue="0.76862745099999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ukraine will win!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDw-qH-DfA">
+                                <rect key="frame" x="15" y="42" width="166.66666666666666" height="24"/>
+                                <fontDescription key="fontDescription" name="FixelText-Medium" family="Fixel Text" pointSize="22"/>
+                                <color key="textColor" name="#505A7B"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Україна переможе!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bb9-2b-nT4">
+                                <rect key="frame" x="15" y="115" width="199" height="24"/>
+                                <fontDescription key="fontDescription" name="FixelText-Medium" family="Fixel Text" pointSize="22"/>
+                                <color key="textColor" name="#505A7B"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cLk-XT-1To">
+                                <rect key="frame" x="15" y="76" width="278" height="2"/>
+                                <color key="backgroundColor" red="0.92156862750000001" green="0.93725490199999995" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="xqw-fQ-G87"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="aOn-mU-IZ9">
+                                <rect key="frame" x="15.000000000000007" y="88" width="108.66666666666669" height="22"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flagUA" translatesAutoresizingMaskIntoConstraints="NO" id="iFh-Sl-KUB">
+                                        <rect key="frame" x="0.0" y="0.0" width="14" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="14" id="88U-8Y-hCN"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ukrainian" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcj-Jv-jci">
+                                        <rect key="frame" x="22.000000000000007" y="0.0" width="86.666666666666686" height="22"/>
+                                        <fontDescription key="fontDescription" name="FixelText-Regular" family="Fixel Text" pointSize="20"/>
+                                        <color key="textColor" red="0.62745098040000002" green="0.6588235294" blue="0.76862745099999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="avY-6Z-SVR">
+                                <rect key="frame" x="180.66666666666666" y="150" width="22" height="22"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="binDelete-ipad"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8mt-52-Sgx">
+                                <rect key="frame" x="256" y="147" width="28" height="28"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="listenIcon-ipad"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A9a-He-yy8">
+                                <rect key="frame" x="217.66666666666666" y="149.33333333333334" width="23.333333333333343" height="23.333333333333343"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="document-ipad"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cLk-XT-1To" firstAttribute="leading" secondItem="nUs-bj-FCz" secondAttribute="leading" constant="15" id="0ZC-Gv-9Hs"/>
+                            <constraint firstItem="A9a-He-yy8" firstAttribute="leading" secondItem="avY-6Z-SVR" secondAttribute="trailing" constant="15" id="Gh3-1E-Mau"/>
+                            <constraint firstAttribute="height" constant="180" id="Hfo-rE-xr2"/>
+                            <constraint firstItem="8mt-52-Sgx" firstAttribute="leading" secondItem="A9a-He-yy8" secondAttribute="trailing" constant="15" id="IAv-LX-f8C"/>
+                            <constraint firstItem="A9a-He-yy8" firstAttribute="centerY" secondItem="8mt-52-Sgx" secondAttribute="centerY" id="OjR-Qx-YSx"/>
+                            <constraint firstItem="bb9-2b-nT4" firstAttribute="top" secondItem="aOn-mU-IZ9" secondAttribute="bottom" constant="5" id="Qzv-yI-FRB"/>
+                            <constraint firstAttribute="bottom" secondItem="8mt-52-Sgx" secondAttribute="bottom" constant="5" id="R9L-6B-toZ"/>
+                            <constraint firstItem="dDw-qH-DfA" firstAttribute="leading" secondItem="nUs-bj-FCz" secondAttribute="leading" constant="15" id="SwD-Ds-XeK"/>
+                            <constraint firstItem="Sbf-DV-pNH" firstAttribute="leading" secondItem="nUs-bj-FCz" secondAttribute="leading" constant="15" id="bcK-O0-bTS"/>
+                            <constraint firstItem="aOn-mU-IZ9" firstAttribute="top" secondItem="cLk-XT-1To" secondAttribute="bottom" constant="10" id="dO3-LV-sEH"/>
+                            <constraint firstItem="avY-6Z-SVR" firstAttribute="centerY" secondItem="A9a-He-yy8" secondAttribute="centerY" id="ex6-G2-2Uw"/>
+                            <constraint firstItem="bb9-2b-nT4" firstAttribute="leading" secondItem="nUs-bj-FCz" secondAttribute="leading" constant="15" id="fBS-dR-xEs"/>
+                            <constraint firstItem="dDw-qH-DfA" firstAttribute="top" secondItem="Sbf-DV-pNH" secondAttribute="bottom" constant="5" id="fuo-y4-M20"/>
+                            <constraint firstItem="cLk-XT-1To" firstAttribute="top" secondItem="dDw-qH-DfA" secondAttribute="bottom" constant="10" id="kGX-Zm-o4a"/>
+                            <constraint firstItem="aOn-mU-IZ9" firstAttribute="leading" secondItem="nUs-bj-FCz" secondAttribute="leading" constant="15" id="kn2-Mo-vgH"/>
+                            <constraint firstItem="Sbf-DV-pNH" firstAttribute="top" secondItem="nUs-bj-FCz" secondAttribute="top" constant="15" id="vCX-yF-w07"/>
+                            <constraint firstAttribute="trailing" secondItem="8mt-52-Sgx" secondAttribute="trailing" constant="24" id="vRL-xW-2r7"/>
+                            <constraint firstAttribute="trailing" secondItem="cLk-XT-1To" secondAttribute="trailing" constant="15" id="xLh-2P-yQk"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="nUs-bj-FCz" secondAttribute="trailing" constant="150" id="0rE-yk-geD"/>
+                    <constraint firstItem="nUs-bj-FCz" firstAttribute="top" secondItem="hnd-1w-As7" secondAttribute="top" id="6c1-pI-7Cl"/>
+                    <constraint firstItem="nUs-bj-FCz" firstAttribute="leading" secondItem="hnd-1w-As7" secondAttribute="leading" constant="15" id="G4R-Qd-kH5"/>
+                    <constraint firstAttribute="bottom" secondItem="nUs-bj-FCz" secondAttribute="bottom" constant="15" id="yOk-wP-hvm"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="backgroundMessageView" destination="nUs-bj-FCz" id="lwk-gH-MEa"/>
+                <outlet property="labelText" destination="dDw-qH-DfA" id="PnK-vh-otU"/>
+                <outlet property="labelTextSecond" destination="bb9-2b-nT4" id="cRJ-0h-BkT"/>
+            </connections>
+            <point key="canvasLocation" x="280.15267175572518" y="107.74647887323944"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="binDelete-ipad" width="22" height="22"/>
+        <image name="document-ipad" width="23.333333969116211" height="23.333333969116211"/>
+        <image name="flagUA" width="14" height="10"/>
+        <image name="flagUK" width="14" height="10"/>
+        <image name="listenIcon-ipad" width="28" height="28"/>
+        <namedColor name="#505A7B">
+            <color red="0.31400001049041748" green="0.3529999852180481" blue="0.48199999332427979" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -15,6 +15,19 @@
 		F625F6BC2A76B7710040F1A3 /* Premium-ipad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F625F6BB2A76B7710040F1A3 /* Premium-ipad.storyboard */; };
 		F625F6BE2A76BF3E0040F1A3 /* MenuItemsCell-ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F625F6BD2A76BF3E0040F1A3 /* MenuItemsCell-ipad.xib */; };
 		F625F6C02A76C0550040F1A3 /* PremiumImageCell-ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F625F6BF2A76C0550040F1A3 /* PremiumImageCell-ipad.xib */; };
+		F625F6C22A779E240040F1A3 /* History-ipad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F625F6C12A779E240040F1A3 /* History-ipad.storyboard */; };
+		F625F6C42A779FFD0040F1A3 /* HistoryEmptyCell-ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F625F6C32A779FFD0040F1A3 /* HistoryEmptyCell-ipad.xib */; };
+		F625F6C62A77A0B50040F1A3 /* HistoryFullCell-ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F625F6C52A77A0B50040F1A3 /* HistoryFullCell-ipad.xib */; };
+		F625F6C82A77A1A80040F1A3 /* TranslatorText-ipad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F625F6C72A77A1A80040F1A3 /* TranslatorText-ipad.storyboard */; };
+		F625F6CC2A77B46C0040F1A3 /* EmptyChatCell-ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F625F6CB2A77B46C0040F1A3 /* EmptyChatCell-ipad.xib */; };
+		F625F6CE2A77B4AB0040F1A3 /* LeftMessagesCell-ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F625F6CD2A77B4AB0040F1A3 /* LeftMessagesCell-ipad.xib */; };
+		F625F6D02A77B4B30040F1A3 /* RightMessagesCell-ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F625F6CF2A77B4B30040F1A3 /* RightMessagesCell-ipad.xib */; };
+		F625F6D22A77B7310040F1A3 /* VoiceChat-ipad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F625F6D12A77B7310040F1A3 /* VoiceChat-ipad.storyboard */; };
+		F625F6D42A77B7DB0040F1A3 /* SelectionCountry-ipad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F625F6D32A77B7DB0040F1A3 /* SelectionCountry-ipad.storyboard */; };
+		F625F6D62A77B83B0040F1A3 /* SectionCountryCell-ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F625F6D52A77B83B0040F1A3 /* SectionCountryCell-ipad.xib */; };
+		F625F6DB2A77B9270040F1A3 /* CameraTranslator-ipad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F625F6DA2A77B9270040F1A3 /* CameraTranslator-ipad.storyboard */; };
+		F625F6DD2A77B9330040F1A3 /* CameraEditPhoto-ipad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F625F6DC2A77B9330040F1A3 /* CameraEditPhoto-ipad.storyboard */; };
+		F625F6DF2A77C4F00040F1A3 /* SectionMenuCell-ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F625F6DE2A77C4F00040F1A3 /* SectionMenuCell-ipad.xib */; };
 		F62893592A6E999C00B7A36C /* MainTranslatorModelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62893582A6E999C00B7A36C /* MainTranslatorModelCell.swift */; };
 		F628935D2A6EBB9100B7A36C /* DrawerPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F628935C2A6EBB9100B7A36C /* DrawerPresentationController.swift */; };
 		F62893602A6EBBD900B7A36C /* DrawerSlideAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F628935F2A6EBBD900B7A36C /* DrawerSlideAnimation.swift */; };
@@ -134,6 +147,19 @@
 		F625F6BB2A76B7710040F1A3 /* Premium-ipad.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Premium-ipad.storyboard"; sourceTree = "<group>"; };
 		F625F6BD2A76BF3E0040F1A3 /* MenuItemsCell-ipad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "MenuItemsCell-ipad.xib"; sourceTree = "<group>"; };
 		F625F6BF2A76C0550040F1A3 /* PremiumImageCell-ipad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "PremiumImageCell-ipad.xib"; sourceTree = "<group>"; };
+		F625F6C12A779E240040F1A3 /* History-ipad.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "History-ipad.storyboard"; sourceTree = "<group>"; };
+		F625F6C32A779FFD0040F1A3 /* HistoryEmptyCell-ipad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "HistoryEmptyCell-ipad.xib"; sourceTree = "<group>"; };
+		F625F6C52A77A0B50040F1A3 /* HistoryFullCell-ipad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "HistoryFullCell-ipad.xib"; sourceTree = "<group>"; };
+		F625F6C72A77A1A80040F1A3 /* TranslatorText-ipad.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "TranslatorText-ipad.storyboard"; sourceTree = "<group>"; };
+		F625F6CB2A77B46C0040F1A3 /* EmptyChatCell-ipad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "EmptyChatCell-ipad.xib"; sourceTree = "<group>"; };
+		F625F6CD2A77B4AB0040F1A3 /* LeftMessagesCell-ipad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "LeftMessagesCell-ipad.xib"; sourceTree = "<group>"; };
+		F625F6CF2A77B4B30040F1A3 /* RightMessagesCell-ipad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "RightMessagesCell-ipad.xib"; sourceTree = "<group>"; };
+		F625F6D12A77B7310040F1A3 /* VoiceChat-ipad.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "VoiceChat-ipad.storyboard"; sourceTree = "<group>"; };
+		F625F6D32A77B7DB0040F1A3 /* SelectionCountry-ipad.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "SelectionCountry-ipad.storyboard"; sourceTree = "<group>"; };
+		F625F6D52A77B83B0040F1A3 /* SectionCountryCell-ipad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "SectionCountryCell-ipad.xib"; sourceTree = "<group>"; };
+		F625F6DA2A77B9270040F1A3 /* CameraTranslator-ipad.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "CameraTranslator-ipad.storyboard"; sourceTree = "<group>"; };
+		F625F6DC2A77B9330040F1A3 /* CameraEditPhoto-ipad.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "CameraEditPhoto-ipad.storyboard"; sourceTree = "<group>"; };
+		F625F6DE2A77C4F00040F1A3 /* SectionMenuCell-ipad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "SectionMenuCell-ipad.xib"; sourceTree = "<group>"; };
 		F62893582A6E999C00B7A36C /* MainTranslatorModelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTranslatorModelCell.swift; sourceTree = "<group>"; };
 		F628935C2A6EBB9100B7A36C /* DrawerPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerPresentationController.swift; sourceTree = "<group>"; };
 		F628935F2A6EBBD900B7A36C /* DrawerSlideAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawerSlideAnimation.swift; sourceTree = "<group>"; };
@@ -262,6 +288,12 @@
 				F625F6B42A76B3440040F1A3 /* MainTranslator-ipad.storyboard */,
 				F625F6B92A76B71D0040F1A3 /* SplashScreen-ipad.storyboard */,
 				F625F6BB2A76B7710040F1A3 /* Premium-ipad.storyboard */,
+				F625F6C12A779E240040F1A3 /* History-ipad.storyboard */,
+				F625F6C72A77A1A80040F1A3 /* TranslatorText-ipad.storyboard */,
+				F625F6D12A77B7310040F1A3 /* VoiceChat-ipad.storyboard */,
+				F625F6D32A77B7DB0040F1A3 /* SelectionCountry-ipad.storyboard */,
+				F625F6DA2A77B9270040F1A3 /* CameraTranslator-ipad.storyboard */,
+				F625F6DC2A77B9330040F1A3 /* CameraEditPhoto-ipad.storyboard */,
 			);
 			path = iPad;
 			sourceTree = "<group>";
@@ -272,6 +304,13 @@
 				F625F6B72A76B5470040F1A3 /* MainTranslatorCell-ipad.xib */,
 				F625F6BD2A76BF3E0040F1A3 /* MenuItemsCell-ipad.xib */,
 				F625F6BF2A76C0550040F1A3 /* PremiumImageCell-ipad.xib */,
+				F625F6C32A779FFD0040F1A3 /* HistoryEmptyCell-ipad.xib */,
+				F625F6C52A77A0B50040F1A3 /* HistoryFullCell-ipad.xib */,
+				F625F6CB2A77B46C0040F1A3 /* EmptyChatCell-ipad.xib */,
+				F625F6CD2A77B4AB0040F1A3 /* LeftMessagesCell-ipad.xib */,
+				F625F6CF2A77B4B30040F1A3 /* RightMessagesCell-ipad.xib */,
+				F625F6D52A77B83B0040F1A3 /* SectionCountryCell-ipad.xib */,
+				F625F6DE2A77C4F00040F1A3 /* SectionMenuCell-ipad.xib */,
 			);
 			path = iPad;
 			sourceTree = "<group>";
@@ -747,29 +786,38 @@
 			buildActionMask = 2147483647;
 			files = (
 				F628936B2A6EBE2100B7A36C /* MenuItemsCell.xib in Resources */,
+				F625F6C42A779FFD0040F1A3 /* HistoryEmptyCell-ipad.xib in Resources */,
 				F68C37082A71438100AD0A1F /* SectionCountryCell.xib in Resources */,
 				F6BE51642A725EC900625E62 /* CameraTranslator.storyboard in Resources */,
 				F6DDCBCD2A6FFB76007B51EE /* ClearHistoryView.xib in Resources */,
 				F625F6B82A76B5470040F1A3 /* MainTranslatorCell-ipad.xib in Resources */,
 				F6D2C8D02A71203400F7D7EF /* LeftMessagesCell.xib in Resources */,
 				F6DE20EB2A6E6CFE003F49F4 /* SplashScreen.storyboard in Resources */,
+				F625F6CE2A77B4AB0040F1A3 /* LeftMessagesCell-ipad.xib in Resources */,
 				F6D6230D2A6FD4FE00D24F16 /* Offer30View.xib in Resources */,
 				F6DDCBD12A6FFBFF007B51EE /* TranslatorText.storyboard in Resources */,
 				F625F6BE2A76BF3E0040F1A3 /* MenuItemsCell-ipad.xib in Resources */,
 				F6D6230F2A6FD50600D24F16 /* Offer50View.xib in Resources */,
+				F625F6D22A77B7310040F1A3 /* VoiceChat-ipad.storyboard in Resources */,
 				F6DE21272A6E72DF003F49F4 /* FixelText-Bold.ttf in Resources */,
 				F625F6BA2A76B71D0040F1A3 /* SplashScreen-ipad.storyboard in Resources */,
 				F6D623022A6FCC9700D24F16 /* HistoryEmptyCell.xib in Resources */,
 				F6DE20C22A6E6A80003F49F4 /* LaunchScreen.storyboard in Resources */,
 				F6D623042A6FCCA400D24F16 /* HistoryFullCell.xib in Resources */,
+				F625F6C62A77A0B50040F1A3 /* HistoryFullCell-ipad.xib in Resources */,
 				F6DE20BF2A6E6A80003F49F4 /* Assets.xcassets in Resources */,
 				F6B1704B2A6E93EC002A7BD2 /* MainTranslatorCell.xib in Resources */,
+				F625F6DB2A77B9270040F1A3 /* CameraTranslator-ipad.storyboard in Resources */,
 				F6DE21242A6E72DF003F49F4 /* FixelText-SemiBold.ttf in Resources */,
 				F6DE20BD2A6E6A7F003F49F4 /* MainTranslator.storyboard in Resources */,
 				F62893692A6EBE1000B7A36C /* PremiumImageCell.xib in Resources */,
 				F625F6C02A76C0550040F1A3 /* PremiumImageCell-ipad.xib in Resources */,
 				F6D2C8D22A71203C00F7D7EF /* RightMessagesCell.xib in Resources */,
+				F625F6C22A779E240040F1A3 /* History-ipad.storyboard in Resources */,
+				F625F6D42A77B7DB0040F1A3 /* SelectionCountry-ipad.storyboard in Resources */,
 				F6DE21562A6E7C49003F49F4 /* Premium.storyboard in Resources */,
+				F625F6D02A77B4B30040F1A3 /* RightMessagesCell-ipad.xib in Resources */,
+				F625F6DF2A77C4F00040F1A3 /* SectionMenuCell-ipad.xib in Resources */,
 				F68C37002A71328500AD0A1F /* EmptyChatCell.xib in Resources */,
 				F6DE21252A6E72DF003F49F4 /* FixelText-Black.ttf in Resources */,
 				F6D2C8CB2A711AA200F7D7EF /* VoiceChat.storyboard in Resources */,
@@ -780,11 +828,15 @@
 				F625F6BC2A76B7710040F1A3 /* Premium-ipad.storyboard in Resources */,
 				F6DE21232A6E72DF003F49F4 /* FixelText-ExtraLight.ttf in Resources */,
 				F6DE20F02A6E7273003F49F4 /* Sriracha-Regular.ttf in Resources */,
+				F625F6D62A77B83B0040F1A3 /* SectionCountryCell-ipad.xib in Resources */,
+				F625F6DD2A77B9330040F1A3 /* CameraEditPhoto-ipad.storyboard in Resources */,
+				F625F6C82A77A1A80040F1A3 /* TranslatorText-ipad.storyboard in Resources */,
 				F6DE21222A6E72DF003F49F4 /* FixelText-Light.ttf in Resources */,
 				F6DE21262A6E72DF003F49F4 /* FixelText-Regular.ttf in Resources */,
 				F6DE21292A6E72DF003F49F4 /* FixelText-Medium.ttf in Resources */,
 				F6D5D9792A7534D100A8053B /* SectionMenuCell.xib in Resources */,
 				F68C37132A71517A00AD0A1F /* SelectionCountryHeaderView.xib in Resources */,
+				F625F6CC2A77B46C0040F1A3 /* EmptyChatCell-ipad.xib in Resources */,
 				F62893872A6FC53D00B7A36C /* History.storyboard in Resources */,
 				F625F6B52A76B3440040F1A3 /* MainTranslator-ipad.storyboard in Resources */,
 			);

@@ -12,7 +12,7 @@ class MainTranslatoreViewController: UIViewController {
     @IBOutlet weak var collectionCell: UICollectionView!
     @IBOutlet weak var menuButton: UIButton!
     
-    var models = [MainTranslatoreModel(text: "Text", image: "text"),MainTranslatoreModel(text: "Voice", image: "voice"), MainTranslatoreModel(text: "Camera", image: "camera"), MainTranslatoreModel(text: "Import", image: "import") ]
+    var models = [MainTranslatoreModel(text: "Text", image: ImageManager.getImage(by: "text")),MainTranslatoreModel(text: "Voice", image: ImageManager.getImage(by: "voice")), MainTranslatoreModel(text: "Camera", image: ImageManager.getImage(by: "camera")), MainTranslatoreModel(text: "Import", image: ImageManager.getImage(by: "import"))]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,13 +56,13 @@ extension MainTranslatoreViewController: UICollectionViewDelegateFlowLayout, UIC
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if indexPath.row == 0 {
-            let entrance = UIStoryboard(name: "TranslatorText", bundle: nil).instantiateViewController(identifier: "TranslatorTextViewController")
+            let entrance = StoryboardFabric.getStoryboard(by: "TranslatorText").instantiateViewController(identifier: "TranslatorTextViewController")
             navigationController?.pushViewController(entrance, animated: true)
         } else if indexPath.row == 1 {
-            let entrance = UIStoryboard(name: "VoiceChat", bundle: nil).instantiateViewController(identifier: "VoiceChatViewController")
+            let entrance = StoryboardFabric.getStoryboard(by: "VoiceChat").instantiateViewController(identifier: "VoiceChatViewController")
             navigationController?.pushViewController(entrance, animated: true)
         } else if indexPath.row == 2 {
-            let entrance = UIStoryboard(name: "CameraTranslator", bundle: nil).instantiateViewController(identifier: "CameraTranslatorViewController")
+            let entrance = StoryboardFabric.getStoryboard(by: "CameraTranslator").instantiateViewController(identifier: "CameraTranslatorViewController")
             navigationController?.pushViewController(entrance, animated: true)
         }
     }
