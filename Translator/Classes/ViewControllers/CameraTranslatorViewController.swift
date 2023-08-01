@@ -9,7 +9,6 @@ import UIKit
 import AVFoundation
 
 class CameraTranslatorViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-
     @IBOutlet weak var takePhotoButton: UIButton!
     @IBOutlet weak var backgroundstackView: UIView!
     @IBOutlet weak var backgroundMainView: UIView!
@@ -73,7 +72,9 @@ class CameraTranslatorViewController: UIViewController, UIImagePickerControllerD
                     session.addOutput(output)
                 }
                 
-                previewLayer.videoGravity = .resizeAspectFill
+                previewLayer.videoGravity = .resizeAspect
+                
+//                pre
                 previewLayer.session = session
                 view.layer.insertSublayer(previewLayer, at: 0)
                 
@@ -130,14 +131,11 @@ class CameraTranslatorViewController: UIViewController, UIImagePickerControllerD
     }
    
     @IBAction func galleryButtonDidTap(_ sender: Any) {
-        
-        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary){
-                    imagePicker.delegate = self
-                    imagePicker.sourceType = .photoLibrary
-                    imagePicker.allowsEditing = false
-
-                    present(imagePicker, animated: true, completion: nil)
-                }
+        guard UIImagePickerController.isSourceTypeAvailable(.photoLibrary) else { return }
+        imagePicker.delegate = self
+        imagePicker.sourceType = .photoLibrary
+        imagePicker.allowsEditing = false
+        present(imagePicker, animated: true, completion: nil)
     }
    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
