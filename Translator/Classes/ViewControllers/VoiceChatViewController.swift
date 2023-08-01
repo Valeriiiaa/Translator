@@ -6,9 +6,11 @@
 //
 
 import UIKit
+import Switches
 
 class VoiceChatViewController: UIViewController {
     
+    @IBOutlet weak var adsSwitcher: YapSwitch!
     @IBOutlet weak var firstFlag: UIImageView!
     @IBOutlet weak var secondFlag: UIImageView!
     @IBOutlet weak var secondLabel: UILabel!
@@ -27,6 +29,19 @@ class VoiceChatViewController: UIViewController {
         tableViewChat.register(UINib(nibName: CellManager.getCell(by: "EmptyChatCell") , bundle: nil), forCellReuseIdentifier: CellManager.getCell(by: "EmptyChatCell"))
 }
     
+    @IBAction func valueDidTap(_ sender: Any) {
+        if adsSwitcher.isOn == true {
+            pushPremiumScreen()
+        } else {
+            
+        }
+    }
+    
+    func pushPremiumScreen() {
+        let entrance = StoryboardFabric.getStoryboard(by: "Premium").instantiateViewController(identifier: "PremiumViewController")
+        navigationController?.pushViewController(entrance, animated: true)
+    }
+   
     @IBAction func backButtonDidTap(_ sender: Any) {
     }
     @IBAction func riversoButtonDidTap(_ sender: Any) {

@@ -132,13 +132,23 @@ class DrawerMenuViewController: UIViewController, UITableViewDelegate, UITableVi
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         previousVC = drawerNavigationController?.viewControllers.last
         switch indexPath.row {
-        case 0: openHistoryVC()
+        case 0: openPremiumVC()
         case 1: openHistoryVC()
-        case 2: rateUs()
-        case 3: openHistoryVC()
+        case 2: openHistoryVC()
+        case 3: rateUs()
         case 4: openHistoryVC()
         default: print ("ppp")
         }
+    }
+    
+    private func openPremiumVC() {
+        let entrance = StoryboardFabric.getStoryboard(by: "Premium").instantiateViewController(identifier: "PremiumViewController")
+        guard !(drawerNavigationController?.viewControllers.last is HistoryViewController) else {
+            dismiss(animated: true)
+            return
+        }
+        drawerNavigationController?.viewControllers = [entrance]
+        dismiss(animated: true)
     }
     
     private func openHistoryVC() {
@@ -162,5 +172,6 @@ class DrawerMenuViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     private func rateUs() {
+        SKStoreReviewController.requestReview()
     }
 }

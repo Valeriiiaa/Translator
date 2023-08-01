@@ -27,9 +27,13 @@
                             <constraint firstAttribute="width" secondItem="bvj-DX-LR4" secondAttribute="height" multiplier="1.07:0.5" id="ULL-1F-YgR"/>
                         </constraints>
                     </imageView>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yi2-C0-Wv9">
+                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yi2-C0-Wv9">
                         <rect key="frame" x="31.666666666666657" y="181" width="330" height="42"/>
                         <color key="backgroundColor" name="BlueButton"/>
+                        <accessibility key="accessibilityConfiguration">
+                            <accessibilityTraits key="traits" notEnabled="YES"/>
+                            <bool key="isElement" value="YES"/>
+                        </accessibility>
                         <constraints>
                             <constraint firstAttribute="width" constant="330" id="h82-rE-83i"/>
                             <constraint firstAttribute="height" constant="42" id="jQ4-hY-soL"/>

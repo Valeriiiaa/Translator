@@ -6,12 +6,12 @@
 //
 
 import UIKit
+import Switches
 
 
 class TranslatorTextViewController: UIViewController, UITextViewDelegate {
     
-    
-   
+    @IBOutlet weak var adsSwitcher: YapSwitch!
     @IBOutlet weak var secondImage: UIImageView!
     @IBOutlet weak var firstFlag: UIImageView!
     @IBOutlet weak var secondLabel: UILabel!
@@ -66,6 +66,18 @@ class TranslatorTextViewController: UIViewController, UITextViewDelegate {
         getTextView.layer.masksToBounds = true
         
         
+    }
+    @IBAction func valueDidTap(_ sender: Any) {
+        if adsSwitcher.isOn == true {
+            pushPremiumScreen()
+        } else {
+            
+        }
+    }
+    
+    func pushPremiumScreen() {
+        let entrance = StoryboardFabric.getStoryboard(by: "Premium").instantiateViewController(identifier: "PremiumViewController")
+        navigationController?.pushViewController(entrance, animated: true)
     }
     
     func setupOverlayView() {

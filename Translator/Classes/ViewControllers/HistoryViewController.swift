@@ -7,9 +7,11 @@
 
 import UIKit
 import SwiftEntryKit
+import Switches
 
 class HistoryViewController: UIViewController {
 
+    @IBOutlet weak var adsSwitcher: YapSwitch!
     @IBOutlet weak var eraserButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     
@@ -24,7 +26,19 @@ class HistoryViewController: UIViewController {
         tableView.register(UINib(nibName: CellManager.getCell(by: "HistoryFullCell") , bundle: nil), forCellReuseIdentifier: CellManager.getCell(by: "HistoryFullCell"))
     }
     
-
+    @IBAction func valueDidTap(_ sender: Any) {
+        if adsSwitcher.isOn == true {
+            pushPremiumScreen()
+        } else {
+            
+        }
+    }
+   
+    func pushPremiumScreen() {
+        let entrance = StoryboardFabric.getStoryboard(by: "Premium").instantiateViewController(identifier: "PremiumViewController")
+        navigationController?.pushViewController(entrance, animated: true)
+    }
+    
     @IBAction func backButtonDidTap(_ sender: Any) {
         navigationController?.popViewController(animated: true)
 //        showPopup()

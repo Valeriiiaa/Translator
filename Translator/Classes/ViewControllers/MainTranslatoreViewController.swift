@@ -6,9 +6,12 @@
 //
 
 import UIKit
+import Switches
+
 
 class MainTranslatoreViewController: UIViewController {
     
+    @IBOutlet weak var adsSwitcher: YapSwitch!
     @IBOutlet weak var collectionCell: UICollectionView!
     @IBOutlet weak var menuButton: UIButton!
     
@@ -19,9 +22,21 @@ class MainTranslatoreViewController: UIViewController {
         collectionCell.dataSource = self
         collectionCell.delegate = self
         collectionCell.register(UINib(nibName: "MainTranslatorCell", bundle: nil), forCellWithReuseIdentifier: "MainTranslatorCell")
+}
+    
+    func pushPremiumScreen() {
+        let entrance = StoryboardFabric.getStoryboard(by: "Premium").instantiateViewController(identifier: "PremiumViewController")
+        navigationController?.pushViewController(entrance, animated: true)
     }
     
-    
+    @IBAction func valueDidTap(_ sender: Any) {
+        if adsSwitcher.isOn == true {
+            pushPremiumScreen()
+        } else {
+            
+        }
+    }
+  
     @IBAction func menuButtonDidTap(_ sender: Any) {
         let drawerController = DrawerMenuViewController.shared
         present(drawerController, animated: true)

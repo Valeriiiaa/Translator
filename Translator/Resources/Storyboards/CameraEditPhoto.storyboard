@@ -53,32 +53,64 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e9c-js-mYp">
-                                        <rect key="frame" x="24" y="18" width="24" height="24"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" image="arrrowBackWhite"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4iw-vK-LXy">
+                                        <rect key="frame" x="24" y="0.0" width="70" height="48"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e9c-js-mYp">
+                                                <rect key="frame" x="10" y="18" width="24" height="24"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="arrrowBackWhite"/>
+                                                <connections>
+                                                    <action selector="backButtonDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="LDz-ff-9Wy"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="FAc-vm-881"/>
+                                            <constraint firstAttribute="height" constant="48" id="NRg-JC-CQv"/>
+                                            <constraint firstItem="e9c-js-mYp" firstAttribute="leading" secondItem="4iw-vK-LXy" secondAttribute="leading" constant="10" id="vOb-6v-qw9"/>
+                                        </constraints>
                                         <connections>
-                                            <action selector="backButtonDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="LDz-ff-9Wy"/>
+                                            <outletCollection property="gestureRecognizers" destination="kag-uE-T2R" appends="YES" id="QdV-l1-0HG"/>
                                         </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h3a-MO-ZyW">
-                                        <rect key="frame" x="345" y="18" width="24" height="24"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" image="checkmark"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="snu-yc-JrJ">
+                                        <rect key="frame" x="317" y="8" width="61" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h3a-MO-ZyW">
+                                                <rect key="frame" x="24" y="10" width="24" height="24"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="checkmark"/>
+                                                <connections>
+                                                    <action selector="checkmarkDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Vaj-N2-XQu"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Hnp-D0-keX"/>
+                                            <constraint firstAttribute="trailing" secondItem="h3a-MO-ZyW" secondAttribute="trailing" constant="13" id="u01-ij-Euz"/>
+                                            <constraint firstAttribute="width" constant="61" id="z2h-B5-L6P"/>
+                                        </constraints>
                                         <connections>
-                                            <action selector="checkmarkDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Vaj-N2-XQu"/>
+                                            <outletCollection property="gestureRecognizers" destination="vg6-D5-QdE" appends="YES" id="QBd-4f-Apq"/>
                                         </connections>
-                                    </button>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.36862745098039218" green="0.34901960784313724" blue="0.37254901960784315" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="h3a-MO-ZyW" firstAttribute="centerY" secondItem="sd8-DL-0XN" secondAttribute="centerY" id="27B-2F-HiU"/>
                                     <constraint firstItem="sd8-DL-0XN" firstAttribute="centerY" secondItem="EUa-vA-YhQ" secondAttribute="centerY" id="J6g-od-Ca2"/>
-                                    <constraint firstItem="h3a-MO-ZyW" firstAttribute="centerY" secondItem="sd8-DL-0XN" secondAttribute="centerY" id="ZWq-3w-uwS"/>
-                                    <constraint firstItem="e9c-js-mYp" firstAttribute="centerY" secondItem="sd8-DL-0XN" secondAttribute="centerY" id="ch6-a8-JHy"/>
+                                    <constraint firstItem="e9c-js-mYp" firstAttribute="centerY" secondItem="sd8-DL-0XN" secondAttribute="centerY" id="J9Q-tO-S52"/>
+                                    <constraint firstItem="snu-yc-JrJ" firstAttribute="top" secondItem="EUa-vA-YhQ" secondAttribute="top" constant="8" id="T6S-6f-9Uk"/>
+                                    <constraint firstItem="4iw-vK-LXy" firstAttribute="leading" secondItem="EUa-vA-YhQ" secondAttribute="leading" constant="24" id="WTj-tw-Z04"/>
+                                    <constraint firstAttribute="trailing" secondItem="snu-yc-JrJ" secondAttribute="trailing" constant="15" id="Z0a-iF-45y"/>
                                     <constraint firstAttribute="height" constant="60" id="iu0-hq-IrO"/>
                                     <constraint firstItem="sd8-DL-0XN" firstAttribute="centerX" secondItem="EUa-vA-YhQ" secondAttribute="centerX" id="mQj-92-MDm"/>
-                                    <constraint firstAttribute="trailing" secondItem="h3a-MO-ZyW" secondAttribute="trailing" constant="24" id="qIN-d1-nFt"/>
-                                    <constraint firstItem="e9c-js-mYp" firstAttribute="leading" secondItem="EUa-vA-YhQ" secondAttribute="leading" constant="24" id="w04-vk-6KE"/>
+                                    <constraint firstItem="4iw-vK-LXy" firstAttribute="top" secondItem="EUa-vA-YhQ" secondAttribute="top" id="xPv-gU-T3A"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Bq-Bw-JA5">
@@ -224,6 +256,16 @@
                 <tapGestureRecognizer id="o7l-ha-HEg">
                     <connections>
                         <action selector="selectCountryButtonDidTap:" destination="Y6W-OH-hqX" id="owY-bQ-cFv"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="kag-uE-T2R">
+                    <connections>
+                        <action selector="backButtonDidTap:" destination="Y6W-OH-hqX" id="GD4-jC-d9T"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="vg6-D5-QdE">
+                    <connections>
+                        <action selector="checkmarkDidTap:" destination="Y6W-OH-hqX" id="ah2-zN-csR"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

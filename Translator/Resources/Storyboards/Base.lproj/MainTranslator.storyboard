@@ -23,6 +23,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="frL-pT-kzL">
+                                <rect key="frame" x="24" y="55" width="104" height="68"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="1LY-Yg-IU0"/>
+                                    <constraint firstAttribute="width" constant="104" id="pwp-M4-GDm"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="qCm-uM-9UH" appends="YES" id="Rnl-jn-wVf"/>
+                                </connections>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pgv-Rd-uzk">
                                 <rect key="frame" x="24" y="83" width="24" height="24"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -40,9 +52,17 @@
                                         <color key="textColor" name="LabelDarkBlue"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="beJ-Bg-fQV">
-                                        <rect key="frame" x="54.666666666666686" y="0.0" width="51" height="31"/>
-                                    </switch>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kif-fm-jpU" customClass="YapSwitch" customModule="Switches">
+                                        <rect key="frame" x="54.666666666666686" y="0.0" width="49" height="31"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="49" id="1KO-ZP-Hoy"/>
+                                            <constraint firstAttribute="height" constant="31" id="Ywz-OU-cFL"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="valueDidTap:" destination="BYZ-38-t0r" eventType="valueChanged" id="uI6-Yk-62V"/>
+                                        </connections>
+                                    </view>
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Voice Translator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gPq-sb-YD1">
@@ -77,26 +97,34 @@
                         <constraints>
                             <constraint firstItem="emY-b6-g7q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6p0-pB-Tt7"/>
                             <constraint firstItem="gPq-sb-YD1" firstAttribute="top" secondItem="cCw-Nn-lpS" secondAttribute="bottom" constant="20" id="9Im-nt-Pie"/>
-                            <constraint firstItem="VuI-qn-3Bp" firstAttribute="centerY" secondItem="pgv-Rd-uzk" secondAttribute="centerY" id="Cfs-Jy-Bvc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VuI-qn-3Bp" secondAttribute="trailing" constant="15" id="GU5-SP-fxt"/>
                             <constraint firstItem="emY-b6-g7q" firstAttribute="top" secondItem="gPq-sb-YD1" secondAttribute="bottom" constant="19" id="J7R-lI-kaS"/>
+                            <constraint firstItem="pgv-Rd-uzk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="PGE-mf-Po1"/>
+                            <constraint firstItem="cCw-Nn-lpS" firstAttribute="centerY" secondItem="pgv-Rd-uzk" secondAttribute="centerY" id="WrU-VO-S2w"/>
                             <constraint firstItem="gPq-sb-YD1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="dUV-uo-BsC"/>
-                            <constraint firstItem="pgv-Rd-uzk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="f21-9y-Ni3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gPq-sb-YD1" secondAttribute="trailing" constant="30" id="mCe-Qr-UI3"/>
+                            <constraint firstItem="pgv-Rd-uzk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="oe1-L9-MQD"/>
                             <constraint firstItem="emY-b6-g7q" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.6" id="pCJ-eb-Af1"/>
-                            <constraint firstItem="pgv-Rd-uzk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="qYp-LT-mrP"/>
+                            <constraint firstItem="frL-pT-kzL" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="55" id="s7X-9A-m9h"/>
+                            <constraint firstItem="frL-pT-kzL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="vfp-Zq-mJC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="emY-b6-g7q" secondAttribute="trailing" id="vu2-lZ-UFQ"/>
                             <constraint firstItem="emY-b6-g7q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yPU-XH-AII"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="adsSwitcher" destination="kif-fm-jpU" id="MyS-h0-g8J"/>
                         <outlet property="collectionCell" destination="emY-b6-g7q" id="Tkd-hv-DrX"/>
                         <outlet property="menuButton" destination="pgv-Rd-uzk" id="ggW-Rw-Uct"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="qCm-uM-9UH">
+                    <connections>
+                        <action selector="menuButtonDidTap:" destination="BYZ-38-t0r" id="hcO-yi-YjA"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="30" y="4"/>
+            <point key="canvasLocation" x="29.770992366412212" y="3.5211267605633805"/>
         </scene>
     </scenes>
     <resources>
