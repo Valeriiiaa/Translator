@@ -236,6 +236,9 @@
                                 <rect key="frame" x="161.66666666666666" y="356" width="70" height="70"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="buttonTranslate"/>
+                                <connections>
+                                    <action selector="translateDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="LWn-en-tz1"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AHX-kf-2zx">
                                 <rect key="frame" x="15" y="558" width="363" height="177"/>

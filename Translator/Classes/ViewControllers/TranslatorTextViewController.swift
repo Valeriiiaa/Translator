@@ -7,10 +7,36 @@
 
 import UIKit
 import Switches
+import MLKitTranslate
+
+class GoogleTranslate {
+    private(set) var option: TranslatorOptions?
+    private(set) var translator: Translator?
+    
+    private func loadTranslateModel() async throws {
+        guard let translator else {
+            print("[log] translator is nil")
+            return
+        }
+        let conditions = ModelDownloadConditions(
+            allowsCellularAccess: false,
+            allowsBackgroundDownloading: true
+        )
+        try await translator.downloadModelIfNeeded(with: conditions)
+        
+    }
+    
+    public func translate(text: String, from: TranslateLanguage, to: TranslateLanguage) async throws -> String {
+        let option = TranslatorOptions(sourceLanguage: from, targetLanguage: to)
+        let translator = Translator.translator(options: option)
+        self.translator = translator
+        try await loadTranslateModel()
+        return try await translator.translate(text)
+    }
+}
 
 
 class TranslatorTextViewController: UIViewController, UITextViewDelegate {
-    
     @IBOutlet weak var adsSwitcher: YapSwitch!
     @IBOutlet weak var secondImage: UIImageView!
     @IBOutlet weak var firstFlag: UIImageView!
@@ -24,13 +50,16 @@ class TranslatorTextViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var backgroundFlagSecondView: UIView!
     @IBOutlet weak var backgroundFlagFirstView: UIView!
     
+    private lazy var translator: GoogleTranslate = {
+        GoogleTranslate()
+    }()
+    
     var overlayView: OverlayView!
     
     var isSwapped = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         switch UIDevice.current.userInterfaceIdiom {
         case .phone:
             backgroundMainView.layer.cornerRadius = 15
@@ -64,9 +93,8 @@ class TranslatorTextViewController: UIViewController, UITextViewDelegate {
         getTextView.layer.borderWidth = 2
         getTextView.layer.borderColor = UIColor(red: 112/255, green: 139/255, blue: 194/255, alpha: 1).cgColor
         getTextView.layer.masksToBounds = true
-        
-        
     }
+    
     @IBAction func valueDidTap(_ sender: Any) {
         if adsSwitcher.isOn == true {
             pushPremiumScreen()
@@ -148,9 +176,22 @@ class TranslatorTextViewController: UIViewController, UITextViewDelegate {
         navigationController?.pushViewController(entrance, animated: true)
     }
     
+    @IBAction func translateDidTap(_ sender: Any) {
+        guard let text = textViewTypeText.text else { return }
+        // Add IHUD
+        
+        Task { @MainActor [weak self] in
+            guard let self else { return }
+            do {
+                let translatedText = try await self.translator.translate(text: text, from: .english, to: .ukrainian)
+                self.textViewGetText.text = translatedText
+            } catch {
+                print("[log] translate \(error.localizedDescription)")
+            }
+        }
+    }
+    
     @IBAction func backbuttonDidTap(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
 }
-
-
