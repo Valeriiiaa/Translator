@@ -38,7 +38,12 @@ class GoogleTranslate {
 }
 
 class TranslatorTextViewController: UIViewController, UITextViewDelegate {
+   
+    @IBOutlet weak var translatedFlagImage: UIImageView!
+    @IBOutlet weak var translatedTextLabel: UILabel!
+    @IBOutlet weak var originalFlagImage: UIImageView!
     @IBOutlet weak var translateButton: UIButton!
+    @IBOutlet weak var originalTextLabel: UILabel!
     @IBOutlet weak var adsSwitcher: YapSwitch!
     @IBOutlet weak var secondImage: UIImageView!
     @IBOutlet weak var firstFlag: UIImageView!
@@ -107,11 +112,15 @@ class TranslatorTextViewController: UIViewController, UITextViewDelegate {
             guard let self else { return }
             self.firstLabel.text = language.key.name
             self.firstFlag.image = UIImage(named: language.flagPicture)
+            self.originalFlagImage.image = UIImage(named: language.flagPicture)
+            self.originalTextLabel.text = language.key.name
         }).store(in: &listeners)
         languageManager.$translatedLanguage.sink(receiveValue: { [weak self] language in
             guard let self else { return }
             self.secondLabel.text = language.key.name
             self.secondImage.image = UIImage(named: language.flagPicture)
+            self.translatedFlagImage.image = UIImage(named: language.flagPicture)
+            self.translatedTextLabel.text = language.key.name
         }).store(in: &listeners)
     }
     

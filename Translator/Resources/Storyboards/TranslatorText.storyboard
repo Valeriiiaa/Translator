@@ -256,8 +256,11 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="iT2-PB-CeO">
                                         <rect key="frame" x="22" y="147" width="74" height="13.333333333333343"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flagUA" translatesAutoresizingMaskIntoConstraints="NO" id="PYc-Oy-ihs">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flagUK" translatesAutoresizingMaskIntoConstraints="NO" id="PYc-Oy-ihs">
                                                 <rect key="frame" x="0.0" y="0.0" width="14" height="13.333333333333334"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="14" id="xJo-7n-kEs"/>
+                                                </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ukrainian" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q6M-fw-uub">
                                                 <rect key="frame" x="22" y="0.0" width="52" height="13.333333333333334"/>
@@ -396,12 +399,16 @@
                         <outlet property="firstFlag" destination="5fP-kC-JIv" id="4Ga-yU-cbf"/>
                         <outlet property="firstLabel" destination="VOO-gS-Wuf" id="ZMW-Y1-t7G"/>
                         <outlet property="getTextView" destination="AHX-kf-2zx" id="2uG-QL-2vs"/>
+                        <outlet property="originalFlagImage" destination="YkI-D6-H0X" id="H5R-0f-cSt"/>
+                        <outlet property="originalTextLabel" destination="i9j-ih-Cn6" id="x4a-PN-6ds"/>
                         <outlet property="putTextView" destination="Sph-WV-O2l" id="Sgb-HI-cxx"/>
                         <outlet property="secondImage" destination="Kx1-Ju-W5Z" id="FnB-cf-c3H"/>
                         <outlet property="secondLabel" destination="Y66-FH-Rmv" id="xZu-3D-OUU"/>
                         <outlet property="textViewGetText" destination="LPj-aJ-bUu" id="CZt-Sy-k8V"/>
                         <outlet property="textViewTypeText" destination="qQr-9B-JUS" id="Bab-95-UHh"/>
                         <outlet property="translateButton" destination="xTa-Du-i8J" id="bZt-gd-fK3"/>
+                        <outlet property="translatedFlagImage" destination="PYc-Oy-ihs" id="AWY-mH-NQd"/>
+                        <outlet property="translatedTextLabel" destination="q6M-fw-uub" id="rC4-sm-ADH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
