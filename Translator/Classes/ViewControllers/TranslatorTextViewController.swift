@@ -207,6 +207,14 @@ class TranslatorTextViewController: UIViewController, UITextViewDelegate {
     
     func pushSelectionScreen() {
         let entrance = StoryboardFabric.getStoryboard(by: "SelectionCountry").instantiateViewController(identifier: "SelectionCountryViewController")
+        (entrance as? SelectionCountryViewController)?.isOriginalLanguage = true
+        (entrance as? SelectionCountryViewController)?.languageManager = languageManager
+        navigationController?.pushViewController(entrance, animated: true)
+    }
+    
+    @IBAction func pushSelectionTranslatedLanguageScreen(_ sender: Any) {
+        let entrance = StoryboardFabric.getStoryboard(by: "SelectionCountry").instantiateViewController(identifier: "SelectionCountryViewController")
+        (entrance as? SelectionCountryViewController)?.isOriginalLanguage = false
         (entrance as? SelectionCountryViewController)?.languageManager = languageManager
         navigationController?.pushViewController(entrance, animated: true)
     }
@@ -218,7 +226,9 @@ class TranslatorTextViewController: UIViewController, UITextViewDelegate {
         Task { @MainActor [weak self] in
             guard let self else { return }
             do {
-                let translatedText = try await self.translator.translate(text: text, from: .english, to: .ukrainian)
+                let originalLanguage = self.languageManager.originalLanguage.key
+                let translatedLanguage = self.languageManager.translatedLanguage.key
+                let translatedText = try await self.translator.translate(text: text, from: originalLanguage, to: translatedLanguage)
                 self.textViewGetText.text = translatedText
             } catch {
                 print("[log] translate \(error.localizedDescription)")

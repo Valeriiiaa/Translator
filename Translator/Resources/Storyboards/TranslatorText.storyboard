@@ -410,7 +410,11 @@
                         <action selector="selectCountryDidTap:" destination="Y6W-OH-hqX" id="hEo-fC-g1O"/>
                     </connections>
                 </tapGestureRecognizer>
-                <tapGestureRecognizer id="HKH-2d-3wT"/>
+                <tapGestureRecognizer id="HKH-2d-3wT">
+                    <connections>
+                        <action selector="pushSelectionTranslatedLanguageScreen:" destination="Y6W-OH-hqX" id="9nA-OL-UlJ"/>
+                    </connections>
+                </tapGestureRecognizer>
                 <tapGestureRecognizer id="6y9-hd-tL3">
                     <connections>
                         <action selector="backbuttonDidTap:" destination="Y6W-OH-hqX" id="erR-rd-Hw1"/>

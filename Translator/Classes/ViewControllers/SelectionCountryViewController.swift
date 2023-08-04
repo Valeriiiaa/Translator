@@ -56,15 +56,21 @@ class SelectionCountryViewController: UIViewController {
     }
     
     private func configureCountries() {
-        let allCountries = countyRepository.languages.sorted(by: { $0.key < $1.key })
+        let languageForRemove = isOriginalLanguage ? languageManager.translatedLanguage : languageManager.originalLanguage
+        var allCountries = countyRepository.languages.sorted(by: { $0.key < $1.key })
             .map({ language in
                 let selectedLanguage = isOriginalLanguage ? languageManager.originalLanguage : languageManager.translatedLanguage
                 let isSelected = selectedLanguage.key.rawValue == language.key
-                return SelectionCountryModel(nameCountry: language.name,
-                                      flagPicture: language.key,
-                                      isSelected: isSelected,
-                                      key: TranslateLanguage.init(rawValue: language.key) )
+                let selectionCountryModel = SelectionCountryModel(nameCountry: language.name,
+                                                                  flagPicture: language.key,
+                                                                  isSelected: isSelected,
+                                                                  key: TranslateLanguage.init(rawValue: language.key))
+                if isSelected {
+                    self.selectedLanguage = selectionCountryModel
+                }
+                return selectionCountryModel
             })
+        allCountries.removeAll(where: { $0.key == languageForRemove.key })
         allItems = [SectionModel(title: "All languages", countryModels: allCountries)]
         tableViewSection.reloadData()
     }
@@ -137,7 +143,7 @@ extension SelectionCountryViewController: UISearchBarDelegate {
             selectionModels = allItems
             return
         }
-        let languages = allItems[1].countryModels
+        let languages = allItems.last?.countryModels ?? []
         let filtredLanguages = languages.filter({ item in
             item.nameCountry.hasPrefix(searchText)
         })
