@@ -8,16 +8,20 @@
 import UIKit
 
 class SelectionCountryViewController: UIViewController {
-    
     @IBOutlet weak var tableViewSection: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     
-    var allItems = [SectionModel(title: "Recently used", countryModels: [SelectionCountryModel(nameCountry: "Hindi", flagPicture: "hindi", isSelected: false), SelectionCountryModel(nameCountry: "Hungarian", flagPicture: "hungarian", isSelected: false), SelectionCountryModel(nameCountry: "Icelandic", flagPicture: "hindi", isSelected: false)]), SectionModel(title: "All languages", countryModels: [SelectionCountryModel(nameCountry: "Indonesian", flagPicture: "hindi", isSelected: true), SelectionCountryModel(nameCountry: "Italian", flagPicture: "hindi", isSelected: false), SelectionCountryModel(nameCountry: "Spain", flagPicture: "hindi", isSelected: false), SelectionCountryModel(nameCountry: "Turkey", flagPicture: "hindi", isSelected: false)])] {
+    private lazy var countyRepository: CountryRepository = {
+        .init()
+    }()
+    
+    var allItems = [SectionModel]() {
         didSet {
             selectionModels = allItems
         }
     }
     
+    public var selectedLanguage: SelectionCountryModel?
     private var selectionModels = [SectionModel]()
     
     override func viewDidLoad() {
@@ -39,32 +43,34 @@ class SelectionCountryViewController: UIViewController {
         tableViewSection.register(UINib(nibName: HeaderManager.getHeader(by: "SelectionCountryHeaderView"), bundle: nil), forHeaderFooterViewReuseIdentifier: HeaderManager.getHeader(by: "SelectionCountryHeaderView"))
         searchBar.delegate = self
         searchBar.placeholder = "Search your language..."
+        configureCountries()
         
         switch UIDevice.current.userInterfaceIdiom {
         case .phone: searchBar.searchTextField.attributedPlaceholder = NSAttributedString(string: "Search your language...", attributes: [NSAttributedString.Key.foregroundColor: UIColor(red: 160/255, green: 168/255, blue: 196/255, alpha: 1), .font: UIFont.systemFont(ofSize: 15)])
-
+            
         default:  searchBar.searchTextField.attributedPlaceholder = NSAttributedString(string: "Search your language...", attributes: [NSAttributedString.Key.foregroundColor: UIColor(red: 160/255, green: 168/255, blue: 196/255, alpha: 1), .font: UIFont.systemFont(ofSize: 25)])
         }
-    
-       let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
-                view.addGestureRecognizer(tapGesture)
-        
-        view.isUserInteractionEnabled = true
     }
+    
+    private func configureCountries() {
+        let allCountries = countyRepository.languages.sorted(by: { $0.key < $1.key })
+            .map({ SelectionCountryModel(nameCountry: $0.name, flagPicture: $0.key, isSelected: false, key: .afrikaans) })
+        allItems = [SectionModel(title: "All languages", countryModels: allCountries)]
+        tableViewSection.reloadData()
+    }
+    
     @objc func handleTap(_ gestureRecognizer: UITapGestureRecognizer) {
-           if let searchBarFrame = searchBar?.frame, !searchBarFrame.contains(gestureRecognizer.location(in: view)) {
-               searchBar?.resignFirstResponder()
-           }
-       }
+        if let searchBarFrame = searchBar?.frame, !searchBarFrame.contains(gestureRecognizer.location(in: view)) {
+            searchBar?.resignFirstResponder()
+        }
+    }
     
     @IBAction func backbuttonDidTap(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
-    
 }
 
-extension SelectionCountryViewController: UITableViewDelegate, UITableViewDataSource {
-   
+extension SelectionCountryViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         selectionModels[section].countryModels.count
     }
@@ -86,18 +92,24 @@ extension SelectionCountryViewController: UITableViewDelegate, UITableViewDataSo
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         guard section != 0 else { return .leastNormalMagnitude }
-            return 50
-        }
+        return 50
+    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let model = selectionModels[indexPath.section].countryModels[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: CellManager.getCell(by: "SectionCountryCell"), for: indexPath)
-        (cell as? SectionCountryCell)?.configure(flagPicture: model.flagPicture, labelCountry: model.nameCountry)
+        (cell as? SectionCountryCell)?.configure(model: model)
         return cell
     }
-}
-   
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let language = selectionModels[indexPath.section].countryModels[indexPath.row]
+        language.isSelected = true
+        selectedLanguage?.isSelected = false
+        selectedLanguage = language
+    }
+}
+
 extension SelectionCountryViewController: UISearchBarDelegate {
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         view.resignFirstResponder()
@@ -116,6 +128,4 @@ extension SelectionCountryViewController: UISearchBarDelegate {
         selectionModels = [SectionModel(title: "", countryModels: filtredLanguages)]
         tableViewSection.reloadData()
     }
-    
-    
 }

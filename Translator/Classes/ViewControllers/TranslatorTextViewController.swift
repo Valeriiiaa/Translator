@@ -36,7 +36,6 @@ class GoogleTranslate {
     }
 }
 
-
 class TranslatorTextViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var translateButton: UIButton!
     @IBOutlet weak var adsSwitcher: YapSwitch!

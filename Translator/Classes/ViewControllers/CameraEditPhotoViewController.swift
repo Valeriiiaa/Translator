@@ -24,7 +24,7 @@ class CameraEditPhotoViewController: UIViewController {
     
     var backDidTap: (() -> Void)?
     
-    var allItems = [SelectionCountryModel(nameCountry: "Hindi", flagPicture: "hindi", isSelected: false), SelectionCountryModel(nameCountry: "Hindi", flagPicture: "hindi", isSelected: false) ,SelectionCountryModel(nameCountry: "Hindi", flagPicture: "hindi", isSelected: false), SelectionCountryModel(nameCountry: "Hindi", flagPicture: "hindi", isSelected: false)] {
+    var allItems = [SelectionCountryModel(nameCountry: "Hindi", flagPicture: "hindi", isSelected: false, key: .afrikaans), SelectionCountryModel(nameCountry: "Hindi", flagPicture: "hindi", isSelected: false, key: .afrikaans) ,SelectionCountryModel(nameCountry: "Hindi", flagPicture: "hindi", isSelected: false, key: .afrikaans), SelectionCountryModel(nameCountry: "Hindi", flagPicture: "hindi", isSelected: false, key: .afrikaans)] {
         didSet {
             countriesModels = allItems
         }
