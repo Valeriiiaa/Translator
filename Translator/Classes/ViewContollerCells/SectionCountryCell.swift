@@ -37,7 +37,7 @@ class SectionCountryCell: UITableViewCell {
     
     func configure(model: SelectionCountryModel) {
         self.model = model
-        nameCountry.text = model.key.rawValue
+        nameCountry.text = model.key.name
         flagImage.image = UIImage(named: model.flagPicture)
         bind()
     }

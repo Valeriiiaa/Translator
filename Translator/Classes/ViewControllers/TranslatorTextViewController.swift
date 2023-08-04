@@ -62,8 +62,6 @@ class TranslatorTextViewController: UIViewController, UITextViewDelegate {
     
     var overlayView: OverlayView!
     
-    var isSwapped = false
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         switch UIDevice.current.userInterfaceIdiom {
@@ -178,23 +176,9 @@ class TranslatorTextViewController: UIViewController, UITextViewDelegate {
     }
     
     @IBAction func riversoButtonDidTap(_ sender: Any) {
-        if isSwapped {
-            let tempText = firstLabel.text
-            firstLabel.text = secondLabel.text
-            secondLabel.text = tempText
-            let tempImage = firstFlag.image
-            firstFlag.image = secondImage.image
-            secondImage.image = tempImage
-            
-        } else {
-            let tempText = secondLabel.text
-            secondLabel.text = firstLabel.text
-            firstLabel.text = tempText
-            let tempImage = secondImage.image
-            secondImage.image = firstFlag.image
-            firstFlag.image = tempImage
-        }
-        isSwapped.toggle()
+        let originalLanguage = languageManager.originalLanguage
+        languageManager.originalLanguage = languageManager.translatedLanguage
+        languageManager.translatedLanguage = originalLanguage
     }
     
     @IBAction func selectSecondButtonDidTap(_ sender: Any) {
