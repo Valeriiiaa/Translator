@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import MLKitTranslate
 
 class SelectionCountryViewController: UIViewController {
     @IBOutlet weak var tableViewSection: UITableView!
@@ -21,6 +22,8 @@ class SelectionCountryViewController: UIViewController {
         }
     }
     
+    public var isOriginalLanguage = true
+    public var languageManager: LanguageManager!
     public var selectedLanguage: SelectionCountryModel?
     private var selectionModels = [SectionModel]()
     
@@ -54,7 +57,14 @@ class SelectionCountryViewController: UIViewController {
     
     private func configureCountries() {
         let allCountries = countyRepository.languages.sorted(by: { $0.key < $1.key })
-            .map({ SelectionCountryModel(nameCountry: $0.name, flagPicture: $0.key, isSelected: false, key: .afrikaans) })
+            .map({ language in
+                let selectedLanguage = isOriginalLanguage ? languageManager.originalLanguage : languageManager.translatedLanguage
+                let isSelected = selectedLanguage.key.rawValue == language.key
+                return SelectionCountryModel(nameCountry: language.name,
+                                      flagPicture: language.key,
+                                      isSelected: isSelected,
+                                      key: TranslateLanguage.init(rawValue: language.key) )
+            })
         allItems = [SectionModel(title: "All languages", countryModels: allCountries)]
         tableViewSection.reloadData()
     }
@@ -104,9 +114,15 @@ extension SelectionCountryViewController: UITableViewDataSource, UITableViewDele
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let language = selectionModels[indexPath.section].countryModels[indexPath.row]
+        guard language.key != selectedLanguage?.key else { return }
         language.isSelected = true
         selectedLanguage?.isSelected = false
         selectedLanguage = language
+        if isOriginalLanguage {
+            languageManager.originalLanguage = language
+        } else {
+            languageManager.translatedLanguage = language
+        }
     }
 }
 

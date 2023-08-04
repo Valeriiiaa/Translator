@@ -9,6 +9,7 @@ import UIKit
 import Switches
 import MLKitTranslate
 import IHProgressHUD
+import Combine
 
 class GoogleTranslate {
     private(set) var option: TranslatorOptions?
@@ -55,6 +56,10 @@ class TranslatorTextViewController: UIViewController, UITextViewDelegate {
         GoogleTranslate()
     }()
     
+    private var listeners = Set<AnyCancellable>()
+    
+    public var languageManager: LanguageManager!
+    
     var overlayView: OverlayView!
     
     var isSwapped = false
@@ -94,6 +99,20 @@ class TranslatorTextViewController: UIViewController, UITextViewDelegate {
         getTextView.layer.borderWidth = 2
         getTextView.layer.borderColor = UIColor(red: 112/255, green: 139/255, blue: 194/255, alpha: 1).cgColor
         getTextView.layer.masksToBounds = true
+        bind()
+    }
+    
+    private func bind() {
+        languageManager.$originalLanguage.sink(receiveValue: { [weak self] language in
+            guard let self else { return }
+            self.firstLabel.text = language.key.name
+            self.firstFlag.image = UIImage(named: language.flagPicture)
+        }).store(in: &listeners)
+        languageManager.$translatedLanguage.sink(receiveValue: { [weak self] language in
+            guard let self else { return }
+            self.secondLabel.text = language.key.name
+            self.secondImage.image = UIImage(named: language.flagPicture)
+        }).store(in: &listeners)
     }
     
     @IBAction func valueDidTap(_ sender: Any) {
@@ -147,6 +166,7 @@ class TranslatorTextViewController: UIViewController, UITextViewDelegate {
             }
         }
     }
+    
     @IBAction func deleteTypeTextDidTap(_ sender: Any) {
         textViewTypeText.text = ""
         textViewGetText.text = ""
@@ -187,6 +207,7 @@ class TranslatorTextViewController: UIViewController, UITextViewDelegate {
     
     func pushSelectionScreen() {
         let entrance = StoryboardFabric.getStoryboard(by: "SelectionCountry").instantiateViewController(identifier: "SelectionCountryViewController")
+        (entrance as? SelectionCountryViewController)?.languageManager = languageManager
         navigationController?.pushViewController(entrance, animated: true)
     }
     

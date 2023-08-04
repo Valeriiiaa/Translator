@@ -22,6 +22,7 @@ class SelectionCountryModel: Decodable {
         self.flagPicture = flagPicture
         self.isSelected = isSelected
         self.key = key
+        key.name
     }
     
     enum CodingKeys: CodingKey {

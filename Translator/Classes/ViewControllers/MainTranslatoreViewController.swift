@@ -15,6 +15,14 @@ class MainTranslatoreViewController: UIViewController {
     @IBOutlet weak var collectionCell: UICollectionView!
     @IBOutlet weak var menuButton: UIButton!
     
+    private lazy var storage: UserDefaultsStorage = {
+        UserDefaultsStorage()
+    }()
+    
+    private lazy var languageManager: LanguageManager = { [unowned self] in
+        LanguageManager(storage: self.storage)
+    }()
+    
     var models = [MainTranslatoreModel(text: "Text", image: ImageManager.getImage(by: "text")),MainTranslatoreModel(text: "Voice", image: ImageManager.getImage(by: "voice")), MainTranslatoreModel(text: "Camera", image: ImageManager.getImage(by: "camera")), MainTranslatoreModel(text: "Import", image: ImageManager.getImage(by: "import"))]
     
     override func viewDidLoad() {
@@ -22,7 +30,7 @@ class MainTranslatoreViewController: UIViewController {
         collectionCell.dataSource = self
         collectionCell.delegate = self
         collectionCell.register(UINib(nibName: "MainTranslatorCell", bundle: nil), forCellWithReuseIdentifier: "MainTranslatorCell")
-}
+    }
     
     func pushPremiumScreen() {
         let entrance = StoryboardFabric.getStoryboard(by: "Premium").instantiateViewController(identifier: "PremiumViewController")
@@ -36,7 +44,7 @@ class MainTranslatoreViewController: UIViewController {
             
         }
     }
-  
+    
     @IBAction func menuButtonDidTap(_ sender: Any) {
         let drawerController = DrawerMenuViewController.shared
         present(drawerController, animated: true)
@@ -72,6 +80,7 @@ extension MainTranslatoreViewController: UICollectionViewDelegateFlowLayout, UIC
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if indexPath.row == 0 {
             let entrance = StoryboardFabric.getStoryboard(by: "TranslatorText").instantiateViewController(identifier: "TranslatorTextViewController")
+            (entrance as? TranslatorTextViewController)?.languageManager = languageManager
             navigationController?.pushViewController(entrance, animated: true)
         } else if indexPath.row == 1 {
             let entrance = StoryboardFabric.getStoryboard(by: "VoiceChat").instantiateViewController(identifier: "VoiceChatViewController")
