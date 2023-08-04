@@ -124,6 +124,8 @@
                 <outlet property="flagSecond" destination="Hal-vu-RmM" id="KZ8-gg-QXd"/>
                 <outlet property="labelFirst" destination="LM6-TM-FAc" id="gp1-sD-6fK"/>
                 <outlet property="labelSecond" destination="ZN2-Rv-91K" id="kO6-7p-ALj"/>
+                <outlet property="originalTextLabel" destination="LM6-TM-FAc" id="ARQ-sY-9vT"/>
+                <outlet property="translatedTextLabel" destination="ZN2-Rv-91K" id="6xX-NN-R6Q"/>
             </connections>
             <point key="canvasLocation" x="180.91603053435114" y="62.323943661971832"/>
         </tableViewCell>

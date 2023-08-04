@@ -81,7 +81,7 @@ class DrawerMenuViewController: UIViewController, UITableViewDelegate, UITableVi
         dismiss(animated: true)
     }
     
-    var models = [DrawerMenuCellType.premiumPicture, .itemsMenu(MenuItemsModel(label: "History", image: "history")), .itemsMenu(MenuItemsModel(label: "Share it", image: "shareIt")), .itemsMenu(MenuItemsModel(label: "Rate us", image: "rateUs")), .itemsMenu(MenuItemsModel(label: "Contact us", image: "contactUs")), .itemsMenu(MenuItemsModel(label: "Privacy Policy", image: "privacyPolicy"))]
+    var models = [DrawerMenuCellType.premiumPicture, .itemsMenu(MenuItemsModel(label: "History", image: ImageManager.getImage(by: "history"))), .itemsMenu(MenuItemsModel(label: "Share it", image: ImageManager.getImage(by: "shareIt"))), .itemsMenu(MenuItemsModel(label: "Rate us", image: ImageManager.getImage(by: "rateUs"))), .itemsMenu(MenuItemsModel(label: "Contact us", image: ImageManager.getImage(by: "contactUs"))), .itemsMenu(MenuItemsModel(label: "Privacy Policy", image: ImageManager.getImage(by: "privacyPolicy")))]
     
     override func viewDidLoad() {
         super.viewDidLoad()

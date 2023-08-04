@@ -8,6 +8,7 @@
 import UIKit
 import Switches
 import MLKitTranslate
+import IHProgressHUD
 
 class GoogleTranslate {
     private(set) var option: TranslatorOptions?
@@ -37,6 +38,7 @@ class GoogleTranslate {
 
 
 class TranslatorTextViewController: UIViewController, UITextViewDelegate {
+    @IBOutlet weak var translateButton: UIButton!
     @IBOutlet weak var adsSwitcher: YapSwitch!
     @IBOutlet weak var secondImage: UIImageView!
     @IBOutlet weak var firstFlag: UIImageView!
@@ -71,12 +73,12 @@ class TranslatorTextViewController: UIViewController, UITextViewDelegate {
             getTextView.layer.cornerRadius = 20
             
         default: backgroundMainView.layer.cornerRadius = 25
-                 backgroundFlagSecondView.layer.cornerRadius = 20
-                 backgroundFlagFirstView.layer.cornerRadius = 20
-                 textViewTypeText.layer.cornerRadius = 40
-                 textViewGetText.layer.cornerRadius = 40
-                 putTextView.layer.cornerRadius = 40
-                 getTextView.layer.cornerRadius = 40
+            backgroundFlagSecondView.layer.cornerRadius = 20
+            backgroundFlagFirstView.layer.cornerRadius = 20
+            textViewTypeText.layer.cornerRadius = 40
+            textViewGetText.layer.cornerRadius = 40
+            putTextView.layer.cornerRadius = 40
+            getTextView.layer.cornerRadius = 40
         }
         
         textViewTypeText.delegate = self
@@ -148,7 +150,12 @@ class TranslatorTextViewController: UIViewController, UITextViewDelegate {
     }
     @IBAction func deleteTypeTextDidTap(_ sender: Any) {
         textViewTypeText.text = ""
+        textViewGetText.text = ""
         
+    }
+    
+    @IBAction func deleteGetTextDidTap(_ sender: Any) {
+        textViewGetText.text = ""
     }
     
     @IBAction func riversoButtonDidTap(_ sender: Any) {
@@ -159,7 +166,7 @@ class TranslatorTextViewController: UIViewController, UITextViewDelegate {
             let tempImage = firstFlag.image
             firstFlag.image = secondImage.image
             secondImage.image = tempImage
-           
+            
         } else {
             let tempText = secondLabel.text
             secondLabel.text = firstLabel.text
@@ -171,7 +178,15 @@ class TranslatorTextViewController: UIViewController, UITextViewDelegate {
         isSwapped.toggle()
     }
     
+    @IBAction func selectSecondButtonDidTap(_ sender: Any) {
+        pushSelectionScreen()
+    }
+   
     @IBAction func selectCountryDidTap(_ sender: Any) {
+        pushSelectionScreen()
+    }
+    
+    func pushSelectionScreen() {
         let entrance = StoryboardFabric.getStoryboard(by: "SelectionCountry").instantiateViewController(identifier: "SelectionCountryViewController")
         navigationController?.pushViewController(entrance, animated: true)
     }
@@ -189,6 +204,23 @@ class TranslatorTextViewController: UIViewController, UITextViewDelegate {
                 print("[log] translate \(error.localizedDescription)")
             }
         }
+        textViewTypeText.resignFirstResponder()
+    }
+    
+    @IBAction func copyTextDidTap(_ sender: Any) {
+        UIPasteboard.general.string = textViewGetText.text
+        IHProgressHUD.showSuccesswithStatus("Translation copied")
+        IHProgressHUD.dismissWithDelay(0.5)
+    }
+   
+    @IBAction func shareTextDidTap(_ sender: Any) {
+        guard let textToShare = textViewGetText.text else  {
+            return
+        }
+        let activityViewController = UIActivityViewController(activityItems: [textToShare], applicationActivities: nil)
+            activityViewController.popoverPresentationController?.barButtonItem = sender as? UIBarButtonItem
+           
+            present(activityViewController, animated: true, completion: nil)
     }
     
     @IBAction func backbuttonDidTap(_ sender: Any) {

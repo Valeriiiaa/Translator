@@ -9,6 +9,8 @@ import UIKit
 
 class HistoryFullTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var translatedTextLabel: UILabel!
+    @IBOutlet weak var originalTextLabel: UILabel!
     @IBOutlet weak var flagSecond: UIImageView!
     @IBOutlet weak var flagFirst: UIImageView!
     @IBOutlet weak var labelSecond: UILabel!
@@ -26,8 +28,15 @@ class HistoryFullTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        
+}
+    
+    func configure(originalText: String, translatedText: String, flagFirst: String, flagSecond: String, firstLanguage: String, secondLanguage: String ) {
+        self.translatedTextLabel.text = translatedText
+        self.originalTextLabel.text = originalText
+        self.flagSecond.image = UIImage(named: flagSecond)
+        self.flagFirst.image = UIImage(named: flagFirst)
+        labelSecond.text = secondLanguage
+        labelFirst.text = firstLanguage
     }
 
     @IBAction func binDeleteDidTap(_ sender: Any) {

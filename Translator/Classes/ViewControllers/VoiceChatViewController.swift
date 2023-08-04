@@ -43,6 +43,7 @@ class VoiceChatViewController: UIViewController {
     }
    
     @IBAction func backButtonDidTap(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
     }
     @IBAction func riversoButtonDidTap(_ sender: Any) {
     }

@@ -14,8 +14,8 @@ class HistoryViewController: UIViewController {
     @IBOutlet weak var adsSwitcher: YapSwitch!
     @IBOutlet weak var eraserButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
-    
     @IBOutlet weak var historyLabel: UILabel!
+   
     var historyModels: [BaseHistoryModel] = [HistoryEmptyModel(id: "1")]
    
     override func viewDidLoad() {
