@@ -34,7 +34,7 @@ extension TranslateLanguage {
         case .bulgarian: return "Bulgarian"
         case .catalan: return "Catalan"
         case .chinese: return "Chinese"
-        case .croatian: return "croatian"
+        case .croatian: return "Croatian"
         case .czech: return "Czech"
         case .danish: return "Danish"
         case .dutch: return "Dutch"

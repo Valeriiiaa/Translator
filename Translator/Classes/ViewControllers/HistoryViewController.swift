@@ -40,7 +40,8 @@ class HistoryViewController: UIViewController {
     }
     
     @IBAction func backButtonDidTap(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
+        let drawerController = DrawerMenuViewController.shared
+        present(drawerController, animated: true)
 //        showPopup()
     }
    
