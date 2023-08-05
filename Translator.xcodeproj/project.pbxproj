@@ -884,10 +884,10 @@
 			);
 			mainGroup = F6DE20A92A6E6A7F003F49F4;
 			packageReferences = (
-				F60A5A6E2A6FDFD200E04862 /* XCRemoteSwiftPackageReference "SwiftEntryKit.git" */,
-				F625F6E62A78FA2D0040F1A3 /* XCRemoteSwiftPackageReference "Switch-Animations.git" */,
-				F61E496D2A7AAF2C00D1EA49 /* XCRemoteSwiftPackageReference "IHProgressHUD.git" */,
-				11203A5C2A7BBE8700452843 /* XCRemoteSwiftPackageReference "Swinject.git" */,
+				F60A5A6E2A6FDFD200E04862 /* XCRemoteSwiftPackageReference "SwiftEntryKit" */,
+				F625F6E62A78FA2D0040F1A3 /* XCRemoteSwiftPackageReference "Switch-Animations" */,
+				F61E496D2A7AAF2C00D1EA49 /* XCRemoteSwiftPackageReference "IHProgressHUD" */,
+				11203A5C2A7BBE8700452843 /* XCRemoteSwiftPackageReference "Swinject" */,
 			);
 			productRefGroup = F6DE20B32A6E6A7F003F49F4 /* Products */;
 			projectDirPath = "";
@@ -1282,7 +1282,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1336,7 +1336,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1353,25 +1353,31 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6NNWR2JHQ8;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = FSWN37F2HA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Translator/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Voice Translator Camera & Text";
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Please allow to record audio.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = MainTranslator;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = w.Translator;
+				PRODUCT_BUNDLE_IDENTIFIER = com.translator.voice.language.translate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1385,25 +1391,31 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6NNWR2JHQ8;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = FSWN37F2HA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Translator/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Voice Translator Camera & Text";
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Please allow to record audio.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = MainTranslator;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = w.Translator;
+				PRODUCT_BUNDLE_IDENTIFIER = com.translator.voice.language.translate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1532,7 +1544,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		11203A5C2A7BBE8700452843 /* XCRemoteSwiftPackageReference "Swinject.git" */ = {
+		11203A5C2A7BBE8700452843 /* XCRemoteSwiftPackageReference "Swinject" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Swinject/Swinject.git";
 			requirement = {
@@ -1540,7 +1552,7 @@
 				minimumVersion = 2.0.0;
 			};
 		};
-		F60A5A6E2A6FDFD200E04862 /* XCRemoteSwiftPackageReference "SwiftEntryKit.git" */ = {
+		F60A5A6E2A6FDFD200E04862 /* XCRemoteSwiftPackageReference "SwiftEntryKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/huri000/SwiftEntryKit.git";
 			requirement = {
@@ -1548,7 +1560,7 @@
 				minimumVersion = 2.0.0;
 			};
 		};
-		F61E496D2A7AAF2C00D1EA49 /* XCRemoteSwiftPackageReference "IHProgressHUD.git" */ = {
+		F61E496D2A7AAF2C00D1EA49 /* XCRemoteSwiftPackageReference "IHProgressHUD" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Swiftify-Corp/IHProgressHUD.git";
 			requirement = {
@@ -1556,7 +1568,7 @@
 				minimumVersion = 0.1.8;
 			};
 		};
-		F625F6E62A78FA2D0040F1A3 /* XCRemoteSwiftPackageReference "Switch-Animations.git" */ = {
+		F625F6E62A78FA2D0040F1A3 /* XCRemoteSwiftPackageReference "Switch-Animations" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/jwd-ali/Switch-Animations.git";
 			requirement = {
@@ -1569,22 +1581,22 @@
 /* Begin XCSwiftPackageProductDependency section */
 		11203A5D2A7BBE8700452843 /* Swinject */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 11203A5C2A7BBE8700452843 /* XCRemoteSwiftPackageReference "Swinject.git" */;
+			package = 11203A5C2A7BBE8700452843 /* XCRemoteSwiftPackageReference "Swinject" */;
 			productName = Swinject;
 		};
 		F60A5A6F2A6FDFD200E04862 /* SwiftEntryKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = F60A5A6E2A6FDFD200E04862 /* XCRemoteSwiftPackageReference "SwiftEntryKit.git" */;
+			package = F60A5A6E2A6FDFD200E04862 /* XCRemoteSwiftPackageReference "SwiftEntryKit" */;
 			productName = SwiftEntryKit;
 		};
 		F61E496E2A7AAF2C00D1EA49 /* IHProgressHUD */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = F61E496D2A7AAF2C00D1EA49 /* XCRemoteSwiftPackageReference "IHProgressHUD.git" */;
+			package = F61E496D2A7AAF2C00D1EA49 /* XCRemoteSwiftPackageReference "IHProgressHUD" */;
 			productName = IHProgressHUD;
 		};
 		F625F6E72A78FA2D0040F1A3 /* Switches */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = F625F6E62A78FA2D0040F1A3 /* XCRemoteSwiftPackageReference "Switch-Animations.git" */;
+			package = F625F6E62A78FA2D0040F1A3 /* XCRemoteSwiftPackageReference "Switch-Animations" */;
 			productName = Switches;
 		};
 /* End XCSwiftPackageProductDependency section */

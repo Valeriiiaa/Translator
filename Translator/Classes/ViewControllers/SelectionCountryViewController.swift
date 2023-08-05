@@ -24,6 +24,7 @@ class SelectionCountryViewController: UIViewController {
     
     public var isOriginalLanguage = true
     public var languageManager: LanguageManager!
+    public var storage: UserDefaultsStorage!
     public var selectedLanguage: SelectionCountryModel?
     private var selectionModels = [SectionModel]()
     
@@ -129,6 +130,7 @@ extension SelectionCountryViewController: UITableViewDataSource, UITableViewDele
         } else {
             languageManager.translatedLanguage = language
         }
+        navigationController?.popViewController(animated: true)
     }
 }
 

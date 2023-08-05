@@ -11,6 +11,19 @@ import MLKitTranslate
 import IHProgressHUD
 import Combine
 
+//class NetworkManager {
+////    public func request(
+//}
+//
+//protocol Translatorф {
+//    func translate(text: String, from: String, to: String) async throws -> String
+//}
+//
+//class GooglePrivateAPITranslator: Translator {
+//    func translate(text: String, from: String, to: String) async throws -> String {
+//    }
+//}
+
 class GoogleTranslate {
     private(set) var option: TranslatorOptions?
     private(set) var translator: Translator?
@@ -25,13 +38,25 @@ class GoogleTranslate {
             allowsBackgroundDownloading: true
         )
         try await translator.downloadModelIfNeeded(with: conditions)
-        
     }
     
     public func translate(text: String, from: TranslateLanguage, to: TranslateLanguage) async throws -> String {
-        let option = TranslatorOptions(sourceLanguage: from, targetLanguage: to)
+        var tmpText = text
+        var tmpFrom = from
+        if from != .english && to != .english {
+            tmpText = try await translateToEnglish(text: tmpText, from: from)
+            tmpFrom = .english
+        }
+        let option = TranslatorOptions(sourceLanguage: tmpFrom, targetLanguage: to)
         let translator = Translator.translator(options: option)
         self.translator = translator
+        try await loadTranslateModel()
+        return try await translator.translate(tmpText)
+    }
+    
+    private func translateToEnglish(text: String, from: TranslateLanguage) async throws -> String {
+        let option = TranslatorOptions(sourceLanguage: from, targetLanguage: .english)
+        let translator = Translator.translator(options: option)
         try await loadTranslateModel()
         return try await translator.translate(text)
     }
@@ -64,6 +89,7 @@ class TranslatorTextViewController: UIViewController, UITextViewDelegate {
     private var listeners = Set<AnyCancellable>()
     
     public var languageManager: LanguageManager!
+    public var storage: UserDefaultsStorage!
     
     var overlayView: OverlayView!
     
@@ -119,7 +145,28 @@ class TranslatorTextViewController: UIViewController, UITextViewDelegate {
             self.secondImage.image = UIImage(named: language.flagPicture)
             self.translatedFlagImage.image = UIImage(named: language.flagPicture)
             self.translatedTextLabel.text = language.key.name
+            guard let text = self.textViewTypeText.text,
+                  !text.isEmpty else { return }
+            self.translate()
         }).store(in: &listeners)
+    }
+    
+    private func translate() {
+        guard let text = textViewTypeText.text else { return }
+        // Add IHUD
+        
+        Task { @MainActor [weak self] in
+            guard let self else { return }
+            do {
+                let originalLanguage = self.languageManager.originalLanguage.key
+                let translatedLanguage = self.languageManager.translatedLanguage.key
+                let translatedText = try await self.translator.translate(text: text, from: originalLanguage, to: translatedLanguage)
+                self.textViewGetText.text = translatedText
+            } catch {
+                print("[log] translate \(error.localizedDescription)")
+            }
+        }
+        textViewTypeText.resignFirstResponder()
     }
     
     @IBAction func valueDidTap(_ sender: Any) {
@@ -202,6 +249,7 @@ class TranslatorTextViewController: UIViewController, UITextViewDelegate {
         let entrance = StoryboardFabric.getStoryboard(by: "SelectionCountry").instantiateViewController(identifier: "SelectionCountryViewController")
         (entrance as? SelectionCountryViewController)?.isOriginalLanguage = true
         (entrance as? SelectionCountryViewController)?.languageManager = languageManager
+        (entrance as? SelectionCountryViewController)?.storage = storage
         navigationController?.pushViewController(entrance, animated: true)
     }
     
@@ -209,25 +257,12 @@ class TranslatorTextViewController: UIViewController, UITextViewDelegate {
         let entrance = StoryboardFabric.getStoryboard(by: "SelectionCountry").instantiateViewController(identifier: "SelectionCountryViewController")
         (entrance as? SelectionCountryViewController)?.isOriginalLanguage = false
         (entrance as? SelectionCountryViewController)?.languageManager = languageManager
+        (entrance as? SelectionCountryViewController)?.storage = storage
         navigationController?.pushViewController(entrance, animated: true)
     }
     
     @IBAction func translateDidTap(_ sender: Any) {
-        guard let text = textViewTypeText.text else { return }
-        // Add IHUD
-        
-        Task { @MainActor [weak self] in
-            guard let self else { return }
-            do {
-                let originalLanguage = self.languageManager.originalLanguage.key
-                let translatedLanguage = self.languageManager.translatedLanguage.key
-                let translatedText = try await self.translator.translate(text: text, from: originalLanguage, to: translatedLanguage)
-                self.textViewGetText.text = translatedText
-            } catch {
-                print("[log] translate \(error.localizedDescription)")
-            }
-        }
-        textViewTypeText.resignFirstResponder()
+        translate()
     }
     
     @IBAction func copyTextDidTap(_ sender: Any) {
