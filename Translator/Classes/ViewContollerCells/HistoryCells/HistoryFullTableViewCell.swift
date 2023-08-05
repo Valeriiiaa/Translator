@@ -21,7 +21,14 @@ class HistoryFullTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        backgroundHistoryView.layer.cornerRadius = 20
+       
+        switch UIDevice.current.userInterfaceIdiom {
+        case .phone:
+            backgroundHistoryView.layer.cornerRadius = 20
+
+        default: backgroundHistoryView.layer.cornerRadius = 30
+        }
+        
         backgroundHistoryView.layer.masksToBounds = true
         backgroundHistoryView.layer.borderWidth = 2
         backgroundHistoryView.layer.borderColor = UIColor(red: 112/255, green: 139/255, blue: 194/255, alpha: 1).cgColor

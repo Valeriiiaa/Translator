@@ -22,10 +22,16 @@ class SectionCountryCell: UITableViewCell {
         switch UIDevice.current.userInterfaceIdiom {
         case .phone:
             backgroundSelectionView.layer.cornerRadius = 15
+            flagImage.layer.cornerRadius = 3
 
         default:  backgroundSelectionView.layer.cornerRadius = 25
+                  flagImage.layer.cornerRadius = 6
         }
+        
+        flagImage.layer.borderWidth = 1
+        flagImage.layer.borderColor = UIColor(red: 235/255, green: 239/255, blue: 248/255, alpha: 1).cgColor
         backgroundSelectionView.layer.masksToBounds = true
+        flagImage.layer.masksToBounds = true
         backgroundSelectionView.layer.borderWidth = 2
         backgroundSelectionView.layer.borderColor = UIColor(red: 235/255, green: 239/255, blue: 248/255, alpha: 1).cgColor
     }
@@ -49,6 +55,8 @@ class SectionCountryCell: UITableViewCell {
             let backgroundColor = value ? UIColor(named: "LanguageSelectionColor") : .white
             self.backgroundSelectionView.backgroundColor = backgroundColor
             self.nameCountry.textColor = value ? .white : .black
+            self.flagImage.layer.borderWidth = 1
+            self.flagImage.layer.borderColor = UIColor(red: 235/255, green: 239/255, blue: 248/255, alpha: 1).cgColor
         }).store(in: &listeners)
     }
 }

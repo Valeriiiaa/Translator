@@ -15,9 +15,15 @@ class LeftMessagesCell: UITableViewCell {
    
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        switch UIDevice.current.userInterfaceIdiom {
+        case .phone:
+            backgroundMessageView.layer.cornerRadius = 20
+
+        default: backgroundMessageView.layer.cornerRadius = 30
+        }
         backgroundMessageView.layer.borderWidth = 2
         backgroundMessageView.layer.borderColor = UIColor(red: 112/255, green: 139/255, blue: 194/255, alpha: 1).cgColor
-        backgroundMessageView.layer.cornerRadius = 20
         backgroundMessageView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMaxXMinYCorner, .layerMinXMaxYCorner]
        
     }

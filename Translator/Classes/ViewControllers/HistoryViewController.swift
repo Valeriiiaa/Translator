@@ -12,15 +12,15 @@ import IHProgressHUD
 
 
 class HistoryViewController: UIViewController {
-   
+    
     @IBOutlet weak var backgroundViewEraser: UIView!
     @IBOutlet weak var adsSwitcher: YapSwitch!
     @IBOutlet weak var eraserButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var historyLabel: UILabel!
-   
+    
     var historyModels: [BaseHistoryModel] = [HistoryEmptyModel(id: "1")]
-   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -36,7 +36,7 @@ class HistoryViewController: UIViewController {
         }
         tableView.reloadData()
     }
-     
+    
     func checkHistoryModels() {
         if historyModels.isEmpty == true {
             self.historyModels = [HistoryEmptyModel(id: "1")]
@@ -44,7 +44,6 @@ class HistoryViewController: UIViewController {
             backgroundViewEraser.isHidden = true
             tableView.reloadData()
         }
-         
     }
     
     @IBAction func valueDidTap(_ sender: Any) {
@@ -54,7 +53,7 @@ class HistoryViewController: UIViewController {
             
         }
     }
-   
+    
     func pushPremiumScreen() {
         let entrance = StoryboardFabric.getStoryboard(by: "Premium").instantiateViewController(identifier: "PremiumViewController")
         navigationController?.pushViewController(entrance, animated: true)
@@ -63,9 +62,8 @@ class HistoryViewController: UIViewController {
     @IBAction func backButtonDidTap(_ sender: Any) {
         let destinationViewController = UIStoryboard(name: "MainTranslator", bundle: nil).instantiateViewController(withIdentifier: "MainTranslatoreViewController") as! MainTranslatoreViewController
         navigationController?.pushViewController(destinationViewController, animated: true)
-//        showPopup()
     }
-   
+    
     @IBAction func eraserButtonDidTap(_ sender: Any) {
         showPopup()
     }
@@ -88,7 +86,7 @@ class HistoryViewController: UIViewController {
             })
         }
     }
-
+    
 }
 
 extension HistoryViewController: UITableViewDelegate, UITableViewDataSource {
@@ -117,6 +115,6 @@ extension HistoryViewController: UITableViewDelegate, UITableViewDataSource {
         }
         return cell
     }
-   
+    
     
 }

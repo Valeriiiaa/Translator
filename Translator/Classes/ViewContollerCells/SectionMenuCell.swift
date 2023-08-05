@@ -15,7 +15,17 @@ class SectionMenuCell: UITableViewCell {
    
     override func awakeFromNib() {
         super.awakeFromNib()
-        backgroundCellView.layer.cornerRadius = 15
+        
+        switch UIDevice.current.userInterfaceIdiom {
+        case .phone:
+            backgroundCellView.layer.cornerRadius = 15
+            flagImage.layer.cornerRadius = 3
+
+        default: backgroundCellView.layer.cornerRadius = 25
+                 flagImage.layer.cornerRadius = 6
+        }
+       
+        flagImage.layer.masksToBounds = true
         backgroundCellView.layer.masksToBounds = true
         backgroundCellView.layer.borderWidth = 2
         backgroundCellView.layer.borderColor = UIColor(red: 235/255, green: 239/255, blue: 248/255, alpha: 1).cgColor

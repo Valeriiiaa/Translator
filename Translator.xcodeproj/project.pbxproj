@@ -524,12 +524,12 @@
 		F6B170452A6E9376002A7BD2 /* ViewContollerCells */ = {
 			isa = PBXGroup;
 			children = (
-				F6B170462A6E93B2002A7BD2 /* MainTranslatorCell.swift */,
 				F6D2C8D32A71204B00F7D7EF /* MessagesChat */,
 				F6D622FD2A6FCC7500D24F16 /* HistoryCells */,
 				F628936C2A6EBFF100B7A36C /* DrawerMenuCells */,
 				F68C37092A7148A100AD0A1F /* SectionCountryCell.swift */,
 				F6D5D97A2A75352E00A8053B /* SectionMenuCell.swift */,
+				F6B170462A6E93B2002A7BD2 /* MainTranslatorCell.swift */,
 			);
 			path = ViewContollerCells;
 			sourceTree = "<group>";
