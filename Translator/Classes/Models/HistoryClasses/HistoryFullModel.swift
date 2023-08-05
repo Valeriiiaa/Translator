@@ -7,8 +7,8 @@
 
 import Foundation
 
-class HistoryFullModel: BaseHistoryModel {
-    
+class HistoryFullModel: BaseHistoryModel, Codable, Equatable {
+
     let id: String
     let originalText: String
     let translatedText: String
@@ -25,5 +25,9 @@ class HistoryFullModel: BaseHistoryModel {
         self.secondFlag = secondFlag
         self.firstLanguageLabel = firstLanguageLabel
         self.secondLanguageLabel = secondLanguageLabel
+    }
+  
+    static func == (lhs: HistoryFullModel, rhs: HistoryFullModel) -> Bool {
+        lhs.originalText == rhs.originalText && lhs.translatedText == rhs.translatedText
     }
 }

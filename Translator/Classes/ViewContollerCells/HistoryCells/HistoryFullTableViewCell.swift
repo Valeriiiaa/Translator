@@ -8,6 +8,8 @@
 import UIKit
 
 class HistoryFullTableViewCell: UITableViewCell {
+    
+    var deleteButtonTapped: (() -> Void)?
 
     @IBOutlet weak var translatedTextLabel: UILabel!
     @IBOutlet weak var originalTextLabel: UILabel!
@@ -40,5 +42,6 @@ class HistoryFullTableViewCell: UITableViewCell {
     }
 
     @IBAction func binDeleteDidTap(_ sender: Any) {
+        deleteButtonTapped?()
     }
 }

@@ -153,7 +153,7 @@ class TranslatorTextViewController: UIViewController, UITextViewDelegate {
     
     private func translate() {
         guard let text = textViewTypeText.text else { return }
-        // Add IHUD
+       
         
         Task { @MainActor [weak self] in
             guard let self else { return }
@@ -162,6 +162,8 @@ class TranslatorTextViewController: UIViewController, UITextViewDelegate {
                 let translatedLanguage = self.languageManager.translatedLanguage.key
                 let translatedText = try await self.translator.translate(text: text, from: originalLanguage, to: translatedLanguage)
                 self.textViewGetText.text = translatedText
+                let historyModel = HistoryFullModel(id: "2", originalText: text, translatedText: translatedText, firstFlag: self.languageManager.originalLanguage.key.rawValue, secondFlag: self.languageManager.translatedLanguage.key.rawValue, firstLanguageLabel: originalLanguage.name, secondLanguageLabel: translatedLanguage.name)
+                self.storage.add(key: .history, value: historyModel)
             } catch {
                 print("[log] translate \(error.localizedDescription)")
             }

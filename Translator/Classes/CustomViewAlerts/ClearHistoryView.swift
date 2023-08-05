@@ -6,14 +6,17 @@
 //
 
 import UIKit
+import SwiftEntryKit
 
 class ClearHistoryView: UIView {
-
+    
     @IBOutlet weak var noButton: UIButton!
     @IBOutlet weak var yesButton: UIButton!
+    
+    var deletedAllCellsTapped: (() -> Void)?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-       
         layer.cornerRadius = 20
         layer.masksToBounds = true
         noButton.layer.cornerRadius = 10
@@ -24,10 +27,13 @@ class ClearHistoryView: UIView {
         yesButton.layer.masksToBounds = true
         
     }
-
+    
     @IBAction func noButtonDidTap(_ sender: Any) {
+        SwiftEntryKit.dismiss()
     }
     @IBAction func yesButtonDidTap(_ sender: Any) {
+        deletedAllCellsTapped?()
+        
     }
 }
 
