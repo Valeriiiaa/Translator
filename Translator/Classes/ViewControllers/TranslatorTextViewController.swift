@@ -11,57 +11,6 @@ import MLKitTranslate
 import IHProgressHUD
 import Combine
 
-//class NetworkManager {
-////    public func request(
-//}
-//
-//protocol Translatorф {
-//    func translate(text: String, from: String, to: String) async throws -> String
-//}
-//
-//class GooglePrivateAPITranslator: Translator {
-//    func translate(text: String, from: String, to: String) async throws -> String {
-//    }
-//}
-
-class GoogleTranslate {
-    private(set) var option: TranslatorOptions?
-    private(set) var translator: Translator?
-    
-    private func loadTranslateModel() async throws {
-        guard let translator else {
-            print("[log] translator is nil")
-            return
-        }
-        let conditions = ModelDownloadConditions(
-            allowsCellularAccess: false,
-            allowsBackgroundDownloading: true
-        )
-        try await translator.downloadModelIfNeeded(with: conditions)
-    }
-    
-    public func translate(text: String, from: TranslateLanguage, to: TranslateLanguage) async throws -> String {
-        var tmpText = text
-        var tmpFrom = from
-        if from != .english && to != .english {
-            tmpText = try await translateToEnglish(text: tmpText, from: from)
-            tmpFrom = .english
-        }
-        let option = TranslatorOptions(sourceLanguage: tmpFrom, targetLanguage: to)
-        let translator = Translator.translator(options: option)
-        self.translator = translator
-        try await loadTranslateModel()
-        return try await translator.translate(tmpText)
-    }
-    
-    private func translateToEnglish(text: String, from: TranslateLanguage) async throws -> String {
-        let option = TranslatorOptions(sourceLanguage: from, targetLanguage: .english)
-        let translator = Translator.translator(options: option)
-        try await loadTranslateModel()
-        return try await translator.translate(text)
-    }
-}
-
 class TranslatorTextViewController: UIViewController, UITextViewDelegate {
    
     @IBOutlet weak var translatedFlagImage: UIImageView!
@@ -82,8 +31,16 @@ class TranslatorTextViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var backgroundFlagSecondView: UIView!
     @IBOutlet weak var backgroundFlagFirstView: UIView!
     
-    private lazy var translator: GoogleTranslate = {
-        GoogleTranslate()
+    private lazy var networkManager: NetworkManager = {
+        NetworkManager()
+    }()
+    
+    private lazy var translatorService: TranslatorService = { [unowned self] in
+        TranslatorService(networkManager: self.networkManager)
+    }()
+    
+    private lazy var translator: TextTranslator = { [unowned self] in
+        GooglePrivateAPITranslator(translatorService: self.translatorService)
     }()
     
     private var listeners = Set<AnyCancellable>()
@@ -160,7 +117,7 @@ class TranslatorTextViewController: UIViewController, UITextViewDelegate {
             do {
                 let originalLanguage = self.languageManager.originalLanguage.key
                 let translatedLanguage = self.languageManager.translatedLanguage.key
-                let translatedText = try await self.translator.translate(text: text, from: originalLanguage, to: translatedLanguage)
+                let translatedText = try await self.translator.translate(text: text, from: originalLanguage.rawValue, to: translatedLanguage.rawValue)
                 self.textViewGetText.text = translatedText
                 let historyModel = HistoryFullModel(id: "2", originalText: text, translatedText: translatedText, firstFlag: self.languageManager.originalLanguage.key.rawValue, secondFlag: self.languageManager.translatedLanguage.key.rawValue, firstLanguageLabel: originalLanguage.name, secondLanguageLabel: translatedLanguage.name)
                 self.storage.add(key: .history, value: historyModel)
