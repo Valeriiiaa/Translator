@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="FixelText-Medium.ttf">
+            <string>FixelText-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Dtl-kQ-Dtm">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Translator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8KG-9D-96p">
+                    <rect key="frame" x="20" y="89" width="353" height="52.666666666666657"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="44"/>
+                    <color key="textColor" name="#3C485A"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="micPopUp" translatesAutoresizingMaskIntoConstraints="NO" id="vRL-Tx-8Sa">
+                    <rect key="frame" x="121.66666666666669" y="186.66666666666663" width="150" height="150"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="150" id="gKW-xK-NWT"/>
+                        <constraint firstAttribute="height" constant="150" id="q18-XY-pbh"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Try to say something" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Z8-Xu-JEO">
+                    <rect key="frame" x="58" y="366.66666666666663" width="277.33333333333331" height="31.666666666666686"/>
+                    <fontDescription key="fontDescription" name="FixelText-Medium" family="Fixel Text" pointSize="29"/>
+                    <color key="textColor" name="#3C485A"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="english" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r8v-Xy-SdT">
+                    <rect key="frame" x="153.66666666666666" y="769.33333333333348" width="85.666666666666657" height="28.666666666666629"/>
+                    <fontDescription key="fontDescription" name="FixelText-Medium" family="Fixel Text" pointSize="26"/>
+                    <color key="textColor" name="#3C485A"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="yKa-gH-HMd"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="r8v-Xy-SdT" firstAttribute="top" secondItem="8Z8-Xu-JEO" secondAttribute="bottom" constant="50" id="87q-6S-h11"/>
+                <constraint firstItem="yKa-gH-HMd" firstAttribute="trailing" secondItem="8KG-9D-96p" secondAttribute="trailing" constant="20" id="9rU-ea-Ema"/>
+                <constraint firstItem="r8v-Xy-SdT" firstAttribute="centerX" secondItem="Dtl-kQ-Dtm" secondAttribute="centerX" id="E9s-kP-IA5"/>
+                <constraint firstItem="vRL-Tx-8Sa" firstAttribute="top" secondItem="8KG-9D-96p" secondAttribute="bottom" constant="45" id="IXS-iS-2lO"/>
+                <constraint firstItem="8Z8-Xu-JEO" firstAttribute="top" secondItem="vRL-Tx-8Sa" secondAttribute="bottom" constant="30" id="N0A-Ma-Te1"/>
+                <constraint firstItem="yKa-gH-HMd" firstAttribute="bottom" secondItem="r8v-Xy-SdT" secondAttribute="bottom" constant="20" id="Ox7-yG-a16"/>
+                <constraint firstItem="8Z8-Xu-JEO" firstAttribute="centerX" secondItem="Dtl-kQ-Dtm" secondAttribute="centerX" id="TPm-Xn-2j7"/>
+                <constraint firstItem="8KG-9D-96p" firstAttribute="top" secondItem="yKa-gH-HMd" secondAttribute="top" constant="30" id="hWr-to-Bjl"/>
+                <constraint firstItem="8KG-9D-96p" firstAttribute="leading" secondItem="yKa-gH-HMd" secondAttribute="leading" constant="20" id="png-C7-4Z3"/>
+                <constraint firstItem="vRL-Tx-8Sa" firstAttribute="centerX" secondItem="Dtl-kQ-Dtm" secondAttribute="centerX" id="xXk-CL-kgR"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="41.984732824427482" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="micPopUp" width="100" height="100"/>
+        <namedColor name="#3C485A">
+            <color red="0.23499999940395355" green="0.28200000524520874" blue="0.3529999852180481" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

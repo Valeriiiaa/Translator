@@ -23,20 +23,20 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" restorationIdentifier="ClearChatView" id="Omk-rB-vKy" customClass="ClearChatView" customModule="Translator" customModuleProvider="target">
+        <view contentMode="scaleToFill" restorationIdentifier="ClearChatView" id="0PP-5p-YMq" customClass="ClearChatView" customModule="Translator" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Clear chat?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nDD-td-PlZ">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Clear history?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g1M-5x-sjo">
                     <rect key="frame" x="20" y="25" width="353" height="26.333333333333329"/>
                     <fontDescription key="fontDescription" name="FixelText-Bold" family="Fixel Text" pointSize="24"/>
                     <color key="textColor" red="0.31372549020000001" green="0.35294117650000001" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="stickClearHistory" translatesAutoresizingMaskIntoConstraints="NO" id="k81-Kg-O5j">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="stickClearHistory" translatesAutoresizingMaskIntoConstraints="NO" id="J6f-9D-xX4">
                     <rect key="frame" x="105" y="646" width="183" height="2"/>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="heR-KW-nPe">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6FT-rR-pLR">
                     <rect key="frame" x="10" y="673" width="373" height="35"/>
                     <string key="text">Your chat will be permanently deleted. 
 Are you sure you want to proceed?</string>
@@ -44,15 +44,15 @@ Are you sure you want to proceed?</string>
                     <color key="textColor" red="0.62745098040000002" green="0.6588235294" blue="0.76862745099999996" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <stackView opaque="NO" contentMode="scaleToFill" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="dub-yK-fXO">
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="6EO-0m-ob4">
                     <rect key="frame" x="76.666666666666686" y="733" width="240" height="45"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Xt-ND-cNq">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sqW-K5-DMo">
                             <rect key="frame" x="0.0" y="0.0" width="107" height="45"/>
                             <color key="backgroundColor" name="BlueButton"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="107" id="P7w-QT-n0W"/>
-                                <constraint firstAttribute="height" constant="45" id="xUW-fF-wnZ"/>
+                                <constraint firstAttribute="width" constant="107" id="4LE-Ny-hLI"/>
+                                <constraint firstAttribute="height" constant="45" id="GeL-Fe-ch7"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="FixelText-SemiBold" family="Fixel Text" pointSize="18"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -60,15 +60,15 @@ Are you sure you want to proceed?</string>
                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
                             <connections>
-                                <action selector="yesButtonDidTap:" destination="Omk-rB-vKy" eventType="touchUpInside" id="XS8-gS-Ogp"/>
+                                <action selector="yesButtonDidTap:" destination="0PP-5p-YMq" eventType="touchUpInside" id="RPh-0T-TkT"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xSQ-DX-XL2">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZPU-aO-t0o">
                             <rect key="frame" x="133" y="0.0" width="107" height="45"/>
                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="107" id="OJ8-3h-GTK"/>
-                                <constraint firstAttribute="height" constant="45" id="mZt-Y4-s9n"/>
+                                <constraint firstAttribute="width" constant="107" id="vQy-Pn-8Ja"/>
+                                <constraint firstAttribute="height" constant="45" id="wjw-t6-o4r"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="FixelText-SemiBold" family="Fixel Text" pointSize="18"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -76,31 +76,31 @@ Are you sure you want to proceed?</string>
                                 <color key="titleColor" name="BlueButton"/>
                             </state>
                             <connections>
-                                <action selector="noButtonDidTap:" destination="Omk-rB-vKy" eventType="touchUpInside" id="yW9-UF-K9v"/>
+                                <action selector="noButtonDidTap:" destination="0PP-5p-YMq" eventType="touchUpInside" id="Dat-6X-G7s"/>
                             </connections>
                         </button>
                     </subviews>
                 </stackView>
             </subviews>
-            <viewLayoutGuide key="safeArea" id="gux-T2-53i"/>
+            <viewLayoutGuide key="safeArea" id="AJe-zA-vEV"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="gux-T2-53i" firstAttribute="bottom" secondItem="dub-yK-fXO" secondAttribute="bottom" constant="40" id="0eg-4G-ouW"/>
-                <constraint firstItem="heR-KW-nPe" firstAttribute="top" secondItem="k81-Kg-O5j" secondAttribute="bottom" constant="25" id="2rv-HJ-eE1"/>
-                <constraint firstItem="nDD-td-PlZ" firstAttribute="top" secondItem="Omk-rB-vKy" secondAttribute="top" constant="25" id="72B-i3-8sI"/>
-                <constraint firstItem="dub-yK-fXO" firstAttribute="top" secondItem="heR-KW-nPe" secondAttribute="bottom" constant="25" id="9uF-n0-6gU"/>
-                <constraint firstAttribute="trailing" secondItem="heR-KW-nPe" secondAttribute="trailing" constant="10" id="BSX-B3-y6r"/>
-                <constraint firstItem="k81-Kg-O5j" firstAttribute="top" secondItem="nDD-td-PlZ" secondAttribute="bottom" constant="25" id="D8m-UJ-Yk8"/>
-                <constraint firstItem="heR-KW-nPe" firstAttribute="leading" secondItem="gux-T2-53i" secondAttribute="leading" constant="10" id="ETY-v0-GoJ"/>
-                <constraint firstItem="dub-yK-fXO" firstAttribute="centerX" secondItem="Omk-rB-vKy" secondAttribute="centerX" id="Yh0-MF-BJf"/>
-                <constraint firstItem="k81-Kg-O5j" firstAttribute="centerX" secondItem="Omk-rB-vKy" secondAttribute="centerX" id="ec6-KR-8AW"/>
-                <constraint firstItem="nDD-td-PlZ" firstAttribute="leading" secondItem="gux-T2-53i" secondAttribute="leading" constant="20" id="qRZ-81-kM9"/>
-                <constraint firstItem="gux-T2-53i" firstAttribute="trailing" secondItem="nDD-td-PlZ" secondAttribute="trailing" constant="20" id="wW7-il-SWE"/>
+                <constraint firstItem="g1M-5x-sjo" firstAttribute="top" secondItem="0PP-5p-YMq" secondAttribute="top" constant="25" id="6GS-C3-6Xy"/>
+                <constraint firstItem="AJe-zA-vEV" firstAttribute="trailing" secondItem="g1M-5x-sjo" secondAttribute="trailing" constant="20" id="MY5-cy-Bbu"/>
+                <constraint firstItem="J6f-9D-xX4" firstAttribute="top" secondItem="g1M-5x-sjo" secondAttribute="bottom" constant="25" id="Q81-K7-dFP"/>
+                <constraint firstItem="6EO-0m-ob4" firstAttribute="top" secondItem="6FT-rR-pLR" secondAttribute="bottom" constant="25" id="VT7-sY-bbO"/>
+                <constraint firstItem="6FT-rR-pLR" firstAttribute="leading" secondItem="AJe-zA-vEV" secondAttribute="leading" constant="10" id="eEo-CD-CR0"/>
+                <constraint firstItem="J6f-9D-xX4" firstAttribute="centerX" secondItem="0PP-5p-YMq" secondAttribute="centerX" id="eX3-7c-PHE"/>
+                <constraint firstItem="6FT-rR-pLR" firstAttribute="top" secondItem="J6f-9D-xX4" secondAttribute="bottom" constant="25" id="isf-FI-sXE"/>
+                <constraint firstAttribute="trailing" secondItem="6FT-rR-pLR" secondAttribute="trailing" constant="10" id="oP5-Sr-8kU"/>
+                <constraint firstItem="g1M-5x-sjo" firstAttribute="leading" secondItem="AJe-zA-vEV" secondAttribute="leading" constant="20" id="uSv-ri-hOi"/>
+                <constraint firstItem="6EO-0m-ob4" firstAttribute="centerX" secondItem="0PP-5p-YMq" secondAttribute="centerX" id="vOg-9K-aBU"/>
+                <constraint firstItem="AJe-zA-vEV" firstAttribute="bottom" secondItem="6EO-0m-ob4" secondAttribute="bottom" constant="40" id="xjA-UT-gma"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="noButton" destination="xSQ-DX-XL2" id="4wu-sh-SYT"/>
-                <outlet property="yesButton" destination="5Xt-ND-cNq" id="CAO-2x-GQK"/>
+                <outlet property="noButton" destination="ZPU-aO-t0o" id="972-1D-1cj"/>
+                <outlet property="yesButton" destination="sqW-K5-DMo" id="Xpb-CB-pzH"/>
             </connections>
             <point key="canvasLocation" x="46.564885496183201" y="20.422535211267608"/>
         </view>

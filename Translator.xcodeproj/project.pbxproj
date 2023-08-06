@@ -75,6 +75,9 @@
 		F68C37102A71509800AD0A1F /* SectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68C370F2A71509800AD0A1F /* SectionModel.swift */; };
 		F68C37132A71517A00AD0A1F /* SelectionCountryHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F68C37122A71517A00AD0A1F /* SelectionCountryHeaderView.xib */; };
 		F68C37162A71522F00AD0A1F /* SelectionCountryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68C37152A71522F00AD0A1F /* SelectionCountryHeaderView.swift */; };
+		F6A1BE2E2A7F8D72003CE35F /* GoogleMic-ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6A1BE2D2A7F8D72003CE35F /* GoogleMic-ipad.xib */; };
+		F6A1BE302A7F8DD1003CE35F /* ClearHistoryView-ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6A1BE2F2A7F8DD1003CE35F /* ClearHistoryView-ipad.xib */; };
+		F6A1BE322A7FB2E1003CE35F /* GoogleMic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A1BE312A7FB2E1003CE35F /* GoogleMic.swift */; };
 		F6B170472A6E93B2002A7BD2 /* MainTranslatorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B170462A6E93B2002A7BD2 /* MainTranslatorCell.swift */; };
 		F6B1704B2A6E93EC002A7BD2 /* MainTranslatorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6B1704A2A6E93EC002A7BD2 /* MainTranslatorCell.xib */; };
 		F6BE51642A725EC900625E62 /* CameraTranslator.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6BE51632A725EC900625E62 /* CameraTranslator.storyboard */; };
@@ -235,6 +238,9 @@
 		F68C370F2A71509800AD0A1F /* SectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionModel.swift; sourceTree = "<group>"; };
 		F68C37122A71517A00AD0A1F /* SelectionCountryHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectionCountryHeaderView.xib; sourceTree = "<group>"; };
 		F68C37152A71522F00AD0A1F /* SelectionCountryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionCountryHeaderView.swift; sourceTree = "<group>"; };
+		F6A1BE2D2A7F8D72003CE35F /* GoogleMic-ipad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "GoogleMic-ipad.xib"; sourceTree = "<group>"; };
+		F6A1BE2F2A7F8DD1003CE35F /* ClearHistoryView-ipad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "ClearHistoryView-ipad.xib"; sourceTree = "<group>"; };
+		F6A1BE312A7FB2E1003CE35F /* GoogleMic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMic.swift; sourceTree = "<group>"; };
 		F6B170462A6E93B2002A7BD2 /* MainTranslatorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTranslatorCell.swift; sourceTree = "<group>"; };
 		F6B1704A2A6E93EC002A7BD2 /* MainTranslatorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTranslatorCell.xib; sourceTree = "<group>"; };
 		F6BE51632A725EC900625E62 /* CameraTranslator.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CameraTranslator.storyboard; sourceTree = "<group>"; };
@@ -506,6 +512,8 @@
 			isa = PBXGroup;
 			children = (
 				F625F6E42A77DBE00040F1A3 /* ClearChatView-ipad.xib */,
+				F6A1BE2D2A7F8D72003CE35F /* GoogleMic-ipad.xib */,
+				F6A1BE2F2A7F8DD1003CE35F /* ClearHistoryView-ipad.xib */,
 			);
 			path = iPad;
 			sourceTree = "<group>";
@@ -733,6 +741,7 @@
 				F6D623122A6FD52300D24F16 /* Offer50View.swift */,
 				F6DDCBCA2A6FF911007B51EE /* ClearChatView.swift */,
 				F6DDCBCE2A6FFB81007B51EE /* ClearHistoryView.swift */,
+				F6A1BE312A7FB2E1003CE35F /* GoogleMic.swift */,
 			);
 			path = CustomViewAlerts;
 			sourceTree = "<group>";
@@ -763,7 +772,6 @@
 		F6DE20B42A6E6A7F003F49F4 /* Translator */ = {
 			isa = PBXGroup;
 			children = (
-				F6D2C8B02A70049700F7D7EF /* ViewTextField */,
 				F6DE20C32A6E6A80003F49F4 /* Info.plist */,
 				F6DE20E72A6E6B14003F49F4 /* Classes */,
 				F6DE20E52A6E6AFB003F49F4 /* Resources */,
@@ -824,6 +832,7 @@
 		F6DE20E72A6E6B14003F49F4 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				F6D2C8B02A70049700F7D7EF /* ViewTextField */,
 				11F25A112A7E849A00E2BC3B /* Network */,
 				11F25A072A7E82A900E2BC3B /* Translator */,
 				11203A612A7D060100452843 /* Storages */,
@@ -1008,6 +1017,7 @@
 				F628936B2A6EBE2100B7A36C /* MenuItemsCell.xib in Resources */,
 				F625F6C42A779FFD0040F1A3 /* HistoryEmptyCell-ipad.xib in Resources */,
 				F68C37082A71438100AD0A1F /* SectionCountryCell.xib in Resources */,
+				F6A1BE302A7F8DD1003CE35F /* ClearHistoryView-ipad.xib in Resources */,
 				F6BE51642A725EC900625E62 /* CameraTranslator.storyboard in Resources */,
 				F6DDCBCD2A6FFB76007B51EE /* ClearHistoryView.xib in Resources */,
 				F625F6B82A76B5470040F1A3 /* MainTranslatorCell-ipad.xib in Resources */,
@@ -1023,6 +1033,7 @@
 				F625F6BA2A76B71D0040F1A3 /* SplashScreen-ipad.storyboard in Resources */,
 				F6D623022A6FCC9700D24F16 /* HistoryEmptyCell.xib in Resources */,
 				F6DE20C22A6E6A80003F49F4 /* LaunchScreen.storyboard in Resources */,
+				F6A1BE2E2A7F8D72003CE35F /* GoogleMic-ipad.xib in Resources */,
 				F6D623042A6FCCA400D24F16 /* HistoryFullCell.xib in Resources */,
 				F625F6C62A77A0B50040F1A3 /* HistoryFullCell-ipad.xib in Resources */,
 				F6DE20BF2A6E6A80003F49F4 /* Assets.xcassets in Resources */,
@@ -1227,6 +1238,7 @@
 				F62893702A6EC12800B7A36C /* MenuItemsCell.swift in Sources */,
 				F6D2C8D72A71207C00F7D7EF /* RightMessegesCell.swift in Sources */,
 				F62893782A6EC38E00B7A36C /* DrawerMenuCellType.swift in Sources */,
+				F6A1BE322A7FB2E1003CE35F /* GoogleMic.swift in Sources */,
 				F6DE21542A6E7B43003F49F4 /* UIView+rotation.swift in Sources */,
 				F62893652A6EBCAD00B7A36C /* DrawerMenuViewController.swift in Sources */,
 				F6B170472A6E93B2002A7BD2 /* MainTranslatorCell.swift in Sources */,

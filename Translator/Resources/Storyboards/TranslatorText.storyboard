@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -59,7 +60,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n5Y-ww-VLF">
                                                 <rect key="frame" x="0.0" y="0.0" width="113" height="34"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flagUK" translatesAutoresizingMaskIntoConstraints="NO" id="5fP-kC-JIv">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flagUK" translatesAutoresizingMaskIntoConstraints="NO" id="5fP-kC-JIv">
                                                         <rect key="frame" x="8" y="12" width="14" height="10"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="14" id="Cpn-6J-Rck"/>
@@ -109,7 +110,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J7A-qt-EaK">
                                                 <rect key="frame" x="179" y="0.0" width="113" height="34"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flagUA" translatesAutoresizingMaskIntoConstraints="NO" id="Kx1-Ju-W5Z">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flagUA" translatesAutoresizingMaskIntoConstraints="NO" id="Kx1-Ju-W5Z">
                                                         <rect key="frame" x="8" y="12" width="14" height="10"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="10" id="ibE-oB-uex"/>
@@ -162,16 +163,17 @@
                                 <rect key="frame" x="15" y="219" width="363" height="177"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="p7o-ga-cDX">
-                                        <rect key="frame" x="22" y="148" width="61" height="13.333333333333343"/>
+                                        <rect key="frame" x="22" y="148" width="64" height="13"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flagUK" translatesAutoresizingMaskIntoConstraints="NO" id="YkI-D6-H0X">
-                                                <rect key="frame" x="0.0" y="0.0" width="14" height="13.333333333333334"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flagUK" translatesAutoresizingMaskIntoConstraints="NO" id="YkI-D6-H0X">
+                                                <rect key="frame" x="0.0" y="0.0" width="17" height="13"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="14" id="MDm-ci-d6M"/>
+                                                    <constraint firstAttribute="width" constant="17" id="MDm-ci-d6M"/>
+                                                    <constraint firstAttribute="height" constant="13" id="Ze0-vZ-CmI"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="English" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i9j-ih-Cn6">
-                                                <rect key="frame" x="22" y="0.0" width="39" height="13.333333333333334"/>
+                                                <rect key="frame" x="25" y="0.0" width="39" height="13"/>
                                                 <fontDescription key="fontDescription" name="FixelText-Regular" family="Fixel Text" pointSize="12"/>
                                                 <color key="textColor" red="0.62745098039215685" green="0.6588235294117647" blue="0.76862745098039209" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -227,7 +229,7 @@
                                     <constraint firstItem="qQr-9B-JUS" firstAttribute="top" secondItem="Sph-WV-O2l" secondAttribute="top" constant="20" id="E0L-Og-79r"/>
                                     <constraint firstItem="6XZ-ih-BUW" firstAttribute="top" secondItem="Sph-WV-O2l" secondAttribute="top" constant="15" id="N1l-8Q-R45"/>
                                     <constraint firstItem="rwd-J4-1XE" firstAttribute="top" secondItem="Mey-A2-hC1" secondAttribute="bottom" constant="10" id="Sd3-vT-Emb"/>
-                                    <constraint firstItem="p7o-ga-cDX" firstAttribute="top" secondItem="Mey-A2-hC1" secondAttribute="bottom" constant="15" id="bOb-KT-lvF"/>
+                                    <constraint firstItem="p7o-ga-cDX" firstAttribute="top" secondItem="Mey-A2-hC1" secondAttribute="bottom" constant="15" id="ZSI-no-AnU"/>
                                     <constraint firstAttribute="trailing" secondItem="rwd-J4-1XE" secondAttribute="trailing" constant="20" id="d9q-Rk-dHX"/>
                                     <constraint firstAttribute="trailing" secondItem="6XZ-ih-BUW" secondAttribute="trailing" constant="18" id="gWO-cM-KkB"/>
                                     <constraint firstItem="6XZ-ih-BUW" firstAttribute="leading" secondItem="qQr-9B-JUS" secondAttribute="trailing" constant="35" id="imM-2Y-fjj"/>
@@ -254,16 +256,17 @@
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="iT2-PB-CeO">
-                                        <rect key="frame" x="22" y="147" width="74" height="13.333333333333343"/>
+                                        <rect key="frame" x="22" y="147" width="77" height="13"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flagUK" translatesAutoresizingMaskIntoConstraints="NO" id="PYc-Oy-ihs">
-                                                <rect key="frame" x="0.0" y="0.0" width="14" height="13.333333333333334"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flagUK" translatesAutoresizingMaskIntoConstraints="NO" id="PYc-Oy-ihs">
+                                                <rect key="frame" x="0.0" y="0.0" width="17" height="13"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="14" id="xJo-7n-kEs"/>
+                                                    <constraint firstAttribute="height" constant="13" id="MSh-D0-pyo"/>
+                                                    <constraint firstAttribute="width" constant="17" id="xJo-7n-kEs"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ukrainian" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q6M-fw-uub">
-                                                <rect key="frame" x="22" y="0.0" width="52" height="13.333333333333334"/>
+                                                <rect key="frame" x="25" y="0.0" width="52" height="13"/>
                                                 <fontDescription key="fontDescription" name="FixelText-Regular" family="Fixel Text" pointSize="12"/>
                                                 <color key="textColor" red="0.62745098039215685" green="0.6588235294117647" blue="0.76862745098039209" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>

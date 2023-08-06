@@ -85,6 +85,8 @@ extension MainTranslatoreViewController: UICollectionViewDelegateFlowLayout, UIC
             navigationController?.pushViewController(entrance, animated: true)
         } else if indexPath.row == 1 {
             let entrance = StoryboardFabric.getStoryboard(by: "VoiceChat").instantiateViewController(identifier: "VoiceChatViewController")
+            (entrance as? VoiceChatViewController)?.languageManager = languageManager
+            (entrance as? VoiceChatViewController)?.storage = storage
             navigationController?.pushViewController(entrance, animated: true)
         } else if indexPath.row == 2 {
             let entrance = StoryboardFabric.getStoryboard(by: "CameraTranslator").instantiateViewController(identifier: "CameraTranslatorViewController")

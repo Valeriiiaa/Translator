@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -34,7 +35,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oos-GP-Hdf">
                                                 <rect key="frame" x="0.0" y="0.0" width="113" height="34"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flagUK" translatesAutoresizingMaskIntoConstraints="NO" id="pj8-00-q2f">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flagUK" translatesAutoresizingMaskIntoConstraints="NO" id="pj8-00-q2f">
                                                         <rect key="frame" x="8" y="12" width="14" height="10"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="10" id="Pb1-7E-r1n"/>
@@ -44,7 +45,10 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9JN-FI-brA">
                                                         <rect key="frame" x="87.666666666666686" y="6" width="16" height="22"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" image="arrowDown "/>
+                                                        <state key="normal" image="arrowDownBlue"/>
+                                                        <connections>
+                                                            <action selector="selectionButtondidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="HCb-ta-fmb"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="English" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E3Q-yv-yWx">
                                                         <rect key="frame" x="30.000000000000011" y="10.333333333333371" width="39.666666666666657" height="13.333333333333336"/>
@@ -54,6 +58,7 @@
                                                     </label>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstItem="E3Q-yv-yWx" firstAttribute="centerY" secondItem="pj8-00-q2f" secondAttribute="centerY" id="NW9-o9-Ss0"/>
                                                     <constraint firstItem="9JN-FI-brA" firstAttribute="leading" secondItem="E3Q-yv-yWx" secondAttribute="trailing" constant="18" id="UAn-1p-RcX"/>
@@ -65,6 +70,9 @@
                                                     <constraint firstItem="9JN-FI-brA" firstAttribute="centerY" secondItem="E3Q-yv-yWx" secondAttribute="centerY" id="uSi-jG-Hyt"/>
                                                     <constraint firstItem="pj8-00-q2f" firstAttribute="leading" secondItem="oos-GP-Hdf" secondAttribute="leading" constant="8" id="xKx-Jl-FDH"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="SSJ-Kk-xD1" appends="YES" id="DWa-s5-zbe"/>
+                                                </connections>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yIH-kY-QcG">
                                                 <rect key="frame" x="135" y="0.0" width="22" height="34"/>
@@ -77,7 +85,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iaN-BW-pLr">
                                                 <rect key="frame" x="179" y="0.0" width="113" height="34"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flagUA" translatesAutoresizingMaskIntoConstraints="NO" id="Lmb-Bb-pqO">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flagUA" translatesAutoresizingMaskIntoConstraints="NO" id="Lmb-Bb-pqO">
                                                         <rect key="frame" x="8" y="12" width="14" height="10"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="14" id="Vr5-sD-GfC"/>
@@ -93,10 +101,14 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hcd-Pf-A7a">
                                                         <rect key="frame" x="87.000000000000028" y="6" width="16" height="22"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                        <state key="normal" image="arrowDown "/>
+                                                        <state key="normal" image="arrowDownBlue"/>
+                                                        <connections>
+                                                            <action selector="selectionButtonSecondDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="xQ3-DK-ZSD"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstItem="dcm-p3-KVV" firstAttribute="leading" secondItem="Lmb-Bb-pqO" secondAttribute="trailing" constant="8" id="7Xm-BD-qeB"/>
                                                     <constraint firstAttribute="width" constant="113" id="AXW-59-4kM"/>
@@ -108,6 +120,9 @@
                                                     <constraint firstItem="hcd-Pf-A7a" firstAttribute="leading" secondItem="dcm-p3-KVV" secondAttribute="trailing" constant="4" id="aD8-lg-U8a"/>
                                                     <constraint firstItem="Lmb-Bb-pqO" firstAttribute="top" secondItem="iaN-BW-pLr" secondAttribute="top" constant="12" id="lWz-fj-ccc"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="3Gy-yL-7TZ" appends="YES" id="lLN-8D-iBg"/>
+                                                </connections>
                                             </view>
                                         </subviews>
                                     </stackView>
@@ -126,16 +141,22 @@
                                         <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="blueMic"/>
+                                        <connections>
+                                            <action selector="blueMicDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Ygr-LL-GDE"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bz5-ov-Rha">
                                         <rect key="frame" x="174" y="0.0" width="60" height="60"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="orangeMic"/>
+                                        <connections>
+                                            <action selector="orangeMicDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="38D-hv-YGC"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kkA-w3-lfn">
-                                <rect key="frame" x="0.0" y="59" width="55" height="34"/>
+                                <rect key="frame" x="0.0" y="83" width="55" height="34"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g0N-2r-xAR">
                                         <rect key="frame" x="15.666666666666664" y="5" width="24" height="24"/>
@@ -159,18 +180,18 @@
                                 </connections>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Voice Chat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rB2-KB-QcC">
-                                <rect key="frame" x="76" y="58.333333333333343" width="92" height="35.666666666666657"/>
+                                <rect key="frame" x="76" y="82.333333333333329" width="92" height="35.666666666666671"/>
                                 <fontDescription key="fontDescription" name="Sriracha-Regular" family="Sriracha" pointSize="20"/>
                                 <color key="textColor" name="#5D6883"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zyb-Mb-UHh">
-                                <rect key="frame" x="178" y="65" width="20" height="22"/>
+                                <rect key="frame" x="178" y="89" width="20" height="22"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="eraser"/>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="n9f-NI-AB6">
-                                <rect key="frame" x="277.33333333333331" y="60.666666666666657" width="100.66666666666669" height="31"/>
+                                <rect key="frame" x="277.33333333333331" y="84.666666666666671" width="100.66666666666669" height="31"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No ADS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YNc-Sf-bYK">
                                         <rect key="frame" x="0.0" y="0.0" width="41.666666666666664" height="31"/>
@@ -192,7 +213,7 @@
                                 </subviews>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NyH-9k-HXt">
-                                <rect key="frame" x="0.0" y="99" width="393" height="592"/>
+                                <rect key="frame" x="0.0" y="123" width="393" height="568"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -206,7 +227,7 @@
                             <constraint firstItem="rB2-KB-QcC" firstAttribute="centerY" secondItem="g0N-2r-xAR" secondAttribute="centerY" id="NH8-Gf-3mw"/>
                             <constraint firstItem="7HN-27-bTA" firstAttribute="top" secondItem="c8T-fx-b7A" secondAttribute="bottom" constant="5" id="OAC-HQ-Rh8"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="7HN-27-bTA" secondAttribute="trailing" constant="24" id="SLC-o3-6LB"/>
-                            <constraint firstItem="kkA-w3-lfn" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="TqV-Nk-TlC"/>
+                            <constraint firstItem="kkA-w3-lfn" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="24" id="TqV-Nk-TlC"/>
                             <constraint firstItem="rB2-KB-QcC" firstAttribute="leading" secondItem="kkA-w3-lfn" secondAttribute="trailing" constant="21" id="WdO-M5-k8D"/>
                             <constraint firstItem="NyH-9k-HXt" firstAttribute="top" secondItem="rB2-KB-QcC" secondAttribute="bottom" constant="5" id="aXq-Uh-rhn"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="n9f-NI-AB6" secondAttribute="trailing" constant="15" id="eru-ZN-Ujv"/>
@@ -220,8 +241,10 @@
                     </view>
                     <connections>
                         <outlet property="adsSwitcher" destination="M51-WP-Er8" id="jVG-Wx-PD0"/>
+                        <outlet property="blueMicButton" destination="UGw-09-cyx" id="1qO-Ve-F1A"/>
                         <outlet property="firstFlag" destination="pj8-00-q2f" id="VRl-bo-guC"/>
                         <outlet property="firstLabel" destination="E3Q-yv-yWx" id="K5e-52-6iI"/>
+                        <outlet property="orangeMicButton" destination="bz5-ov-Rha" id="PxI-VM-W9G"/>
                         <outlet property="secondFlag" destination="Lmb-Bb-pqO" id="mlh-ee-dHS"/>
                         <outlet property="secondLabel" destination="dcm-p3-KVV" id="oJ9-R4-h64"/>
                         <outlet property="tableViewChat" destination="NyH-9k-HXt" id="tDb-Z8-UTQ"/>
@@ -233,12 +256,22 @@
                         <action selector="backButtonDidTap:" destination="Y6W-OH-hqX" id="uqG-fr-zsE"/>
                     </connections>
                 </tapGestureRecognizer>
+                <tapGestureRecognizer id="SSJ-Kk-xD1">
+                    <connections>
+                        <action selector="selectionButtonSecondDidTap:" destination="Y6W-OH-hqX" id="twM-ol-CSA"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="3Gy-yL-7TZ">
+                    <connections>
+                        <action selector="selectionButtondidTap:" destination="Y6W-OH-hqX" id="gDZ-ga-Wj0"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="46.564885496183201" y="-2.1126760563380285"/>
         </scene>
     </scenes>
     <resources>
-        <image name="arrowDown " width="16" height="16"/>
+        <image name="arrowDownBlue" width="16" height="16"/>
         <image name="back" width="24" height="24"/>
         <image name="blueMic" width="60" height="60"/>
         <image name="eraser" width="20" height="20"/>

@@ -61,6 +61,11 @@ class TranslatorTextViewController: UIViewController, UITextViewDelegate {
             textViewGetText.layer.cornerRadius = 20
             putTextView.layer.cornerRadius = 20
             getTextView.layer.cornerRadius = 20
+            firstFlag.layer.cornerRadius = 1
+            secondImage.layer.cornerRadius = 1
+            originalFlagImage.layer.cornerRadius = 1
+            translatedFlagImage.layer.cornerRadius = 1
+            
             
         default: backgroundMainView.layer.cornerRadius = 25
             backgroundFlagSecondView.layer.cornerRadius = 20
@@ -69,15 +74,29 @@ class TranslatorTextViewController: UIViewController, UITextViewDelegate {
             textViewGetText.layer.cornerRadius = 40
             putTextView.layer.cornerRadius = 40
             getTextView.layer.cornerRadius = 40
+            firstFlag.layer.cornerRadius = 2
+            secondImage.layer.cornerRadius = 2
+            originalFlagImage.layer.cornerRadius = 2
+            translatedFlagImage.layer.cornerRadius = 2
         }
         
         textViewTypeText.delegate = self
+        firstFlag.layer.masksToBounds = true
+        secondImage.layer.masksToBounds = true
         backgroundMainView.layer.masksToBounds = true
         backgroundFlagSecondView.layer.masksToBounds = true
         backgroundFlagFirstView.layer.masksToBounds = true
         textViewTypeText.layer.masksToBounds = true
         textViewGetText.layer.masksToBounds = true
         setupOverlayView()
+        originalFlagImage.layer.borderWidth = 1
+        originalFlagImage.layer.borderColor = UIColor(red: 235/255, green: 239/255, blue: 248/255, alpha: 1).cgColor
+        translatedFlagImage.layer.borderWidth = 1
+        translatedFlagImage.layer.borderColor = UIColor(red: 235/255, green: 239/255, blue: 248/255, alpha: 1).cgColor
+        firstFlag.layer.borderWidth = 1
+        firstFlag.layer.borderColor = UIColor(red: 235/255, green: 239/255, blue: 248/255, alpha: 1).cgColor
+        secondImage.layer.borderWidth = 1
+        secondImage.layer.borderColor = UIColor(red: 235/255, green: 239/255, blue: 248/255, alpha: 1).cgColor
         putTextView.layer.borderWidth = 2
         putTextView.layer.borderColor = UIColor(red: 112/255, green: 139/255, blue: 194/255, alpha: 1).cgColor
         putTextView.layer.masksToBounds = true

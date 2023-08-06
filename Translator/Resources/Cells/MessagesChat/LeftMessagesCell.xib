@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -29,16 +30,16 @@
                         <rect key="frame" x="15" y="0.0" width="278" height="100"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="vgg-Ij-DTj">
-                                <rect key="frame" x="15" y="8" width="61" height="13.333333333333336"/>
+                                <rect key="frame" x="15" y="8" width="64" height="13.333333333333336"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flagUK" translatesAutoresizingMaskIntoConstraints="NO" id="vxj-bw-5kQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="14" height="13.333333333333334"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flagUK" translatesAutoresizingMaskIntoConstraints="NO" id="vxj-bw-5kQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="17" height="13.333333333333334"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="14" id="BHJ-mV-ZFd"/>
+                                            <constraint firstAttribute="width" constant="17" id="BHJ-mV-ZFd"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="English" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BFL-7U-dII">
-                                        <rect key="frame" x="22" y="0.0" width="39" height="13.333333333333334"/>
+                                        <rect key="frame" x="25" y="0.0" width="39" height="13.333333333333334"/>
                                         <fontDescription key="fontDescription" name="FixelText-Regular" family="Fixel Text" pointSize="12"/>
                                         <color key="textColor" red="0.62745098040000002" green="0.6588235294" blue="0.76862745099999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -65,16 +66,16 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="pD3-8W-ZAq">
-                                <rect key="frame" x="15" y="54.666666666666664" width="74" height="13.333333333333336"/>
+                                <rect key="frame" x="15" y="54.666666666666664" width="77" height="13.333333333333336"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flagUA" translatesAutoresizingMaskIntoConstraints="NO" id="jGE-Kc-DgF">
-                                        <rect key="frame" x="0.0" y="0.0" width="14" height="13.333333333333334"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flagUA" translatesAutoresizingMaskIntoConstraints="NO" id="jGE-Kc-DgF">
+                                        <rect key="frame" x="0.0" y="0.0" width="17" height="13.333333333333334"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="14" id="7Hi-so-lFR"/>
+                                            <constraint firstAttribute="width" constant="17" id="7Hi-so-lFR"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ukrainian" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6m2-BR-yZF">
-                                        <rect key="frame" x="22" y="0.0" width="52" height="13.333333333333334"/>
+                                        <rect key="frame" x="25" y="0.0" width="52" height="13.333333333333334"/>
                                         <fontDescription key="fontDescription" name="FixelText-Regular" family="Fixel Text" pointSize="12"/>
                                         <color key="textColor" red="0.62745098040000002" green="0.6588235294" blue="0.76862745099999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -139,6 +140,8 @@
                 <outlet property="backgroundMessageView" destination="BQm-dh-rbn" id="zJA-6t-iZn"/>
                 <outlet property="labelText" destination="aBr-ss-vRc" id="YOm-kq-rjb"/>
                 <outlet property="labelTextSecond" destination="ZhI-MW-HdM" id="Ge6-Oc-phD"/>
+                <outlet property="originalFlag" destination="vxj-bw-5kQ" id="OZ3-GB-AwK"/>
+                <outlet property="translatedFlag" destination="jGE-Kc-DgF" id="UbR-mF-WhS"/>
             </connections>
             <point key="canvasLocation" x="258.77862595419845" y="64.08450704225352"/>
         </tableViewCell>

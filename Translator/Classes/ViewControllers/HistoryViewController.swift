@@ -67,6 +67,7 @@ class HistoryViewController: UIViewController {
     @IBAction func eraserButtonDidTap(_ sender: Any) {
         showPopup()
     }
+   
     private func showPopup() {
         let view = ClearHistoryView.fromNib()
         view.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width * 0.9).isActive = true

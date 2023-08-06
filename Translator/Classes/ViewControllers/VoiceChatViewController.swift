@@ -7,9 +7,14 @@
 
 import UIKit
 import Switches
+import Combine
+import SwiftEntryKit
 
 class VoiceChatViewController: UIViewController {
     
+    @IBOutlet weak var orangeMicButton: UIButton!
+    
+    @IBOutlet weak var blueMicButton: UIButton!
     @IBOutlet weak var adsSwitcher: YapSwitch!
     @IBOutlet weak var firstFlag: UIImageView!
     @IBOutlet weak var secondFlag: UIImageView!
@@ -17,17 +22,24 @@ class VoiceChatViewController: UIViewController {
     @IBOutlet weak var firstLabel: UILabel!
     @IBOutlet weak var tableViewChat: UITableView!
     
+    public var languageManager: LanguageManager!
+    
+    public var storage: UserDefaultsStorage!
+    
+    private var listeners = Set<AnyCancellable>()
+    
+    
     var messagesModel = [MessagesModel(id: "1", textFirst: "Ukraine will win!", textSecond: "Україна переможе!", isMe: true), MessagesModel(id: "2", textFirst: "Ukraine will win!", textSecond: "Україна переможе!", isMe: true), MessagesModel(id: "3", textFirst: "Ukraine will win!", textSecond: "Україна переможе!", isMe: false), MessagesModel(id: "4", textFirst: "Ukraine will win!", textSecond: "Україна переможе!", isMe: false)]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         tableViewChat.dataSource = self
         tableViewChat.delegate = self
         tableViewChat.register(UINib(nibName: CellManager.getCell(by: "LeftMessagesCell") , bundle: nil), forCellReuseIdentifier: CellManager.getCell(by: "LeftMessagesCell"))
         tableViewChat.register(UINib(nibName: CellManager.getCell(by: "RightMessagesCell") , bundle: nil), forCellReuseIdentifier: CellManager.getCell(by: "RightMessagesCell"))
         tableViewChat.register(UINib(nibName: CellManager.getCell(by: "EmptyChatCell") , bundle: nil), forCellReuseIdentifier: CellManager.getCell(by: "EmptyChatCell"))
-}
+        bind()
+    }
     
     @IBAction func valueDidTap(_ sender: Any) {
         if adsSwitcher.isOn == true {
@@ -37,17 +49,71 @@ class VoiceChatViewController: UIViewController {
         }
     }
     
+    func pushSelectionScreen() {
+        let entrance = StoryboardFabric.getStoryboard(by: "SelectionCountry").instantiateViewController(identifier: "SelectionCountryViewController")
+        (entrance as? SelectionCountryViewController)?.isOriginalLanguage = true
+        (entrance as? SelectionCountryViewController)?.languageManager = languageManager
+        (entrance as? SelectionCountryViewController)?.storage = storage
+        navigationController?.pushViewController(entrance, animated: true)
+    }
+    
     func pushPremiumScreen() {
         let entrance = StoryboardFabric.getStoryboard(by: "Premium").instantiateViewController(identifier: "PremiumViewController")
         navigationController?.pushViewController(entrance, animated: true)
     }
-   
+    
+    @IBAction func selectionButtonSecondDidTap(_ sender: Any) {
+        pushSelectionScreen()
+    }
+    @IBAction func selectionButtondidTap(_ sender: Any) {
+        let entrance = StoryboardFabric.getStoryboard(by: "SelectionCountry").instantiateViewController(identifier: "SelectionCountryViewController")
+        (entrance as? SelectionCountryViewController)?.isOriginalLanguage = false
+        (entrance as? SelectionCountryViewController)?.languageManager = languageManager
+        (entrance as? SelectionCountryViewController)?.storage = storage
+        navigationController?.pushViewController(entrance, animated: true)
+    }
     @IBAction func backButtonDidTap(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
-    @IBAction func riversoButtonDidTap(_ sender: Any) {
+    
+    @IBAction func orangeMicDidTap(_ sender: Any) {
+        let view = GoogleMic.fromNib()
+        view.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width * 0.9).isActive = true
+        var attributes = EKAttributes.centerFloat
+        attributes.displayDuration = .infinity
+        attributes.screenInteraction = .dismiss
+        attributes.screenBackground = .color(color: EKColor(UIColor.black.withAlphaComponent(0.4)))
+        SwiftEntryKit.display(entry: view, using: attributes)
     }
     
+    @IBAction func blueMicDidTap(_ sender: Any) {
+        let view = GoogleMic.fromNib()
+        view.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width * 0.9).isActive = true
+        var attributes = EKAttributes.centerFloat
+        attributes.displayDuration = .infinity
+        attributes.screenInteraction = .dismiss
+        attributes.screenBackground = .color(color: EKColor(UIColor.black.withAlphaComponent(0.4)))
+        SwiftEntryKit.display(entry: view, using: attributes)
+    }
+   
+    @IBAction func riversoButtonDidTap(_ sender: Any) {
+        let originalLanguage = languageManager.originalLanguage
+        languageManager.originalLanguage = languageManager.translatedLanguage
+        languageManager.translatedLanguage = originalLanguage
+    }
+    
+    private func bind() {
+        languageManager.$originalLanguage.sink(receiveValue: { [weak self] language in
+            guard let self else { return }
+            self.firstLabel.text = language.key.name
+            self.firstFlag.image = UIImage(named: language.flagPicture)
+        }).store(in: &listeners)
+        languageManager.$translatedLanguage.sink(receiveValue: { [weak self] language in
+            guard let self else { return }
+            self.secondLabel.text = language.key.name
+            self.secondFlag.image = UIImage(named: language.flagPicture)
+        }).store(in: &listeners)
+    }
 }
 
 extension VoiceChatViewController: UITableViewDelegate, UITableViewDataSource {
