@@ -1486,6 +1486,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "Voice Translator Camera & Text";
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Please allow to record audio.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "For translate speech";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = MainTranslator;
@@ -1524,6 +1525,7 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "Voice Translator Camera & Text";
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Please allow to record audio.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "For translate speech";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = MainTranslator;

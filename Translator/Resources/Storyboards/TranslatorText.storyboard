@@ -194,6 +194,9 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="20" height="22"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" image="voiceMic"/>
+                                                <connections>
+                                                    <action selector="speechToTextDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="guy-eB-t9T"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nch-kB-d4E">
                                                 <rect key="frame" x="30" y="0.0" width="22" height="22"/>
