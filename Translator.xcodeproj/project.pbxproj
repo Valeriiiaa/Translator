@@ -78,6 +78,8 @@
 		F6A1BE2E2A7F8D72003CE35F /* GoogleMic-ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6A1BE2D2A7F8D72003CE35F /* GoogleMic-ipad.xib */; };
 		F6A1BE302A7F8DD1003CE35F /* ClearHistoryView-ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6A1BE2F2A7F8DD1003CE35F /* ClearHistoryView-ipad.xib */; };
 		F6A1BE322A7FB2E1003CE35F /* GoogleMic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A1BE312A7FB2E1003CE35F /* GoogleMic.swift */; };
+		F6A1BE352A7FBD86003CE35F /* MessagesEmptyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A1BE342A7FBD86003CE35F /* MessagesEmptyModel.swift */; };
+		F6A1BE372A7FBDA7003CE35F /* BaseMessagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A1BE362A7FBDA7003CE35F /* BaseMessagesModel.swift */; };
 		F6B170472A6E93B2002A7BD2 /* MainTranslatorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B170462A6E93B2002A7BD2 /* MainTranslatorCell.swift */; };
 		F6B1704B2A6E93EC002A7BD2 /* MainTranslatorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6B1704A2A6E93EC002A7BD2 /* MainTranslatorCell.xib */; };
 		F6BE51642A725EC900625E62 /* CameraTranslator.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6BE51632A725EC900625E62 /* CameraTranslator.storyboard */; };
@@ -92,7 +94,7 @@
 		F6D2C8D22A71203C00F7D7EF /* RightMessagesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6D2C8D12A71203C00F7D7EF /* RightMessagesCell.xib */; };
 		F6D2C8D52A71206D00F7D7EF /* LeftMessagesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D2C8D42A71206D00F7D7EF /* LeftMessagesCell.swift */; };
 		F6D2C8D72A71207C00F7D7EF /* RightMessegesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D2C8D62A71207C00F7D7EF /* RightMessegesCell.swift */; };
-		F6D2C8DB2A71268500F7D7EF /* MessagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D2C8DA2A71268500F7D7EF /* MessagesModel.swift */; };
+		F6D2C8DB2A71268500F7D7EF /* MessagesFullModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D2C8DA2A71268500F7D7EF /* MessagesFullModel.swift */; };
 		F6D5D9642A727BAF00A8053B /* CameraEditPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D5D9632A727BAF00A8053B /* CameraEditPhotoViewController.swift */; };
 		F6D5D9792A7534D100A8053B /* SectionMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6D5D9782A7534D100A8053B /* SectionMenuCell.xib */; };
 		F6D5D97B2A75352E00A8053B /* SectionMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D5D97A2A75352E00A8053B /* SectionMenuCell.swift */; };
@@ -241,6 +243,8 @@
 		F6A1BE2D2A7F8D72003CE35F /* GoogleMic-ipad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "GoogleMic-ipad.xib"; sourceTree = "<group>"; };
 		F6A1BE2F2A7F8DD1003CE35F /* ClearHistoryView-ipad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "ClearHistoryView-ipad.xib"; sourceTree = "<group>"; };
 		F6A1BE312A7FB2E1003CE35F /* GoogleMic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMic.swift; sourceTree = "<group>"; };
+		F6A1BE342A7FBD86003CE35F /* MessagesEmptyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesEmptyModel.swift; sourceTree = "<group>"; };
+		F6A1BE362A7FBDA7003CE35F /* BaseMessagesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMessagesModel.swift; sourceTree = "<group>"; };
 		F6B170462A6E93B2002A7BD2 /* MainTranslatorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTranslatorCell.swift; sourceTree = "<group>"; };
 		F6B1704A2A6E93EC002A7BD2 /* MainTranslatorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTranslatorCell.xib; sourceTree = "<group>"; };
 		F6BE51632A725EC900625E62 /* CameraTranslator.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CameraTranslator.storyboard; sourceTree = "<group>"; };
@@ -258,7 +262,7 @@
 		F6D2C8D12A71203C00F7D7EF /* RightMessagesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RightMessagesCell.xib; sourceTree = "<group>"; };
 		F6D2C8D42A71206D00F7D7EF /* LeftMessagesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftMessagesCell.swift; sourceTree = "<group>"; };
 		F6D2C8D62A71207C00F7D7EF /* RightMessegesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightMessegesCell.swift; sourceTree = "<group>"; };
-		F6D2C8DA2A71268500F7D7EF /* MessagesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesModel.swift; sourceTree = "<group>"; };
+		F6D2C8DA2A71268500F7D7EF /* MessagesFullModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesFullModel.swift; sourceTree = "<group>"; };
 		F6D5D9632A727BAF00A8053B /* CameraEditPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraEditPhotoViewController.swift; sourceTree = "<group>"; };
 		F6D5D9782A7534D100A8053B /* SectionMenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionMenuCell.xib; sourceTree = "<group>"; };
 		F6D5D97A2A75352E00A8053B /* SectionMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionMenuCell.swift; sourceTree = "<group>"; };
@@ -521,13 +525,13 @@
 		F62893572A6E998700B7A36C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F6A1BE332A7FBD5C003CE35F /* MessagesClasses */,
 				11F25A152A7E889500E2BC3B /* ResponseModel */,
 				F68C370E2A71507D00AD0A1F /* CountrySelection */,
 				F6D623052A6FCEE200D24F16 /* HistoryClasses */,
 				F62893762A6EC38300B7A36C /* Enums */,
 				F62893712A6EC28100B7A36C /* DrawerMenuOptions */,
 				F62893582A6E999C00B7A36C /* MainTranslatorModelCell.swift */,
-				F6D2C8DA2A71268500F7D7EF /* MessagesModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -625,6 +629,16 @@
 				F68C37152A71522F00AD0A1F /* SelectionCountryHeaderView.swift */,
 			);
 			path = HeaderFooters;
+			sourceTree = "<group>";
+		};
+		F6A1BE332A7FBD5C003CE35F /* MessagesClasses */ = {
+			isa = PBXGroup;
+			children = (
+				F6D2C8DA2A71268500F7D7EF /* MessagesFullModel.swift */,
+				F6A1BE342A7FBD86003CE35F /* MessagesEmptyModel.swift */,
+				F6A1BE362A7FBDA7003CE35F /* BaseMessagesModel.swift */,
+			);
+			path = MessagesClasses;
 			sourceTree = "<group>";
 		};
 		F6B170452A6E9376002A7BD2 /* ViewContollerCells */ = {
@@ -1257,6 +1271,7 @@
 				11F25A092A7E82B300E2BC3B /* TextTranslator.swift in Sources */,
 				F6DE21592A6E7CBD003F49F4 /* PremiumViewController.swift in Sources */,
 				F6D5D9642A727BAF00A8053B /* CameraEditPhotoViewController.swift in Sources */,
+				F6A1BE352A7FBD86003CE35F /* MessagesEmptyModel.swift in Sources */,
 				11F25A142A7E84BF00E2BC3B /* GoogleTranslatePrivateAPIDescriptor.swift in Sources */,
 				11F25A012A7E827600E2BC3B /* NetworkError.swift in Sources */,
 				11F259FB2A7E825300E2BC3B /* HttpMethod.swift in Sources */,
@@ -1275,12 +1290,13 @@
 				F68C370A2A7148A100AD0A1F /* SectionCountryCell.swift in Sources */,
 				F6D2C8B22A7004A200F7D7EF /* TextField.swift in Sources */,
 				F6D623112A6FD51900D24F16 /* Offer30View.swift in Sources */,
+				F6A1BE372A7FBDA7003CE35F /* BaseMessagesModel.swift in Sources */,
 				F6D2C8D52A71206D00F7D7EF /* LeftMessagesCell.swift in Sources */,
 				F625F6B22A76B2DA0040F1A3 /* StoryboardFabric.swift in Sources */,
 				F6DDCBCF2A6FFB81007B51EE /* ClearHistoryView.swift in Sources */,
 				F6D622FF2A6FCC8600D24F16 /* HistoryFullTableViewCell.swift in Sources */,
 				F628936E2A6EC02000B7A36C /* PremiumImageCell.swift in Sources */,
-				F6D2C8DB2A71268500F7D7EF /* MessagesModel.swift in Sources */,
+				F6D2C8DB2A71268500F7D7EF /* MessagesFullModel.swift in Sources */,
 				11F25A102A7E83BC00E2BC3B /* TranslatorService.swift in Sources */,
 				F6DE20B82A6E6A7F003F49F4 /* SceneDelegate.swift in Sources */,
 				F6D2C8B62A70074A00F7D7EF /* TextMessageView.swift in Sources */,
