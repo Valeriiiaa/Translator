@@ -7,7 +7,7 @@
 
 import Foundation
 
-class MessagesModel {
+class MessagesFullModel: BaseMessagesModel  {
    
     let id: String
     let textFirst: String

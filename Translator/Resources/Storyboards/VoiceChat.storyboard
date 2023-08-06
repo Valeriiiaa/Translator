@@ -185,11 +185,6 @@
                                 <color key="textColor" name="#5D6883"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zyb-Mb-UHh">
-                                <rect key="frame" x="178" y="89" width="20" height="22"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="eraser"/>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="n9f-NI-AB6">
                                 <rect key="frame" x="277.33333333333331" y="84.666666666666671" width="100.66666666666669" height="31"/>
                                 <subviews>
@@ -216,11 +211,31 @@
                                 <rect key="frame" x="0.0" y="123" width="393" height="568"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mBI-m1-4pp">
+                                <rect key="frame" x="170" y="75" width="73" height="43"/>
+                                <subviews>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zyb-Mb-UHh">
+                                        <rect key="frame" x="5" y="14" width="20" height="22"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="eraser"/>
+                                        <connections>
+                                            <action selector="eraserButtondidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="dGJ-Fr-ry4"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Zyb-Mb-UHh" firstAttribute="leading" secondItem="mBI-m1-4pp" secondAttribute="leading" constant="5" id="24m-T9-E1J"/>
+                                    <constraint firstAttribute="height" constant="43" id="LgA-yZ-vIC"/>
+                                    <constraint firstAttribute="width" constant="73" id="aEo-2b-vzg"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="NyH-9k-HXt" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="3Pb-WV-SSe"/>
+                            <constraint firstItem="NyH-9k-HXt" firstAttribute="top" secondItem="mBI-m1-4pp" secondAttribute="bottom" constant="5" id="6TN-4H-9Mf"/>
                             <constraint firstItem="n9f-NI-AB6" firstAttribute="centerY" secondItem="rB2-KB-QcC" secondAttribute="centerY" id="752-Bw-C61"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="NyH-9k-HXt" secondAttribute="trailing" id="8v5-jS-rQc"/>
                             <constraint firstItem="c8T-fx-b7A" firstAttribute="top" secondItem="NyH-9k-HXt" secondAttribute="bottom" constant="2" id="EJj-PJ-ePA"/>
@@ -231,8 +246,8 @@
                             <constraint firstItem="rB2-KB-QcC" firstAttribute="leading" secondItem="kkA-w3-lfn" secondAttribute="trailing" constant="21" id="WdO-M5-k8D"/>
                             <constraint firstItem="NyH-9k-HXt" firstAttribute="top" secondItem="rB2-KB-QcC" secondAttribute="bottom" constant="5" id="aXq-Uh-rhn"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="n9f-NI-AB6" secondAttribute="trailing" constant="15" id="eru-ZN-Ujv"/>
-                            <constraint firstItem="Zyb-Mb-UHh" firstAttribute="leading" secondItem="rB2-KB-QcC" secondAttribute="trailing" constant="10" id="fnd-4z-lal"/>
-                            <constraint firstItem="Zyb-Mb-UHh" firstAttribute="centerY" secondItem="rB2-KB-QcC" secondAttribute="centerY" id="n30-66-xl1"/>
+                            <constraint firstItem="Zyb-Mb-UHh" firstAttribute="centerY" secondItem="rB2-KB-QcC" secondAttribute="centerY" id="mek-8L-SrE"/>
+                            <constraint firstItem="mBI-m1-4pp" firstAttribute="leading" secondItem="rB2-KB-QcC" secondAttribute="trailing" constant="2" id="rP6-zM-p1c"/>
                             <constraint firstItem="7HN-27-bTA" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="sY1-9T-avf"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="7HN-27-bTA" secondAttribute="bottom" constant="10" id="uo4-gh-SAt"/>
                             <constraint firstItem="c8T-fx-b7A" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="yi0-1s-njs"/>
@@ -241,7 +256,9 @@
                     </view>
                     <connections>
                         <outlet property="adsSwitcher" destination="M51-WP-Er8" id="jVG-Wx-PD0"/>
+                        <outlet property="backgroundEraserView" destination="mBI-m1-4pp" id="lgo-3M-sI5"/>
                         <outlet property="blueMicButton" destination="UGw-09-cyx" id="1qO-Ve-F1A"/>
+                        <outlet property="eraserButton" destination="Zyb-Mb-UHh" id="m4E-Bl-kYl"/>
                         <outlet property="firstFlag" destination="pj8-00-q2f" id="VRl-bo-guC"/>
                         <outlet property="firstLabel" destination="E3Q-yv-yWx" id="K5e-52-6iI"/>
                         <outlet property="orangeMicButton" destination="bz5-ov-Rha" id="PxI-VM-W9G"/>

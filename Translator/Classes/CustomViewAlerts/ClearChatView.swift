@@ -6,11 +6,14 @@
 //
 
 import UIKit
+import SwiftEntryKit
 
 class ClearChatView: UIView {
     
     @IBOutlet weak var noButton: UIButton!
     @IBOutlet weak var yesButton: UIButton!
+    
+    var deletedAllCellsTapped: (() -> Void)?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,8 +28,10 @@ class ClearChatView: UIView {
         
     }
     @IBAction func yesButtonDidTap(_ sender: Any) {
+        SwiftEntryKit.dismiss()
     }
     @IBAction func noButtonDidTap(_ sender: Any) {
+        deletedAllCellsTapped?()
     }
 }
 

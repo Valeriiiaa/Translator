@@ -9,11 +9,13 @@ import UIKit
 import Switches
 import Combine
 import SwiftEntryKit
+import IHProgressHUD
 
 class VoiceChatViewController: UIViewController {
     
+    @IBOutlet weak var backgroundEraserView: UIView!
+    @IBOutlet weak var eraserButton: UIButton!
     @IBOutlet weak var orangeMicButton: UIButton!
-    
     @IBOutlet weak var blueMicButton: UIButton!
     @IBOutlet weak var adsSwitcher: YapSwitch!
     @IBOutlet weak var firstFlag: UIImageView!
@@ -22,6 +24,8 @@ class VoiceChatViewController: UIViewController {
     @IBOutlet weak var firstLabel: UILabel!
     @IBOutlet weak var tableViewChat: UITableView!
     
+    var messageModel: [BaseMessagesModel] = [MessagesEmptyModel(id: "1")]
+    
     public var languageManager: LanguageManager!
     
     public var storage: UserDefaultsStorage!
@@ -29,7 +33,7 @@ class VoiceChatViewController: UIViewController {
     private var listeners = Set<AnyCancellable>()
     
     
-    var messagesModel = [MessagesModel(id: "1", textFirst: "Ukraine will win!", textSecond: "Україна переможе!", isMe: true), MessagesModel(id: "2", textFirst: "Ukraine will win!", textSecond: "Україна переможе!", isMe: true), MessagesModel(id: "3", textFirst: "Ukraine will win!", textSecond: "Україна переможе!", isMe: false), MessagesModel(id: "4", textFirst: "Ukraine will win!", textSecond: "Україна переможе!", isMe: false)]
+    var messagesModel = [MessagesFullModel(id: "1", textFirst: "Ukraine will win!", textSecond: "Україна переможе!", isMe: true), MessagesFullModel(id: "2", textFirst: "Ukraine will win!", textSecond: "Україна переможе!", isMe: true), MessagesFullModel(id: "3", textFirst: "Ukraine will win!", textSecond: "Україна переможе!", isMe: false), MessagesFullModel(id: "4", textFirst: "Ukraine will win!", textSecond: "Україна переможе!", isMe: false)]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +43,7 @@ class VoiceChatViewController: UIViewController {
         tableViewChat.register(UINib(nibName: CellManager.getCell(by: "RightMessagesCell") , bundle: nil), forCellReuseIdentifier: CellManager.getCell(by: "RightMessagesCell"))
         tableViewChat.register(UINib(nibName: CellManager.getCell(by: "EmptyChatCell") , bundle: nil), forCellReuseIdentifier: CellManager.getCell(by: "EmptyChatCell"))
         bind()
+        
     }
     
     @IBAction func valueDidTap(_ sender: Any) {
@@ -48,6 +53,29 @@ class VoiceChatViewController: UIViewController {
             
         }
     }
+    @IBAction func eraserButtondidTap(_ sender: Any) {
+        showPopup()
+    }
+    
+    private func showPopup() {
+        let view = ClearChatView.fromNib()
+        view.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width * 0.9).isActive = true
+        var attributes = EKAttributes.centerFloat
+        attributes.displayDuration = .infinity
+        attributes.screenInteraction = .dismiss
+        attributes.screenBackground = .color(color: EKColor(UIColor.black.withAlphaComponent(0.4)))
+        attributes.entryInteraction = .forward
+        SwiftEntryKit.display(entry: view, using: attributes)
+        view.deletedAllCellsTapped = {[weak self] in
+            self?.messageModel.removeAll()
+            self?.tableViewChat.reloadData()
+            SwiftEntryKit.dismiss(with: {
+                IHProgressHUD.showSuccesswithStatus("History was cleared")
+                IHProgressHUD.dismissWithDelay(0.5)
+            })
+        }
+    }
+    
     
     func pushSelectionScreen() {
         let entrance = StoryboardFabric.getStoryboard(by: "SelectionCountry").instantiateViewController(identifier: "SelectionCountryViewController")
@@ -65,6 +93,7 @@ class VoiceChatViewController: UIViewController {
     @IBAction func selectionButtonSecondDidTap(_ sender: Any) {
         pushSelectionScreen()
     }
+   
     @IBAction func selectionButtondidTap(_ sender: Any) {
         let entrance = StoryboardFabric.getStoryboard(by: "SelectionCountry").instantiateViewController(identifier: "SelectionCountryViewController")
         (entrance as? SelectionCountryViewController)?.isOriginalLanguage = false
@@ -72,6 +101,7 @@ class VoiceChatViewController: UIViewController {
         (entrance as? SelectionCountryViewController)?.storage = storage
         navigationController?.pushViewController(entrance, animated: true)
     }
+   
     @IBAction func backButtonDidTap(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
