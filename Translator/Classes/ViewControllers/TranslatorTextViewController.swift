@@ -10,6 +10,7 @@ import Switches
 import MLKitTranslate
 import IHProgressHUD
 import Combine
+import SwiftEntryKit
 
 import Speech
 
@@ -41,7 +42,7 @@ class SpeechManager {
         }
     }
     
-    public func startRecognize(for language: String) throws {
+    public func startRecognize(for language: String, textChanged: @escaping (String) -> Void) throws {
         guard let speechRecognizer = SFSpeechRecognizer(locale: .init(languageComponents: .init(identifier: language))) else {
             throw SpeechManagerError.notSupported
         }
@@ -67,6 +68,7 @@ class SpeechManager {
             }
             guard let response else { return }
             let text = response.bestTranscription.formattedString
+            textChanged(text)
             print("[text] \(text)")
         })
     }
@@ -80,7 +82,7 @@ class SpeechManager {
 }
 
 class TranslatorTextViewController: UIViewController, UITextViewDelegate {
-   
+    
     @IBOutlet weak var translatedFlagImage: UIImageView!
     @IBOutlet weak var translatedTextLabel: UILabel!
     @IBOutlet weak var originalFlagImage: UIImageView!
@@ -201,7 +203,6 @@ class TranslatorTextViewController: UIViewController, UITextViewDelegate {
     
     private func translate() {
         guard let text = textViewTypeText.text else { return }
-       
         
         Task { @MainActor [weak self] in
             guard let self else { return }
@@ -290,11 +291,35 @@ class TranslatorTextViewController: UIViewController, UITextViewDelegate {
     @IBAction func selectSecondButtonDidTap(_ sender: Any) {
         pushSelectionScreen()
     }
-   
+    
     @IBAction func speechToTextDidTap(_ sender: Any) {
-        let language = languageManager.originalLanguage.key.rawValue
+        let view = GoogleMic.fromNib()
+        view.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width * 0.9).isActive = true
+        var attributes = EKAttributes.centerFloat
+        attributes.displayDuration = .infinity
+        attributes.screenInteraction = .dismiss
+        attributes.screenBackground = .color(color: EKColor(UIColor.black.withAlphaComponent(0.4)))
+        SwiftEntryKit.display(entry: view, using: attributes)
+        
+        let language = languageManager.originalLanguage.key
+        let languageKey = language.rawValue
+        
+        var speechText = ""
+        
+        view.translatedLanguage.text = language.name
+        view.didHideView = { [weak self] in
+            guard let self else { return }
+            self.speechManager.stopRecognize()
+            self.textViewTypeText.text = speechText
+        }
+        
         do {
-            try speechManager.startRecognize(for: language)
+            try speechManager.startRecognize(for: languageKey, textChanged: { [weak self, weak view] text in
+                guard let self else { return }
+                guard let view else { return }
+                view.saySmthLabel.text = text
+                speechText = text
+            })
         } catch {
             print("[log] speech \(error.localizedDescription)")
         }
@@ -329,15 +354,15 @@ class TranslatorTextViewController: UIViewController, UITextViewDelegate {
         IHProgressHUD.showSuccesswithStatus("Translation copied")
         IHProgressHUD.dismissWithDelay(0.5)
     }
-   
+    
     @IBAction func shareTextDidTap(_ sender: Any) {
         guard let textToShare = textViewGetText.text else  {
             return
         }
         let activityViewController = UIActivityViewController(activityItems: [textToShare], applicationActivities: nil)
-            activityViewController.popoverPresentationController?.barButtonItem = sender as? UIBarButtonItem
-           
-            present(activityViewController, animated: true, completion: nil)
+        activityViewController.popoverPresentationController?.barButtonItem = sender as? UIBarButtonItem
+        
+        present(activityViewController, animated: true, completion: nil)
     }
     
     @IBAction func backbuttonDidTap(_ sender: Any) {

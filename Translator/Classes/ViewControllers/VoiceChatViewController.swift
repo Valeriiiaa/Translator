@@ -12,7 +12,6 @@ import SwiftEntryKit
 import IHProgressHUD
 
 class VoiceChatViewController: UIViewController {
-    
     @IBOutlet weak var backgroundEraserView: UIView!
     @IBOutlet weak var eraserButton: UIButton!
     @IBOutlet weak var orangeMicButton: UIButton!
@@ -31,7 +30,6 @@ class VoiceChatViewController: UIViewController {
     public var storage: UserDefaultsStorage!
     
     private var listeners = Set<AnyCancellable>()
-    
     
     var messagesModel = [MessagesFullModel(id: "1", textFirst: "Ukraine will win!", textSecond: "Україна переможе!", isMe: true), MessagesFullModel(id: "2", textFirst: "Ukraine will win!", textSecond: "Україна переможе!", isMe: true), MessagesFullModel(id: "3", textFirst: "Ukraine will win!", textSecond: "Україна переможе!", isMe: false), MessagesFullModel(id: "4", textFirst: "Ukraine will win!", textSecond: "Україна переможе!", isMe: false)]
     
@@ -53,6 +51,7 @@ class VoiceChatViewController: UIViewController {
             
         }
     }
+    
     @IBAction func eraserButtondidTap(_ sender: Any) {
         showPopup()
     }
@@ -75,7 +74,6 @@ class VoiceChatViewController: UIViewController {
             })
         }
     }
-    
     
     func pushSelectionScreen() {
         let entrance = StoryboardFabric.getStoryboard(by: "SelectionCountry").instantiateViewController(identifier: "SelectionCountryViewController")
@@ -169,6 +167,3 @@ extension VoiceChatViewController: UITableViewDelegate, UITableViewDataSource {
         }
     }
 }
-
-
-
