@@ -15,6 +15,8 @@ class DrawerMenuViewController: UIViewController, UITableViewDelegate, UITableVi
     
     private var previousVC: UIViewController?
     
+    private let storage = UserDefaultsStorage.shared
+    
     let transitionManager = DrawerTransitionManager()
     init() {
         super.init(nibName: nil, bundle: nil)
@@ -150,6 +152,7 @@ class DrawerMenuViewController: UIViewController, UITableViewDelegate, UITableVi
     
     private func openHistoryVC() {
         let entrance = StoryboardFabric.getStoryboard(by: "History").instantiateViewController(identifier: "HistoryViewController")
+        (entrance as? HistoryViewController)?.storage = storage
         guard !(drawerNavigationController?.viewControllers.last is HistoryViewController) else {
             dismiss(animated: true)
             return

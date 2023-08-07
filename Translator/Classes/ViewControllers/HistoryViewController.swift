@@ -10,7 +10,6 @@ import SwiftEntryKit
 import Switches
 import IHProgressHUD
 
-
 class HistoryViewController: UIViewController {
     
     @IBOutlet weak var backgroundViewEraser: UIView!
@@ -18,6 +17,8 @@ class HistoryViewController: UIViewController {
     @IBOutlet weak var eraserButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var historyLabel: UILabel!
+    
+    public var storage: UserDefaultsStorage!
     
     var historyModels: [BaseHistoryModel] = [HistoryEmptyModel(id: "1")]
     
@@ -28,7 +29,7 @@ class HistoryViewController: UIViewController {
         tableView.register(UINib(nibName: CellManager.getCell(by: "HistoryEmptyCell") , bundle: nil), forCellReuseIdentifier: CellManager.getCell(by: "HistoryEmptyCell"))
         tableView.register(UINib(nibName: CellManager.getCell(by: "HistoryFullCell") , bundle: nil), forCellReuseIdentifier: CellManager.getCell(by: "HistoryFullCell"))
         
-        var historyModels: [HistoryFullModel] = UserDefaultsStorage.shared.get(key: .history, defaultValue: [])
+        let historyModels: [HistoryFullModel] = storage.get(key: .history, defaultValue: [])
         if historyModels.isEmpty == false {
             self.historyModels = historyModels
             eraserButton.isHidden = false
@@ -80,6 +81,7 @@ class HistoryViewController: UIViewController {
             self?.historyModels.removeAll()
             self?.tableView.reloadData()
             self?.checkHistoryModels()
+            self?.storage.clear(key: .history)
             SwiftEntryKit.dismiss(with: {
                 IHProgressHUD.showSuccesswithStatus("History was cleared")
                 IHProgressHUD.dismissWithDelay(0.5)
