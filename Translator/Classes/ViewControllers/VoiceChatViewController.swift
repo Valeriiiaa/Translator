@@ -75,7 +75,7 @@ class VoiceChatViewController: UIViewController {
         attributes.screenBackground = .color(color: EKColor(UIColor.black.withAlphaComponent(0.4)))
         attributes.entryInteraction = .forward
         SwiftEntryKit.display(entry: view, using: attributes)
-        view.deletedAllCellsTapped = {[weak self] in
+        view.deletedAllCellsTapped = { [weak self] in
             self?.messageModel.removeAll()
             self?.tableViewChat.reloadData()
             self?.checkMessageModels()

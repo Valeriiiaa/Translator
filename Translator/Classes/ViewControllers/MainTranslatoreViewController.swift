@@ -11,7 +11,7 @@ import Switches
 
 class MainTranslatoreViewController: UIViewController {
     
-    @IBOutlet weak var adsSwitcher: YapSwitch!
+    @IBOutlet weak var adsSwitcher: YapSwitchSlim!
     @IBOutlet weak var collectionCell: UICollectionView!
     @IBOutlet weak var menuButton: UIButton!
     

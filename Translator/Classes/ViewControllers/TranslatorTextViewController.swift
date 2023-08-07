@@ -75,6 +75,7 @@ class SpeechManager {
     
     public func stopRecognize() {
         recognitionTask?.cancel()
+        audioEngine.inputNode.removeTap(onBus: 0)
         audioEngine.stop()
         speechRecognizer = nil
         self.request = nil

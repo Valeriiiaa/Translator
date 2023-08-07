@@ -20,13 +20,9 @@ class SplashScreenViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         loaderImage.startRotation()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: { [weak self] in
             let entrance = StoryboardFabric.getStoryboard(by: "Premium").instantiateViewController(withIdentifier: "PremiumViewController")
-            self.navigationController?.pushViewController(entrance, animated: true)
+            self?.navigationController?.pushViewController(entrance, animated: true)
         })
     }
-    
 }
-
-
-

@@ -9,9 +9,6 @@ import UIKit
 import StoreKit
 
 class DrawerMenuViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
-    
-    
     static let shared = DrawerMenuViewController()
     
     public weak var drawerNavigationController: UINavigationController?
@@ -157,7 +154,7 @@ class DrawerMenuViewController: UIViewController, UITableViewDelegate, UITableVi
             dismiss(animated: true)
             return
         }
-        drawerNavigationController?.viewControllers = [entrance]
+        drawerNavigationController?.pushViewController(entrance, animated: false) //?.viewControllers = [entrance]
         dismiss(animated: true)
     }
     

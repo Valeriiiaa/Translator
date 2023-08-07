@@ -8,7 +8,7 @@
 import UIKit
 
 class PremiumViewController: UIViewController {
-
+    
     @IBOutlet weak var buyNowButton: UIButton!
     @IBOutlet weak var backgroundTextView: UIView!
     @IBOutlet weak var backgroundPremiumView: UIView!
@@ -22,7 +22,7 @@ class PremiumViewController: UIViewController {
         ]
         gradient.startPoint = CGPoint(x: 0.0, y: 0.2)
         gradient.endPoint = CGPoint(x: 1.0, y: 0.5)
-       
+        
         return gradient
     }()
     
@@ -31,30 +31,25 @@ class PremiumViewController: UIViewController {
         
         switch UIDevice.current.userInterfaceIdiom {
         case .phone:
-                  backgroundTextView.layer.cornerRadius = 20
-                  buyNowButton.layer.cornerRadius = 15
+            backgroundTextView.layer.cornerRadius = 20
+            buyNowButton.layer.cornerRadius = 15
             
         default:  backgroundTextView.layer.cornerRadius = 30
-                  buyNowButton.layer.cornerRadius = 25
+            buyNowButton.layer.cornerRadius = 25
         }
-      
+        
         backgroundTextView.layer.masksToBounds = true
         buyNowButton.layer.masksToBounds = true
         
         gradient.frame = buyNowButton.bounds
         buyNowButton.layer.insertSublayer(gradient, at: 0)
-
-      
-        
     }
     
     @IBAction func closeButtonDidTap(_ sender: Any) {
         let entarcen = StoryboardFabric.getStoryboard(by: "MainTranslator").instantiateViewController(identifier: "MainTranslatoreViewController")
-        self.navigationController?.pushViewController(entarcen, animated: true)
+        self.navigationController?.setViewControllers([entarcen], animated: true)
     }
     
     @IBAction func buyNowButtonDidTap(_ sender: Any) {
     }
-    
-
 }

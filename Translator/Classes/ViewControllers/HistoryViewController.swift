@@ -60,8 +60,7 @@ class HistoryViewController: UIViewController {
     }
     
     @IBAction func backButtonDidTap(_ sender: Any) {
-        let destinationViewController = UIStoryboard(name: "MainTranslator", bundle: nil).instantiateViewController(withIdentifier: "MainTranslatoreViewController") as! MainTranslatoreViewController
-        navigationController?.pushViewController(destinationViewController, animated: true)
+        navigationController?.popToRootViewController(animated: true)
     }
     
     @IBAction func eraserButtonDidTap(_ sender: Any) {
