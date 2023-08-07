@@ -42,6 +42,16 @@ class VoiceChatViewController: UIViewController {
         tableViewChat.register(UINib(nibName: CellManager.getCell(by: "EmptyChatCell") , bundle: nil), forCellReuseIdentifier: CellManager.getCell(by: "EmptyChatCell"))
         bind()
         
+         
+    }
+    
+    func checkMessageModels() {
+        if messageModel.isEmpty == true {
+            self.messageModel = [MessagesEmptyModel(id: "1")]
+            eraserButton.isHidden  = true
+            backgroundEraserView.isHidden = true
+            tableViewChat.reloadData()
+        }
     }
     
     @IBAction func valueDidTap(_ sender: Any) {
@@ -68,6 +78,7 @@ class VoiceChatViewController: UIViewController {
         view.deletedAllCellsTapped = {[weak self] in
             self?.messageModel.removeAll()
             self?.tableViewChat.reloadData()
+            self?.checkMessageModels()
             SwiftEntryKit.dismiss(with: {
                 IHProgressHUD.showSuccesswithStatus("History was cleared")
                 IHProgressHUD.dismissWithDelay(0.5)

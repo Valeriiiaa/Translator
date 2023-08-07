@@ -40,6 +40,13 @@ class LeftMessagesCell: UITableViewCell {
        
     }
 
+    @IBAction func listenTextDidTap(_ sender: Any) {
+    }
+    @IBAction func copyTextDidTap(_ sender: Any) {
+    }
+    @IBAction func deleteBinDidTap(_ sender: Any) {
+    }
+   
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

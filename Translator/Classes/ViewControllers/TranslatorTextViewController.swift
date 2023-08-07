@@ -11,7 +11,7 @@ import MLKitTranslate
 import IHProgressHUD
 import Combine
 import SwiftEntryKit
-
+import AVFoundation
 import Speech
 
 enum SpeechManagerError: Error {
@@ -101,6 +101,9 @@ class TranslatorTextViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var backgroundFlagSecondView: UIView!
     @IBOutlet weak var backgroundFlagFirstView: UIView!
     
+    private var speechUtterance: AVSpeechUtterance?
+    private var synthesizer: AVSpeechSynthesizer?
+    
     private lazy var speechManager: SpeechManager = {
         .init()
     }()
@@ -139,7 +142,6 @@ class TranslatorTextViewController: UIViewController, UITextViewDelegate {
             secondImage.layer.cornerRadius = 1
             originalFlagImage.layer.cornerRadius = 1
             translatedFlagImage.layer.cornerRadius = 1
-            
             
         default: backgroundMainView.layer.cornerRadius = 25
             backgroundFlagSecondView.layer.cornerRadius = 20
@@ -272,10 +274,18 @@ class TranslatorTextViewController: UIViewController, UITextViewDelegate {
         }
     }
     
+    @IBAction func pasteTextButton(_ sender: Any) {
+        if let clipboardText = UIPasteboard.general.string {
+            textViewTypeText.text = clipboardText
+            overlayView.isHidden = true
+        }
+    }
+    
+   
     @IBAction func deleteTypeTextDidTap(_ sender: Any) {
         textViewTypeText.text = ""
         textViewGetText.text = ""
-        
+        overlayView.isHidden = false
     }
     
     @IBAction func deleteGetTextDidTap(_ sender: Any) {
@@ -367,5 +377,15 @@ class TranslatorTextViewController: UIViewController, UITextViewDelegate {
     
     @IBAction func backbuttonDidTap(_ sender: Any) {
         navigationController?.popViewController(animated: true)
+    }
+   
+    @IBAction func listenTextButtondidTap(_ sender: Any) {
+        let utterance = AVSpeechUtterance(string: textViewGetText.text)
+        utterance.voice = AVSpeechSynthesisVoice(language: languageManager.translatedLanguage.key.rawValue)!
+        utterance.rate = 0.4
+        let synthesizer = AVSpeechSynthesizer()
+        synthesizer.speak(utterance)
+        self.synthesizer = synthesizer
+        self.speechUtterance = utterance
     }
 }

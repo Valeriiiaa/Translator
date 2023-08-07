@@ -202,6 +202,9 @@
                                                 <rect key="frame" x="30" y="0.0" width="22" height="22"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" image="copyText"/>
+                                                <connections>
+                                                    <action selector="pasteTextButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="nNW-64-dKx"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -280,6 +283,9 @@
                                         <rect key="frame" x="319" y="142" width="24" height="28"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="listen"/>
+                                        <connections>
+                                            <action selector="listenTextButtondidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="0EI-G9-lpf"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tNV-ti-vDA">
                                         <rect key="frame" x="293" y="145" width="17" height="22"/>
