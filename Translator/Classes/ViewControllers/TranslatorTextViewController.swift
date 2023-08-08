@@ -185,6 +185,11 @@ class TranslatorTextViewController: UIViewController, UITextViewDelegate {
         bind()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        stopSpeaking()
+    }
+    
     private func bind() {
         languageManager.$originalLanguage.sink(receiveValue: { [weak self] language in
             guard let self else { return }
@@ -255,7 +260,7 @@ class TranslatorTextViewController: UIViewController, UITextViewDelegate {
     @objc func dismissKeyboard() {
         textViewTypeText.resignFirstResponder()
     }
-    //
+    
     func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tapGesture)
@@ -280,6 +285,7 @@ class TranslatorTextViewController: UIViewController, UITextViewDelegate {
         if let clipboardText = UIPasteboard.general.string {
             textViewTypeText.text = clipboardText
             overlayView.isHidden = true
+            stopSpeaking()
         }
     }
     
@@ -288,20 +294,24 @@ class TranslatorTextViewController: UIViewController, UITextViewDelegate {
         textViewTypeText.text = ""
         textViewGetText.text = ""
         overlayView.isHidden = false
+        stopSpeaking()
     }
     
     @IBAction func deleteGetTextDidTap(_ sender: Any) {
         textViewGetText.text = ""
+        stopSpeaking()
     }
     
     @IBAction func riversoButtonDidTap(_ sender: Any) {
         let originalLanguage = languageManager.originalLanguage
         languageManager.originalLanguage = languageManager.translatedLanguage
         languageManager.translatedLanguage = originalLanguage
+        stopSpeaking()
     }
     
     @IBAction func selectSecondButtonDidTap(_ sender: Any) {
         pushSelectionScreen()
+        stopSpeaking()
     }
     
     @IBAction func speechToTextDidTap(_ sender: Any) {
@@ -359,6 +369,7 @@ class TranslatorTextViewController: UIViewController, UITextViewDelegate {
     
     @IBAction func translateDidTap(_ sender: Any) {
         translate()
+        stopSpeaking()
     }
     
     @IBAction func copyTextDidTap(_ sender: Any) {
@@ -383,6 +394,7 @@ class TranslatorTextViewController: UIViewController, UITextViewDelegate {
     
     @IBAction func fullScreenDidTap(_ sender: Any) {
         let vc = StoryboardFabric.getStoryboard(by: "TranslatorText").instantiateViewController(identifier: "FullScreenTextViewController")
+        (vc as? FullScreenTextViewController)?.translatedText = textViewGetText.text
         vc.hero.isEnabled = true
         vc.modalPresentationStyle = .fullScreen
         vc.view.heroModifiers = [.contentsRect(getTextView.frame), .useNormalSnapshot, .cascade, .arc()]
@@ -398,5 +410,9 @@ class TranslatorTextViewController: UIViewController, UITextViewDelegate {
         synthesizer.speak(utterance)
         self.synthesizer = synthesizer
         self.speechUtterance = utterance
+    }
+    
+    func stopSpeaking() {
+        self.synthesizer?.stopSpeaking(at: .immediate)
     }
 }
