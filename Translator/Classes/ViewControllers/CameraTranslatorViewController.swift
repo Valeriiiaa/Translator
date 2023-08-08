@@ -13,7 +13,6 @@ class CameraTranslatorViewController: UIViewController, UIImagePickerControllerD
     @IBOutlet weak var backgroundstackView: UIView!
     @IBOutlet weak var backgroundMainView: UIView!
     
-    
     var imagePicker = UIImagePickerController()
     
     var session: AVCaptureSession?
@@ -21,23 +20,21 @@ class CameraTranslatorViewController: UIViewController, UIImagePickerControllerD
     let previewLayer = AVCaptureVideoPreviewLayer()
     
     let output = AVCapturePhotoOutput()
-   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         backgroundMainView.layer.cornerRadius = 15
         backgroundMainView.layer.masksToBounds = true
         backgroundstackView.layer.cornerRadius = 10
         backgroundstackView.layer.masksToBounds = true
-      
+        
         checkCameraPermissions()
     }
-    
-    
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         previewLayer.frame = view.bounds
-}
+    }
     
     private func checkCameraPermissions() {
         switch  AVCaptureDevice.authorizationStatus(for: .video) {
@@ -56,7 +53,7 @@ class CameraTranslatorViewController: UIViewController, UIImagePickerControllerD
             setUpCamera()
         case .denied:
             break
-            @unknown default: break
+        @unknown default: break
         }
     }
     
@@ -72,9 +69,9 @@ class CameraTranslatorViewController: UIViewController, UIImagePickerControllerD
                     session.addOutput(output)
                 }
                 
-                previewLayer.videoGravity = .resizeAspect
+                previewLayer.videoGravity = .resizeAspectFill
                 
-//                pre
+                //                pre
                 previewLayer.session = session
                 view.layer.insertSublayer(previewLayer, at: 0)
                 
@@ -82,7 +79,7 @@ class CameraTranslatorViewController: UIViewController, UIImagePickerControllerD
                     session.startRunning()
                     self.session = session
                 }
-               
+                
             }
             catch {
                 print(error)
@@ -91,35 +88,35 @@ class CameraTranslatorViewController: UIViewController, UIImagePickerControllerD
     }
     
     func withDeviceLock(on device: AVCaptureDevice, block: (AVCaptureDevice) -> Void) {
-            do {
-                try device.lockForConfiguration()
-                block(device)
-                device.unlockForConfiguration()
-            } catch {
-            }
+        do {
+            try device.lockForConfiguration()
+            block(device)
+            device.unlockForConfiguration()
+        } catch {
         }
+    }
     
     func turnOnTorch(device: AVCaptureDevice) {
-            guard device.hasTorch else { return }
-            withDeviceLock(on: device) {
-                try? $0.setTorchModeOn(level: AVCaptureDevice.maxAvailableTorchLevel)
-            }
+        guard device.hasTorch else { return }
+        withDeviceLock(on: device) {
+            try? $0.setTorchModeOn(level: AVCaptureDevice.maxAvailableTorchLevel)
         }
+    }
     
     func turnOffTorch(device: AVCaptureDevice) {
-            guard device.hasTorch else { return }
-            withDeviceLock(on: device) {
-                $0.torchMode = .off
-            }
+        guard device.hasTorch else { return }
+        withDeviceLock(on: device) {
+            $0.torchMode = .off
         }
-   
+    }
+    
     @IBAction func cancelButtonDidTap(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
     
     @IBAction func selectCountryButtonDidTap(_ sender: Any) {
     }
-   
+    
     @IBAction func splashButtonDidTap(_ sender: Any) {
         
     }
@@ -129,7 +126,7 @@ class CameraTranslatorViewController: UIViewController, UIImagePickerControllerD
                             delegate: self)
         
     }
-   
+    
     @IBAction func galleryButtonDidTap(_ sender: Any) {
         guard UIImagePickerController.isSourceTypeAvailable(.photoLibrary) else { return }
         imagePicker.delegate = self
@@ -137,15 +134,15 @@ class CameraTranslatorViewController: UIViewController, UIImagePickerControllerD
         imagePicker.allowsEditing = false
         present(imagePicker, animated: true, completion: nil)
     }
-   
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-            picker.dismiss(animated: true, completion: nil)
-            if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-                pushAnotherScreen(image: image)
-            }
-
+        picker.dismiss(animated: true, completion: nil)
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            pushAnotherScreen(image: image)
         }
-  
+        
+    }
+    
     func pushAnotherScreen(image: UIImage) {
         let entrance = StoryboardFabric.getStoryboard(by: "CameraEditPhoto").instantiateViewController(identifier: "CameraEditPhotoViewController")
         (entrance as? CameraEditPhotoViewController)?.image = image
@@ -159,16 +156,16 @@ class CameraTranslatorViewController: UIViewController, UIImagePickerControllerD
 }
 
 extension CameraTranslatorViewController: AVCapturePhotoCaptureDelegate {
-   
+    
     func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
         guard let data = photo.fileDataRepresentation() else {
             return
         }
-       
+        
         guard let image  = UIImage(data: data) else { return }
-    
+        
         session?.stopRunning()
-       
+        
         pushAnotherScreen(image: image)
     }
 }
