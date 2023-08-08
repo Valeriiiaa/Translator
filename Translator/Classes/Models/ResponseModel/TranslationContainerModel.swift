@@ -22,7 +22,7 @@ struct TranslationContainerModel: Codable {
 // MARK: - AlternativeTranslation
 struct AlternativeTranslation: Codable {
     let srcPhrase: String
-    let alternative: [Alternative]
+    let alternative: [Alternative]?
     let srcunicodeoffsets: [Srcunicodeoffset]
     let rawSrcSegment: String
     let startPos, endPos: Int
