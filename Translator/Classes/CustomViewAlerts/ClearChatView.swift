@@ -28,10 +28,10 @@ class ClearChatView: UIView {
         
     }
     @IBAction func yesButtonDidTap(_ sender: Any) {
-        SwiftEntryKit.dismiss()
+        deletedAllCellsTapped?()
     }
     @IBAction func noButtonDidTap(_ sender: Any) {
-        deletedAllCellsTapped?()
+        SwiftEntryKit.dismiss()
     }
 }
 

@@ -23,15 +23,13 @@ class VoiceChatViewController: UIViewController {
     @IBOutlet weak var firstLabel: UILabel!
     @IBOutlet weak var tableViewChat: UITableView!
     
-    var messageModel: [BaseMessagesModel] = [MessagesEmptyModel(id: "1")]
-    
     public var languageManager: LanguageManager!
     
     public var storage: UserDefaultsStorage!
     
     private var listeners = Set<AnyCancellable>()
     
-    var messagesModel = [MessagesFullModel(id: "1", textFirst: "Ukraine will win!", textSecond: "Україна переможе!", isMe: true), MessagesFullModel(id: "2", textFirst: "Ukraine will win!", textSecond: "Україна переможе!", isMe: true), MessagesFullModel(id: "3", textFirst: "Ukraine will win!", textSecond: "Україна переможе!", isMe: false), MessagesFullModel(id: "4", textFirst: "Ukraine will win!", textSecond: "Україна переможе!", isMe: false)]
+    var messagesModel: [BaseMessagesModel] = [MessagesFullModel(id: "1", textFirst: "Ukraine will win!", textSecond: "Україна переможе!", isMe: true), MessagesFullModel(id: "2", textFirst: "Ukraine will win!", textSecond: "Україна переможе!", isMe: true), MessagesFullModel(id: "3", textFirst: "Ukraine will win!", textSecond: "Україна переможе!", isMe: false), MessagesFullModel(id: "4", textFirst: "Ukraine will win!", textSecond: "Україна переможе!", isMe: false)]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,16 +38,15 @@ class VoiceChatViewController: UIViewController {
         tableViewChat.register(UINib(nibName: CellManager.getCell(by: "LeftMessagesCell") , bundle: nil), forCellReuseIdentifier: CellManager.getCell(by: "LeftMessagesCell"))
         tableViewChat.register(UINib(nibName: CellManager.getCell(by: "RightMessagesCell") , bundle: nil), forCellReuseIdentifier: CellManager.getCell(by: "RightMessagesCell"))
         tableViewChat.register(UINib(nibName: CellManager.getCell(by: "EmptyChatCell") , bundle: nil), forCellReuseIdentifier: CellManager.getCell(by: "EmptyChatCell"))
+        checkMessageModels()
         bind()
-        
-         
     }
     
     func checkMessageModels() {
-        if messageModel.isEmpty == true {
-            self.messageModel = [MessagesEmptyModel(id: "1")]
-            eraserButton.isHidden  = true
-            backgroundEraserView.isHidden = true
+        eraserButton.isHidden = messagesModel.isEmpty
+        backgroundEraserView.isHidden = messagesModel.isEmpty
+        if messagesModel.isEmpty == true {
+            self.messagesModel = [MessagesEmptyModel(id: "1")]
             tableViewChat.reloadData()
         }
     }
@@ -76,8 +73,7 @@ class VoiceChatViewController: UIViewController {
         attributes.entryInteraction = .forward
         SwiftEntryKit.display(entry: view, using: attributes)
         view.deletedAllCellsTapped = { [weak self] in
-            self?.messageModel.removeAll()
-            self?.tableViewChat.reloadData()
+            self?.messagesModel.removeAll()
             self?.checkMessageModels()
             SwiftEntryKit.dismiss(with: {
                 IHProgressHUD.showSuccesswithStatus("History was cleared")
@@ -156,7 +152,6 @@ class VoiceChatViewController: UIViewController {
 }
 
 extension VoiceChatViewController: UITableViewDelegate, UITableViewDataSource {
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         messagesModel.count
     }
@@ -167,14 +162,18 @@ extension VoiceChatViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let model = messagesModel[indexPath.row]
-        if model.isMe {
-            let cell = tableView.dequeueReusableCell(withIdentifier: CellManager.getCell(by: "LeftMessagesCell"), for: indexPath)
-            (cell as? LeftMessagesCell)?.configure(labelFirst: model.textFirst, labelSecond: model.textSecond)
-            return cell
-        } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: CellManager.getCell(by: "RightMessagesCell"), for: indexPath)
-            (cell as? LeftMessagesCell)?.configure(labelFirst: model.textFirst, labelSecond: model.textSecond)
+        var cell = UITableViewCell()
+        guard let fullModel = model as? MessagesFullModel else {
+            cell = tableView.dequeueReusableCell(withIdentifier: CellManager.getCell(by: "EmptyChatCell"), for: indexPath)
             return cell
         }
+        if fullModel.isMe {
+            cell = tableView.dequeueReusableCell(withIdentifier: CellManager.getCell(by: "LeftMessagesCell"), for: indexPath)
+            (cell as? LeftMessagesCell)?.configure(labelFirst: fullModel.textFirst, labelSecond: fullModel.textSecond)
+        } else {
+            cell = tableView.dequeueReusableCell(withIdentifier: CellManager.getCell(by: "RightMessagesCell"), for: indexPath)
+            (cell as? RightMessegesCell)?.configure(textFirst: fullModel.textFirst, textSecond: fullModel.textSecond)
+        }
+        return cell
     }
 }
