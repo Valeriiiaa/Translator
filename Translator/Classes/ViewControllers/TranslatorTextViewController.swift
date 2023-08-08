@@ -13,6 +13,7 @@ import Combine
 import SwiftEntryKit
 import AVFoundation
 import Speech
+import Hero
 
 enum SpeechManagerError: Error {
     case noInput
@@ -379,7 +380,16 @@ class TranslatorTextViewController: UIViewController, UITextViewDelegate {
     @IBAction func backbuttonDidTap(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
-   
+    
+    @IBAction func fullScreenDidTap(_ sender: Any) {
+        let vc = StoryboardFabric.getStoryboard(by: "TranslatorText").instantiateViewController(identifier: "FullScreenTextViewController")
+        vc.hero.isEnabled = true
+        vc.modalPresentationStyle = .fullScreen
+        vc.view.heroModifiers = [.contentsRect(getTextView.frame), .useNormalSnapshot, .cascade, .arc()]
+        vc.hero.modalAnimationType = .autoReverse(presenting: .fade)
+        present(vc, animated: true)
+    }
+    
     @IBAction func listenTextButtondidTap(_ sender: Any) {
         let utterance = AVSpeechUtterance(string: textViewGetText.text)
         utterance.voice = AVSpeechSynthesisVoice(language: languageManager.translatedLanguage.key.rawValue)!
