@@ -76,7 +76,7 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="English" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VOO-gS-Wuf">
-                                                        <rect key="frame" x="30.000000000000011" y="10.333333333333343" width="39.666666666666643" height="13.333333333333336"/>
+                                                        <rect key="frame" x="30.000000000000011" y="10.333333333333343" width="39.666666666666657" height="13.333333333333336"/>
                                                         <fontDescription key="fontDescription" name="FixelText-Medium" family="Fixel Text" pointSize="12"/>
                                                         <color key="textColor" red="0.23137254901960785" green="0.27450980392156865" blue="0.41176470588235292" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -322,7 +322,7 @@
                                             <action selector="deleteGetTextDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="fmR-Dy-Z6z"/>
                                         </connections>
                                     </button>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LPj-aJ-bUu">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LPj-aJ-bUu">
                                         <rect key="frame" x="20" y="20" width="273" height="100"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>

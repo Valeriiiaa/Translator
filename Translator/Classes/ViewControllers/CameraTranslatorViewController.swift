@@ -115,6 +115,7 @@ class CameraTranslatorViewController: UIViewController, UIImagePickerControllerD
     }
     
     @IBAction func selectCountryButtonDidTap(_ sender: Any) {
+        
     }
     
     @IBAction func splashButtonDidTap(_ sender: Any) {

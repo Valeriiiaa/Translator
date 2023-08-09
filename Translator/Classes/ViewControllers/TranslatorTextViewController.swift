@@ -116,6 +116,7 @@ class TranslatorTextViewController: UIViewController, UITextViewDelegate {
         guard let text,
               !text.isEmpty else { return }
         textViewTypeText.text = text
+        overlayView.isHidden = true
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -222,8 +223,7 @@ class TranslatorTextViewController: UIViewController, UITextViewDelegate {
         }
     }
     
-   
-    @IBAction func deleteTypeTextDidTap(_ sender: Any) {
+   @IBAction func deleteTypeTextDidTap(_ sender: Any) {
         textViewTypeText.text = ""
         textViewGetText.text = ""
         overlayView.isHidden = false
@@ -266,6 +266,7 @@ class TranslatorTextViewController: UIViewController, UITextViewDelegate {
             guard let self else { return }
             self.speechManager.stopRecognize()
             self.textViewTypeText.text = speechText
+            self.overlayView.isHidden = true
         }
         
         do {
