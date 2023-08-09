@@ -11,6 +11,8 @@ import IHProgressHUD
 class LeftMessagesCell: UITableViewCell {
     
     var listenTextDidTap: ((String) -> Void)?
+    
+    var deleteButtonTapped: (() -> Void)?
 
     @IBOutlet weak var translatedFlag: UIImageView!
     @IBOutlet weak var originalFlag: UIImageView!
@@ -55,6 +57,7 @@ class LeftMessagesCell: UITableViewCell {
     }
    
     @IBAction func deleteBinDidTap(_ sender: Any) {
+        deleteButtonTapped?()
     }
    
     override func setSelected(_ selected: Bool, animated: Bool) {

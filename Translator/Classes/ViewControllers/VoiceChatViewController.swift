@@ -88,7 +88,7 @@ class VoiceChatViewController: UIViewController {
             self?.stopSpeaking()
             self?.checkMessageModels()
             SwiftEntryKit.dismiss(with: {
-                IHProgressHUD.showSuccesswithStatus("History was cleared")
+                IHProgressHUD.showSuccesswithStatus("Chat was cleared")
                 IHProgressHUD.dismissWithDelay(0.5)
             })
         }
@@ -182,6 +182,12 @@ extension VoiceChatViewController: UITableViewDelegate, UITableViewDataSource {
         if fullModel.isMe {
             cell = tableView.dequeueReusableCell(withIdentifier: CellManager.getCell(by: "LeftMessagesCell"), for: indexPath)
             (cell as? LeftMessagesCell)?.configure(labelFirst: fullModel.textFirst, labelSecond: fullModel.textSecond)
+            (cell as? LeftMessagesCell)?.deleteButtonTapped = { [weak self] in
+                self?.deleteCell(at: indexPath)
+                self?.checkMessageModels()
+                IHProgressHUD.showSuccesswithStatus("Message was cleared")
+                IHProgressHUD.dismissWithDelay(0.4)
+            }
             (cell as? LeftMessagesCell)?.listenTextDidTap = { [weak self] text in
                 self?.stopSpeaking()
                 let utterance = AVSpeechUtterance(string: text)
@@ -195,6 +201,12 @@ extension VoiceChatViewController: UITableViewDelegate, UITableViewDataSource {
         } else {
             cell = tableView.dequeueReusableCell(withIdentifier: CellManager.getCell(by: "RightMessagesCell"), for: indexPath)
             (cell as? RightMessegesCell)?.configure(textFirst: fullModel.textFirst, textSecond: fullModel.textSecond)
+            (cell as? RightMessegesCell)?.deleteButtonTapped = { [weak self] in
+                self?.deleteCell(at: indexPath)
+                self?.checkMessageModels()
+                IHProgressHUD.showSuccesswithStatus("Message was cleared")
+                IHProgressHUD.dismissWithDelay(0.4)
+            }
             (cell as? RightMessegesCell)?.listenTextDidTap = { [weak self] text in
                 self?.stopSpeaking()
                 let utterance = AVSpeechUtterance(string: text)
@@ -207,6 +219,12 @@ extension VoiceChatViewController: UITableViewDelegate, UITableViewDataSource {
             }
         }
         return cell
+    }
+    
+    func deleteCell(at indexPath: IndexPath) {
+        messagesModel.remove(at: indexPath.row)
+        tableViewChat.deleteRows(at: [indexPath], with: .automatic)
+        tableViewChat.reloadData()
     }
    
     func stopSpeaking() {

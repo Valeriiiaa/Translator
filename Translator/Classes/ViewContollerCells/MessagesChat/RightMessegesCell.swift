@@ -12,6 +12,8 @@ class RightMessegesCell: UITableViewCell {
 
     var listenTextDidTap: ((String) -> Void)?
     
+    var deleteButtonTapped: (() -> Void)?
+    
     @IBOutlet weak var translatedFlag: UIImageView!
     @IBOutlet weak var originalFlag: UIImageView!
     @IBOutlet weak var textLabelSecond: UILabel!
@@ -56,8 +58,11 @@ class RightMessegesCell: UITableViewCell {
         IHProgressHUD.showSuccesswithStatus("Translation copied")
         IHProgressHUD.dismissWithDelay(0.5)
     }
+  
     @IBAction func deleteBinDidTap(_ sender: Any) {
+        deleteButtonTapped?()
     }
+   
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
