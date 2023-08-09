@@ -10,6 +10,9 @@ import Switches
 import Combine
 import SwiftEntryKit
 import IHProgressHUD
+import AVRouting
+import Speech
+import Hero
 
 class VoiceChatViewController: UIViewController {
     @IBOutlet weak var backgroundEraserView: UIView!
@@ -22,6 +25,9 @@ class VoiceChatViewController: UIViewController {
     @IBOutlet weak var secondLabel: UILabel!
     @IBOutlet weak var firstLabel: UILabel!
     @IBOutlet weak var tableViewChat: UITableView!
+    
+    private var speechUtterance: AVSpeechUtterance?
+    private var synthesizer: AVSpeechSynthesizer?
     
     public var languageManager: LanguageManager!
     
@@ -40,6 +46,11 @@ class VoiceChatViewController: UIViewController {
         tableViewChat.register(UINib(nibName: CellManager.getCell(by: "EmptyChatCell") , bundle: nil), forCellReuseIdentifier: CellManager.getCell(by: "EmptyChatCell"))
         checkMessageModels()
         bind()
+    }
+   
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        stopSpeaking()
     }
     
     func checkMessageModels() {
@@ -74,6 +85,7 @@ class VoiceChatViewController: UIViewController {
         SwiftEntryKit.display(entry: view, using: attributes)
         view.deletedAllCellsTapped = { [weak self] in
             self?.messagesModel.removeAll()
+            self?.stopSpeaking()
             self?.checkMessageModels()
             SwiftEntryKit.dismiss(with: {
                 IHProgressHUD.showSuccesswithStatus("History was cleared")
@@ -170,10 +182,34 @@ extension VoiceChatViewController: UITableViewDelegate, UITableViewDataSource {
         if fullModel.isMe {
             cell = tableView.dequeueReusableCell(withIdentifier: CellManager.getCell(by: "LeftMessagesCell"), for: indexPath)
             (cell as? LeftMessagesCell)?.configure(labelFirst: fullModel.textFirst, labelSecond: fullModel.textSecond)
+            (cell as? LeftMessagesCell)?.listenTextDidTap = { [weak self] text in
+                self?.stopSpeaking()
+                let utterance = AVSpeechUtterance(string: text)
+                utterance.voice = AVSpeechSynthesisVoice(language: self?.languageManager.originalLanguage.key.rawValue)!
+                utterance.rate = 0.4
+                let synthesizer = AVSpeechSynthesizer()
+                synthesizer.speak(utterance)
+                self?.synthesizer = synthesizer
+                self?.speechUtterance = utterance
+            }
         } else {
             cell = tableView.dequeueReusableCell(withIdentifier: CellManager.getCell(by: "RightMessagesCell"), for: indexPath)
             (cell as? RightMessegesCell)?.configure(textFirst: fullModel.textFirst, textSecond: fullModel.textSecond)
+            (cell as? RightMessegesCell)?.listenTextDidTap = { [weak self] text in
+                self?.stopSpeaking()
+                let utterance = AVSpeechUtterance(string: text)
+                utterance.voice = AVSpeechSynthesisVoice(language: self?.languageManager.translatedLanguage.key.rawValue)!
+                utterance.rate = 0.4
+                let synthesizer = AVSpeechSynthesizer()
+                synthesizer.speak(utterance)
+                self?.synthesizer = synthesizer
+                self?.speechUtterance = utterance
+            }
         }
         return cell
+    }
+   
+    func stopSpeaking() {
+        synthesizer?.stopSpeaking(at: .immediate)
     }
 }

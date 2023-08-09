@@ -6,14 +6,18 @@
 //
 
 import UIKit
+import IHProgressHUD
 
 class RightMessegesCell: UITableViewCell {
 
+    var listenTextDidTap: ((String) -> Void)?
+    
     @IBOutlet weak var translatedFlag: UIImageView!
     @IBOutlet weak var originalFlag: UIImageView!
     @IBOutlet weak var textLabelSecond: UILabel!
     @IBOutlet weak var firstTextLabel: UILabel!
     @IBOutlet weak var backgorundMessagesView: UIView!
+  
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -43,8 +47,14 @@ class RightMessegesCell: UITableViewCell {
     }
 
     @IBAction func listenTextDidTap(_ sender: Any) {
+        guard let text = textLabelSecond.text else { return }
+        listenTextDidTap?(text)
     }
+   
     @IBAction func copyTextDidTap(_ sender: Any) {
+        UIPasteboard.general.string = textLabelSecond.text
+        IHProgressHUD.showSuccesswithStatus("Translation copied")
+        IHProgressHUD.dismissWithDelay(0.5)
     }
     @IBAction func deleteBinDidTap(_ sender: Any) {
     }

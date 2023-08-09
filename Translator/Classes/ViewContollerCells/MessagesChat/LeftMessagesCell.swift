@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import IHProgressHUD
 
 class LeftMessagesCell: UITableViewCell {
+    
+    var listenTextDidTap: ((String) -> Void)?
 
     @IBOutlet weak var translatedFlag: UIImageView!
     @IBOutlet weak var originalFlag: UIImageView!
@@ -41,9 +44,16 @@ class LeftMessagesCell: UITableViewCell {
     }
 
     @IBAction func listenTextDidTap(_ sender: Any) {
+        guard let text = labelTextSecond.text else { return }
+        listenTextDidTap?(text)
     }
+   
     @IBAction func copyTextDidTap(_ sender: Any) {
+        UIPasteboard.general.string = labelTextSecond.text
+        IHProgressHUD.showSuccesswithStatus("Translation copied")
+        IHProgressHUD.dismissWithDelay(0.5)
     }
+   
     @IBAction func deleteBinDidTap(_ sender: Any) {
     }
    
