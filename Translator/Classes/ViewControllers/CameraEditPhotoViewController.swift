@@ -6,10 +6,11 @@
 //
 
 import UIKit
+import TOCropViewController
+import CropViewController
+import IHProgressHUD
 
 class CameraEditPhotoViewController: UIViewController {
-    
-    
     @IBOutlet weak var arrowDownWhiteButton: UIButton!
     @IBOutlet weak var bottomStuckConstraint: NSLayoutConstraint!
     @IBOutlet weak var textFieldMenu: TextField!
@@ -19,8 +20,16 @@ class CameraEditPhotoViewController: UIViewController {
     @IBOutlet weak var backgroundStuckView: UIView!
     @IBOutlet weak var backgrounMainView: UIView!
     @IBOutlet weak var backgroundRotateView: UIView!
-    
+    @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var bottomView: UIView!
+    private var croppedImage: UIImage?
     public var image: UIImage?
+    
+    private lazy var textRecognizer: TextDetectionManager = {
+        TextDetectionManager()
+    }()
+    
+    private weak var cropViewController: CropViewController?
     
     var backDidTap: (() -> Void)?
     
@@ -34,6 +43,7 @@ class CameraEditPhotoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        embeddedCropView()
         
         switch UIDevice.current.userInterfaceIdiom {
         case .phone:
@@ -69,16 +79,37 @@ class CameraEditPhotoViewController: UIViewController {
         menuTableView.delegate = self
         menuTableView.register(UINib(nibName: CellManager.getCell(by: "SectionMenuCell"), bundle: nil), forCellReuseIdentifier: CellManager.getCell(by: "SectionMenuCell"))
         
-        guard let image else { return }
-        backgroundImageView.image = image
-        
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
-        backgroundImageView.addGestureRecognizer(tapGesture)
-        
-        backgroundImageView.isUserInteractionEnabled = true
-        
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    private func embeddedCropView() {
+        guard let image else { return }
+        let cropController = CropViewController(croppingStyle: .default, image: image)
+        cropController.toolbar.isHidden = true
+        cropController.cropView.translatesAutoresizingMaskIntoConstraints = false
+        containerView.addSubview(cropController.cropView)
+        self.addChild(cropController)
+        cropController.cropView.topAnchor.constraint(equalTo: containerView.topAnchor).isActive = true
+        cropController.cropView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor).isActive = true
+        cropController.cropView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor).isActive = true
+        cropController.cropView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -50).isActive = true
+        cropController.didMove(toParent: self)
+        cropController.resetCropViewLayout()
+        cropController.cropView.setNeedsLayout()
+        cropController.cropView.layoutIfNeeded()
+        self.cropViewController = cropController
+        
+        cropController.onDidCropToRect = { image, rect, int in
+            print(image)
+        }
+        cropController.delegate = self
+    }
+    
+    private func openTranslateText(with: String) {
+        let entrance = StoryboardFabric.getStoryboard(by: "TranslatorText").instantiateViewController(identifier: "TranslatorTextViewController")
+        (entrance as? TranslatorTextViewController)?.text = with
+        DrawerMenuViewController.shared.set(viewController: entrance)
     }
     
     @objc func keyboardWillShow(notification: NSNotification) {
@@ -93,7 +124,6 @@ class CameraEditPhotoViewController: UIViewController {
         self.view.layoutSubviews()
     }
     
-    
     @objc func handleTap(_ sender: UITapGestureRecognizer) {
         textFieldMenu.resignFirstResponder()
     }
@@ -103,8 +133,6 @@ class CameraEditPhotoViewController: UIViewController {
         return true
     }
     
-    
-    
     @IBAction func selectCountryButtonDidTap(_ sender: Any) {
         UIView.animate(withDuration: 0, animations: {
             self.backgroundTableView.isHidden = !self.backgroundTableView.isHidden
@@ -112,10 +140,26 @@ class CameraEditPhotoViewController: UIViewController {
     }
     
     @IBAction func rotateButtonDidTap(_ sender: Any) {
-        
+        cropViewController?.cropView.rotateImageNinetyDegrees(animated: true, clockwise: true)
     }
     
     @IBAction func checkmarkDidTap(_ sender: Any) {
+        cropViewController?.commitCurrentCrop()
+        guard let image = croppedImage else { return }
+        IHProgressHUD.show()
+        Task { @MainActor [weak self, weak image] in
+            defer {
+                IHProgressHUD.dismiss()
+            }
+            guard let self else { return }
+            guard let image else { return }
+            do {
+                let text = try await textRecognizer.recognizeText(from: image)
+                self.openTranslateText(with: text)
+            } catch {
+                print("[log] text recognition error \(error.localizedDescription)")
+            }
+        }
     }
     
     @IBAction func backButtonDidTap(_ sender: Any) {
@@ -133,7 +177,6 @@ extension CameraEditPhotoViewController: UITextFieldDelegate {
             return
         }
         countriesModels = allItems.filter({ $0.nameCountry.localizedCaseInsensitiveContains(searchText) })
-        
     }
 } 
 
@@ -153,5 +196,21 @@ extension CameraEditPhotoViewController: UITableViewDelegate, UITableViewDataSou
         let cell = tableView.dequeueReusableCell(withIdentifier: CellManager.getCell(by: "SectionMenuCell"), for: indexPath)
         (cell as? SectionMenuCell)?.configure(flagPicture: model.flagPicture, labelCountry: model.nameCountry)
         return cell
+    }
+}
+
+extension CameraEditPhotoViewController: CropViewControllerDelegate {
+    func cropViewDidBecomeResettable(_ cropView: TOCropView) {
+    }
+    
+    func cropViewDidBecomeNonResettable(_ cropView: TOCropView) {
+    }
+    
+    func cropViewController(_ cropViewController: CropViewController, didCropToImage image: UIImage, withRect cropRect: CGRect, angle: Int) {
+        croppedImage = image
+    }
+    
+    func cropViewController(_ cropViewController: CropViewController, didCropToCircularImage image: UIImage, withRect cropRect: CGRect, angle: Int) {
+        print("hui")
     }
 }

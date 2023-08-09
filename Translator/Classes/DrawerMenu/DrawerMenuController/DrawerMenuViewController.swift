@@ -108,6 +108,14 @@ class DrawerMenuViewController: UIViewController, UITableViewDelegate, UITableVi
         drawerNavigationController?.setViewControllers([previousVC].compactMap({ $0 }), animated: true)
     }
     
+    public func set(viewController: UIViewController) {
+        guard let mainViewController = drawerNavigationController?.viewControllers.first as? MainTranslatoreViewController else { return }
+        
+        (viewController as? TranslatorTextViewController)?.languageManager = mainViewController.languageManager
+        (viewController as? TranslatorTextViewController)?.storage = mainViewController.storage
+        drawerNavigationController?.viewControllers = [mainViewController, viewController]
+    }
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         tableView.frame = CGRect(x: 0, y: view.safeAreaInsets.top + 60, width: view.bounds.size.width - 0, height: view.bounds.size.height)

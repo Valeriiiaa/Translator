@@ -22,6 +22,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y7k-ht-uhO">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ka8-G1-HpR">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
@@ -232,14 +236,18 @@
                             <constraint firstItem="Rlf-n9-u9e" firstAttribute="top" secondItem="Q7V-eH-id9" secondAttribute="bottom" id="CRg-Tr-kdW"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Pf0-Ed-PBw" secondAttribute="trailing" id="GIM-ml-JdV"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Ka8-G1-HpR" secondAttribute="trailing" id="I4h-bI-DMr"/>
+                            <constraint firstItem="Y7k-ht-uhO" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="KLb-Q6-yOf"/>
                             <constraint firstItem="Ka8-G1-HpR" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Ozf-Wr-l6Z"/>
                             <constraint firstItem="2Bq-Bw-JA5" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Rr4-3v-dpW"/>
+                            <constraint firstItem="Y7k-ht-uhO" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="SDZ-6l-XhM"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="2Bq-Bw-JA5" secondAttribute="trailing" id="UPV-Qz-03V"/>
                             <constraint firstItem="EUa-vA-YhQ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="a4o-jj-y9T"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="EUa-vA-YhQ" secondAttribute="trailing" id="id8-Rc-N4Y"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Y7k-ht-uhO" secondAttribute="trailing" id="kix-Te-oPe"/>
                             <constraint firstItem="Pf0-Ed-PBw" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="teM-5i-A84"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Q7V-eH-id9" secondAttribute="trailing" constant="32" id="tn5-OL-T1d"/>
                             <constraint firstItem="Ka8-G1-HpR" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="uC6-ge-TrH"/>
+                            <constraint firstAttribute="bottom" secondItem="Y7k-ht-uhO" secondAttribute="bottom" id="zgu-Gr-2jF"/>
                         </constraints>
                     </view>
                     <connections>
@@ -249,6 +257,8 @@
                         <outlet property="backgroundStuckView" destination="Rlf-n9-u9e" id="Q8a-lV-Ft5"/>
                         <outlet property="backgroundTableView" destination="Q7V-eH-id9" id="ymE-2b-UFp"/>
                         <outlet property="bottomStuckConstraint" destination="CRg-Tr-kdW" id="l9A-YU-u0b"/>
+                        <outlet property="bottomView" destination="2Bq-Bw-JA5" id="hbm-16-WgB"/>
+                        <outlet property="containerView" destination="Y7k-ht-uhO" id="jh7-9S-2mD"/>
                         <outlet property="menuTableView" destination="Rbd-Ey-XND" id="3Ut-fI-r5V"/>
                         <outlet property="textFieldMenu" destination="PoT-sv-ar6" id="bYl-xJ-An4"/>
                     </connections>

@@ -15,11 +15,11 @@ class MainTranslatoreViewController: UIViewController {
     @IBOutlet weak var collectionCell: UICollectionView!
     @IBOutlet weak var menuButton: UIButton!
     
-    private lazy var storage: UserDefaultsStorage = {
+    public lazy var storage: UserDefaultsStorage = {
         UserDefaultsStorage()
     }()
     
-    private lazy var languageManager: LanguageManager = { [unowned self] in
+    public lazy var languageManager: LanguageManager = { [unowned self] in
         LanguageManager(storage: self.storage)
     }()
     
