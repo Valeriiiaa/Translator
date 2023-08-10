@@ -9,7 +9,8 @@ import UIKit
 
 class GoogleMic: UIView {
    
-    @IBOutlet weak var textViewTrySaySmth: UITextView!
+    
+    @IBOutlet weak var trySaySmth: UILabel!
     @IBOutlet weak var translatedLanguage: UILabel!
     @IBOutlet weak var micImageView: UIImageView!
     
