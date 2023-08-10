@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="FixelText-Black.ttf">
+            <string>FixelText-Black</string>
+        </array>
+        <array key="FixelText-Bold.ttf">
+            <string>FixelText-Bold</string>
+        </array>
+        <array key="FixelText-Medium.ttf">
+            <string>FixelText-Medium</string>
+        </array>
+        <array key="FixelText-SemiBold.ttf">
+            <string>FixelText-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="Offer30View" id="ALC-PV-neR" customClass="Offer30View" customModule="Translator" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="633" height="856"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backAlert" translatesAutoresizingMaskIntoConstraints="NO" id="NQZ-cY-Tcp">
+                    <rect key="frame" x="0.0" y="0.0" width="633" height="255.66666666666666"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="255.66999999999999" id="WWZ-JC-2aH"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LIMITED OFFER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LUV-QK-mZR">
+                    <rect key="frame" x="20" y="25" width="593" height="48"/>
+                    <fontDescription key="fontDescription" name="FixelText-Bold" family="Fixel Text" pointSize="44"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tif-vJ-HaI">
+                    <rect key="frame" x="20" y="80" width="593" height="74.333333333333314"/>
+                    <string key="text"> 30% 
+</string>
+                    <fontDescription key="fontDescription" name="FixelText-Black" family="Fixel Text" pointSize="68"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OFF" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Mc-DF-7jR">
+                    <rect key="frame" x="265" y="154.33333333333334" width="103.33333333333331" height="61.333333333333343"/>
+                    <fontDescription key="fontDescription" name="FixelText-Black" family="Fixel Text" pointSize="56"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U3f-2W-LNs">
+                    <rect key="frame" x="66.666666666666686" y="455.66666666666669" width="500.00000000000006" height="70.000000000000057"/>
+                    <color key="backgroundColor" name="BlueButton"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="500" id="0Q6-8k-qz2"/>
+                        <constraint firstAttribute="height" constant="70" id="dEb-bX-SDP"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="FixelText-SemiBold" family="Fixel Text" pointSize="26"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="BUY NOW">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="buyNowButtonDidTap:" destination="ALC-PV-neR" eventType="touchUpInside" id="LGk-0P-TIz"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Just pay $1,99 once" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bPn-Tx-6TU">
+                    <rect key="frame" x="20" y="538.66666666666663" width="593" height="270.33333333333337"/>
+                    <fontDescription key="fontDescription" name="FixelText-Medium" family="Fixel Text" pointSize="26"/>
+                    <color key="textColor" red="0.62745098040000002" green="0.6588235294" blue="0.76862745099999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jhs-4I-haO">
+                    <rect key="frame" x="568" y="15" width="50" height="50"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" image="arrownDownWhite-ipad"/>
+                    <connections>
+                        <action selector="closeButtonDidTap:" destination="ALC-PV-neR" eventType="touchUpInside" id="Cpq-w8-7wA"/>
+                    </connections>
+                </button>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="ut0-Eh-r54">
+                    <rect key="frame" x="60" y="285.66666666666669" width="25" height="115"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stick-ipad" translatesAutoresizingMaskIntoConstraints="NO" id="2IW-vI-723">
+                            <rect key="frame" x="0.0" y="0.0" width="25" height="5"/>
+                        </imageView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stick-ipad" translatesAutoresizingMaskIntoConstraints="NO" id="lJM-l0-qLA">
+                            <rect key="frame" x="0.0" y="55" width="25" height="5"/>
+                        </imageView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stick-ipad" translatesAutoresizingMaskIntoConstraints="NO" id="Pqa-Vd-PN8">
+                            <rect key="frame" x="0.0" y="110" width="25" height="5"/>
+                        </imageView>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="G7v-Dy-X76">
+                    <rect key="frame" x="150" y="275.66666666666669" width="383" height="135"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unlimited Voice Translator" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LKT-IV-44s">
+                            <rect key="frame" x="0.0" y="0.0" width="383" height="31.666666666666668"/>
+                            <fontDescription key="fontDescription" name="FixelText-Medium" family="Fixel Text" pointSize="29"/>
+                            <color key="textColor" name="BlueButton"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unlimited Camera Translator" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IxU-9N-NgH">
+                            <rect key="frame" x="0.0" y="51.666666666666622" width="383" height="31.666666666666664"/>
+                            <fontDescription key="fontDescription" name="FixelText-Medium" family="Fixel Text" pointSize="29"/>
+                            <color key="textColor" name="BlueButton"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100% No Annoying ADS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lxU-go-13k">
+                            <rect key="frame" x="0.0" y="103.33333333333331" width="383" height="31.666666666666657"/>
+                            <fontDescription key="fontDescription" name="FixelText-Medium" family="Fixel Text" pointSize="29"/>
+                            <color key="textColor" name="BlueButton"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="SM2-Ck-wPa"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="tif-vJ-HaI" firstAttribute="top" secondItem="LUV-QK-mZR" secondAttribute="top" constant="55" id="0co-rB-fXp"/>
+                <constraint firstItem="jhs-4I-haO" firstAttribute="top" secondItem="ALC-PV-neR" secondAttribute="top" constant="15" id="1Tf-Aq-YVR"/>
+                <constraint firstItem="bPn-Tx-6TU" firstAttribute="leading" secondItem="SM2-Ck-wPa" secondAttribute="leading" constant="20" id="1V7-7Z-cgJ"/>
+                <constraint firstItem="SM2-Ck-wPa" firstAttribute="trailing" secondItem="LUV-QK-mZR" secondAttribute="trailing" constant="20" id="4fw-Mt-8Ce"/>
+                <constraint firstItem="ut0-Eh-r54" firstAttribute="top" secondItem="NQZ-cY-Tcp" secondAttribute="bottom" constant="30" id="5V8-rK-hVt"/>
+                <constraint firstItem="SM2-Ck-wPa" firstAttribute="trailing" secondItem="bPn-Tx-6TU" secondAttribute="trailing" constant="20" id="5t6-Wv-J14"/>
+                <constraint firstItem="LUV-QK-mZR" firstAttribute="top" secondItem="ALC-PV-neR" secondAttribute="top" constant="25" id="7FM-b7-ixd"/>
+                <constraint firstItem="U3f-2W-LNs" firstAttribute="top" secondItem="G7v-Dy-X76" secondAttribute="bottom" constant="45" id="Alq-k6-TNJ"/>
+                <constraint firstItem="NQZ-cY-Tcp" firstAttribute="top" secondItem="ALC-PV-neR" secondAttribute="top" id="Csb-C0-S2I"/>
+                <constraint firstItem="9Mc-DF-7jR" firstAttribute="centerX" secondItem="tif-vJ-HaI" secondAttribute="centerX" id="DfP-ti-MJ7"/>
+                <constraint firstItem="9Mc-DF-7jR" firstAttribute="top" secondItem="tif-vJ-HaI" secondAttribute="bottom" id="HGu-fw-O09"/>
+                <constraint firstItem="ut0-Eh-r54" firstAttribute="leading" secondItem="SM2-Ck-wPa" secondAttribute="leading" constant="60" id="Hbc-RB-U2t"/>
+                <constraint firstItem="SM2-Ck-wPa" firstAttribute="bottom" secondItem="bPn-Tx-6TU" secondAttribute="bottom" constant="13" id="I2O-Wd-GS8"/>
+                <constraint firstItem="G7v-Dy-X76" firstAttribute="centerY" secondItem="ut0-Eh-r54" secondAttribute="centerY" id="O1K-eg-e5x"/>
+                <constraint firstItem="SM2-Ck-wPa" firstAttribute="trailing" secondItem="tif-vJ-HaI" secondAttribute="trailing" constant="20" id="SBd-8v-M9y"/>
+                <constraint firstItem="U3f-2W-LNs" firstAttribute="centerX" secondItem="ALC-PV-neR" secondAttribute="centerX" id="TNs-ir-lE1"/>
+                <constraint firstAttribute="trailing" secondItem="jhs-4I-haO" secondAttribute="trailing" constant="15" id="TZJ-jv-APW"/>
+                <constraint firstItem="bPn-Tx-6TU" firstAttribute="top" secondItem="U3f-2W-LNs" secondAttribute="bottom" constant="13" id="a41-Ly-OQM"/>
+                <constraint firstItem="SM2-Ck-wPa" firstAttribute="trailing" secondItem="NQZ-cY-Tcp" secondAttribute="trailing" id="kLK-jJ-UCf"/>
+                <constraint firstItem="NQZ-cY-Tcp" firstAttribute="leading" secondItem="SM2-Ck-wPa" secondAttribute="leading" id="kSn-oc-HK3"/>
+                <constraint firstItem="LUV-QK-mZR" firstAttribute="leading" secondItem="SM2-Ck-wPa" secondAttribute="leading" constant="20" id="l7h-na-s5Z"/>
+                <constraint firstItem="tif-vJ-HaI" firstAttribute="leading" secondItem="SM2-Ck-wPa" secondAttribute="leading" constant="20" id="toL-Xk-9e3"/>
+                <constraint firstItem="G7v-Dy-X76" firstAttribute="leading" secondItem="ut0-Eh-r54" secondAttribute="trailing" constant="65" id="zUG-6m-5w6"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="buyNowButton" destination="U3f-2W-LNs" id="tXc-Zu-q2I"/>
+            </connections>
+            <point key="canvasLocation" x="429.7709923664122" y="56.338028169014088"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrownDownWhite-ipad" width="50" height="50"/>
+        <image name="backAlert" width="953" height="592"/>
+        <image name="stick-ipad" width="25" height="5"/>
+        <namedColor name="BlueButton">
+            <color red="0.31400001049041748" green="0.55699998140335083" blue="0.96100002527236938" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

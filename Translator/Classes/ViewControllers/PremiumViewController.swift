@@ -60,6 +60,8 @@ class PremiumViewController: UIViewController {
             }
             catch {
                 print("[log] restore Error \(error)")
+                IHProgressHUD.showError(withStatus: "No purchases yet")
+                
             }
         }
     }

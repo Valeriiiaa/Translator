@@ -89,6 +89,8 @@
 		F6A1BE3A2A84D7C9003CE35F /* SwiftyStoreKit in Frameworks */ = {isa = PBXBuildFile; productRef = F6A1BE392A84D7C9003CE35F /* SwiftyStoreKit */; };
 		F6A1BE3C2A84D801003CE35F /* IAPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A1BE3B2A84D801003CE35F /* IAPManager.swift */; };
 		F6A1BE3E2A84DABC003CE35F /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A1BE3D2A84DABC003CE35F /* UserManager.swift */; };
+		F6A1BE402A84E3E9003CE35F /* Offer30View-ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6A1BE3F2A84E3E9003CE35F /* Offer30View-ipad.xib */; };
+		F6A1BE422A84E59C003CE35F /* Offer50View-ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6A1BE412A84E59C003CE35F /* Offer50View-ipad.xib */; };
 		F6B170472A6E93B2002A7BD2 /* MainTranslatorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B170462A6E93B2002A7BD2 /* MainTranslatorCell.swift */; };
 		F6B1704B2A6E93EC002A7BD2 /* MainTranslatorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6B1704A2A6E93EC002A7BD2 /* MainTranslatorCell.xib */; };
 		F6BE51642A725EC900625E62 /* CameraTranslator.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6BE51632A725EC900625E62 /* CameraTranslator.storyboard */; };
@@ -259,6 +261,8 @@
 		F6A1BE362A7FBDA7003CE35F /* BaseMessagesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMessagesModel.swift; sourceTree = "<group>"; };
 		F6A1BE3B2A84D801003CE35F /* IAPManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPManager.swift; sourceTree = "<group>"; };
 		F6A1BE3D2A84DABC003CE35F /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		F6A1BE3F2A84E3E9003CE35F /* Offer30View-ipad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "Offer30View-ipad.xib"; sourceTree = "<group>"; };
+		F6A1BE412A84E59C003CE35F /* Offer50View-ipad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "Offer50View-ipad.xib"; sourceTree = "<group>"; };
 		F6B170462A6E93B2002A7BD2 /* MainTranslatorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTranslatorCell.swift; sourceTree = "<group>"; };
 		F6B1704A2A6E93EC002A7BD2 /* MainTranslatorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTranslatorCell.xib; sourceTree = "<group>"; };
 		F6BE51632A725EC900625E62 /* CameraTranslator.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CameraTranslator.storyboard; sourceTree = "<group>"; };
@@ -540,6 +544,8 @@
 				F625F6E42A77DBE00040F1A3 /* ClearChatView-ipad.xib */,
 				F6A1BE2D2A7F8D72003CE35F /* GoogleMic-ipad.xib */,
 				F6A1BE2F2A7F8DD1003CE35F /* ClearHistoryView-ipad.xib */,
+				F6A1BE3F2A84E3E9003CE35F /* Offer30View-ipad.xib */,
+				F6A1BE412A84E59C003CE35F /* Offer50View-ipad.xib */,
 			);
 			path = iPad;
 			sourceTree = "<group>";
@@ -1098,6 +1104,7 @@
 				F6DE21252A6E72DF003F49F4 /* FixelText-Black.ttf in Resources */,
 				F6D2C8CB2A711AA200F7D7EF /* VoiceChat.storyboard in Resources */,
 				F6DDCBC92A6FF0B6007B51EE /* ClearChatView.xib in Resources */,
+				F6A1BE402A84E3E9003CE35F /* Offer30View-ipad.xib in Resources */,
 				F68C37042A71393C00AD0A1F /* SelectionCountry.storyboard in Resources */,
 				F6DE21282A6E72DF003F49F4 /* FixelText-Thin.ttf in Resources */,
 				F6CFB9772A7279A10058246B /* CameraEditPhoto.storyboard in Resources */,
@@ -1109,6 +1116,7 @@
 				F625F6DD2A77B9330040F1A3 /* CameraEditPhoto-ipad.storyboard in Resources */,
 				F625F6C82A77A1A80040F1A3 /* TranslatorText-ipad.storyboard in Resources */,
 				F6DE21222A6E72DF003F49F4 /* FixelText-Light.ttf in Resources */,
+				F6A1BE422A84E59C003CE35F /* Offer50View-ipad.xib in Resources */,
 				F6DE21262A6E72DF003F49F4 /* FixelText-Regular.ttf in Resources */,
 				F6DE21292A6E72DF003F49F4 /* FixelText-Medium.ttf in Resources */,
 				F6D5D9792A7534D100A8053B /* SectionMenuCell.xib in Resources */,
