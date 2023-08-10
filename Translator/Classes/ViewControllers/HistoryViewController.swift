@@ -14,7 +14,7 @@ class HistoryViewController: UIViewController {
     
     @IBOutlet weak var noAdsLabel: UILabel!
     @IBOutlet weak var backgroundViewEraser: UIView!
-    @IBOutlet weak var adsSwitcher: YapSwitch!
+    @IBOutlet weak var adsSwitcher: PVSwitch!
     @IBOutlet weak var eraserButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var historyLabel: UILabel!

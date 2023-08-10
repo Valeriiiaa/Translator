@@ -13,7 +13,7 @@ class MainTranslatoreViewController: UIViewController, UIImagePickerControllerDe
     var imagePicker = UIImagePickerController()
     
     @IBOutlet weak var noAdsLabel: UILabel!
-    @IBOutlet weak var adsSwitcher: YapSwitchSlim!
+    @IBOutlet weak var adsSwitcher: PVSwitch!
     @IBOutlet weak var collectionCell: UICollectionView!
     @IBOutlet weak var menuButton: UIButton!
     

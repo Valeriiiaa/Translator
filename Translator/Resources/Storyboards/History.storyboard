@@ -42,7 +42,7 @@
                                 </connections>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jt2-Ao-eBi">
-                                <rect key="frame" x="250.33333333333334" y="70.666666666666671" width="100.66666666666666" height="31"/>
+                                <rect key="frame" x="241.33333333333334" y="70.666666666666671" width="109.66666666666666" height="31"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No ADS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cOt-IH-jSK">
                                         <rect key="frame" x="0.0" y="0.0" width="41.666666666666664" height="31"/>
@@ -50,16 +50,13 @@
                                         <color key="textColor" red="0.23137254901960785" green="0.27450980392156865" blue="0.41176470588235292" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RYD-ru-OgZ" customClass="YapSwitch" customModule="Switches">
-                                        <rect key="frame" x="51.666666666666657" y="0.0" width="49" height="31"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KJz-N9-afL" customClass="PVSwitch" customModule="Translator" customModuleProvider="target">
+                                        <rect key="frame" x="51.666666666666657" y="0.0" width="58" height="31"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="31" id="k7Z-Df-csB"/>
-                                            <constraint firstAttribute="width" constant="49" id="rJH-xe-a2C"/>
+                                            <constraint firstAttribute="height" constant="31" id="P12-Lc-efv"/>
+                                            <constraint firstAttribute="width" constant="58" id="xfp-z5-IJU"/>
                                         </constraints>
-                                        <connections>
-                                            <action selector="valueDidTap:" destination="Y6W-OH-hqX" eventType="valueChanged" id="inw-lg-4o7"/>
-                                        </connections>
                                     </view>
                                 </subviews>
                             </stackView>
@@ -131,7 +128,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="adsSwitcher" destination="RYD-ru-OgZ" id="NsH-z2-37H"/>
                         <outlet property="backgroundViewEraser" destination="TVU-pv-kb7" id="kXa-bx-Ug6"/>
                         <outlet property="eraserButton" destination="qVD-qp-Pcr" id="3Hw-Z7-uk4"/>
                         <outlet property="historyLabel" destination="bxv-Sa-j9g" id="Oj1-az-31B"/>

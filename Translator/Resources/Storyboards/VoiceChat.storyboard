@@ -189,7 +189,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="n9f-NI-AB6">
-                                <rect key="frame" x="277.33333333333331" y="84.666666666666671" width="100.66666666666669" height="31"/>
+                                <rect key="frame" x="268.33333333333331" y="84.666666666666671" width="109.66666666666669" height="31"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No ADS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YNc-Sf-bYK">
                                         <rect key="frame" x="0.0" y="0.0" width="41.666666666666664" height="31"/>
@@ -197,12 +197,12 @@
                                         <color key="textColor" name="#3B4669"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M51-WP-Er8" customClass="YapSwitch" customModule="Switches">
-                                        <rect key="frame" x="51.666666666666686" y="0.0" width="49" height="31"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M51-WP-Er8" customClass="PVSwitch" customModule="Translator" customModuleProvider="target">
+                                        <rect key="frame" x="51.666666666666686" y="0.0" width="58" height="31"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="31" id="rnA-Xc-mZV"/>
-                                            <constraint firstAttribute="width" constant="49" id="x97-c4-w5p"/>
+                                            <constraint firstAttribute="width" constant="58" id="x97-c4-w5p"/>
                                         </constraints>
                                         <connections>
                                             <action selector="valueDidTap:" destination="Y6W-OH-hqX" eventType="valueChanged" id="d9d-qs-lNj"/>

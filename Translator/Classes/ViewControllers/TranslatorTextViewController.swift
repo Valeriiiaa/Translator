@@ -14,14 +14,13 @@ import AVFoundation
 import Hero
 
 class TranslatorTextViewController: UIViewController, UITextViewDelegate {
-   
     @IBOutlet weak var noAdsLabel: UILabel!
     @IBOutlet weak var translatedFlagImage: UIImageView!
     @IBOutlet weak var translatedTextLabel: UILabel!
     @IBOutlet weak var originalFlagImage: UIImageView!
     @IBOutlet weak var translateButton: UIButton!
     @IBOutlet weak var originalTextLabel: UILabel!
-    @IBOutlet weak var adsSwitcher: YapSwitch!
+    @IBOutlet weak var adsSwitcher: PVSwitch!
     @IBOutlet weak var secondImage: UIImageView!
     @IBOutlet weak var firstFlag: UIImageView!
     @IBOutlet weak var secondLabel: UILabel!

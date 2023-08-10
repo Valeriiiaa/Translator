@@ -24,7 +24,7 @@ class VoiceChatViewController: UIViewController {
     @IBOutlet weak var eraserButton: UIButton!
     @IBOutlet weak var orangeMicButton: UIButton!
     @IBOutlet weak var blueMicButton: UIButton!
-    @IBOutlet weak var adsSwitcher: YapSwitch!
+    @IBOutlet weak var adsSwitcher: PVSwitch!
     @IBOutlet weak var firstFlag: UIImageView!
     @IBOutlet weak var secondFlag: UIImageView!
     @IBOutlet weak var secondLabel: UILabel!
