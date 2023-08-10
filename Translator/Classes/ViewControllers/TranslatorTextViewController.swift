@@ -281,7 +281,7 @@ class TranslatorTextViewController: UIViewController, UITextViewDelegate {
             try speechManager.startRecognize(for: languageKey, textChanged: { [weak self, weak view] text in
                 guard let self else { return }
                 guard let view else { return }
-                view.saySmthLabel.text = text
+                view.textViewTrySaySmth.text = text
                 speechText = text
             })
         } catch {

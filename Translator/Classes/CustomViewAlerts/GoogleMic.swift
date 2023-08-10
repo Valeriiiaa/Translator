@@ -8,7 +8,8 @@
 import UIKit
 
 class GoogleMic: UIView {
-    @IBOutlet weak var saySmthLabel: UILabel!
+   
+    @IBOutlet weak var textViewTrySaySmth: UITextView!
     @IBOutlet weak var translatedLanguage: UILabel!
     @IBOutlet weak var micImageView: UIImageView!
     
@@ -16,6 +17,7 @@ class GoogleMic: UIView {
   
     override func awakeFromNib() {
         super.awakeFromNib()
+      
         layer.cornerRadius = 20
         layer.masksToBounds = true
     }

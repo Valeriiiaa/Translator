@@ -13,6 +13,9 @@
         <array key="FixelText-Medium.ttf">
             <string>FixelText-Medium</string>
         </array>
+        <array key="FixelText-Regular.ttf">
+            <string>FixelText-Regular</string>
+        </array>
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -21,48 +24,49 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Translator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LM8-d8-Yz9">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Translator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LM8-d8-Yz9">
                     <rect key="frame" x="20" y="83" width="353" height="28.666666666666671"/>
                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                     <color key="textColor" name="#3C485A"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="micPopUpOf" translatesAutoresizingMaskIntoConstraints="NO" id="MVm-Dc-aMm">
-                    <rect key="frame" x="146.66666666666666" y="156.66666666666663" width="100" height="100"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="micPopUpOf" translatesAutoresizingMaskIntoConstraints="NO" id="MVm-Dc-aMm">
+                    <rect key="frame" x="146.66666666666666" y="156.66666666666666" width="100" height="99.999999999999972"/>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Try to say something" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L3w-ff-Xbd">
-                    <rect key="frame" x="20" y="286.66666666666669" width="353" height="26"/>
-                    <fontDescription key="fontDescription" name="FixelText-Medium" family="Fixel Text" pointSize="23"/>
-                    <color key="textColor" name="#3C485A"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="english" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b6k-2I-sXn">
-                    <rect key="frame" x="166.66666666666666" y="778" width="60" height="20"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="english" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b6k-2I-sXn">
+                    <rect key="frame" x="167" y="778" width="59.333333333333343" height="20"/>
                     <fontDescription key="fontDescription" name="FixelText-Medium" family="Fixel Text" pointSize="18"/>
                     <color key="textColor" name="#3C485A"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Try to say something" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EgO-WV-CBp">
+                    <rect key="frame" x="20" y="286.66666666666674" width="353" height="441.33333333333326"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="textColor" systemColor="labelColor"/>
+                    <fontDescription key="fontDescription" name="FixelText-Regular" family="Fixel Text" pointSize="24"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="L3w-ff-Xbd" firstAttribute="top" secondItem="MVm-Dc-aMm" secondAttribute="bottom" constant="30" id="FB0-eB-CsU"/>
-                <constraint firstItem="L3w-ff-Xbd" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="FNl-qz-7OB"/>
+                <constraint firstItem="EgO-WV-CBp" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="2ba-Ot-vvC"/>
+                <constraint firstItem="EgO-WV-CBp" firstAttribute="top" secondItem="MVm-Dc-aMm" secondAttribute="bottom" constant="30" id="DM8-a4-DbO"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="b6k-2I-sXn" secondAttribute="bottom" constant="20" id="GFe-hv-6Wc"/>
                 <constraint firstItem="b6k-2I-sXn" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="GWe-9n-hP5"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="LM8-d8-Yz9" secondAttribute="trailing" constant="20" id="Hdz-ul-71E"/>
                 <constraint firstItem="MVm-Dc-aMm" firstAttribute="top" secondItem="LM8-d8-Yz9" secondAttribute="bottom" constant="45" id="PCC-ld-TSq"/>
                 <constraint firstItem="MVm-Dc-aMm" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Wl6-6c-zfn"/>
+                <constraint firstItem="b6k-2I-sXn" firstAttribute="top" secondItem="EgO-WV-CBp" secondAttribute="bottom" constant="50" id="ivr-0A-pk1"/>
                 <constraint firstItem="LM8-d8-Yz9" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="24" id="j5R-ON-srn"/>
                 <constraint firstItem="LM8-d8-Yz9" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="lgw-k5-36p"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="L3w-ff-Xbd" secondAttribute="trailing" constant="20" id="n4D-zY-mRa"/>
-                <constraint firstItem="L3w-ff-Xbd" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="t3i-IF-3Fy"/>
-                <constraint firstItem="b6k-2I-sXn" firstAttribute="top" secondItem="L3w-ff-Xbd" secondAttribute="bottom" constant="50" id="t8x-La-UqU"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="EgO-WV-CBp" secondAttribute="trailing" constant="20" id="vHL-5c-sOs"/>
+                <constraint firstItem="EgO-WV-CBp" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="zp9-qm-93H"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="micImageView" destination="MVm-Dc-aMm" id="qCH-tO-DCt"/>
-                <outlet property="saySmthLabel" destination="L3w-ff-Xbd" id="ubg-9t-vlB"/>
+                <outlet property="textViewTrySaySmth" destination="EgO-WV-CBp" id="Mjr-sT-BFB"/>
                 <outlet property="translatedLanguage" destination="b6k-2I-sXn" id="kT0-9g-Yot"/>
             </connections>
             <point key="canvasLocation" x="42" y="20"/>
@@ -73,6 +77,9 @@
         <namedColor name="#3C485A">
             <color red="0.23499999940395355" green="0.28200000524520874" blue="0.3529999852180481" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
