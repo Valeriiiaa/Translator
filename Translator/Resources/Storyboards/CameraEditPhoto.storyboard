@@ -259,6 +259,8 @@
                         <outlet property="bottomStuckConstraint" destination="CRg-Tr-kdW" id="l9A-YU-u0b"/>
                         <outlet property="bottomView" destination="2Bq-Bw-JA5" id="hbm-16-WgB"/>
                         <outlet property="containerView" destination="Y7k-ht-uhO" id="jh7-9S-2mD"/>
+                        <outlet property="languageFlagImageView" destination="SBw-z6-wTg" id="ldb-dN-YJ7"/>
+                        <outlet property="languageNameLabel" destination="hvq-V4-kmf" id="rxh-1K-3Au"/>
                         <outlet property="menuTableView" destination="Rbd-Ey-XND" id="3Ut-fI-r5V"/>
                         <outlet property="textFieldMenu" destination="PoT-sv-ar6" id="bYl-xJ-An4"/>
                     </connections>

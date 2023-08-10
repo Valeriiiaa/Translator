@@ -8,6 +8,6 @@
 import Foundation
 
 class UserManager {
-    public var isPremium = true
+    public var isPremium = false
     static let shared = UserManager()
 }

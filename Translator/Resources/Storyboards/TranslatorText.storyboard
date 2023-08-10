@@ -460,7 +460,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bqc-ac-MQe">
                                 <rect key="frame" x="20" y="129" width="353" height="669"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <mutableString key="text">Йога - це духовна та фізична практика, яка виникла в давній Індії. Практика йоги включає різноманітні пози, вправи дихання та медитаційні техніки, які сприяють фізичній силі, гнучкості та релаксації. Також вірять, що йога має безліч корисних впливів на ментальне здоров'я, такі як зниження стресу, тривоги та депресії, покращення загального самопочуття. Останнім часом йога стала дедалі популярнішою у всьому світі як форма вправ та практики </mutableString>
+                                <string key="text">Йога - це духовна та фізична практика, яка виникла в давній Індії. Практика йоги включає різноманітні пози, вправи дихання та медитаційні техніки, які сприяють фізичній силі, гнучкості та релаксації. Також вірять, що йога має безліч корисних впливів на ментальне здоров'я, такі як зниження стресу, тривоги та депресії, покращення загального самопочуття. Останнім часом йога стала дедалі популярнішою у всьому світі як форма вправ та практики </string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="FixelText-Regular" family="Fixel Text" pointSize="24"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -492,6 +492,10 @@
                             <constraint firstItem="qTv-xD-dV0" firstAttribute="trailing" secondItem="T61-h8-Fhu" secondAttribute="trailing" constant="20" id="yPk-M4-5Yo"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="closeButton" destination="T61-h8-Fhu" id="yZW-T3-DEA"/>
+                        <outlet property="translatedTextView" destination="bqc-ac-MQe" id="dMu-W8-h7d"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vx0-8y-Gtb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -10,6 +10,7 @@ import AVFoundation
 
 class CameraTranslatorViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    @IBOutlet weak var languageNameLabel: UILabel!
     @IBOutlet weak var backgroundTableView: UIView!
     @IBOutlet weak var bottomStuckConstraint: NSLayoutConstraint!
     @IBOutlet weak var tableViewMenu: UITableView!
@@ -17,6 +18,7 @@ class CameraTranslatorViewController: UIViewController, UIImagePickerControllerD
     @IBOutlet weak var takePhotoButton: UIButton!
     @IBOutlet weak var backgroundstackView: UIView!
     @IBOutlet weak var backgroundMainView: UIView!
+    public var languageManager: LanguageManager?
     
     var imagePicker = UIImagePickerController()
     
@@ -76,6 +78,8 @@ class CameraTranslatorViewController: UIViewController, UIImagePickerControllerD
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
+        languageNameLabel.text = languageManager?.translatedLanguage.nameCountry
     }
     
     @objc func keyboardWillShow(notification: NSNotification) {
@@ -216,6 +220,7 @@ class CameraTranslatorViewController: UIViewController, UIImagePickerControllerD
     func pushAnotherScreen(image: UIImage) {
         let entrance = StoryboardFabric.getStoryboard(by: "CameraEditPhoto").instantiateViewController(identifier: "CameraEditPhotoViewController")
         (entrance as? CameraEditPhotoViewController)?.image = image
+        (entrance as? CameraEditPhotoViewController)?.languageManager = languageManager
         (entrance as? CameraEditPhotoViewController)?.backDidTap = { [weak self] in
             DispatchQueue.global().async {
                 self?.session?.startRunning()

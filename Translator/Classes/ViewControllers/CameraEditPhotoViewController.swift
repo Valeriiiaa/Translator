@@ -12,6 +12,8 @@ import IHProgressHUD
 
 class CameraEditPhotoViewController: UIViewController {
   
+    @IBOutlet weak var languageFlagImageView: UIImageView!
+    @IBOutlet weak var languageNameLabel: UILabel!
     @IBOutlet weak var arrowDownWhiteButton: UIButton!
     @IBOutlet weak var bottomStuckConstraint: NSLayoutConstraint!
     @IBOutlet weak var textFieldMenu: TextField!
@@ -26,10 +28,15 @@ class CameraEditPhotoViewController: UIViewController {
     private var croppedImage: UIImage?
     public var image: UIImage?
     
+    override var prefersStatusBarHidden: Bool {
+        true
+    }
+    
     private lazy var textRecognizer: TextDetectionManager = {
         TextDetectionManager()
     }()
     
+    public var languageManager: LanguageManager?
     private weak var cropViewController: CropViewController?
     
     var backDidTap: (() -> Void)?
@@ -82,6 +89,10 @@ class CameraEditPhotoViewController: UIViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        guard let translatedLanguage = languageManager?.translatedLanguage else { return }
+        
+        languageNameLabel.text = translatedLanguage.nameCountry
+        languageFlagImageView.image = UIImage(named: translatedLanguage.flagPicture)
     }
     
     private func embeddedCropView() {
@@ -99,6 +110,7 @@ class CameraEditPhotoViewController: UIViewController {
         cropController.resetCropViewLayout()
         cropController.cropView.setNeedsLayout()
         cropController.cropView.layoutIfNeeded()
+        cropController.cropView.cropViewPadding = 50
         self.cropViewController = cropController
         
         cropController.onDidCropToRect = { image, rect, int in

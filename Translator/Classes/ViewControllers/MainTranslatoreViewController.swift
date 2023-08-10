@@ -98,6 +98,7 @@ extension MainTranslatoreViewController: UICollectionViewDelegateFlowLayout, UIC
             navigationController?.pushViewController(entrance, animated: true)
         } else if indexPath.row == 2 {
             let entrance = StoryboardFabric.getStoryboard(by: "CameraTranslator").instantiateViewController(identifier: "CameraTranslatorViewController")
+            (entrance as? CameraTranslatorViewController)?.languageManager = languageManager
             navigationController?.pushViewController(entrance, animated: true)
         } else if indexPath.row == 3 {
             guard UIImagePickerController.isSourceTypeAvailable(.photoLibrary) else { return }

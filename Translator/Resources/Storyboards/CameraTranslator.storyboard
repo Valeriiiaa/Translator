@@ -205,6 +205,7 @@
                         <outlet property="backgroundTableView" destination="ouK-5s-hhg" id="X9p-3E-LcT"/>
                         <outlet property="backgroundstackView" destination="dB4-8B-pS9" id="PM4-cF-yUH"/>
                         <outlet property="bottomStuckConstraint" destination="3Wy-Ta-RTJ" id="RFC-GU-iZa"/>
+                        <outlet property="languageNameLabel" destination="KKv-0T-J8J" id="EoT-c8-0h7"/>
                         <outlet property="tableViewMenu" destination="8xO-Bf-pxN" id="izj-SI-lYc"/>
                         <outlet property="takePhotoButton" destination="bdc-Gb-Pr8" id="6fk-7V-ptN"/>
                         <outlet property="textFieldMenu" destination="nG3-EQ-UGR" id="6yW-1P-lNV"/>
