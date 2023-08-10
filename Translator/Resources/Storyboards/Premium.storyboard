@@ -123,6 +123,9 @@
                                 <rect key="frame" x="19" y="630" width="335" height="60"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="subButtonBorder"/>
+                                <connections>
+                                    <action selector="buyNowButtonDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="UHJ-YZ-3Hg"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>

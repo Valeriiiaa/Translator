@@ -97,7 +97,7 @@
                         <constraint firstAttribute="width" constant="272" id="qz6-x5-QKg"/>
                     </constraints>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                    <state key="normal" image="subButtonBorder">
+                    <state key="normal" backgroundImage="subButtonBorder">
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>

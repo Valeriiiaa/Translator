@@ -9,7 +9,7 @@ import Foundation
 import SwiftyStoreKit
 
 enum Products: String {
-    case support = "translatorSub_1"
+    case support = "com.translator.premium"
 }
 
 enum IAPStatus {

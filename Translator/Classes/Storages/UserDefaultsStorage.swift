@@ -12,6 +12,8 @@ enum LocalKey: String {
     case originalLanguage
     case translatedLanguage
     case history
+    case countOfClosePremium
+    case countOfOpens
 }
 
 class UserDefaultsStorage {

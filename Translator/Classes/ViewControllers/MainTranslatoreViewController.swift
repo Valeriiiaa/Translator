@@ -25,6 +25,10 @@ class MainTranslatoreViewController: UIViewController, UIImagePickerControllerDe
         LanguageManager(storage: self.storage)
     }()
     
+    private lazy var attManager: AppTrackingTransparencyManager = {
+        .init()
+    }()
+    
     var models = [MainTranslatoreModel(text: "Text", image: ImageManager.getImage(by: "text")),MainTranslatoreModel(text: "Voice", image: ImageManager.getImage(by: "voice")), MainTranslatoreModel(text: "Camera", image: ImageManager.getImage(by: "camera")), MainTranslatoreModel(text: "Import", image: ImageManager.getImage(by: "import"))]
     
     override func viewDidLoad() {
@@ -37,6 +41,11 @@ class MainTranslatoreViewController: UIViewController, UIImagePickerControllerDe
             noAdsLabel.isHidden = true
             adsSwitcher.isHidden = true
         } else {
+        }
+        
+        Task { [weak self] in
+            guard let self else { return }
+            _ = await self.attManager.requestPermission()
         }
     }
     

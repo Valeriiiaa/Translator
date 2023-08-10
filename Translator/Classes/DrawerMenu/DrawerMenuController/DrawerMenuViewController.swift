@@ -15,7 +15,7 @@ class DrawerMenuViewController: UIViewController, UITableViewDelegate, UITableVi
     
     private var previousVC: UIViewController?
     
-    private let storage = UserDefaultsStorage.shared
+    public let storage = UserDefaultsStorage.shared
     
     let transitionManager = DrawerTransitionManager()
     init() {

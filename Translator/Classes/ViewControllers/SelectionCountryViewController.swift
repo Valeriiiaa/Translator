@@ -57,7 +57,6 @@ class SelectionCountryViewController: UIViewController {
     }
     
     private func configureCountries() {
-        let languageForRemove = isOriginalLanguage ? languageManager.translatedLanguage : languageManager.originalLanguage
         var allCountries = countyRepository.languages.sorted(by: { $0.key < $1.key })
             .map({ language in
                 let selectedLanguage = isOriginalLanguage ? languageManager.originalLanguage : languageManager.translatedLanguage
@@ -71,7 +70,6 @@ class SelectionCountryViewController: UIViewController {
                 }
                 return selectionCountryModel
             })
-        allCountries.removeAll(where: { $0.key == languageForRemove.key })
         allItems = [SectionModel(title: "All languages", countryModels: allCountries)]
         tableViewSection.reloadData()
     }

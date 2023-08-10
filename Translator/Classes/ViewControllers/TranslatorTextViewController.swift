@@ -12,6 +12,7 @@ import Combine
 import SwiftEntryKit
 import AVFoundation
 import Hero
+import AppTrackingTransparency
 
 class TranslatorTextViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var noAdsLabel: UILabel!
@@ -61,7 +62,7 @@ class TranslatorTextViewController: UIViewController, UITextViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
         switch UIDevice.current.userInterfaceIdiom {
         case .phone:
             backgroundMainView.layer.cornerRadius = 15
@@ -113,6 +114,7 @@ class TranslatorTextViewController: UIViewController, UITextViewDelegate {
         getTextView.layer.borderWidth = 2
         getTextView.layer.borderColor = UIColor(red: 112/255, green: 139/255, blue: 194/255, alpha: 1).cgColor
         getTextView.layer.masksToBounds = true
+        getTextView.isHidden = true
         bind()
         
         if UserManager.shared.isPremium {
@@ -154,12 +156,17 @@ class TranslatorTextViewController: UIViewController, UITextViewDelegate {
     
     private func translate() {
         guard let text = textViewTypeText.text else { return }
+        let originalLanguage = languageManager.originalLanguage.key
+        let translatedLanguage = languageManager.translatedLanguage.key
+        getTextView.isHidden = false
+        guard originalLanguage != translatedLanguage else {
+            textViewGetText.text = text
+            return
+        }
         
         Task { @MainActor [weak self] in
             guard let self else { return }
             do {
-                let originalLanguage = self.languageManager.originalLanguage.key
-                let translatedLanguage = self.languageManager.translatedLanguage.key
                 let translatedText = try await self.translator.translate(text: text, from: originalLanguage.rawValue, to: translatedLanguage.rawValue)
                 self.textViewGetText.text = translatedText
                 let historyModel = HistoryFullModel(id: "2", originalText: text, translatedText: translatedText, firstFlag: self.languageManager.originalLanguage.key.rawValue, secondFlag: self.languageManager.translatedLanguage.key.rawValue, firstLanguageLabel: originalLanguage.name, secondLanguageLabel: translatedLanguage.name)
@@ -231,10 +238,12 @@ class TranslatorTextViewController: UIViewController, UITextViewDelegate {
         }
     }
     
-   @IBAction func deleteTypeTextDidTap(_ sender: Any) {
+    @IBAction func deleteTypeTextDidTap(_ sender: Any) {
         textViewTypeText.text = ""
         textViewGetText.text = ""
         overlayView.isHidden = false
+        getTextView.isHidden = true
+        
         stopSpeaking()
     }
     
@@ -337,14 +346,14 @@ class TranslatorTextViewController: UIViewController, UITextViewDelegate {
     
     @IBAction func fullScreenDidTap(_ sender: Any) {
         guard textViewGetText.text.isEmpty == false else { return }
-            let vc = StoryboardFabric.getStoryboard(by: "TranslatorText").instantiateViewController(identifier: "FullScreenTextViewController")
-            (vc as? FullScreenTextViewController)?.translatedText = textViewGetText.text
-            vc.hero.isEnabled = true
-            vc.modalPresentationStyle = .fullScreen
-            vc.view.heroModifiers = [.contentsRect(getTextView.frame), .useNormalSnapshot, .cascade, .arc()]
-            vc.hero.modalAnimationType = .autoReverse(presenting: .fade)
-            present(vc, animated: true)
-        }
+        let vc = StoryboardFabric.getStoryboard(by: "TranslatorText").instantiateViewController(identifier: "FullScreenTextViewController")
+        (vc as? FullScreenTextViewController)?.translatedText = textViewGetText.text
+        vc.hero.isEnabled = true
+        vc.modalPresentationStyle = .fullScreen
+        vc.view.heroModifiers = [.contentsRect(getTextView.frame), .useNormalSnapshot, .cascade, .arc()]
+        vc.hero.modalAnimationType = .autoReverse(presenting: .fade)
+        present(vc, animated: true)
+    }
     
     
     @IBAction func listenTextButtondidTap(_ sender: Any) {
