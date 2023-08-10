@@ -52,11 +52,14 @@
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KJz-N9-afL" customClass="PVSwitch" customModule="Translator" customModuleProvider="target">
                                         <rect key="frame" x="51.666666666666657" y="0.0" width="58" height="31"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="31" id="P12-Lc-efv"/>
                                             <constraint firstAttribute="width" constant="58" id="xfp-z5-IJU"/>
                                         </constraints>
+                                        <connections>
+                                            <action selector="valueDidTap:" destination="Y6W-OH-hqX" eventType="valueChanged" id="c9O-fb-1LY"/>
+                                        </connections>
                                     </view>
                                 </subviews>
                             </stackView>
@@ -128,6 +131,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="adsSwitcher" destination="KJz-N9-afL" id="YnX-Ls-loH"/>
                         <outlet property="backgroundViewEraser" destination="TVU-pv-kb7" id="kXa-bx-Ug6"/>
                         <outlet property="eraserButton" destination="qVD-qp-Pcr" id="3Hw-Z7-uk4"/>
                         <outlet property="historyLabel" destination="bxv-Sa-j9g" id="Oj1-az-31B"/>

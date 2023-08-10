@@ -1563,7 +1563,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 6;
-				DEVELOPMENT_TEAM = FSWN37F2HA;
+				DEVELOPMENT_TEAM = 8M56J59P6Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Translator/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Voice Translator Camera & Text";
@@ -1601,7 +1601,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 6;
-				DEVELOPMENT_TEAM = FSWN37F2HA;
+				DEVELOPMENT_TEAM = 8M56J59P6Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Translator/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Voice Translator Camera & Text";

@@ -43,7 +43,7 @@
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aaa-jR-sRt" customClass="PVSwitch" customModule="Translator" customModuleProvider="target">
                                         <rect key="frame" x="51.666666666666686" y="0.0" width="58" height="31"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="31" id="fJQ-8M-8mG"/>
                                             <constraint firstAttribute="width" constant="58" id="igf-Wp-p75"/>
@@ -220,7 +220,7 @@
                                         </connections>
                                     </button>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qQr-9B-JUS">
-                                        <rect key="frame" x="20" y="20" width="273" height="100"/>
+                                        <rect key="frame" x="20" y="20" width="308" height="100"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="GA4-z3-vF1"/>
@@ -241,7 +241,7 @@
                                     <constraint firstItem="p7o-ga-cDX" firstAttribute="top" secondItem="Mey-A2-hC1" secondAttribute="bottom" constant="15" id="ZSI-no-AnU"/>
                                     <constraint firstAttribute="trailing" secondItem="rwd-J4-1XE" secondAttribute="trailing" constant="20" id="d9q-Rk-dHX"/>
                                     <constraint firstAttribute="trailing" secondItem="6XZ-ih-BUW" secondAttribute="trailing" constant="18" id="gWO-cM-KkB"/>
-                                    <constraint firstItem="6XZ-ih-BUW" firstAttribute="leading" secondItem="qQr-9B-JUS" secondAttribute="trailing" constant="35" id="imM-2Y-fjj"/>
+                                    <constraint firstItem="6XZ-ih-BUW" firstAttribute="leading" secondItem="qQr-9B-JUS" secondAttribute="trailing" id="imM-2Y-fjj"/>
                                     <constraint firstItem="p7o-ga-cDX" firstAttribute="leading" secondItem="Sph-WV-O2l" secondAttribute="leading" constant="22" id="jIB-Jb-ze0"/>
                                     <constraint firstItem="qQr-9B-JUS" firstAttribute="leading" secondItem="Sph-WV-O2l" secondAttribute="leading" constant="20" id="klD-J2-rF8"/>
                                 </constraints>
@@ -326,7 +326,7 @@
                                         </connections>
                                     </button>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LPj-aJ-bUu">
-                                        <rect key="frame" x="20" y="20" width="273" height="100"/>
+                                        <rect key="frame" x="20" y="20" width="308" height="100"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="txI-YB-iYy"/>
@@ -352,7 +352,7 @@
                                     <constraint firstAttribute="bottom" secondItem="oe8-VA-ml4" secondAttribute="bottom" constant="45" id="bWv-dg-lNM"/>
                                     <constraint firstItem="iT2-PB-CeO" firstAttribute="top" secondItem="oe8-VA-ml4" secondAttribute="bottom" constant="15" id="bZo-GF-NXi"/>
                                     <constraint firstAttribute="trailing" secondItem="KrG-WT-Zvc" secondAttribute="trailing" constant="20" id="cRm-ko-wOr"/>
-                                    <constraint firstItem="WYo-AN-i3b" firstAttribute="leading" secondItem="LPj-aJ-bUu" secondAttribute="trailing" constant="35" id="eht-Yf-dkD"/>
+                                    <constraint firstItem="WYo-AN-i3b" firstAttribute="leading" secondItem="LPj-aJ-bUu" secondAttribute="trailing" id="eht-Yf-dkD"/>
                                     <constraint firstAttribute="height" constant="177" id="ifH-Cm-ula"/>
                                     <constraint firstItem="WYo-AN-i3b" firstAttribute="top" secondItem="AHX-kf-2zx" secondAttribute="top" constant="15" id="qgm-kc-klG"/>
                                     <constraint firstAttribute="trailing" secondItem="WYo-AN-i3b" secondAttribute="trailing" constant="18" id="rdd-13-F6s"/>
@@ -464,7 +464,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bqc-ac-MQe">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bqc-ac-MQe">
                                 <rect key="frame" x="20" y="129" width="353" height="669"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">Йога - це духовна та фізична практика, яка виникла в давній Індії. Практика йоги включає різноманітні пози, вправи дихання та медитаційні техніки, які сприяють фізичній силі, гнучкості та релаксації. Також вірять, що йога має безліч корисних впливів на ментальне здоров'я, такі як зниження стресу, тривоги та депресії, покращення загального самопочуття. Останнім часом йога стала дедалі популярнішою у всьому світі як форма вправ та практики </string>
@@ -489,7 +489,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qTv-xD-dV0"/>
-                        <color key="backgroundColor" red="0.12941176470588234" green="0.17254901960784313" blue="0.27058823529411763" alpha="0.94999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.12941176470588234" green="0.17254901960784313" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="bqc-ac-MQe" firstAttribute="leading" secondItem="qTv-xD-dV0" secondAttribute="leading" constant="20" id="0d2-rd-ywj"/>
                             <constraint firstItem="T61-h8-Fhu" firstAttribute="top" secondItem="qTv-xD-dV0" secondAttribute="top" constant="20" id="9ya-gy-ysL"/>

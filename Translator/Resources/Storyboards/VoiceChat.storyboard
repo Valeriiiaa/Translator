@@ -199,7 +199,7 @@
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M51-WP-Er8" customClass="PVSwitch" customModule="Translator" customModuleProvider="target">
                                         <rect key="frame" x="51.666666666666686" y="0.0" width="58" height="31"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="31" id="rnA-Xc-mZV"/>
                                             <constraint firstAttribute="width" constant="58" id="x97-c4-w5p"/>

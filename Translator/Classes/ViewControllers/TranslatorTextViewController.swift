@@ -225,7 +225,7 @@ class TranslatorTextViewController: UIViewController, UITextViewDelegate {
     
     @IBAction func pasteTextButton(_ sender: Any) {
         if let clipboardText = UIPasteboard.general.string {
-            textViewTypeText.text = clipboardText
+            textViewTypeText.text += clipboardText
             overlayView.isHidden = true
             stopSpeaking()
         }
@@ -315,6 +315,7 @@ class TranslatorTextViewController: UIViewController, UITextViewDelegate {
     }
     
     @IBAction func copyTextDidTap(_ sender: Any) {
+        guard textViewGetText.text.isEmpty == false else { return }
         UIPasteboard.general.string = textViewGetText.text
         IHProgressHUD.showSuccesswithStatus("Text was copied")
         IHProgressHUD.dismissWithDelay(0.5)
@@ -335,16 +336,19 @@ class TranslatorTextViewController: UIViewController, UITextViewDelegate {
     }
     
     @IBAction func fullScreenDidTap(_ sender: Any) {
-        let vc = StoryboardFabric.getStoryboard(by: "TranslatorText").instantiateViewController(identifier: "FullScreenTextViewController")
-        (vc as? FullScreenTextViewController)?.translatedText = textViewGetText.text
-        vc.hero.isEnabled = true
-        vc.modalPresentationStyle = .fullScreen
-        vc.view.heroModifiers = [.contentsRect(getTextView.frame), .useNormalSnapshot, .cascade, .arc()]
-        vc.hero.modalAnimationType = .autoReverse(presenting: .fade)
-        present(vc, animated: true)
-    }
+        guard textViewGetText.text.isEmpty == false else { return }
+            let vc = StoryboardFabric.getStoryboard(by: "TranslatorText").instantiateViewController(identifier: "FullScreenTextViewController")
+            (vc as? FullScreenTextViewController)?.translatedText = textViewGetText.text
+            vc.hero.isEnabled = true
+            vc.modalPresentationStyle = .fullScreen
+            vc.view.heroModifiers = [.contentsRect(getTextView.frame), .useNormalSnapshot, .cascade, .arc()]
+            vc.hero.modalAnimationType = .autoReverse(presenting: .fade)
+            present(vc, animated: true)
+        }
+    
     
     @IBAction func listenTextButtondidTap(_ sender: Any) {
+        stopSpeaking()
         let utterance = AVSpeechUtterance(string: textViewGetText.text)
         utterance.voice = AVSpeechSynthesisVoice(language: languageManager.translatedLanguage.key.rawValue)!
         utterance.rate = 0.4

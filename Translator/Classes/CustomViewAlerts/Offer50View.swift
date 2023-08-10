@@ -38,6 +38,7 @@ class Offer50View: UIView {
         
     }
     @IBAction func buyNowButtonDidTap(_ sender: Any) {
+        
     }
     @IBAction func closeButtonDidTap(_ sender: Any) {
     }

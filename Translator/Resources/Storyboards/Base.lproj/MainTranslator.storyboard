@@ -58,7 +58,7 @@
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kif-fm-jpU" customClass="PVSwitch" customModule="Translator" customModuleProvider="target">
                                         <rect key="frame" x="54.666666666666686" y="0.0" width="58" height="31"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="58" id="1KO-ZP-Hoy"/>
                                             <constraint firstAttribute="height" constant="31" id="Ywz-OU-cFL"/>
