@@ -11,6 +11,7 @@ import CropViewController
 import IHProgressHUD
 
 class CameraEditPhotoViewController: UIViewController {
+  
     @IBOutlet weak var arrowDownWhiteButton: UIButton!
     @IBOutlet weak var bottomStuckConstraint: NSLayoutConstraint!
     @IBOutlet weak var textFieldMenu: TextField!
