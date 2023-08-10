@@ -14,6 +14,8 @@ import AVFoundation
 import Hero
 
 class TranslatorTextViewController: UIViewController, UITextViewDelegate {
+   
+    @IBOutlet weak var noAdsLabel: UILabel!
     @IBOutlet weak var translatedFlagImage: UIImageView!
     @IBOutlet weak var translatedTextLabel: UILabel!
     @IBOutlet weak var originalFlagImage: UIImageView!
@@ -112,6 +114,12 @@ class TranslatorTextViewController: UIViewController, UITextViewDelegate {
         getTextView.layer.borderColor = UIColor(red: 112/255, green: 139/255, blue: 194/255, alpha: 1).cgColor
         getTextView.layer.masksToBounds = true
         bind()
+        
+        if UserManager.shared.isPremium {
+            noAdsLabel.isHidden = true
+            adsSwitcher.isHidden = true
+        } else {
+        }
         
         guard let text,
               !text.isEmpty else { return }

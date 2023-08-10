@@ -116,6 +116,7 @@
                         <outlet property="adsSwitcher" destination="kif-fm-jpU" id="MyS-h0-g8J"/>
                         <outlet property="collectionCell" destination="emY-b6-g7q" id="Tkd-hv-DrX"/>
                         <outlet property="menuButton" destination="pgv-Rd-uzk" id="ggW-Rw-Uct"/>
+                        <outlet property="noAdsLabel" destination="cCw-Nn-lpS" id="bOc-gm-K4Q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

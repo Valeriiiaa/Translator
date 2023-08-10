@@ -15,7 +15,9 @@ import Speech
 import Hero
 
 class VoiceChatViewController: UIViewController {
+   
     @IBOutlet weak var backgroundEraserView: UIView!
+    @IBOutlet weak var noAdsLabel: UILabel!
     @IBOutlet weak var eraserButton: UIButton!
     @IBOutlet weak var orangeMicButton: UIButton!
     @IBOutlet weak var blueMicButton: UIButton!
@@ -46,6 +48,12 @@ class VoiceChatViewController: UIViewController {
         tableViewChat.register(UINib(nibName: CellManager.getCell(by: "EmptyChatCell") , bundle: nil), forCellReuseIdentifier: CellManager.getCell(by: "EmptyChatCell"))
         checkMessageModels()
         bind()
+        
+        if UserManager.shared.isPremium {
+            noAdsLabel.isHidden = true
+            adsSwitcher.isHidden = true
+        } else {
+        }
     }
    
     override func viewWillDisappear(_ animated: Bool) {

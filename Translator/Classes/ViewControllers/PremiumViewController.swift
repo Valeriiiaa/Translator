@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import IHProgressHUD
 
 class PremiumViewController: UIViewController {
     
@@ -50,6 +51,27 @@ class PremiumViewController: UIViewController {
         self.navigationController?.setViewControllers([entarcen], animated: true)
     }
     
+    @IBAction func restorePurchasesDidTap(_ sender: Any) {
+        IHProgressHUD.show()
+        Task { [weak self] in
+            do {
+                let result = try await IAPManager.shared.restorePurchases()
+                IHProgressHUD.dismissWithDelay(0.2)
+            }
+            catch {
+                print("[log] restore Error \(error)")
+            }
+        }
+    }
+  
     @IBAction func buyNowButtonDidTap(_ sender: Any) {
+        Task { [weak self] in
+            do {
+                let result = try await IAPManager.shared.buyStandartPack()
+            }
+            catch {
+                print("[log] restore Error \(error)")
+            }
+        }
     }
 }

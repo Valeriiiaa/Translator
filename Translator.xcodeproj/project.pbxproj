@@ -86,6 +86,9 @@
 		F6A1BE322A7FB2E1003CE35F /* GoogleMic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A1BE312A7FB2E1003CE35F /* GoogleMic.swift */; };
 		F6A1BE352A7FBD86003CE35F /* MessagesEmptyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A1BE342A7FBD86003CE35F /* MessagesEmptyModel.swift */; };
 		F6A1BE372A7FBDA7003CE35F /* BaseMessagesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A1BE362A7FBDA7003CE35F /* BaseMessagesModel.swift */; };
+		F6A1BE3A2A84D7C9003CE35F /* SwiftyStoreKit in Frameworks */ = {isa = PBXBuildFile; productRef = F6A1BE392A84D7C9003CE35F /* SwiftyStoreKit */; };
+		F6A1BE3C2A84D801003CE35F /* IAPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A1BE3B2A84D801003CE35F /* IAPManager.swift */; };
+		F6A1BE3E2A84DABC003CE35F /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A1BE3D2A84DABC003CE35F /* UserManager.swift */; };
 		F6B170472A6E93B2002A7BD2 /* MainTranslatorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B170462A6E93B2002A7BD2 /* MainTranslatorCell.swift */; };
 		F6B1704B2A6E93EC002A7BD2 /* MainTranslatorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6B1704A2A6E93EC002A7BD2 /* MainTranslatorCell.xib */; };
 		F6BE51642A725EC900625E62 /* CameraTranslator.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6BE51632A725EC900625E62 /* CameraTranslator.storyboard */; };
@@ -254,6 +257,8 @@
 		F6A1BE312A7FB2E1003CE35F /* GoogleMic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMic.swift; sourceTree = "<group>"; };
 		F6A1BE342A7FBD86003CE35F /* MessagesEmptyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesEmptyModel.swift; sourceTree = "<group>"; };
 		F6A1BE362A7FBDA7003CE35F /* BaseMessagesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseMessagesModel.swift; sourceTree = "<group>"; };
+		F6A1BE3B2A84D801003CE35F /* IAPManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPManager.swift; sourceTree = "<group>"; };
+		F6A1BE3D2A84DABC003CE35F /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		F6B170462A6E93B2002A7BD2 /* MainTranslatorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTranslatorCell.swift; sourceTree = "<group>"; };
 		F6B1704A2A6E93EC002A7BD2 /* MainTranslatorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTranslatorCell.xib; sourceTree = "<group>"; };
 		F6BE51632A725EC900625E62 /* CameraTranslator.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CameraTranslator.storyboard; sourceTree = "<group>"; };
@@ -328,6 +333,7 @@
 				F61E496F2A7AAF2C00D1EA49 /* IHProgressHUD in Frameworks */,
 				F625F6E82A78FA2D0040F1A3 /* Switches in Frameworks */,
 				11F6FF7F2A83BC030050EB2F /* TOCropViewController in Frameworks */,
+				F6A1BE3A2A84D7C9003CE35F /* SwiftyStoreKit in Frameworks */,
 				F60A5A702A6FDFD200E04862 /* SwiftEntryKit in Frameworks */,
 				11203A5E2A7BBE8700452843 /* Swinject in Frameworks */,
 				11F6FF722A8242DE0050EB2F /* Hero in Frameworks */,
@@ -361,6 +367,8 @@
 				11203A5F2A7D053000452843 /* LanguageManager.swift */,
 				11F6FF802A83CA650050EB2F /* SpeechManager.swift */,
 				11F6FF822A83CAA80050EB2F /* TextDetectionManager.swift */,
+				F6A1BE3B2A84D801003CE35F /* IAPManager.swift */,
+				F6A1BE3D2A84DABC003CE35F /* UserManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -947,6 +955,7 @@
 				11F6FF712A8242DE0050EB2F /* Hero */,
 				11F6FF7C2A83BC030050EB2F /* CropViewController */,
 				11F6FF7E2A83BC030050EB2F /* TOCropViewController */,
+				F6A1BE392A84D7C9003CE35F /* SwiftyStoreKit */,
 			);
 			productName = Translator;
 			productReference = F6DE20B22A6E6A7F003F49F4 /* Translator.app */;
@@ -1031,6 +1040,7 @@
 				11203A5C2A7BBE8700452843 /* XCRemoteSwiftPackageReference "Swinject" */,
 				11F6FF702A8242DE0050EB2F /* XCRemoteSwiftPackageReference "Hero" */,
 				11F6FF7B2A83BC030050EB2F /* XCRemoteSwiftPackageReference "TOCropViewController" */,
+				F6A1BE382A84D7C9003CE35F /* XCRemoteSwiftPackageReference "SwiftyStoreKit" */,
 			);
 			productRefGroup = F6DE20B32A6E6A7F003F49F4 /* Products */;
 			projectDirPath = "";
@@ -1310,10 +1320,12 @@
 				11203A632A7D060600452843 /* UserDefaultsStorage.swift in Sources */,
 				F6DE20B62A6E6A7F003F49F4 /* AppDelegate.swift in Sources */,
 				F68C370A2A7148A100AD0A1F /* SectionCountryCell.swift in Sources */,
+				F6A1BE3E2A84DABC003CE35F /* UserManager.swift in Sources */,
 				F6D2C8B22A7004A200F7D7EF /* TextField.swift in Sources */,
 				F6D623112A6FD51900D24F16 /* Offer30View.swift in Sources */,
 				F6A1BE372A7FBDA7003CE35F /* BaseMessagesModel.swift in Sources */,
 				F6D2C8D52A71206D00F7D7EF /* LeftMessagesCell.swift in Sources */,
+				F6A1BE3C2A84D801003CE35F /* IAPManager.swift in Sources */,
 				F625F6B22A76B2DA0040F1A3 /* StoryboardFabric.swift in Sources */,
 				F6DDCBCF2A6FFB81007B51EE /* ClearHistoryView.swift in Sources */,
 				F6D622FF2A6FCC8600D24F16 /* HistoryFullTableViewCell.swift in Sources */,
@@ -1519,7 +1531,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 5;
-				DEVELOPMENT_TEAM = FSWN37F2HA;
+				DEVELOPMENT_TEAM = 8M56J59P6Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Translator/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Voice Translator Camera & Text";
@@ -1557,7 +1569,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 5;
-				DEVELOPMENT_TEAM = FSWN37F2HA;
+				DEVELOPMENT_TEAM = 8M56J59P6Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Translator/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Voice Translator Camera & Text";
@@ -1755,6 +1767,14 @@
 				minimumVersion = 3.0.0;
 			};
 		};
+		F6A1BE382A84D7C9003CE35F /* XCRemoteSwiftPackageReference "SwiftyStoreKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/bizz84/SwiftyStoreKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.16.4;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1792,6 +1812,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = F625F6E62A78FA2D0040F1A3 /* XCRemoteSwiftPackageReference "Switch-Animations" */;
 			productName = Switches;
+		};
+		F6A1BE392A84D7C9003CE35F /* SwiftyStoreKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F6A1BE382A84D7C9003CE35F /* XCRemoteSwiftPackageReference "SwiftyStoreKit" */;
+			productName = SwiftyStoreKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

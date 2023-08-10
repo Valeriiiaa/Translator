@@ -12,6 +12,7 @@ import IHProgressHUD
 
 class HistoryViewController: UIViewController {
     
+    @IBOutlet weak var noAdsLabel: UILabel!
     @IBOutlet weak var backgroundViewEraser: UIView!
     @IBOutlet weak var adsSwitcher: YapSwitch!
     @IBOutlet weak var eraserButton: UIButton!
@@ -28,6 +29,12 @@ class HistoryViewController: UIViewController {
         tableView.dataSource = self
         tableView.register(UINib(nibName: CellManager.getCell(by: "HistoryEmptyCell") , bundle: nil), forCellReuseIdentifier: CellManager.getCell(by: "HistoryEmptyCell"))
         tableView.register(UINib(nibName: CellManager.getCell(by: "HistoryFullCell") , bundle: nil), forCellReuseIdentifier: CellManager.getCell(by: "HistoryFullCell"))
+        
+        if UserManager.shared.isPremium {
+            noAdsLabel.isHidden = true
+            adsSwitcher.isHidden = true
+        } else {
+        }
         
         let historyModels: [HistoryFullModel] = storage.get(key: .history, defaultValue: [])
         if historyModels.isEmpty == false {

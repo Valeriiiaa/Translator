@@ -38,16 +38,16 @@
                                     <outletCollection property="gestureRecognizers" destination="k1D-cY-6F1" appends="YES" id="EuV-c3-GTT"/>
                                 </connections>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jt2-Ao-eBi">
-                                <rect key="frame" x="250.33333333333337" y="70.666666666666671" width="100.66666666666663" height="31"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jt2-Ao-eBi">
+                                <rect key="frame" x="250.33333333333334" y="70.666666666666671" width="100.66666666666666" height="31"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="No ADS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cOt-IH-jSK">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No ADS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cOt-IH-jSK">
                                         <rect key="frame" x="0.0" y="0.0" width="41.666666666666664" height="31"/>
                                         <fontDescription key="fontDescription" name="FixelText-Medium" family="Fixel Text" pointSize="12"/>
                                         <color key="textColor" red="0.23137254901960785" green="0.27450980392156865" blue="0.41176470588235292" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RYD-ru-OgZ" customClass="YapSwitch" customModule="Switches">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RYD-ru-OgZ" customClass="YapSwitch" customModule="Switches">
                                         <rect key="frame" x="51.666666666666657" y="0.0" width="49" height="31"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
@@ -64,8 +64,8 @@
                                 <rect key="frame" x="0.0" y="128" width="375" height="684"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
-                            <view hidden="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TVU-pv-kb7">
-                                <rect key="frame" x="149" y="57" width="57" height="59"/>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TVU-pv-kb7">
+                                <rect key="frame" x="145" y="57" width="61" height="59"/>
                                 <subviews>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qVD-qp-Pcr">
                                         <rect key="frame" x="1" y="18" width="20" height="22"/>
@@ -88,7 +88,7 @@
                                     <outletCollection property="gestureRecognizers" destination="gIL-He-XVk" appends="YES" id="Bew-PD-4F7"/>
                                 </connections>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aTA-An-6Au">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aTA-An-6Au">
                                 <rect key="frame" x="24" y="74" width="24" height="24"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="back"/>
@@ -96,8 +96,8 @@
                                     <action selector="backButtonDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="OrB-J5-l7P"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="History" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bxv-Sa-j9g">
-                                <rect key="frame" x="79" y="68.333333333333329" width="66.666666666666686" height="35.666666666666671"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="History" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bxv-Sa-j9g">
+                                <rect key="frame" x="75" y="68.333333333333329" width="66.666666666666686" height="35.666666666666671"/>
                                 <fontDescription key="fontDescription" name="Sriracha-Regular" family="Sriracha" pointSize="20"/>
                                 <color key="textColor" name="LabelMiddle"/>
                                 <nil key="highlightedColor"/>
@@ -109,7 +109,6 @@
                             <constraint firstAttribute="bottom" secondItem="GD5-P9-TBR" secondAttribute="bottom" id="30R-ZJ-Cff"/>
                             <constraint firstItem="TVU-pv-kb7" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="7" id="4fL-Xz-t63"/>
                             <constraint firstItem="GD5-P9-TBR" firstAttribute="top" secondItem="TVU-pv-kb7" secondAttribute="bottom" constant="12" id="8iZ-bU-taF"/>
-                            <constraint firstItem="bxv-Sa-j9g" firstAttribute="leading" secondItem="aTA-An-6Au" secondAttribute="trailing" constant="31" id="DCb-KA-GwQ"/>
                             <constraint firstItem="aTA-An-6Au" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leadingMargin" constant="8" id="RYU-Lv-gaZ"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="GD5-P9-TBR" secondAttribute="trailing" id="ctR-El-mgW"/>
                             <constraint firstItem="TVU-pv-kb7" firstAttribute="leading" secondItem="bxv-Sa-j9g" secondAttribute="trailing" constant="3.3300000000000001" id="eyX-Du-s9K"/>
@@ -129,6 +128,7 @@
                         <outlet property="backgroundViewEraser" destination="TVU-pv-kb7" id="kXa-bx-Ug6"/>
                         <outlet property="eraserButton" destination="qVD-qp-Pcr" id="3Hw-Z7-uk4"/>
                         <outlet property="historyLabel" destination="bxv-Sa-j9g" id="Oj1-az-31B"/>
+                        <outlet property="noAdsLabel" destination="cOt-IH-jSK" id="OuD-gs-EZF"/>
                         <outlet property="tableView" destination="GD5-P9-TBR" id="Hcx-Fr-xwQ"/>
                     </connections>
                 </viewController>

@@ -261,6 +261,7 @@
                         <outlet property="eraserButton" destination="Zyb-Mb-UHh" id="m4E-Bl-kYl"/>
                         <outlet property="firstFlag" destination="pj8-00-q2f" id="VRl-bo-guC"/>
                         <outlet property="firstLabel" destination="E3Q-yv-yWx" id="K5e-52-6iI"/>
+                        <outlet property="noAdsLabel" destination="YNc-Sf-bYK" id="XhR-1H-69R"/>
                         <outlet property="orangeMicButton" destination="bz5-ov-Rha" id="PxI-VM-W9G"/>
                         <outlet property="secondFlag" destination="Lmb-Bb-pqO" id="mlh-ee-dHS"/>
                         <outlet property="secondLabel" destination="dcm-p3-KVV" id="oJ9-R4-h64"/>

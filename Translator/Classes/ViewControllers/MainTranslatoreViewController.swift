@@ -8,9 +8,11 @@
 import UIKit
 import Switches
 
-
-class MainTranslatoreViewController: UIViewController {
+class MainTranslatoreViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    var imagePicker = UIImagePickerController()
+    
+    @IBOutlet weak var noAdsLabel: UILabel!
     @IBOutlet weak var adsSwitcher: YapSwitchSlim!
     @IBOutlet weak var collectionCell: UICollectionView!
     @IBOutlet weak var menuButton: UIButton!
@@ -29,7 +31,13 @@ class MainTranslatoreViewController: UIViewController {
         super.viewDidLoad()
         collectionCell.dataSource = self
         collectionCell.delegate = self
-        collectionCell.register(UINib(nibName: "MainTranslatorCell", bundle: nil), forCellWithReuseIdentifier: "MainTranslatorCell")
+        collectionCell.register(UINib(nibName: "MainTranslatorCell", bundle: nil),forCellWithReuseIdentifier: "MainTranslatorCell")
+        
+        if UserManager.shared.isPremium {
+            noAdsLabel.isHidden = true
+            adsSwitcher.isHidden = true
+        } else {
+        }
     }
     
     func pushPremiumScreen() {
@@ -91,6 +99,12 @@ extension MainTranslatoreViewController: UICollectionViewDelegateFlowLayout, UIC
         } else if indexPath.row == 2 {
             let entrance = StoryboardFabric.getStoryboard(by: "CameraTranslator").instantiateViewController(identifier: "CameraTranslatorViewController")
             navigationController?.pushViewController(entrance, animated: true)
+        } else if indexPath.row == 3 {
+            guard UIImagePickerController.isSourceTypeAvailable(.photoLibrary) else { return }
+            imagePicker.delegate = self
+            imagePicker.sourceType = .photoLibrary
+            imagePicker.allowsEditing = false
+            present(imagePicker, animated: true, completion: nil)
         }
     }
     
@@ -101,5 +115,21 @@ extension MainTranslatoreViewController: UICollectionViewDelegateFlowLayout, UIC
         return cell
     }
     
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        picker.dismiss(animated: true, completion: nil)
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            pushAnotherScreen(image: image)
+        }
+        
+    }
+    
+    func pushAnotherScreen(image: UIImage) {
+        let entrance = StoryboardFabric.getStoryboard(by: "CameraEditPhoto").instantiateViewController(identifier: "CameraEditPhotoViewController")
+        (entrance as? CameraEditPhotoViewController)?.image = image
+        navigationController?.pushViewController(entrance, animated: true)
+    }
     
 }
+
+
+
