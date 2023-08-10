@@ -34,10 +34,10 @@ class PremiumViewController: UIViewController {
         switch UIDevice.current.userInterfaceIdiom {
         case .phone:
             backgroundTextView.layer.cornerRadius = 20
-           
+            
             
         default:  backgroundTextView.layer.cornerRadius = 30
-           
+            
         }
         
         backgroundTextView.layer.masksToBounds = true
@@ -94,11 +94,12 @@ class PremiumViewController: UIViewController {
             catch {
                 print("[log] restore Error \(error)")
                 IHProgressHUD.showError(withStatus: error.localizedDescription)
-                
+                IHProgressHUD.showError(withStatus: "No purchases yet")
+                IHProgressHUD.dismissWithDelay(0.5)
             }
         }
     }
-  
+    
     @IBAction func buyNowButtonDidTap(_ sender: Any) {
         IHProgressHUD.show()
         Task { [weak self] in
