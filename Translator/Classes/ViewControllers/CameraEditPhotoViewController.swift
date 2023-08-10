@@ -112,6 +112,23 @@ class CameraEditPhotoViewController: UIViewController {
         DrawerMenuViewController.shared.set(viewController: entrance)
     }
     
+    private func recognize() {
+        guard let image = croppedImage else { return }
+        Task { @MainActor [weak self, weak image] in
+            defer {
+                IHProgressHUD.dismiss()
+            }
+            guard let self else { return }
+            guard let image else { return }
+            do {
+                let text = try await textRecognizer.recognizeText(from: image)
+                self.openTranslateText(with: text)
+            } catch {
+                print("[log] text recognition error \(error.localizedDescription)")
+            }
+        }
+    }
+    
     @objc func keyboardWillShow(notification: NSNotification) {
         bottomStuckConstraint.constant = 200
         self.view.layoutIfNeeded()
@@ -145,21 +162,7 @@ class CameraEditPhotoViewController: UIViewController {
     
     @IBAction func checkmarkDidTap(_ sender: Any) {
         cropViewController?.commitCurrentCrop()
-        guard let image = croppedImage else { return }
         IHProgressHUD.show()
-        Task { @MainActor [weak self, weak image] in
-            defer {
-                IHProgressHUD.dismiss()
-            }
-            guard let self else { return }
-            guard let image else { return }
-            do {
-                let text = try await textRecognizer.recognizeText(from: image)
-                self.openTranslateText(with: text)
-            } catch {
-                print("[log] text recognition error \(error.localizedDescription)")
-            }
-        }
     }
     
     @IBAction func backButtonDidTap(_ sender: Any) {
@@ -169,7 +172,6 @@ class CameraEditPhotoViewController: UIViewController {
 }
 
 extension CameraEditPhotoViewController: UITextFieldDelegate {
-    
     func textField(_ searchBar: UISearchBar, textDidChange searchText: String) {
         defer { menuTableView.reloadData() }
         guard !searchText.isEmpty else {
@@ -208,6 +210,7 @@ extension CameraEditPhotoViewController: CropViewControllerDelegate {
     
     func cropViewController(_ cropViewController: CropViewController, didCropToImage image: UIImage, withRect cropRect: CGRect, angle: Int) {
         croppedImage = image
+        recognize()
     }
     
     func cropViewController(_ cropViewController: CropViewController, didCropToCircularImage image: UIImage, withRect cropRect: CGRect, angle: Int) {
