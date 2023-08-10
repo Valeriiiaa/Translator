@@ -145,6 +145,7 @@
                     <constraint firstAttribute="trailing" secondItem="BQm-dh-rbn" secondAttribute="trailing" constant="100" id="ape-xG-nRp"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="backgroundMessageView" destination="BQm-dh-rbn" id="zJA-6t-iZn"/>
                 <outlet property="labelText" destination="aBr-ss-vRc" id="YOm-kq-rjb"/>

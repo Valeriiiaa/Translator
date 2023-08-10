@@ -145,6 +145,7 @@
                     <constraint firstItem="5O1-pV-TDu" firstAttribute="leading" secondItem="hB5-Kq-6EB" secondAttribute="leading" constant="132" id="wgu-VQ-opv"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="backgorundMessagesView" destination="5O1-pV-TDu" id="Ofy-dM-AVA"/>
                 <outlet property="firstTextLabel" destination="Llv-Ba-0Rr" id="rBS-O4-19x"/>

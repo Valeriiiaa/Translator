@@ -10,7 +10,7 @@ import IHProgressHUD
 
 class PremiumViewController: UIViewController {
     
-    @IBOutlet weak var buyNowButton: UIButton!
+    
     @IBOutlet weak var backgroundTextView: UIView!
     @IBOutlet weak var backgroundPremiumView: UIView!
     
@@ -33,17 +33,17 @@ class PremiumViewController: UIViewController {
         switch UIDevice.current.userInterfaceIdiom {
         case .phone:
             backgroundTextView.layer.cornerRadius = 20
-            buyNowButton.layer.cornerRadius = 15
+           
             
         default:  backgroundTextView.layer.cornerRadius = 30
-            buyNowButton.layer.cornerRadius = 25
+           
         }
         
         backgroundTextView.layer.masksToBounds = true
-        buyNowButton.layer.masksToBounds = true
+       
         
-        gradient.frame = buyNowButton.bounds
-        buyNowButton.layer.insertSublayer(gradient, at: 0)
+//        gradient.frame = buyNowButton.bounds
+//        buyNowButton.layer.insertSublayer(gradient, at: 0)
     }
     
     @IBAction func closeButtonDidTap(_ sender: Any) {

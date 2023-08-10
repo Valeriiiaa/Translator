@@ -91,6 +91,7 @@
 		F6A1BE3E2A84DABC003CE35F /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A1BE3D2A84DABC003CE35F /* UserManager.swift */; };
 		F6A1BE402A84E3E9003CE35F /* Offer30View-ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6A1BE3F2A84E3E9003CE35F /* Offer30View-ipad.xib */; };
 		F6A1BE422A84E59C003CE35F /* Offer50View-ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6A1BE412A84E59C003CE35F /* Offer50View-ipad.xib */; };
+		F6A1BE452A854B2F003CE35F /* ImageWithoutWhite.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A1BE442A854B2F003CE35F /* ImageWithoutWhite.swift */; };
 		F6B170472A6E93B2002A7BD2 /* MainTranslatorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B170462A6E93B2002A7BD2 /* MainTranslatorCell.swift */; };
 		F6B1704B2A6E93EC002A7BD2 /* MainTranslatorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6B1704A2A6E93EC002A7BD2 /* MainTranslatorCell.xib */; };
 		F6BE51642A725EC900625E62 /* CameraTranslator.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6BE51632A725EC900625E62 /* CameraTranslator.storyboard */; };
@@ -263,6 +264,7 @@
 		F6A1BE3D2A84DABC003CE35F /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		F6A1BE3F2A84E3E9003CE35F /* Offer30View-ipad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "Offer30View-ipad.xib"; sourceTree = "<group>"; };
 		F6A1BE412A84E59C003CE35F /* Offer50View-ipad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "Offer50View-ipad.xib"; sourceTree = "<group>"; };
+		F6A1BE442A854B2F003CE35F /* ImageWithoutWhite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageWithoutWhite.swift; sourceTree = "<group>"; };
 		F6B170462A6E93B2002A7BD2 /* MainTranslatorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTranslatorCell.swift; sourceTree = "<group>"; };
 		F6B1704A2A6E93EC002A7BD2 /* MainTranslatorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTranslatorCell.xib; sourceTree = "<group>"; };
 		F6BE51632A725EC900625E62 /* CameraTranslator.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CameraTranslator.storyboard; sourceTree = "<group>"; };
@@ -669,6 +671,14 @@
 			path = MessagesClasses;
 			sourceTree = "<group>";
 		};
+		F6A1BE432A854B1A003CE35F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F6A1BE442A854B2F003CE35F /* ImageWithoutWhite.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		F6B170452A6E9376002A7BD2 /* ViewContollerCells */ = {
 			isa = PBXGroup;
 			children = (
@@ -814,6 +824,7 @@
 		F6DE20B42A6E6A7F003F49F4 /* Translator */ = {
 			isa = PBXGroup;
 			children = (
+				F6A1BE432A854B1A003CE35F /* Extensions */,
 				F6DE20C32A6E6A80003F49F4 /* Info.plist */,
 				F6DE20E72A6E6B14003F49F4 /* Classes */,
 				F6DE20E52A6E6AFB003F49F4 /* Resources */,
@@ -1300,6 +1311,7 @@
 				F6D5D97B2A75352E00A8053B /* SectionMenuCell.swift in Sources */,
 				F68C37102A71509800AD0A1F /* SectionModel.swift in Sources */,
 				11F6FF812A83CA650050EB2F /* SpeechManager.swift in Sources */,
+				F6A1BE452A854B2F003CE35F /* ImageWithoutWhite.swift in Sources */,
 				F6BE51662A72625B00625E62 /* CameraTranslatorViewController.swift in Sources */,
 				F6D623072A6FCEF500D24F16 /* HistoryEmptyModel.swift in Sources */,
 				F6D2C8CD2A711AB400F7D7EF /* VoiceChatViewController.swift in Sources */,
@@ -1539,7 +1551,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 6;
-				DEVELOPMENT_TEAM = FSWN37F2HA;
+				DEVELOPMENT_TEAM = 8M56J59P6Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Translator/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Voice Translator Camera & Text";
@@ -1577,7 +1589,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 6;
-				DEVELOPMENT_TEAM = FSWN37F2HA;
+				DEVELOPMENT_TEAM = 8M56J59P6Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Translator/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Voice Translator Camera & Text";

@@ -26,6 +26,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundSplash" translatesAutoresizingMaskIntoConstraints="NO" id="add-IA-37C">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7HN-27-bTA">
                                 <rect key="frame" x="24" y="758" width="345" height="50"/>
                                 <subviews>
@@ -209,7 +212,7 @@
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NyH-9k-HXt">
                                 <rect key="frame" x="0.0" y="123" width="393" height="568"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mBI-m1-4pp">
                                 <rect key="frame" x="170" y="75" width="73" height="43"/>
@@ -236,8 +239,11 @@
                         <constraints>
                             <constraint firstItem="NyH-9k-HXt" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="3Pb-WV-SSe"/>
                             <constraint firstItem="NyH-9k-HXt" firstAttribute="top" secondItem="mBI-m1-4pp" secondAttribute="bottom" constant="5" id="6TN-4H-9Mf"/>
+                            <constraint firstAttribute="bottom" secondItem="add-IA-37C" secondAttribute="bottom" id="6Uv-Oi-JSS"/>
                             <constraint firstItem="n9f-NI-AB6" firstAttribute="centerY" secondItem="rB2-KB-QcC" secondAttribute="centerY" id="752-Bw-C61"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="NyH-9k-HXt" secondAttribute="trailing" id="8v5-jS-rQc"/>
+                            <constraint firstItem="add-IA-37C" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="B00-rC-yZM"/>
+                            <constraint firstItem="add-IA-37C" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Bxv-2g-MlI"/>
                             <constraint firstItem="c8T-fx-b7A" firstAttribute="top" secondItem="NyH-9k-HXt" secondAttribute="bottom" constant="2" id="EJj-PJ-ePA"/>
                             <constraint firstItem="rB2-KB-QcC" firstAttribute="centerY" secondItem="g0N-2r-xAR" secondAttribute="centerY" id="NH8-Gf-3mw"/>
                             <constraint firstItem="7HN-27-bTA" firstAttribute="top" secondItem="c8T-fx-b7A" secondAttribute="bottom" constant="5" id="OAC-HQ-Rh8"/>
@@ -245,6 +251,7 @@
                             <constraint firstItem="kkA-w3-lfn" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="24" id="TqV-Nk-TlC"/>
                             <constraint firstItem="rB2-KB-QcC" firstAttribute="leading" secondItem="kkA-w3-lfn" secondAttribute="trailing" constant="21" id="WdO-M5-k8D"/>
                             <constraint firstItem="NyH-9k-HXt" firstAttribute="top" secondItem="rB2-KB-QcC" secondAttribute="bottom" constant="5" id="aXq-Uh-rhn"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="add-IA-37C" secondAttribute="trailing" id="b3X-oU-7lG"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="n9f-NI-AB6" secondAttribute="trailing" constant="15" id="eru-ZN-Ujv"/>
                             <constraint firstItem="Zyb-Mb-UHh" firstAttribute="centerY" secondItem="rB2-KB-QcC" secondAttribute="centerY" id="mek-8L-SrE"/>
                             <constraint firstItem="mBI-m1-4pp" firstAttribute="leading" secondItem="rB2-KB-QcC" secondAttribute="trailing" constant="2" id="rP6-zM-p1c"/>
@@ -257,6 +264,9 @@
                     <connections>
                         <outlet property="adsSwitcher" destination="M51-WP-Er8" id="jVG-Wx-PD0"/>
                         <outlet property="backgroundEraserView" destination="mBI-m1-4pp" id="lgo-3M-sI5"/>
+                        <outlet property="backgroundStuckView" destination="7HN-27-bTA" id="jee-pq-TcM"/>
+                        <outlet property="backgroundflagFirst" destination="oos-GP-Hdf" id="Whp-Wg-kol"/>
+                        <outlet property="backgroundflagSecond" destination="iaN-BW-pLr" id="x0w-WR-tJx"/>
                         <outlet property="blueMicButton" destination="UGw-09-cyx" id="1qO-Ve-F1A"/>
                         <outlet property="eraserButton" destination="Zyb-Mb-UHh" id="m4E-Bl-kYl"/>
                         <outlet property="firstFlag" destination="pj8-00-q2f" id="VRl-bo-guC"/>
@@ -291,6 +301,7 @@
     <resources>
         <image name="arrowDownBlue" width="16" height="16"/>
         <image name="back" width="24" height="24"/>
+        <image name="backgroundSplash" width="360" height="800"/>
         <image name="blueMic" width="60" height="60"/>
         <image name="eraser" width="20" height="20"/>
         <image name="flagUA" width="14" height="10"/>

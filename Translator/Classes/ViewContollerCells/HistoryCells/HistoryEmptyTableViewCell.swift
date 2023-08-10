@@ -9,15 +9,17 @@ import UIKit
 
 class HistoryEmptyTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var emptyCellImage: UIImageView!
+   
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        emptyCellImage.image = emptyCellImage.image?.imageByMakingWhiteBackgroundTransparent()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
+       
     }
 
 }

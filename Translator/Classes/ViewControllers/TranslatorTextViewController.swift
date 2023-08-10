@@ -62,6 +62,7 @@ class TranslatorTextViewController: UIViewController, UITextViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+       
         switch UIDevice.current.userInterfaceIdiom {
         case .phone:
             backgroundMainView.layer.cornerRadius = 15
@@ -316,7 +317,7 @@ class TranslatorTextViewController: UIViewController, UITextViewDelegate {
     
     @IBAction func copyTextDidTap(_ sender: Any) {
         UIPasteboard.general.string = textViewGetText.text
-        IHProgressHUD.showSuccesswithStatus("Translation copied")
+        IHProgressHUD.showSuccesswithStatus("Text was copied")
         IHProgressHUD.dismissWithDelay(0.5)
     }
     

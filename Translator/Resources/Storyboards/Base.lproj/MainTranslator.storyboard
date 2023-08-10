@@ -24,6 +24,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundSplash" translatesAutoresizingMaskIntoConstraints="NO" id="7xh-Xj-JjY">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="frL-pT-kzL">
                                 <rect key="frame" x="24" y="55" width="104" height="68"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -74,7 +77,7 @@
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="emY-b6-g7q">
                                 <rect key="frame" x="0.0" y="199.33333333333337" width="393" height="511"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ISl-k7-xdH">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -98,10 +101,13 @@
                         <constraints>
                             <constraint firstItem="emY-b6-g7q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6p0-pB-Tt7"/>
                             <constraint firstItem="gPq-sb-YD1" firstAttribute="top" secondItem="cCw-Nn-lpS" secondAttribute="bottom" constant="20" id="9Im-nt-Pie"/>
+                            <constraint firstAttribute="bottom" secondItem="7xh-Xj-JjY" secondAttribute="bottom" id="DgR-FQ-si5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VuI-qn-3Bp" secondAttribute="trailing" constant="15" id="GU5-SP-fxt"/>
                             <constraint firstItem="emY-b6-g7q" firstAttribute="top" secondItem="gPq-sb-YD1" secondAttribute="bottom" constant="19" id="J7R-lI-kaS"/>
                             <constraint firstItem="pgv-Rd-uzk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="PGE-mf-Po1"/>
+                            <constraint firstItem="7xh-Xj-JjY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="TkF-e5-9dA"/>
                             <constraint firstItem="cCw-Nn-lpS" firstAttribute="centerY" secondItem="pgv-Rd-uzk" secondAttribute="centerY" id="WrU-VO-S2w"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7xh-Xj-JjY" secondAttribute="trailing" id="afI-eF-Bwn"/>
                             <constraint firstItem="gPq-sb-YD1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="dUV-uo-BsC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gPq-sb-YD1" secondAttribute="trailing" constant="30" id="mCe-Qr-UI3"/>
                             <constraint firstItem="pgv-Rd-uzk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="oe1-L9-MQD"/>
@@ -110,6 +116,7 @@
                             <constraint firstItem="frL-pT-kzL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="vfp-Zq-mJC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="emY-b6-g7q" secondAttribute="trailing" id="vu2-lZ-UFQ"/>
                             <constraint firstItem="emY-b6-g7q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yPU-XH-AII"/>
+                            <constraint firstItem="7xh-Xj-JjY" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="zKA-mE-izG"/>
                         </constraints>
                     </view>
                     <connections>
@@ -130,6 +137,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="backgroundSplash" width="360" height="800"/>
         <image name="menu" width="24" height="24"/>
         <namedColor name="#5D6883">
             <color red="0.36500000953674316" green="0.40799999237060547" blue="0.51399999856948853" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

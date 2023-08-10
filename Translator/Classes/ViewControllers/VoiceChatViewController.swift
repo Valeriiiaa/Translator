@@ -16,6 +16,9 @@ import Hero
 
 class VoiceChatViewController: UIViewController {
    
+    @IBOutlet weak var backgroundflagSecond: UIView!
+    @IBOutlet weak var backgroundflagFirst: UIView!
+    @IBOutlet weak var backgroundStuckView: UIView!
     @IBOutlet weak var backgroundEraserView: UIView!
     @IBOutlet weak var noAdsLabel: UILabel!
     @IBOutlet weak var eraserButton: UIButton!
@@ -41,6 +44,21 @@ class VoiceChatViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        switch UIDevice.current.userInterfaceIdiom {
+        case .phone: backgroundStuckView.layer.cornerRadius = 15
+            backgroundflagFirst.layer.cornerRadius = 10
+            backgroundflagSecond.layer.cornerRadius = 10
+            
+        default: backgroundStuckView.layer.cornerRadius = 25
+            backgroundflagFirst.layer.cornerRadius = 20
+            backgroundflagSecond.layer.cornerRadius = 20
+        }
+        
+        backgroundStuckView.layer.masksToBounds = true
+        backgroundflagFirst.layer.masksToBounds = true
+        backgroundflagSecond.layer.masksToBounds = true
+       
         tableViewChat.dataSource = self
         tableViewChat.delegate = self
         tableViewChat.register(UINib(nibName: CellManager.getCell(by: "LeftMessagesCell") , bundle: nil), forCellReuseIdentifier: CellManager.getCell(by: "LeftMessagesCell"))

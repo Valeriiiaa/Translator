@@ -16,9 +16,6 @@
         <array key="FixelText-Regular.ttf">
             <string>FixelText-Regular</string>
         </array>
-        <array key="FixelText-SemiBold.ttf">
-            <string>FixelText-SemiBold</string>
-        </array>
     </customFonts>
     <scenes>
         <!--Premium View Controller-->
@@ -66,26 +63,11 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gain new experience just for $3,99 using our Voice Translator" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c3N-9M-coc">
                                 <rect key="frame" x="42" y="718" width="291" height="35"/>
                                 <fontDescription key="fontDescription" name="FixelText-Regular" family="Fixel Text" pointSize="16"/>
-                                <color key="textColor" name="LabelColorLight"/>
+                                <color key="textColor" name="#A0A8C4"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oWo-Mp-APu">
-                                <rect key="frame" x="12.666666666666657" y="638" width="350" height="52"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="52" id="OHe-0O-uWl"/>
-                                    <constraint firstAttribute="width" constant="350" id="hfF-Xc-lqe"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="FixelText-SemiBold" family="Fixel Text" pointSize="16"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="BUY NOW">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="buyNowButtonDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="iLQ-YK-cjA"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dya-fl-D2f">
-                                <rect key="frame" x="29" y="466" width="316" height="150"/>
+                                <rect key="frame" x="29" y="458" width="316" height="150"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="38" translatesAutoresizingMaskIntoConstraints="NO" id="uJe-dp-i5P">
                                         <rect key="frame" x="25" y="34" width="8" height="82"/>
@@ -135,24 +117,31 @@
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lifeTimeLabel" translatesAutoresizingMaskIntoConstraints="NO" id="ljI-dv-HIa">
-                                <rect key="frame" x="28" y="397" width="320" height="49"/>
+                                <rect key="frame" x="28" y="375" width="320" height="49"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gvt-IM-fVa">
+                                <rect key="frame" x="19" y="630" width="335" height="60"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="subButtonBorder"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Gvt-IM-fVa" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="19" id="04d-g5-gn1"/>
+                            <constraint firstItem="Gvt-IM-fVa" firstAttribute="top" secondItem="dya-fl-D2f" secondAttribute="bottom" constant="22" id="2C8-Bf-fGd"/>
                             <constraint firstAttribute="bottom" secondItem="pp3-nK-eBv" secondAttribute="bottom" id="35D-jL-6SL"/>
                             <constraint firstAttribute="trailing" secondItem="c3N-9M-coc" secondAttribute="trailing" constant="42" id="3R9-ft-r0g"/>
-                            <constraint firstItem="oWo-Mp-APu" firstAttribute="top" secondItem="dya-fl-D2f" secondAttribute="bottom" constant="22" id="4lq-vF-Mvf"/>
                             <constraint firstItem="pp3-nK-eBv" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="5EB-pn-drl"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="dya-fl-D2f" secondAttribute="trailing" constant="30" id="5WI-9U-amd"/>
-                            <constraint firstItem="dya-fl-D2f" firstAttribute="top" secondItem="ljI-dv-HIa" secondAttribute="bottom" constant="20" id="8kz-57-mjA"/>
+                            <constraint firstItem="dya-fl-D2f" firstAttribute="top" secondItem="ljI-dv-HIa" secondAttribute="bottom" constant="34" id="8kz-57-mjA"/>
+                            <constraint firstItem="c3N-9M-coc" firstAttribute="top" secondItem="Gvt-IM-fVa" secondAttribute="bottom" constant="28" id="BW5-fv-1OW"/>
                             <constraint firstItem="Ogh-KM-LlM" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="Fhv-x4-IHx"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ljI-dv-HIa" secondAttribute="trailing" constant="27" id="Ivx-ka-E9h"/>
                             <constraint firstAttribute="bottomMargin" secondItem="c3N-9M-coc" secondAttribute="bottom" constant="25" id="JvD-Lw-LT9"/>
-                            <constraint firstItem="oWo-Mp-APu" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="KKH-42-YKI"/>
                             <constraint firstItem="Fgt-OR-LYd" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="5" id="Ksn-aW-KRz"/>
                             <constraint firstItem="ljI-dv-HIa" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="28" id="SCk-Jr-alh"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Gvt-IM-fVa" secondAttribute="trailing" constant="21" id="TMo-KQ-QgB"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="pp3-nK-eBv" secondAttribute="trailing" id="VYR-DN-2q8"/>
                             <constraint firstItem="Fgt-OR-LYd" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leadingMargin" constant="8" id="Z3o-EF-qqI"/>
                             <constraint firstItem="PoQ-0N-Hd0" firstAttribute="centerY" secondItem="Fgt-OR-LYd" secondAttribute="centerY" id="ayh-zJ-gri"/>
@@ -160,13 +149,11 @@
                             <constraint firstItem="pp3-nK-eBv" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="kFb-7j-MdA"/>
                             <constraint firstItem="Ogh-KM-LlM" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="24" id="rHl-4o-ulX"/>
                             <constraint firstItem="c3N-9M-coc" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="42" id="rRa-b8-ije"/>
-                            <constraint firstItem="c3N-9M-coc" firstAttribute="top" secondItem="oWo-Mp-APu" secondAttribute="bottom" constant="28" id="uxS-tn-ptc"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="PoQ-0N-Hd0" secondAttribute="trailing" constant="24" id="z8R-ph-EXs"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="backgroundTextView" destination="dya-fl-D2f" id="m3d-xD-Ugh"/>
-                        <outlet property="buyNowButton" destination="oWo-Mp-APu" id="f9m-dW-ec9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -184,11 +171,12 @@
         <image name="lifeTimeLabel" width="322" height="49"/>
         <image name="premiumBackground" width="360" height="800"/>
         <image name="stick" width="8" height="2"/>
+        <image name="subButtonBorder" width="328" height="60"/>
+        <namedColor name="#A0A8C4">
+            <color red="0.62699997425079346" green="0.6589999794960022" blue="0.76899999380111694" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="BlueButton">
             <color red="0.31400001049041748" green="0.55699998140335083" blue="0.96100002527236938" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="LabelColorLight">
-            <color red="0.62699997425079346" green="0.6589999794960022" blue="0.76899999380111694" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="LabelDarkBlue">
             <color red="0.23499999940395355" green="0.28200000524520874" blue="0.3529999852180481" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

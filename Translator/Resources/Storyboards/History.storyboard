@@ -26,6 +26,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundSplash" translatesAutoresizingMaskIntoConstraints="NO" id="hKU-fw-7bh">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RQ0-Uu-8I4">
                                 <rect key="frame" x="10" y="54" width="61" height="59"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -62,13 +65,13 @@
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="GD5-P9-TBR">
                                 <rect key="frame" x="0.0" y="128" width="375" height="684"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TVU-pv-kb7">
-                                <rect key="frame" x="145" y="57" width="61" height="59"/>
+                                <rect key="frame" x="149" y="57" width="61" height="59"/>
                                 <subviews>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qVD-qp-Pcr">
-                                        <rect key="frame" x="1" y="18" width="20" height="22"/>
+                                        <rect key="frame" x="7" y="18" width="20" height="22"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" image="eraser"/>
                                         <connections>
@@ -82,7 +85,7 @@
                                     <constraint firstAttribute="width" constant="61" id="1ZH-39-Dw7"/>
                                     <constraint firstAttribute="height" constant="59" id="Hj1-y4-2jQ"/>
                                     <constraint firstItem="qVD-qp-Pcr" firstAttribute="top" secondItem="TVU-pv-kb7" secondAttribute="top" constant="18" id="IMF-Wv-Mxa"/>
-                                    <constraint firstItem="qVD-qp-Pcr" firstAttribute="leading" secondItem="TVU-pv-kb7" secondAttribute="leading" constant="1" id="UaU-qc-mUO"/>
+                                    <constraint firstItem="qVD-qp-Pcr" firstAttribute="leading" secondItem="TVU-pv-kb7" secondAttribute="leading" constant="7" id="UaU-qc-mUO"/>
                                 </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="gIL-He-XVk" appends="YES" id="Bew-PD-4F7"/>
@@ -97,7 +100,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="History" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bxv-Sa-j9g">
-                                <rect key="frame" x="75" y="68.333333333333329" width="66.666666666666686" height="35.666666666666671"/>
+                                <rect key="frame" x="79" y="68.333333333333329" width="66.666666666666686" height="35.666666666666671"/>
                                 <fontDescription key="fontDescription" name="Sriracha-Regular" family="Sriracha" pointSize="20"/>
                                 <color key="textColor" name="LabelMiddle"/>
                                 <nil key="highlightedColor"/>
@@ -109,13 +112,17 @@
                             <constraint firstAttribute="bottom" secondItem="GD5-P9-TBR" secondAttribute="bottom" id="30R-ZJ-Cff"/>
                             <constraint firstItem="TVU-pv-kb7" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="7" id="4fL-Xz-t63"/>
                             <constraint firstItem="GD5-P9-TBR" firstAttribute="top" secondItem="TVU-pv-kb7" secondAttribute="bottom" constant="12" id="8iZ-bU-taF"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="hKU-fw-7bh" secondAttribute="trailing" id="Gz0-gh-9EY"/>
                             <constraint firstItem="aTA-An-6Au" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leadingMargin" constant="8" id="RYU-Lv-gaZ"/>
+                            <constraint firstItem="bxv-Sa-j9g" firstAttribute="leading" secondItem="RQ0-Uu-8I4" secondAttribute="trailing" constant="8" id="ZwH-C6-O0v"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="GD5-P9-TBR" secondAttribute="trailing" id="ctR-El-mgW"/>
                             <constraint firstItem="TVU-pv-kb7" firstAttribute="leading" secondItem="bxv-Sa-j9g" secondAttribute="trailing" constant="3.3300000000000001" id="eyX-Du-s9K"/>
                             <constraint firstItem="bxv-Sa-j9g" firstAttribute="centerY" secondItem="aTA-An-6Au" secondAttribute="centerY" id="ghv-XM-sjD"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="jt2-Ao-eBi" secondAttribute="trailing" constant="24" id="hCf-jS-aaU"/>
+                            <constraint firstItem="hKU-fw-7bh" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="k7z-6M-ZiF"/>
                             <constraint firstItem="RQ0-Uu-8I4" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="10" id="kA2-LZ-zx5"/>
-                            <constraint firstItem="jt2-Ao-eBi" firstAttribute="leading" secondItem="TVU-pv-kb7" secondAttribute="trailing" constant="44.329999999999998" id="oL0-DU-tVt"/>
+                            <constraint firstAttribute="bottom" secondItem="hKU-fw-7bh" secondAttribute="bottom" id="mYO-bZ-gDm"/>
+                            <constraint firstItem="hKU-fw-7bh" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="nQf-Z7-YWL"/>
                             <constraint firstItem="jt2-Ao-eBi" firstAttribute="centerY" secondItem="bxv-Sa-j9g" secondAttribute="centerY" id="oUn-Gt-bXY"/>
                             <constraint firstItem="aTA-An-6Au" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="24" id="obo-H3-Xdb"/>
                             <constraint firstItem="RQ0-Uu-8I4" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="4" id="vrT-QW-cwv"/>
@@ -149,6 +156,7 @@
     </scenes>
     <resources>
         <image name="back" width="24" height="24"/>
+        <image name="backgroundSplash" width="360" height="800"/>
         <image name="eraser" width="20" height="20"/>
         <namedColor name="LabelMiddle">
             <color red="0.36500000953674316" green="0.40799999237060547" blue="0.51399999856948853" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

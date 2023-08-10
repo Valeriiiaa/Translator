@@ -60,6 +60,14 @@ class DrawerMenuViewController: UIViewController, UITableViewDelegate, UITableVi
         return label
     }()
     
+    private var backgroundSplashes: UIImageView = {
+        let image = UIImageView()
+        image.image = UIImage(named: "backgroundSplashDrawer")
+        image.translatesAutoresizingMaskIntoConstraints = false
+        return image
+    }()
+    
+    
     private var menuBottomLabel: UILabel = {
         let label = UILabel()
         label.text = "Gain new experience using\nour Voice Translator"
@@ -85,6 +93,7 @@ class DrawerMenuViewController: UIViewController, UITableViewDelegate, UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        view.addSubview(backgroundSplashes)
         view.addSubview(tableView)
         view.addSubview(closeButton)
         view.addSubview(menuLabel)
@@ -102,8 +111,13 @@ class DrawerMenuViewController: UIViewController, UITableViewDelegate, UITableVi
         menuBottomLabel.translatesAutoresizingMaskIntoConstraints = false
         menuBottomLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         menuBottomLabel.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -50).isActive = true
+        backgroundSplashes.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        backgroundSplashes.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        backgroundSplashes.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        backgroundSplashes.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         
     }
+    
     public func back() {
         drawerNavigationController?.setViewControllers([previousVC].compactMap({ $0 }), animated: true)
     }
@@ -141,9 +155,9 @@ class DrawerMenuViewController: UIViewController, UITableViewDelegate, UITableVi
         switch indexPath.row {
         case 0: openPremiumVC()
         case 1: openHistoryVC()
-        case 2: openHistoryVC()
+        case 2: shareIt()
         case 3: rateUs()
-        case 4: openHistoryVC()
+        case 4: shareIt()
         default: print ("ppp")
         }
     }
@@ -170,16 +184,11 @@ class DrawerMenuViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     private func shareIt() {
-        let entrance = StoryboardFabric.getStoryboard(by: "History").instantiateViewController(identifier: "HistoryViewController")
-        guard !(drawerNavigationController?.viewControllers.last is HistoryViewController) else {
-            dismiss(animated: true)
-            return
-        }
-        drawerNavigationController?.viewControllers = [entrance]
-        dismiss(animated: true)
+        
     }
     
     private func rateUs() {
         SKStoreReviewController.requestReview()
+        dismiss(animated: true)
     }
 }

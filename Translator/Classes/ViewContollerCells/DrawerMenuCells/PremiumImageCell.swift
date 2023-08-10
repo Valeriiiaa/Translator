@@ -9,10 +9,12 @@ import UIKit
 
 class PremiumImageCell: UITableViewCell {
 
+    @IBOutlet weak var premiumImage: UIImageView!
     @IBOutlet weak var buyNowButton: UIButton!
    
     override func awakeFromNib() {
         super.awakeFromNib()
+//        premiumImage.image = premiumImage.image?.imageByMakingWhiteBackgroundTransparent()
         
         switch UIDevice.current.userInterfaceIdiom {
         case .phone:

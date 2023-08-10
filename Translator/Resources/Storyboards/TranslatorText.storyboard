@@ -29,6 +29,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundSplash" translatesAutoresizingMaskIntoConstraints="NO" id="OOk-mh-Fto">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="KTy-eT-5G8">
                                 <rect key="frame" x="268.33333333333331" y="79.666666666666671" width="100.66666666666669" height="31"/>
                                 <subviews>
@@ -227,7 +230,7 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="Mey-A2-hC1" secondAttribute="trailing" constant="18" id="4ZO-Nc-fbD"/>
                                     <constraint firstItem="Mey-A2-hC1" firstAttribute="leading" secondItem="Sph-WV-O2l" secondAttribute="leading" constant="20" id="70v-19-Dbg"/>
@@ -333,7 +336,7 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="tNV-ti-vDA" firstAttribute="centerY" secondItem="KrG-WT-Zvc" secondAttribute="centerY" id="10h-jq-ayK"/>
                                     <constraint firstItem="D1A-1s-4Lm" firstAttribute="centerY" secondItem="tNV-ti-vDA" secondAttribute="centerY" id="5cj-oA-f4P"/>
@@ -391,10 +394,13 @@
                             <constraint firstItem="xTa-Du-i8J" firstAttribute="bottom" secondItem="Sph-WV-O2l" secondAttribute="bottom" constant="30" id="3Gz-lk-m0W"/>
                             <constraint firstItem="CTL-vC-Vay" firstAttribute="centerY" secondItem="muk-9g-vxq" secondAttribute="centerY" id="46Z-EJ-PBR"/>
                             <constraint firstItem="muk-9g-vxq" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leadingMargin" constant="8" id="4V0-mI-wSU"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="OOk-mh-Fto" secondAttribute="trailing" id="828-ee-d4j"/>
+                            <constraint firstAttribute="bottom" secondItem="OOk-mh-Fto" secondAttribute="bottom" id="978-Ro-o4y"/>
                             <constraint firstItem="CTL-vC-Vay" firstAttribute="leading" secondItem="muk-9g-vxq" secondAttribute="trailing" constant="31" id="9Uf-dI-cbX"/>
                             <constraint firstItem="Sph-WV-O2l" firstAttribute="top" secondItem="bBh-Pz-uiH" secondAttribute="bottom" constant="30" id="BOX-i4-lNY"/>
                             <constraint firstItem="muk-9g-vxq" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="24" id="FAO-4m-Tmw"/>
                             <constraint firstItem="xTa-Du-i8J" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="H9U-Mx-3J5"/>
+                            <constraint firstItem="OOk-mh-Fto" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="LGi-9g-9Fw"/>
                             <constraint firstItem="3B5-lo-Spj" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="5" id="OJj-mR-cAa"/>
                             <constraint firstItem="bBh-Pz-uiH" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="24" id="QSl-F6-c0K"/>
                             <constraint firstItem="AHX-kf-2zx" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="15" id="Qec-Vt-gZk"/>
@@ -403,6 +409,7 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="KTy-eT-5G8" secondAttribute="trailing" constant="24" id="ZHp-y3-4P5"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="bBh-Pz-uiH" secondAttribute="trailing" constant="24" id="ZZr-LP-jjm"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Sph-WV-O2l" secondAttribute="trailing" constant="15" id="aoJ-jO-ZXV"/>
+                            <constraint firstItem="OOk-mh-Fto" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="fII-14-bM2"/>
                             <constraint firstItem="3B5-lo-Spj" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="8" id="t80-kr-gio"/>
                             <constraint firstItem="bBh-Pz-uiH" firstAttribute="top" secondItem="3B5-lo-Spj" secondAttribute="bottom" constant="20" id="uKQ-1N-d3G"/>
                             <constraint firstItem="Sph-WV-O2l" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="15" id="wss-bq-aVC"/>
@@ -457,7 +464,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bqc-ac-MQe">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bqc-ac-MQe">
                                 <rect key="frame" x="20" y="129" width="353" height="669"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">Йога - це духовна та фізична практика, яка виникла в давній Індії. Практика йоги включає різноманітні пози, вправи дихання та медитаційні техніки, які сприяють фізичній силі, гнучкості та релаксації. Також вірять, що йога має безліч корисних впливів на ментальне здоров'я, такі як зниження стресу, тривоги та депресії, покращення загального самопочуття. Останнім часом йога стала дедалі популярнішою у всьому світі як форма вправ та практики </string>
@@ -505,6 +512,7 @@
     <resources>
         <image name="arrowDownBlue" width="16" height="16"/>
         <image name="back" width="24" height="24"/>
+        <image name="backgroundSplash" width="360" height="800"/>
         <image name="buttonTranslate" width="70" height="70"/>
         <image name="closeWhite" width="25" height="25"/>
         <image name="copy" width="18" height="18"/>
