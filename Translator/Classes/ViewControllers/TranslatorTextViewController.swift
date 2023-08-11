@@ -6,15 +6,13 @@
 //
 
 import UIKit
-import Switches
 import IHProgressHUD
 import Combine
 import SwiftEntryKit
 import AVFoundation
 import Hero
-import AppTrackingTransparency
 
-class TranslatorTextViewController: UIViewController, UITextViewDelegate {
+class TranslatorTextViewController: UIViewController {
     @IBOutlet weak var noAdsLabel: UILabel!
     @IBOutlet weak var translatedFlagImage: UIImageView!
     @IBOutlet weak var translatedTextLabel: UILabel!
@@ -33,6 +31,8 @@ class TranslatorTextViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var backgroundMainView: UIView!
     @IBOutlet weak var backgroundFlagSecondView: UIView!
     @IBOutlet weak var backgroundFlagFirstView: UIView!
+    @IBOutlet weak var pulseTwoView: UIView!
+    @IBOutlet weak var pulseOneView: UIView!
     private var speechUtterance: AVSpeechUtterance?
     private var synthesizer: AVSpeechSynthesizer?
     
@@ -53,6 +53,7 @@ class TranslatorTextViewController: UIViewController, UITextViewDelegate {
     }()
     
     private var listeners = Set<AnyCancellable>()
+    private var isAnimating = false
     
     public var languageManager: LanguageManager!
     public var storage: UserDefaultsStorage!
@@ -116,6 +117,7 @@ class TranslatorTextViewController: UIViewController, UITextViewDelegate {
         getTextView.layer.masksToBounds = true
         getTextView.isHidden = true
         bind()
+        roundPulse()
         
         if UserManager.shared.isPremium {
             noAdsLabel.isHidden = true
@@ -154,8 +156,14 @@ class TranslatorTextViewController: UIViewController, UITextViewDelegate {
         }).store(in: &listeners)
     }
     
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesEnded(touches, with: event)
+        dismissKeyboard()
+    }
+    
     private func translate() {
-        guard let text = textViewTypeText.text else { return }
+        guard let text = textViewTypeText.text,
+              !text.isEmpty else { return }
         let originalLanguage = languageManager.originalLanguage.key
         let translatedLanguage = languageManager.translatedLanguage.key
         getTextView.isHidden = false
@@ -206,28 +214,44 @@ class TranslatorTextViewController: UIViewController, UITextViewDelegate {
         }
     }
     
-    @objc func dismissKeyboard() {
+    private func dismissKeyboard() {
         textViewTypeText.resignFirstResponder()
     }
     
-    func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-        view.addGestureRecognizer(tapGesture)
-        if textView.text.isEmpty {
-            showOverlayView(false)
-        }
-        return true
+    private func animateButtonIfNeeded() {
+        guard let text = textViewTypeText.text,
+              !isAnimating,
+              !text.isEmpty else { return }
+        
+        isAnimating = true
+        
+        let valueFirst = 1.3
+        let valueSecond = 1.2
+        
+        UIView.animate(withDuration: 0.5, delay: 0, options: [.autoreverse, .repeat], animations: { [unowned self] in
+            self.pulseOneView.transform = .init(scaleX: valueFirst, y: valueFirst)
+            self.pulseTwoView.transform = .init(scaleX: valueSecond, y: valueSecond)
+        })
     }
     
-    func textViewDidEndEditing(_ textView: UITextView) {
-        view.gestureRecognizers?.forEach {
-            if let tapGesture = $0 as? UITapGestureRecognizer {
-                view.removeGestureRecognizer(tapGesture)
-            }
-            if textView.text.isEmpty {
-                showOverlayView(true)
-            }
-        }
+    private func removeTranslateButtonAnimation() {
+        self.pulseOneView.layer.removeAllAnimations()
+        self.pulseTwoView.layer.removeAllAnimations()
+        UIView.animate(withDuration: 0.2, animations: { [unowned self] in
+            self.pulseOneView.transform = .identity
+            self.pulseTwoView.transform = .identity
+        }, completion: { [unowned self] _ in
+            self.pulseOneView.layer.removeAllAnimations()
+            self.pulseTwoView.layer.removeAllAnimations()
+        })
+        
+    }
+    
+    private func roundPulse() {
+        [pulseOneView, pulseTwoView].forEach({ item in
+            item?.layer.cornerRadius = 50 / 2
+            item?.layer.masksToBounds = true
+        })
     }
     
     @IBAction func pasteTextButton(_ sender: Any) {
@@ -243,12 +267,14 @@ class TranslatorTextViewController: UIViewController, UITextViewDelegate {
         textViewGetText.text = ""
         overlayView.isHidden = false
         getTextView.isHidden = true
-        
+        removeTranslateButtonAnimation()
         stopSpeaking()
     }
     
     @IBAction func deleteGetTextDidTap(_ sender: Any) {
         textViewGetText.text = ""
+        isAnimating = false
+        removeTranslateButtonAnimation()
         stopSpeaking()
     }
     
@@ -287,11 +313,15 @@ class TranslatorTextViewController: UIViewController, UITextViewDelegate {
         }
         
         do {
-            try speechManager.startRecognize(for: languageKey, textChanged: { [weak self, weak view] text in
-                guard let self else { return }
+            try speechManager.startRecognize(for: languageKey, textChanged: { [weak view] text in
                 guard let view else { return }
                 view.trySaySmth.text = ""
-//                speechText = text
+                speechText = text
+            }, volumeChanged: { [weak view] volume in
+                guard let view else { return }
+                DispatchQueue.main.async {
+                    view.addPulse(volume: volume)
+                }
             })
         } catch {
             print("[log] speech \(error.localizedDescription)")
@@ -369,5 +399,27 @@ class TranslatorTextViewController: UIViewController, UITextViewDelegate {
     
     func stopSpeaking() {
         self.synthesizer?.stopSpeaking(at: .immediate)
+    }
+}
+
+
+extension TranslatorTextViewController: UITextViewDelegate {
+    func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
+        if textView.text.isEmpty {
+            showOverlayView(false)
+        }
+        return true
+    }
+    
+    func textViewDidChange(_ textView: UITextView) {
+        animateButtonIfNeeded()
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text.isEmpty {
+            showOverlayView(true)
+            isAnimating = false
+            removeTranslateButtonAnimation()
+        }
     }
 }

@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Switches
 
 class MainTranslatoreViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     

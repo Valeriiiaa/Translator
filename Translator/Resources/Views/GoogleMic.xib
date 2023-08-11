@@ -30,6 +30,22 @@
                     <color key="textColor" name="#3C485A"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h3H-Zl-CXw">
+                    <rect key="frame" x="154.66666666666666" y="157" width="84" height="100"/>
+                    <color key="backgroundColor" red="0.0" green="0.45882352941176469" blue="0.8901960784313725" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="84" id="4YI-GW-vDy"/>
+                        <constraint firstAttribute="height" constant="84" id="jC8-Je-ICl"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S5i-qu-06k">
+                    <rect key="frame" x="154.66666666666666" y="376" width="84" height="100"/>
+                    <color key="backgroundColor" red="0.0" green="0.45882352941176469" blue="0.8901960784313725" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="84" id="8IW-dm-LcL"/>
+                        <constraint firstAttribute="height" constant="84" id="c2c-om-BCG"/>
+                    </constraints>
+                </view>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="popUpMicOff" translatesAutoresizingMaskIntoConstraints="NO" id="MVm-Dc-aMm">
                     <rect key="frame" x="154.66666666666666" y="156.66666666666663" width="84" height="100"/>
                 </imageView>
@@ -50,11 +66,15 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="qUf-UV-LOU" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="34d-hz-DGF"/>
+                <constraint firstItem="h3H-Zl-CXw" firstAttribute="centerX" secondItem="MVm-Dc-aMm" secondAttribute="centerX" id="6Hz-D9-4OK"/>
+                <constraint firstItem="h3H-Zl-CXw" firstAttribute="centerY" secondItem="MVm-Dc-aMm" secondAttribute="centerY" id="6J9-UJ-HBb"/>
                 <constraint firstItem="b6k-2I-sXn" firstAttribute="top" secondItem="qUf-UV-LOU" secondAttribute="bottom" constant="50" id="7ug-o8-duZ"/>
+                <constraint firstItem="S5i-qu-06k" firstAttribute="centerX" secondItem="MVm-Dc-aMm" secondAttribute="centerX" id="90a-Qv-6Bb"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="b6k-2I-sXn" secondAttribute="bottom" constant="20" id="GFe-hv-6Wc"/>
                 <constraint firstItem="b6k-2I-sXn" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="GWe-9n-hP5"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="LM8-d8-Yz9" secondAttribute="trailing" constant="20" id="Hdz-ul-71E"/>
                 <constraint firstItem="MVm-Dc-aMm" firstAttribute="top" secondItem="LM8-d8-Yz9" secondAttribute="bottom" constant="45" id="PCC-ld-TSq"/>
+                <constraint firstItem="S5i-qu-06k" firstAttribute="centerY" secondItem="MVm-Dc-aMm" secondAttribute="centerY" id="Tit-Nh-HGK"/>
                 <constraint firstItem="MVm-Dc-aMm" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Wl6-6c-zfn"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="qUf-UV-LOU" secondAttribute="trailing" constant="20" id="aoX-BX-gQE"/>
                 <constraint firstItem="qUf-UV-LOU" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="fXh-NR-kba"/>
@@ -65,14 +85,16 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="micImageView" destination="MVm-Dc-aMm" id="qCH-tO-DCt"/>
+                <outlet property="pulseOneView" destination="h3H-Zl-CXw" id="eF9-Pp-35P"/>
+                <outlet property="pulseTwoView" destination="S5i-qu-06k" id="8bB-pO-8E2"/>
                 <outlet property="translatedLanguage" destination="b6k-2I-sXn" id="kT0-9g-Yot"/>
                 <outlet property="trySaySmth" destination="qUf-UV-LOU" id="OjV-CD-edK"/>
             </connections>
-            <point key="canvasLocation" x="42" y="20"/>
+            <point key="canvasLocation" x="41.984732824427482" y="19.718309859154932"/>
         </view>
     </objects>
     <resources>
-        <image name="popUpMicOff" width="84" height="84"/>
+        <image name="popUpMicOff" width="83.666664123535156" height="83.333335876464844"/>
         <namedColor name="#3C485A">
             <color red="0.23499999940395355" green="0.28200000524520874" blue="0.3529999852180481" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

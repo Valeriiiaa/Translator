@@ -32,6 +32,7 @@
 		11F6FF832A83CAA80050EB2F /* TextDetectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F6FF822A83CAA80050EB2F /* TextDetectionManager.swift */; };
 		11F6FFAD2A8549BA0050EB2F /* PVSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F6FFAC2A8549BA0050EB2F /* PVSwitch.swift */; };
 		11F6FFAF2A8564040050EB2F /* AppTrackingTransparencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F6FFAE2A8564040050EB2F /* AppTrackingTransparencyManager.swift */; };
+		11F6FFB22A863BC50050EB2F /* PulseLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F6FFB12A863BC50050EB2F /* PulseLayer.swift */; };
 		BDACE054AB7F8597976A68D1 /* Pods_Translator_TranslatorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB4658282A8B14DCEEBBD108 /* Pods_Translator_TranslatorUITests.framework */; };
 		EC560B2B8FA86727D86AD288 /* Pods_Translator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15D230D4831FBE8007CCA162 /* Pods_Translator.framework */; };
 		F60A5A702A6FDFD200E04862 /* SwiftEntryKit in Frameworks */ = {isa = PBXBuildFile; productRef = F60A5A6F2A6FDFD200E04862 /* SwiftEntryKit */; };
@@ -203,6 +204,7 @@
 		11F6FF822A83CAA80050EB2F /* TextDetectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextDetectionManager.swift; sourceTree = "<group>"; };
 		11F6FFAC2A8549BA0050EB2F /* PVSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PVSwitch.swift; sourceTree = "<group>"; };
 		11F6FFAE2A8564040050EB2F /* AppTrackingTransparencyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTrackingTransparencyManager.swift; sourceTree = "<group>"; };
+		11F6FFB12A863BC50050EB2F /* PulseLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulseLayer.swift; sourceTree = "<group>"; };
 		15D230D4831FBE8007CCA162 /* Pods_Translator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Translator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		57C2C79C259450A96A23ADDD /* Pods-TranslatorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TranslatorTests.debug.xcconfig"; path = "Target Support Files/Pods-TranslatorTests/Pods-TranslatorTests.debug.xcconfig"; sourceTree = "<group>"; };
 		83C17975E857912BED351A51 /* Pods_TranslatorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TranslatorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -477,6 +479,14 @@
 				11F6FFAC2A8549BA0050EB2F /* PVSwitch.swift */,
 			);
 			path = PVSwitch;
+			sourceTree = "<group>";
+		};
+		11F6FFB02A863BB80050EB2F /* Layers */ = {
+			isa = PBXGroup;
+			children = (
+				11F6FFB12A863BC50050EB2F /* PulseLayer.swift */,
+			);
+			path = Layers;
 			sourceTree = "<group>";
 		};
 		23F0B90C2FE0B0CD8F5B3CC5 /* Frameworks */ = {
@@ -896,6 +906,7 @@
 		F6DE20E72A6E6B14003F49F4 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				11F6FFB02A863BB80050EB2F /* Layers */,
 				11F6FFAB2A8549B40050EB2F /* PVSwitch */,
 				F6D2C8B02A70049700F7D7EF /* ViewTextField */,
 				11F25A112A7E849A00E2BC3B /* Network */,
@@ -1366,6 +1377,7 @@
 				11F25A102A7E83BC00E2BC3B /* TranslatorService.swift in Sources */,
 				11F6FF832A83CAA80050EB2F /* TextDetectionManager.swift in Sources */,
 				F6DE20B82A6E6A7F003F49F4 /* SceneDelegate.swift in Sources */,
+				11F6FFB22A863BC50050EB2F /* PulseLayer.swift in Sources */,
 				F6D2C8B62A70074A00F7D7EF /* TextMessageView.swift in Sources */,
 				11F25A172A7E88A100E2BC3B /* TranslationContainerModel.swift in Sources */,
 				F62893622A6EBC2700B7A36C /* DrawerTransitionManager.swift in Sources */,
@@ -1562,7 +1574,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = FSWN37F2HA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Translator/Info.plist;
@@ -1601,7 +1613,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = FSWN37F2HA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Translator/Info.plist;

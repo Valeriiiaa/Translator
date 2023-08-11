@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Switches
 import Combine
 import SwiftEntryKit
 import IHProgressHUD

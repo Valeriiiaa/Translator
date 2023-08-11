@@ -7,7 +7,6 @@
 
 import UIKit
 import SwiftEntryKit
-import Switches
 import IHProgressHUD
 
 class HistoryViewController: UIViewController {
