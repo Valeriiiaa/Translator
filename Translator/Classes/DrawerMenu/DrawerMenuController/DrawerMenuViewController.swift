@@ -17,6 +17,10 @@ class DrawerMenuViewController: UIViewController, UITableViewDelegate, UITableVi
     
     public let storage = UserDefaultsStorage.shared
     
+    public lazy var speechManager: SpeechManager = {
+        .init()
+    }()
+    
     let transitionManager = DrawerTransitionManager()
     init() {
         super.init(nibName: nil, bundle: nil)

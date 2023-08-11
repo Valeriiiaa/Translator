@@ -235,7 +235,9 @@ class TranslatorTextViewController: UIViewController {
     }
     
     private func removeTranslateButtonAnimation() {
+        isAnimating = false
         self.pulseOneView.layer.removeAllAnimations()
+        self.pulseTwoView.layer.removeAllAnimations()
         self.pulseTwoView.layer.removeAllAnimations()
         UIView.animate(withDuration: 0.2, animations: { [unowned self] in
             self.pulseOneView.transform = .identity
@@ -265,7 +267,7 @@ class TranslatorTextViewController: UIViewController {
     @IBAction func deleteTypeTextDidTap(_ sender: Any) {
         textViewTypeText.text = ""
         textViewGetText.text = ""
-        overlayView.isHidden = false
+        overlayView.isHidden = textViewTypeText.isFirstResponder
         getTextView.isHidden = true
         removeTranslateButtonAnimation()
         stopSpeaking()
@@ -413,12 +415,16 @@ extension TranslatorTextViewController: UITextViewDelegate {
     
     func textViewDidChange(_ textView: UITextView) {
         animateButtonIfNeeded()
+        if textView.text.isEmpty {
+            getTextView.isHidden = true
+        }
     }
     
     func textViewDidEndEditing(_ textView: UITextView) {
         if textView.text.isEmpty {
             showOverlayView(true)
             isAnimating = false
+            getTextView.isHidden = true
             removeTranslateButtonAnimation()
         }
     }

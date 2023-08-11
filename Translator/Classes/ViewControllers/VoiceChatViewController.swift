@@ -14,7 +14,6 @@ import Speech
 import Hero
 
 class VoiceChatViewController: UIViewController {
-   
     @IBOutlet weak var backgroundflagSecond: UIView!
     @IBOutlet weak var backgroundflagFirst: UIView!
     @IBOutlet weak var backgroundStuckView: UIView!
@@ -30,12 +29,20 @@ class VoiceChatViewController: UIViewController {
     @IBOutlet weak var firstLabel: UILabel!
     @IBOutlet weak var tableViewChat: UITableView!
     
+    @IBOutlet weak var firstPulseOneView: UIView!
+    @IBOutlet weak var firstPulseTwoView: UIView!
+    
+    @IBOutlet weak var secondPulseOneView: UIView!
+    @IBOutlet weak var secondPulseTwoView: UIView!
+    
     private var speechUtterance: AVSpeechUtterance?
     private var synthesizer: AVSpeechSynthesizer?
     
     public var languageManager: LanguageManager!
     
     public var storage: UserDefaultsStorage!
+    
+    private let speechManager = DrawerMenuViewController.shared.speechManager
     
     private var listeners = Set<AnyCancellable>()
     
@@ -65,6 +72,8 @@ class VoiceChatViewController: UIViewController {
         tableViewChat.register(UINib(nibName: CellManager.getCell(by: "EmptyChatCell") , bundle: nil), forCellReuseIdentifier: CellManager.getCell(by: "EmptyChatCell"))
         checkMessageModels()
         bind()
+        roundPulses()
+        animatePulses()
         
         if UserManager.shared.isPremium {
             noAdsLabel.isHidden = true
@@ -132,6 +141,24 @@ class VoiceChatViewController: UIViewController {
         navigationController?.pushViewController(entrance, animated: true)
     }
     
+    private func animatePulses() {
+        let firstValueFirst = 1.3
+        let firstValueSecond = 1.2
+        UIView.animate(withDuration: 0.5, delay: 0, options: [.autoreverse, .repeat], animations: { [unowned self] in
+            self.firstPulseOneView.transform = .init(scaleX: firstValueFirst, y: firstValueFirst)
+            self.firstPulseTwoView.transform = .init(scaleX: firstValueSecond, y: firstValueSecond)
+            self.secondPulseOneView.transform = .init(scaleX: firstValueFirst, y: firstValueFirst)
+            self.secondPulseTwoView.transform = .init(scaleX: firstValueSecond, y: firstValueSecond)
+        })
+    }
+    
+    private func roundPulses() {
+        [firstPulseOneView, firstPulseTwoView, secondPulseOneView, secondPulseTwoView].forEach({ view in
+            view?.layer.cornerRadius = 50 / 2
+            view?.layer.masksToBounds = true
+        })
+    }
+    
     @IBAction func selectionButtonSecondDidTap(_ sender: Any) {
         pushSelectionScreen()
     }
@@ -150,22 +177,74 @@ class VoiceChatViewController: UIViewController {
     
     @IBAction func orangeMicDidTap(_ sender: Any) {
         let view = GoogleMic.fromNib()
+        orangeMicButton.setImage(UIImage(named: "orangeMicOn"), for: .normal)
         view.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width * 0.9).isActive = true
         var attributes = EKAttributes.centerFloat
         attributes.displayDuration = .infinity
         attributes.screenInteraction = .dismiss
         attributes.screenBackground = .color(color: EKColor(UIColor.black.withAlphaComponent(0.4)))
         SwiftEntryKit.display(entry: view, using: attributes)
+        
+        let language = languageManager.originalLanguage.key
+        let languageKey = language.rawValue
+
+        
+        view.translatedLanguage.text = language.name
+        view.didHideView = { [weak self] in
+            guard let self else { return }
+            self.speechManager.stopRecognize()
+            self.orangeMicButton.setImage(UIImage(named: "orangeMic"), for: .normal)
+        }
+        
+        do {
+            try speechManager.startRecognize(for: languageKey, textChanged: { [weak view] text in
+                guard let view else { return }
+                view.trySaySmth.text = ""
+            }, volumeChanged: { [weak view] volume in
+                guard let view else { return }
+                DispatchQueue.main.async {
+                    view.addPulse(volume: volume)
+                }
+            })
+        } catch {
+            print("[log] speech \(error.localizedDescription)")
+        }
     }
     
     @IBAction func blueMicDidTap(_ sender: Any) {
         let view = GoogleMic.fromNib()
+        blueMicButton.setImage(UIImage(named: "blueMicOn"), for: .normal)
         view.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width * 0.9).isActive = true
         var attributes = EKAttributes.centerFloat
         attributes.displayDuration = .infinity
         attributes.screenInteraction = .dismiss
         attributes.screenBackground = .color(color: EKColor(UIColor.black.withAlphaComponent(0.4)))
         SwiftEntryKit.display(entry: view, using: attributes)
+        
+        let language = languageManager.originalLanguage.key
+        let languageKey = language.rawValue
+
+        
+        view.translatedLanguage.text = language.name
+        view.didHideView = { [weak self] in
+            guard let self else { return }
+            self.speechManager.stopRecognize()
+            self.blueMicButton.setImage(UIImage(named: "blueMic"), for: .normal)
+        }
+        
+        do {
+            try speechManager.startRecognize(for: languageKey, textChanged: { [weak view] text in
+                guard let view else { return }
+                view.trySaySmth.text = ""
+            }, volumeChanged: { [weak view] volume in
+                guard let view else { return }
+                DispatchQueue.main.async {
+                    view.addPulse(volume: volume)
+                }
+            })
+        } catch {
+            print("[log] speech \(error.localizedDescription)")
+        }
     }
    
     @IBAction func riversoButtonDidTap(_ sender: Any) {

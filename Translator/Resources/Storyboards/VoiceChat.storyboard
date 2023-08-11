@@ -138,24 +138,96 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="114" translatesAutoresizingMaskIntoConstraints="NO" id="c8T-fx-b7A">
-                                <rect key="frame" x="79.666666666666686" y="693" width="234" height="60"/>
+                                <rect key="frame" x="89.666666666666686" y="703" width="214" height="50"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UGw-09-cyx">
-                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" image="blueMic"/>
-                                        <connections>
-                                            <action selector="blueMicDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Ygr-LL-GDE"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bz5-ov-Rha">
-                                        <rect key="frame" x="174" y="0.0" width="60" height="60"/>
-                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" image="orangeMic"/>
-                                        <connections>
-                                            <action selector="orangeMicDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="38D-hv-YGC"/>
-                                        </connections>
-                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K5K-a8-4jH">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PDU-b3-69n">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" red="0.31372549019607843" green="0.55686274509803924" blue="0.96078431372549022" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="T8T-Bs-e9U"/>
+                                                    <constraint firstAttribute="width" constant="50" id="Tgk-5g-wH0"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KRu-49-CVF">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" red="0.31372549019607843" green="0.55686274509803924" blue="0.96078431372549022" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="TLp-MM-C8A"/>
+                                                    <constraint firstAttribute="height" constant="50" id="r6n-pN-DjJ"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UGw-09-cyx">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="2GQ-j3-SRX"/>
+                                                    <constraint firstAttribute="width" constant="50" id="5sK-dt-q8F"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="blueMic"/>
+                                                <connections>
+                                                    <action selector="blueMicDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Ygr-LL-GDE"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="UGw-09-cyx" firstAttribute="top" secondItem="K5K-a8-4jH" secondAttribute="top" id="Kmw-DJ-DUl"/>
+                                            <constraint firstItem="PDU-b3-69n" firstAttribute="centerX" secondItem="UGw-09-cyx" secondAttribute="centerX" id="O3i-gV-dgZ"/>
+                                            <constraint firstItem="KRu-49-CVF" firstAttribute="centerX" secondItem="UGw-09-cyx" secondAttribute="centerX" id="Ozz-s3-47W"/>
+                                            <constraint firstItem="PDU-b3-69n" firstAttribute="centerY" secondItem="UGw-09-cyx" secondAttribute="centerY" id="REn-8V-f94"/>
+                                            <constraint firstItem="KRu-49-CVF" firstAttribute="centerY" secondItem="UGw-09-cyx" secondAttribute="centerY" id="fXW-Vs-y1W"/>
+                                            <constraint firstAttribute="trailing" secondItem="UGw-09-cyx" secondAttribute="trailing" id="gqA-p8-guq"/>
+                                            <constraint firstItem="UGw-09-cyx" firstAttribute="leading" secondItem="K5K-a8-4jH" secondAttribute="leading" id="ten-6S-6x5"/>
+                                            <constraint firstAttribute="bottom" secondItem="UGw-09-cyx" secondAttribute="bottom" id="yu1-qP-IYM"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wDm-fs-9lf">
+                                        <rect key="frame" x="164" y="0.0" width="50" height="50"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cxE-GW-Hrd">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" red="0.96078431372549022" green="0.81960784313725488" blue="0.31372549019607843" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="om2-gV-hFT"/>
+                                                    <constraint firstAttribute="width" constant="50" id="xyJ-2C-0Gx"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qPD-6T-YCX">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" red="0.96078431372549022" green="0.81960784313725488" blue="0.31372549019607843" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="6Yg-QN-Gjw"/>
+                                                    <constraint firstAttribute="height" constant="50" id="Fai-7B-LHi"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bz5-ov-Rha">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="ZbW-o8-Jb3"/>
+                                                    <constraint firstAttribute="height" constant="50" id="vgT-EB-9Ph"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="orangeMic"/>
+                                                <connections>
+                                                    <action selector="orangeMicDidTap:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="38D-hv-YGC"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="bz5-ov-Rha" firstAttribute="top" secondItem="wDm-fs-9lf" secondAttribute="top" id="79H-Pc-OmU"/>
+                                            <constraint firstItem="qPD-6T-YCX" firstAttribute="centerX" secondItem="bz5-ov-Rha" secondAttribute="centerX" id="Fsh-2N-OoV"/>
+                                            <constraint firstAttribute="trailing" secondItem="bz5-ov-Rha" secondAttribute="trailing" id="L4I-dz-CwE"/>
+                                            <constraint firstItem="cxE-GW-Hrd" firstAttribute="centerY" secondItem="bz5-ov-Rha" secondAttribute="centerY" id="Ngl-HR-trg"/>
+                                            <constraint firstItem="cxE-GW-Hrd" firstAttribute="centerX" secondItem="bz5-ov-Rha" secondAttribute="centerX" id="Osy-24-L4v"/>
+                                            <constraint firstAttribute="bottom" secondItem="bz5-ov-Rha" secondAttribute="bottom" id="QK4-OQ-gER"/>
+                                            <constraint firstItem="qPD-6T-YCX" firstAttribute="centerY" secondItem="bz5-ov-Rha" secondAttribute="centerY" id="ZvX-LR-ap5"/>
+                                            <constraint firstItem="bz5-ov-Rha" firstAttribute="leading" secondItem="wDm-fs-9lf" secondAttribute="leading" id="yca-Vo-X5p"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kkA-w3-lfn">
@@ -211,7 +283,7 @@
                                 </subviews>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NyH-9k-HXt">
-                                <rect key="frame" x="0.0" y="123" width="393" height="568"/>
+                                <rect key="frame" x="0.0" y="123" width="393" height="578"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mBI-m1-4pp">
@@ -271,10 +343,14 @@
                         <outlet property="eraserButton" destination="Zyb-Mb-UHh" id="m4E-Bl-kYl"/>
                         <outlet property="firstFlag" destination="pj8-00-q2f" id="VRl-bo-guC"/>
                         <outlet property="firstLabel" destination="E3Q-yv-yWx" id="K5e-52-6iI"/>
+                        <outlet property="firstPulseOneView" destination="PDU-b3-69n" id="Om0-Ej-wxA"/>
+                        <outlet property="firstPulseTwoView" destination="KRu-49-CVF" id="TvX-Fj-5wj"/>
                         <outlet property="noAdsLabel" destination="YNc-Sf-bYK" id="XhR-1H-69R"/>
                         <outlet property="orangeMicButton" destination="bz5-ov-Rha" id="PxI-VM-W9G"/>
                         <outlet property="secondFlag" destination="Lmb-Bb-pqO" id="mlh-ee-dHS"/>
                         <outlet property="secondLabel" destination="dcm-p3-KVV" id="oJ9-R4-h64"/>
+                        <outlet property="secondPulseOneView" destination="cxE-GW-Hrd" id="jMb-OQ-Upy"/>
+                        <outlet property="secondPulseTwoView" destination="qPD-6T-YCX" id="kXy-sl-wLC"/>
                         <outlet property="tableViewChat" destination="NyH-9k-HXt" id="tDb-Z8-UTQ"/>
                     </connections>
                 </viewController>
@@ -302,11 +378,11 @@
         <image name="arrowDownBlue" width="16" height="16"/>
         <image name="back" width="24" height="24"/>
         <image name="backgroundSplash" width="360" height="800"/>
-        <image name="blueMic" width="60" height="60"/>
+        <image name="blueMic" width="50" height="50"/>
         <image name="eraser" width="20" height="20"/>
         <image name="flagUA" width="14" height="10"/>
         <image name="flagUK" width="14" height="10"/>
-        <image name="orangeMic" width="60" height="60"/>
+        <image name="orangeMic" width="50" height="50"/>
         <image name="riverso" width="22" height="22"/>
         <namedColor name="#3B4669">
             <color red="0.23100000619888306" green="0.27500000596046448" blue="0.41200000047683716" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
